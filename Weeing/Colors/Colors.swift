@@ -12,5 +12,8 @@ extension Color {
     static let loginColor = Color("loginColor")
     static let grayColor = Color("grayColor")
     static let loginTextFieldColor = Color("loginTextFieldColor")
+    static let joinColor = Color("joinColor")
+    static let joinTextFieldColor = Color("joinTextFieldColor")
+    static let loginLetterColor = Color("loginLetterColor")
 }
 

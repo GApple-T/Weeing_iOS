@@ -23,7 +23,7 @@ struct LoginView: View {
                     .padding(.top,109)
                 Group {
                     Text("Email")
-                        .foregroundColor(.loginColor)
+                        .foregroundColor(.loginLetterColor)
                         .font(.custom("AppleSDGothicNeoM00", size:16))
                         .padding(.top,65)
                         .padding(.trailing,287)
@@ -49,7 +49,7 @@ struct LoginView: View {
                 
                 Group {
                     Text("Password")
-                        .foregroundColor(.loginColor)
+                        .foregroundColor(.loginLetterColor)
                         .font(.custom("AppleSDGothicNeoM00", size:16))
                         .padding(.top,12)
                         .padding(.trailing,257)
