@@ -65,7 +65,7 @@ struct LoginView: View {
                                     .padding(.leading,60)
                                     .padding(.trailing,130)
                                 
-                                Image(systemName: "eye.slash")
+                                Image(systemName: "eye")
                                     .resizable()
                                     .frame(width:15,height: 10)
                                     .foregroundColor(.grayColor)
