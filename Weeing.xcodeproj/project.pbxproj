@@ -11,6 +11,10 @@
 		AFA611622A94B54400D63657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611612A94B54400D63657 /* Assets.xcassets */; };
 		AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611642A94B54400D63657 /* Preview Assets.xcassets */; };
 		AFA6116C2A94B55A00D63657 /* mainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6116B2A94B55A00D63657 /* mainPageView.swift */; };
+		AFA611712A94C6F400D63657 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611702A94C6F400D63657 /* LoginView.swift */; };
+		AFA611742A94C7FD00D63657 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611732A94C7FD00D63657 /* Colors.swift */; };
+		AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611762A94C8B400D63657 /* Nunito-Black.ttf */; };
+		AFA611792A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611782A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		AFA611612A94B54400D63657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA611642A94B54400D63657 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFA6116B2A94B55A00D63657 /* mainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPageView.swift; sourceTree = "<group>"; };
+		AFA611702A94C6F400D63657 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AFA611732A94C7FD00D63657 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AFA611762A94C8B400D63657 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		AFA611782A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
+		AFA6117A2A94C8DF00D63657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +60,12 @@
 		AFA6115C2A94B54300D63657 /* Weeing */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6117A2A94C8DF00D63657 /* Info.plist */,
 				AFA6115D2A94B54300D63657 /* WeeingApp.swift */,
 				AFA6116B2A94B55A00D63657 /* mainPageView.swift */,
+				AFA611722A94C72300D63657 /* Colors */,
 				AFA6116D2A94B56900D63657 /* Views */,
+				AFA611752A94C85700D63657 /* Fonts */,
 				AFA611612A94B54400D63657 /* Assets.xcassets */,
 				AFA611632A94B54400D63657 /* Preview Content */,
 			);
@@ -71,8 +83,26 @@
 		AFA6116D2A94B56900D63657 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AFA611702A94C6F400D63657 /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AFA611722A94C72300D63657 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611732A94C7FD00D63657 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		AFA611752A94C85700D63657 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611762A94C8B400D63657 /* Nunito-Black.ttf */,
+				AFA611782A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
+				AFA611792A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
+				AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
+				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA6116C2A94B55A00D63657 /* mainPageView.swift in Sources */,
 			);
@@ -277,6 +311,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Weeing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +340,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Weeing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
