@@ -19,7 +19,7 @@ struct JoinView: View {
                 Group {
                     Text("Email")
                         .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoB00", size:16))
+                        .font(.custom("AppleSDGothicNeoM00", size:16))
                         .padding(.top,66)
                         .padding(.trailing,297)
                         .padding(.leading,54)
@@ -46,7 +46,7 @@ struct JoinView: View {
                     Group {
                         Text("인증번호")
                             .foregroundColor(.joinColor)
-                            .font(.custom("AppleSDGothicNeoB00", size:15))
+                            .font(.custom("AppleSDGothicNeoM00", size:15))
                             .padding(.top,12)
                             .padding(.trailing,282)
                             .padding(.leading,56)
@@ -73,7 +73,7 @@ struct JoinView: View {
                         .cornerRadius(10)
                         .overlay(
                             Text("확인")
-                                .font(.custom("AppleSDGothicNeoB00", size: 15))
+                                .font(.custom("AppleSDGothicNeoM00", size: 15))
                                 .foregroundColor(.white)
                         )
                         .padding(.horizontal,50)
