@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C07105C2A95F566009A1A1E /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C07105B2A95F566009A1A1E /* AppleSDGothicNeoB00.ttf */; };
-		4C07105E2A95F571009A1A1E /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C07105D2A95F571009A1A1E /* AppleSDGothicNeoM00.ttf */; };
 		AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6115D2A94B54300D63657 /* WeeingApp.swift */; };
 		AFA611622A94B54400D63657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611612A94B54400D63657 /* Assets.xcassets */; };
 		AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611642A94B54400D63657 /* Preview Assets.xcassets */; };
@@ -18,11 +16,10 @@
 		AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611762A94C8B400D63657 /* Nunito-Black.ttf */; };
 		AFA611802A94F61A00D63657 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6117F2A94F61A00D63657 /* SignupView.swift */; };
 		AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6118D2A95D37E00D63657 /* makePasswordView.swift */; };
+		AFA611902A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C07105B2A95F566009A1A1E /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
-		4C07105D2A95F571009A1A1E /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		AFA6115A2A94B54300D63657 /* Weeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6115D2A94B54300D63657 /* WeeingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingApp.swift; sourceTree = "<group>"; };
 		AFA611612A94B54400D63657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +31,7 @@
 		AFA6117A2A94C8DF00D63657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AFA6117F2A94F61A00D63657 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		AFA6118D2A95D37E00D63657 /* makePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makePasswordView.swift; sourceTree = "<group>"; };
+		AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA611762A94C8B400D63657 /* Nunito-Black.ttf */,
-				4C07105B2A95F566009A1A1E /* AppleSDGothicNeoB00.ttf */,
-				4C07105D2A95F571009A1A1E /* AppleSDGothicNeoM00.ttf */,
+				AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -172,10 +169,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C07105E2A95F571009A1A1E /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
+				AFA611902A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
-				4C07105C2A95F566009A1A1E /* AppleSDGothicNeoB00.ttf in Resources */,
 				AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State private var emailText = ""
     @State private var passwordText = ""
+    @State private var showPassword = false
     
     var body: some View {
         ZStack {
@@ -23,8 +24,8 @@ struct LoginView: View {
                     .padding(.top,109)
                 Group {
                     Text("Email")
-                        .foregroundColor(Color("loginletterColor"))
-                        .font(.custom("AppleSDGothicNeoB00", size:16))
+                        .foregroundColor(Color.loginLetterColor)
+                        .font(.custom("AppleSDGothicNeoM00", size:16))
                         .padding(.top,65)
                         .padding(.trailing,287)
                         .padding(.leading,56)
@@ -49,8 +50,8 @@ struct LoginView: View {
                 
                 Group {
                     Text("Password")
-                        .foregroundColor(Color("loginletterColor"))
-                        .font(.custom("AppleSDGothicNeoB00", size:16))
+                        .foregroundColor(Color.loginLetterColor)
+                        .font(.custom("AppleSDGothicNeoM00", size:16))
                         .padding(.top,12)
                         .padding(.trailing,257)
                         .padding(.leading,55)
@@ -60,16 +61,35 @@ struct LoginView: View {
                         .frame(height:40)
                         .padding(.horizontal,50)
                         .overlay(
-                            ZStack {
-                                TextField("",text: $passwordText)
-                                    .padding(.leading,60)
-                                    .padding(.trailing,130)
+                            HStack {
+                                if showPassword == false {
+                                    SecureField("",text: $passwordText)
+                                        .padding(.leading,60)
+                                        .padding(.trailing,130)
+                                } else {
+                                    TextField("",text: $passwordText)
+                                        .padding(.leading,60)
+                                        .padding(.trailing,130)
+                                }
                                 
-                                Image(systemName: "eye")
-                                    .resizable()
-                                    .frame(width:15,height: 10)
-                                    .foregroundColor(.grayColor)
-                                    .padding(.leading,250)
+                                Button {
+                                    self.showPassword.toggle()
+                                } label: {
+                                    if showPassword == false {
+                                        Image(systemName: "eye")
+                                            .resizable()
+                                            .frame(width:15,height: 10)
+                                            .foregroundColor(.grayColor)
+                                            .padding(.trailing,62)
+                                    } else {
+                                        Image(systemName: "eye.slash")
+                                            .resizable()
+                                            .frame(width:15,height: 10)
+                                            .foregroundColor(.grayColor)
+                                            .padding(.trailing,62)
+                                    }
+                                    
+                                }
                             }
                         )
                     
@@ -87,7 +107,7 @@ struct LoginView: View {
                     .overlay(
                         Text("로그인")
                             .foregroundColor(.white)
-                            .font(.custom("AppleSDGothicNeoB00", size: 15))
+                            .font(.custom("AppleSDGothicNeoM00", size: 15))
                     )
                     .padding(.horizontal,50)
                     .padding(.top,38)

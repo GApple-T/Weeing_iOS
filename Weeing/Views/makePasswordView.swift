@@ -11,6 +11,7 @@ struct makePasswordView: View {
     
     @State private var passwordText = ""
     @State private var checkPasswordText = ""
+    @State private var showPassword = false
     
     var body: some View {
         ZStack {
@@ -25,7 +26,7 @@ struct makePasswordView: View {
                 Group {
                     Text("Password")
                         .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoB00", size:16))
+                        .font(.custom("AppleSDGothicNeoM00", size:16))
                         .padding(.top,12)
                         .padding(.trailing,263)
                         .padding(.leading,58)
@@ -35,17 +36,37 @@ struct makePasswordView: View {
                         .frame(height:40)
                         .padding(.horizontal,50)
                         .overlay(
-                            ZStack {
-                                SecureField("",text: $passwordText)
-                                    .font(.system(size:12))
-                                    .padding(.leading,60)
-                                    .padding(.trailing,130)
+                            HStack {
+                                if showPassword == false {
+                                    SecureField("",text: $passwordText)
+                                        .font(.system(size:12))
+                                        .padding(.leading,60)
+                                        .padding(.trailing,130)
+                                } else {
+                                    TextField("",text: $passwordText)
+                                        .font(.system(size:12))
+                                        .padding(.leading,60)
+                                        .padding(.trailing,130)
+                                }
                                 
-                                Image(systemName: "eye")
-                                    .resizable()
-                                    .frame(width:15,height: 10)
-                                    .foregroundColor(.grayColor)
-                                    .padding(.leading,258)
+                                Button {
+                                    self.showPassword.toggle()
+                                } label: {
+                                    if showPassword == false {
+                                        Image(systemName: "eye")
+                                            .resizable()
+                                            .frame(width:15,height: 10)
+                                            .foregroundColor(.grayColor)
+                                            .padding(.trailing,62)
+                                    } else {
+                                        Image(systemName: "eye.slash")
+                                            .resizable()
+                                            .frame(width:15,height: 10)
+                                            .foregroundColor(.grayColor)
+                                            .padding(.trailing,62)
+                                    }
+                                    
+                                }
                             }
                         )
                     
@@ -60,7 +81,7 @@ struct makePasswordView: View {
                 Group {
                     Text("Check Password")
                         .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoB00", size:15))
+                        .font(.custom("AppleSDGothicNeoM00", size:15))
                         .padding(.top,12)
                         .padding(.trailing,223)
                         .padding(.leading,58)
@@ -83,7 +104,7 @@ struct makePasswordView: View {
                         .cornerRadius(10)
                         .overlay(
                             Text("회원가입")
-                                .font(.custom("AppleSDGothicNeoB00", size: 15))
+                                .font(.custom("AppleSDGothicNeoM00", size: 15))
                                 .foregroundColor(.white)
                         )
                         .padding(.horizontal,65)
