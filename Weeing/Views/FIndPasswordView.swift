@@ -32,7 +32,7 @@ struct FIndPasswordView: View {
                 Text("Email")
                     .font(.custom("AppleSDGothicNeoM00", size: 16))
                     .foregroundColor(.findPasswordColor)
-                    .padding(.top,pressedConfirm ? 70 : 72)
+                    .padding(.top,pressedConfirm ? 70 : 70)
                     .padding(.leading,54)
                     .padding(.trailing,297)
                 
