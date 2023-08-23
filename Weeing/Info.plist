@@ -4,8 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Nunito-Black.ttf</string>
 		<string>AppleSDGothicNeoM00.ttf</string>
+		<string>Nunito-Black.ttf</string>
 	</array>
 </dict>
 </plist>

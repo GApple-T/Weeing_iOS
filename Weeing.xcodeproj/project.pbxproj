@@ -14,8 +14,9 @@
 		AFA611712A94C6F400D63657 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611702A94C6F400D63657 /* LoginView.swift */; };
 		AFA611742A94C7FD00D63657 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611732A94C7FD00D63657 /* Colors.swift */; };
 		AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611762A94C8B400D63657 /* Nunito-Black.ttf */; };
-		AFA611792A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611782A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf */; };
 		AFA611802A94F61A00D63657 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6117F2A94F61A00D63657 /* SignupView.swift */; };
+		AFA6118C2A95D1D900D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6118B2A95D1D900D63657 /* AppleSDGothicNeoM00.ttf */; };
+		AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6118D2A95D37E00D63657 /* makePasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,10 @@
 		AFA611702A94C6F400D63657 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AFA611732A94C7FD00D63657 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AFA611762A94C8B400D63657 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
-		AFA611782A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
 		AFA6117A2A94C8DF00D63657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AFA6117F2A94F61A00D63657 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		AFA6118B2A95D1D900D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../../Downloads/AppleSDGothicNeoM00 2/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
+		AFA6118D2A95D37E00D63657 /* makePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makePasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				AFA611702A94C6F400D63657 /* LoginView.swift */,
 				AFA6117F2A94F61A00D63657 /* SignupView.swift */,
+				AFA6118D2A95D37E00D63657 /* makePasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA611762A94C8B400D63657 /* Nunito-Black.ttf */,
-				AFA611782A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf */,
+				AFA6118B2A95D1D900D63657 /* AppleSDGothicNeoM00.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -167,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				AFA611792A94C8CB00D63657 /* AppleSDGothicNeoM00.ttf in Resources */,
+				AFA6118C2A95D1D900D63657 /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
 				AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */,
 			);
@@ -185,6 +188,7 @@
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA6116C2A94B55A00D63657 /* mainPageView.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
+				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
