@@ -25,7 +25,7 @@ struct makePasswordView: View {
                 Group {
                     Text("Password")
                         .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoM00", size:16))
+                        .font(.custom("AppleSDGothicNeoB00", size:16))
                         .padding(.top,12)
                         .padding(.trailing,263)
                         .padding(.leading,58)
@@ -60,7 +60,7 @@ struct makePasswordView: View {
                 Group {
                     Text("Check Password")
                         .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoM00", size:16))
+                        .font(.custom("AppleSDGothicNeoB00", size:15))
                         .padding(.top,12)
                         .padding(.trailing,223)
                         .padding(.leading,58)
@@ -83,7 +83,7 @@ struct makePasswordView: View {
                         .cornerRadius(10)
                         .overlay(
                             Text("회원가입")
-                                .font(.custom("AppleSDGothicNeoM00", size: 15))
+                                .font(.custom("AppleSDGothicNeoB00", size: 15))
                                 .foregroundColor(.white)
                         )
                         .padding(.horizontal,65)

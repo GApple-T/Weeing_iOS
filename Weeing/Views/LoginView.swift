@@ -23,8 +23,8 @@ struct LoginView: View {
                     .padding(.top,109)
                 Group {
                     Text("Email")
-                        .foregroundColor(.loginLetterColor)
-                        .font(.custom("AppleSDGothicNeoM00", size:16))
+                        .foregroundColor(Color("loginletterColor"))
+                        .font(.custom("AppleSDGothicNeoB00", size:16))
                         .padding(.top,65)
                         .padding(.trailing,287)
                         .padding(.leading,56)
@@ -49,8 +49,8 @@ struct LoginView: View {
                 
                 Group {
                     Text("Password")
-                        .foregroundColor(.loginLetterColor)
-                        .font(.custom("AppleSDGothicNeoM00", size:16))
+                        .foregroundColor(Color("loginletterColor"))
+                        .font(.custom("AppleSDGothicNeoB00", size:16))
                         .padding(.top,12)
                         .padding(.trailing,257)
                         .padding(.leading,55)
@@ -87,7 +87,7 @@ struct LoginView: View {
                     .overlay(
                         Text("로그인")
                             .foregroundColor(.white)
-                            .font(.custom("AppleSDGothicNeoM00", size: 15))
+                            .font(.custom("AppleSDGothicNeoB00", size: 15))
                     )
                     .padding(.horizontal,50)
                     .padding(.top,38)
