@@ -22,7 +22,7 @@ struct ResetPasswordView: View {
                     .foregroundColor(.findPasswordColor)
                     .padding(.top,109)
                 
-                Text("password")
+                Text("Password")
                     .font(.custom("AppleSDGothicNeoM00", size: 16))
                     .foregroundColor(.findPasswordColor)
                     .padding(.top,40)
