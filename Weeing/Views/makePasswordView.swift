@@ -107,8 +107,8 @@ struct makePasswordView: View {
                                 .font(.custom("AppleSDGothicNeoM00", size: 15))
                                 .foregroundColor(.white)
                         )
-                        .padding(.horizontal,65)
-                        .padding(.top,52)
+                        .padding(.horizontal,50)
+                        .padding(.top,48)
 
                 Spacer()
                 

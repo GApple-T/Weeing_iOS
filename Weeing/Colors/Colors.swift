@@ -15,5 +15,8 @@ extension Color {
     static let joinColor = Color("joinColor")
     static let joinTextFieldColor = Color("joinTextFieldColor")
     static let loginLetterColor = Color("loginLetterColor")
+    static let findPasswordColor = Color("findPasswordColor")
+    static let findPasswordTextFieldColor = Color("findPasswordTextFieldColor")
+    static let findPasswordButtonColor = Color("findPasswordButtonColor")
 }
 

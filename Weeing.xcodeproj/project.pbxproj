@@ -17,6 +17,7 @@
 		AFA611802A94F61A00D63657 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6117F2A94F61A00D63657 /* SignupView.swift */; };
 		AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6118D2A95D37E00D63657 /* makePasswordView.swift */; };
 		AFA611902A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */; };
+		AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611912A961EC600D63657 /* FIndPasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AFA6117F2A94F61A00D63657 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		AFA6118D2A95D37E00D63657 /* makePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makePasswordView.swift; sourceTree = "<group>"; };
 		AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
+		AFA611912A961EC600D63657 /* FIndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				AFA611702A94C6F400D63657 /* LoginView.swift */,
 				AFA6117F2A94F61A00D63657 /* SignupView.swift */,
 				AFA6118D2A95D37E00D63657 /* makePasswordView.swift */,
+				AFA611912A961EC600D63657 /* FIndPasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
+				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA6116C2A94B55A00D63657 /* mainPageView.swift in Sources */,
