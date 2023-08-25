@@ -1,10 +1,24 @@
 import SwiftUI
 
-struct JoinView: View {
+struct SignupView: View {
     
     @State private var pressedConfirm = false
     @State private var emailText = ""
     @State private var confirmNumber = ""
+    @Environment(\.dismiss) var dismiss
+    
+    var backButton : some View {
+        Button {
+            self.dismiss()
+        } label: {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .aspectRatio(contentMode: .fit)
+                Text("로그인")
+            }
+        }
+
+    }
     
     var body: some View {
         ZStack {
@@ -82,24 +96,30 @@ struct JoinView: View {
 
                 Spacer()
                 
-                if pressedConfirm == true {
-                    Text("인증번호가 발송되지 않았나요?")
-                        .foregroundColor(.grayColor)
-                        .font(.custom("AppleSDGothicNeoM00", size: 12))
-                        .padding(.bottom,44)
-                } else if pressedConfirm == false {
-                    Text("이미 계정이 있있으신가요?")
-                        .foregroundColor(.grayColor)
-                        .font(.custom("AppleSDGothicNeoM00",size:12))
-                        .padding(.bottom,44)
+                Button {
+                    self.dismiss()
+                } label: {
+                    if pressedConfirm == true {
+                        Text("인증번호가 발송되지 않았나요?")
+                            .foregroundColor(.grayColor)
+                            .font(.custom("AppleSDGothicNeoM00", size: 12))
+                            .padding(.bottom,44)
+                    } else if pressedConfirm == false {
+                        Text("이미 계정이 있있으신가요?")
+                            .foregroundColor(.grayColor)
+                            .font(.custom("AppleSDGothicNeoM00",size:12))
+                            .padding(.bottom,44)
+                    }
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: backButton)
     }
 }
 
-struct JoinView_Previews: PreviewProvider {
+struct SignupView_Previews: PreviewProvider {
     static var previews: some View {
-        JoinView()
+        SignupView()
     }
 }

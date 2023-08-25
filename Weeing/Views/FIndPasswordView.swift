@@ -12,6 +12,20 @@ struct FIndPasswordView: View {
     @State private var textEmail = ""
     @State private var confirmNumber = ""
     @State private var pressedConfirm = false
+    @Environment(\.dismiss) var dismiss
+    
+    var backButton : some View {
+        Button {
+            self.dismiss()
+        } label: {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .aspectRatio(contentMode: .fit)
+                Text("로그인")
+            }
+        }
+
+    }
     
     var body: some View {
         ZStack {
@@ -91,21 +105,26 @@ struct FIndPasswordView: View {
 
                 Spacer()
                 
-                if pressedConfirm == false {
-                    Text("비밀번호를 재설정할 필요가 없나요?")
-                        .font(.custom("AppleSDGothicNeoM00", size: 12))
-                        .foregroundColor(.grayColor)
-                        .padding(.bottom,44)
-                        .padding(.horizontal,110)
-                } else {
-                    Text("인증번호가 발송되지 않았나요?")
-                        .font(.custom("AppleSDGothicNeoM00", size: 12))
-                        .foregroundColor(.grayColor)
-                        .padding(.bottom,44)
-                        .padding(.horizontal,122)
+                Button {
+                    self.dismiss()
+                } label: {
+                    if pressedConfirm == false {
+                        Text("비밀번호를 재설정할 필요가 없나요?")
+                            .font(.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundColor(.grayColor)
+                            .padding(.bottom,44)
+                            .padding(.horizontal,110)
+                    } else {
+                        Text("인증번호가 발송되지 않았나요?")
+                            .font(.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundColor(.grayColor)
+                            .padding(.bottom,44)
+                            .padding(.horizontal,122)
+                    }
                 }
-                
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: backButton)
         }
     }
 }
