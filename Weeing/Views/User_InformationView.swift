@@ -22,7 +22,7 @@ struct User_InformationView: View {
                     .padding(.top,93)
                 
                 Text("이름")
-                    .font(.custom("AppleSDGothicNeoM00", size: 14))
+                    .font(.custom("AppleSDGothicNeoB00", size: 14))
                     .padding(.leading,54)
                     .padding(.trailing,311)
                     .padding(.top,75)
@@ -40,7 +40,7 @@ struct User_InformationView: View {
                     )
                 
                 Text("학번")
-                    .font(.custom("AppleSDGothicNeoM00", size: 14))
+                    .font(.custom("AppleSDGothicNeoB00", size: 14))
                     .padding(.top,16)
                     .padding(.leading,54)
                     .padding(.trailing,311)
@@ -66,7 +66,7 @@ struct User_InformationView: View {
                     .overlay(
                         Text("확인")
                             .foregroundColor(.white)
-                            .font(.custom("AppleSDGothicNeoM00", size: 15))
+                            .font(.custom("AppleSDGothicNeoSB00", size: 15))
                             .padding(.top,48)
                     )
                 
