@@ -19,6 +19,7 @@
 		AFA611902A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */; };
 		AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611912A961EC600D63657 /* FIndPasswordView.swift */; };
 		AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611952A9779F900D63657 /* ResetPasswordView.swift */; };
+		AFA611982A98756300D63657 /* User_InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611972A98756300D63657 /* User_InformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
 		AFA611912A961EC600D63657 /* FIndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndPasswordView.swift; sourceTree = "<group>"; };
 		AFA611952A9779F900D63657 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		AFA611972A98756300D63657 /* User_InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_InformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				AFA6118D2A95D37E00D63657 /* makePasswordView.swift */,
 				AFA611912A961EC600D63657 /* FIndPasswordView.swift */,
 				AFA611952A9779F900D63657 /* ResetPasswordView.swift */,
+				AFA611972A98756300D63657 /* User_InformationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				AFA6116C2A94B55A00D63657 /* mainPageView.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
+				AFA611982A98756300D63657 /* User_InformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
