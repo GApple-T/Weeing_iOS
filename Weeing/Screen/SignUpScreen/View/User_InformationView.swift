@@ -25,7 +25,7 @@ struct User_InformationView: View {
                     .font(.custom("AppleSDGothicNeoB00", size: 14))
                     .padding(.leading,54)
                     .padding(.trailing,311)
-                    .padding(.top,75)
+                    .padding(.top,60)
                 
                 Rectangle()
                     .cornerRadius(10)

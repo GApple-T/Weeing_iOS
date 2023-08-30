@@ -13,7 +13,7 @@ struct LoginView: View {
     @State private var passwordText = ""
     @State private var showPassword = false
     @State private var showLoginView = false
-    
+    let emailPattern = "^S([21-23]{2})0([01-72]{2})$"
     
     var body: some View {
         ZStack {
@@ -31,7 +31,7 @@ struct LoginView: View {
                                 Text("Email")
                                     .foregroundColor(Color.loginLetterColor)
                                     .font(.custom("AppleSDGothicNeoM00", size:16))
-                                    .padding(.top,65)
+                                    .padding(.top,50)
                                     .padding(.trailing,287)
                                     .padding(.leading,56)
                                 
@@ -109,14 +109,6 @@ struct LoginView: View {
                                 }
                             }
                             
-//                            Text("로그인")
-//                                .font(.system(size:15))
-//                                .frame(width: 290, height: 40)
-//                                .foregroundColor(.white)
-//                                .background(Color.loginColor)
-//                                .cornerRadius(10)
-//                                .padding(.horizontal,50)
-//                                .padding(.top,38)
                             Rectangle()
                                 .foregroundColor(.loginColor)
                                 .frame(height:40)

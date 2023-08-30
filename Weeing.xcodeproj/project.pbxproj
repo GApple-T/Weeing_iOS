@@ -76,8 +76,9 @@
 			children = (
 				AFA6117A2A94C8DF00D63657 /* Info.plist */,
 				AFA6115D2A94B54300D63657 /* WeeingApp.swift */,
+				AFA611CA2A9F04CA00D63657 /* Core */,
+				AFA611C32A9F007500D63657 /* Screen */,
 				AFA611722A94C72300D63657 /* Colors */,
-				AFA6116D2A94B56900D63657 /* Views */,
 				AFA611752A94C85700D63657 /* Fonts */,
 				AFA611612A94B54400D63657 /* Assets.xcassets */,
 				AFA611632A94B54400D63657 /* Preview Content */,
@@ -91,20 +92,6 @@
 				AFA611642A94B54400D63657 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AFA6116D2A94B56900D63657 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AFA611702A94C6F400D63657 /* LoginView.swift */,
-				AFA6117F2A94F61A00D63657 /* SignupView.swift */,
-				AFA6118D2A95D37E00D63657 /* makePasswordView.swift */,
-				AFA611912A961EC600D63657 /* FIndPasswordView.swift */,
-				AFA611952A9779F900D63657 /* ResetPasswordView.swift */,
-				AFA611972A98756300D63657 /* User_InformationView.swift */,
-				AFA6119F2A98877F00D63657 /* SplashView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		AFA611722A94C72300D63657 /* Colors */ = {
@@ -124,6 +111,75 @@
 				AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AFA611C32A9F007500D63657 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611C82A9F02C200D63657 /* SplashScreen */,
+				AFA611C62A9F026000D63657 /* SignUpScreen */,
+				AFA611C42A9F012B00D63657 /* LoginScreen */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		AFA611C42A9F012B00D63657 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611C52A9F014600D63657 /* View */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		AFA611C52A9F014600D63657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611702A94C6F400D63657 /* LoginView.swift */,
+				AFA611912A961EC600D63657 /* FIndPasswordView.swift */,
+				AFA611952A9779F900D63657 /* ResetPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFA611C62A9F026000D63657 /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611C72A9F027C00D63657 /* View */,
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		AFA611C72A9F027C00D63657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611972A98756300D63657 /* User_InformationView.swift */,
+				AFA6118D2A95D37E00D63657 /* makePasswordView.swift */,
+				AFA6117F2A94F61A00D63657 /* SignupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFA611C82A9F02C200D63657 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611C92A9F02D400D63657 /* View */,
+				AFA6119F2A98877F00D63657 /* SplashView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		AFA611C92A9F02D400D63657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFA611CA2A9F04CA00D63657 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
