@@ -21,13 +21,13 @@ struct makePasswordView: View {
                     .font(.custom("Nunito-Black", size: 44))
                     .foregroundColor(.joinColor)
                     .padding(.horizontal,112)
-                    .padding(.top,109)
+                    .padding(.top,115)
                 
                 Group {
                     Text("Password")
                         .foregroundColor(.joinColor)
                         .font(.custom("AppleSDGothicNeoM00", size:16))
-                        .padding(.top,12)
+                        .padding(.top,66)
                         .padding(.trailing,263)
                         .padding(.leading,58)
 
