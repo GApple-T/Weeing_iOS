@@ -13,7 +13,6 @@ struct LoginView: View {
     @State private var passwordText = ""
     @State private var showPassword = false
     @State private var showLoginView = false
-    let emailPattern = "^S([21-23]{2})0([01-72]{2})$"
     
     var body: some View {
         ZStack {
@@ -27,76 +26,12 @@ struct LoginView: View {
                                 .font(.custom("Nunito-Black",size: 45))
                                 .padding(.horizontal,134)
                                 .padding(.top,109)
-                            Group {
-                                Text("Email")
-                                    .foregroundColor(Color.loginLetterColor)
-                                    .font(.custom("AppleSDGothicNeoM00", size:16))
-                                    .padding(.top,50)
-                                    .padding(.trailing,287)
-                                    .padding(.leading,56)
-                                
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(.loginTextFieldColor)
-                                    .frame(height:40)
-                                    .padding(.horizontal,50)
-                                    .overlay(
-                                        ZStack {
-                                            TextField("",text: $emailText)
-                                                .padding(.leading,60)
-                                                .padding(.trailing,130)
-                                            
-                                            Text("@gsm.hs.kr")
-                                                .font(.custom("AppleSDGothicNeoM00", size: 14))
-                                                .foregroundColor(.grayColor)
-                                                .padding(.leading,210)
-                                        }
-                                    )
-                            }
                             
-                            Group {
-                                Text("Password")
-                                    .foregroundColor(Color.loginLetterColor)
-                                    .font(.custom("AppleSDGothicNeoM00", size:16))
-                                    .padding(.top,12)
-                                    .padding(.trailing,257)
-                                    .padding(.leading,55)
-                                
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(.loginTextFieldColor)
-                                    .frame(height:40)
-                                    .padding(.horizontal,50)
-                                    .overlay(
-                                        HStack {
-                                            if showPassword == false {
-                                                SecureField("",text: $passwordText)
-                                                    .padding(.leading,60)
-                                                    .padding(.trailing,130)
-                                            } else {
-                                                TextField("",text: $passwordText)
-                                                    .padding(.leading,60)
-                                                    .padding(.trailing,130)
-                                            }
-                                            
-                                            Button {
-                                                self.showPassword.toggle()
-                                            } label: {
-                                                if showPassword == false {
-                                                    Image(systemName: "eye")
-                                                        .resizable()
-                                                        .frame(width:15,height: 10)
-                                                        .foregroundColor(.grayColor)
-                                                        .padding(.trailing,62)
-                                                } else {
-                                                    Image(systemName: "eye.slash")
-                                                        .resizable()
-                                                        .frame(width:15,height: 10)
-                                                        .foregroundColor(.grayColor)
-                                                        .padding(.trailing,62)
-                                                }
-                                                
-                                            }
-                                        }
-                                    )
+                            WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
+                                .padding(.top,50)
+                            
+                            WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
+                                .padding(.top,12)
                                 
                                 NavigationLink {
                                     FIndPasswordView()
@@ -107,18 +42,8 @@ struct LoginView: View {
                                         .padding(.leading,56)
                                         .padding(.trailing,244)
                                 }
-                            }
                             
-                            Rectangle()
-                                .foregroundColor(.loginColor)
-                                .frame(height:40)
-                                .cornerRadius(10)
-                                .overlay(
-                                    Text("로그인")
-                                        .foregroundColor(.white)
-                                        .font(.system(size:15))
-                                )
-                                .padding(.horizontal,50)
+                            startPageButton(buttonText: "로그인", buttonColor: .loginColor)
                                 .padding(.top,38)
                             
                             Spacer()

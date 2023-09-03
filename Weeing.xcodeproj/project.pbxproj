@@ -15,13 +15,18 @@
 		AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611762A94C8B400D63657 /* Nunito-Black.ttf */; };
 		AFA611802A94F61A00D63657 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6117F2A94F61A00D63657 /* SignupView.swift */; };
 		AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6118D2A95D37E00D63657 /* makePasswordView.swift */; };
-		AFA611902A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */; };
 		AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611912A961EC600D63657 /* FIndPasswordView.swift */; };
 		AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611952A9779F900D63657 /* ResetPasswordView.swift */; };
 		AFA611982A98756300D63657 /* User_InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611972A98756300D63657 /* User_InformationView.swift */; };
-		AFA6119C2A987C9300D63657 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6119B2A987C9300D63657 /* AppleSDGothicNeoSB00.ttf */; };
-		AFA6119E2A987EA300D63657 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA6119D2A987EA300D63657 /* AppleSDGothicNeoB00.ttf */; };
 		AFA611A02A98877F00D63657 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6119F2A98877F00D63657 /* SplashView.swift */; };
+		AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611CE2A9F638200D63657 /* WeeingEmailTextField.swift */; };
+		AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D02AA1724000D63657 /* WeeingConfirmTextField.swift */; };
+		AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */; };
+		AFA611D62AA1E94900D63657 /* startPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* startPageButton.swift */; };
+		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
+		AFA611DC2AA328D400D63657 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611DB2AA328D400D63657 /* AppleSDGothicNeoM00.ttf */; };
+		AFA611DE2AA328DE00D63657 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611DD2AA328DE00D63657 /* AppleSDGothicNeoSB00.ttf */; };
+		AFA611E02AA328E900D63657 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA611DF2AA328E900D63657 /* AppleSDGothicNeoB00.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +40,18 @@
 		AFA6117A2A94C8DF00D63657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AFA6117F2A94F61A00D63657 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		AFA6118D2A95D37E00D63657 /* makePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makePasswordView.swift; sourceTree = "<group>"; };
-		AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
 		AFA611912A961EC600D63657 /* FIndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndPasswordView.swift; sourceTree = "<group>"; };
 		AFA611952A9779F900D63657 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		AFA611972A98756300D63657 /* User_InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_InformationView.swift; sourceTree = "<group>"; };
-		AFA6119B2A987C9300D63657 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
-		AFA6119D2A987EA300D63657 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../../Downloads/GothicB 2/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		AFA6119F2A98877F00D63657 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		AFA611CE2A9F638200D63657 /* WeeingEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingEmailTextField.swift; sourceTree = "<group>"; };
+		AFA611D02AA1724000D63657 /* WeeingConfirmTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingConfirmTextField.swift; sourceTree = "<group>"; };
+		AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingPasswordTextField.swift; sourceTree = "<group>"; };
+		AFA611D52AA1E94900D63657 /* startPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPageButton.swift; sourceTree = "<group>"; };
+		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
+		AFA611DB2AA328D400D63657 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
+		AFA611DD2AA328DE00D63657 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
+		AFA611DF2AA328E900D63657 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoB00.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +86,9 @@
 			children = (
 				AFA6117A2A94C8DF00D63657 /* Info.plist */,
 				AFA6115D2A94B54300D63657 /* WeeingApp.swift */,
+				AFA611CB2A9F62CC00D63657 /* DesignSystem */,
 				AFA611CA2A9F04CA00D63657 /* Core */,
 				AFA611C32A9F007500D63657 /* Screen */,
-				AFA611722A94C72300D63657 /* Colors */,
-				AFA611752A94C85700D63657 /* Fonts */,
 				AFA611612A94B54400D63657 /* Assets.xcassets */,
 				AFA611632A94B54400D63657 /* Preview Content */,
 			);
@@ -94,23 +103,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AFA611722A94C72300D63657 /* Colors */ = {
+		AFA611722A94C72300D63657 /* Color */ = {
 			isa = PBXGroup;
 			children = (
 				AFA611732A94C7FD00D63657 /* Colors.swift */,
 			);
-			path = Colors;
+			path = Color;
 			sourceTree = "<group>";
 		};
-		AFA611752A94C85700D63657 /* Fonts */ = {
+		AFA611752A94C85700D63657 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				AFA6119D2A987EA300D63657 /* AppleSDGothicNeoB00.ttf */,
 				AFA611762A94C8B400D63657 /* Nunito-Black.ttf */,
-				AFA6119B2A987C9300D63657 /* AppleSDGothicNeoSB00.ttf */,
-				AFA6118F2A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf */,
+				AFA611DF2AA328E900D63657 /* AppleSDGothicNeoB00.ttf */,
+				AFA611DB2AA328D400D63657 /* AppleSDGothicNeoM00.ttf */,
+				AFA611DD2AA328DE00D63657 /* AppleSDGothicNeoSB00.ttf */,
 			);
-			path = Fonts;
+			path = Font;
 			sourceTree = "<group>";
 		};
 		AFA611C32A9F007500D63657 /* Screen */ = {
@@ -163,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				AFA611C92A9F02D400D63657 /* View */,
-				AFA6119F2A98877F00D63657 /* SplashView.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 		AFA611C92A9F02D400D63657 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AFA6119F2A98877F00D63657 /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +189,52 @@
 			children = (
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		AFA611CB2A9F62CC00D63657 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611E12AA3294500D63657 /* Resources */,
+				AFA611CC2A9F635500D63657 /* Sources */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		AFA611CC2A9F635500D63657 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611D42AA1E8EB00D63657 /* Button */,
+				AFA611CD2A9F636700D63657 /* TextField */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFA611CD2A9F636700D63657 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611CE2A9F638200D63657 /* WeeingEmailTextField.swift */,
+				AFA611D02AA1724000D63657 /* WeeingConfirmTextField.swift */,
+				AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */,
+				AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		AFA611D42AA1E8EB00D63657 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611D52AA1E94900D63657 /* startPageButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		AFA611E12AA3294500D63657 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFA611752A94C85700D63657 /* Font */,
+				AFA611722A94C72300D63657 /* Color */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +295,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA6119C2A987C9300D63657 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				AFA611DE2AA328DE00D63657 /* AppleSDGothicNeoSB00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				AFA611902A95F7DD00D63657 /* AppleSDGothicNeoM00.ttf in Resources */,
+				AFA611DC2AA328D400D63657 /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
-				AFA6119E2A987EA300D63657 /* AppleSDGothicNeoB00.ttf in Resources */,
+				AFA611E02AA328E900D63657 /* AppleSDGothicNeoB00.ttf in Resources */,
 				AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,11 +315,16 @@
 				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
+				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
+				AFA611D62AA1E94900D63657 /* startPageButton.swift in Sources */,
+				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
+				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* User_InformationView.swift in Sources */,
+				AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,18 +57,8 @@ struct User_InformationView: View {
                             .padding(.trailing,45)
                     )
                 
-                Rectangle()
-                    .frame(height:40)
-                    .foregroundColor(.joinColor)
-                    .cornerRadius(10)
-                    .padding(.horizontal,50)
+                startPageButton(buttonText: "확인", buttonColor: .joinColor)
                     .padding(.top,48)
-                    .overlay(
-                        Text("확인")
-                            .foregroundColor(.white)
-                            .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                            .padding(.top,48)
-                    )
                 
                 Spacer()
             }
