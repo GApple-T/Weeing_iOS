@@ -31,7 +31,7 @@ struct LoginView: View {
                                 .padding(.top,50)
                             
                             WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
-                                .padding(.top,12)
+                                .padding(.top,20)
                                 
                                 NavigationLink {
                                     FIndPasswordView()
@@ -44,7 +44,7 @@ struct LoginView: View {
                                 }
                             
                             startPageButton(buttonText: "로그인", buttonColor: .loginColor)
-                                .padding(.top,38)
+                                .padding(.top,40)
                             
                             Spacer()
                             

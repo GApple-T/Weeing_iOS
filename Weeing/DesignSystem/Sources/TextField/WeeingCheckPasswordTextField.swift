@@ -27,8 +27,8 @@ public struct WeeingCheckPasswordTextField: View {
             Text("Check Password")
                 .font(.custom("AppleSDGothicNeoM00", size: 15))
                 .foregroundColor(titleColor)
-                .padding(.leading,58)
-                .padding(.trailing,223)
+                .padding(.leading,56)
+                .padding(.trailing,225)
             
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(textFieldColor)

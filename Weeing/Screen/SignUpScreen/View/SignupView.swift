@@ -29,10 +29,10 @@ struct SignupView: View {
                         .font(.custom("Nunito-Black", size: 44))
                         .foregroundColor(.joinColor)
                         .padding(.horizontal,112)
-                        .padding(.top,86)
+                        .padding(.top,109)
                     
                     WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
-                        .padding(.top,66)
+                        .padding(.top,51)
                     
                     if pressedConfirm == true {
                         WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
@@ -42,7 +42,7 @@ struct SignupView: View {
                         self.pressedConfirm.toggle()
                     } label: {
                         startPageButton(buttonText: "확인", buttonColor: .joinColor)
-                            .padding(.top,48)
+                            .padding(.top,44)
                     }
                     
                     Spacer()

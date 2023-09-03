@@ -28,8 +28,8 @@ public struct WeeingEmailTextField: View {
             Text("Email")
                 .foregroundColor(titleColor)
                 .font(.custom("AppleSDGothicNeoM00", size:16))
-                .padding(.trailing,297)
-                .padding(.leading,54)
+                .padding(.trailing,295)
+                .padding(.leading,56)
             
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(textFieldColor)

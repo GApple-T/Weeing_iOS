@@ -23,7 +23,7 @@ struct ResetPasswordView: View {
                     .padding(.top,109)
                 
                 WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
-                    .padding(.top,53)
+                    .padding(.top,63)
                 
                 Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                     .font(.custom("AppleSDGothicNeoM00", size: 9))
@@ -35,7 +35,7 @@ struct ResetPasswordView: View {
                     .padding(.top,12)
                 
                 startPageButton(buttonText: "완료", buttonColor: .findPasswordButtonColor)
-                    .padding(.top,48)
+                    .padding(.top,37)
                 
                 Spacer()
             }

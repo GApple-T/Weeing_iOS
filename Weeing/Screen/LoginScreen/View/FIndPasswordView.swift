@@ -39,7 +39,7 @@ struct FIndPasswordView: View {
                         .padding(.horizontal,70)
                     
                     WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
-                        .padding(.top,pressedConfirm ? 65 : 113)
+                        .padding(.top,63)
                     
                     if pressedConfirm == false {
                         Text("회원가입 시 사용하신 이메일을 입력해주세요.")
@@ -57,7 +57,7 @@ struct FIndPasswordView: View {
                         self.pressedConfirm.toggle()
                     } label: {
                         startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .findPasswordColor)
-                            .padding(.top, 34)
+                            .padding(.top, 44)
                     }
                     
                     Spacer()
