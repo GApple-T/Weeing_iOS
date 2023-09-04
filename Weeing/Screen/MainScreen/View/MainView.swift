@@ -16,7 +16,7 @@ struct MainView: View {
                 HStack{
                     Text("Weeing")
                         .font(Font.custom("Nunito-Black", size: 40))
-                        .foregroundColor(Color("loginColor"))
+                        .foregroundColor(Color.loginColor)
                         .padding(.leading, 30)
                     Spacer()
                 }
@@ -27,13 +27,13 @@ struct MainView: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .inset(by: 0.5)
-                            .stroke(Color("loginColor"), lineWidth: 1)
+                            .stroke(Color.loginColor, lineWidth: 1)
                     )
                     .padding(.bottom, 23)
 
                 ZStack{
                     RoundedRectangle(cornerRadius: 8)
-                        .foregroundColor(Color("loginTextFieldColor"))
+                        .foregroundColor(Color.loginTextFieldColor)
                         .frame(width: 360, height: 360)
                     DatePicker(
                         "DatePicker",
@@ -41,7 +41,7 @@ struct MainView: View {
                         displayedComponents: [.date]
                     )
                     .datePickerStyle(.graphical)
-                    .background(Color("loginTextFieldColor"))
+                    .background(Color.loginTextFieldColor)
                     .cornerRadius(8)
                     .frame(width: 340, height: 340)
                     .accentColor(.orange)

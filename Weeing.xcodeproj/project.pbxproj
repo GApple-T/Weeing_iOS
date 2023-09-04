@@ -17,6 +17,10 @@
 		4CF1031B2AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF103122AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf */; };
 		4CF1031C2AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF103132AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf */; };
 		4CF103202AA600C00059C4C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* MainView.swift */; };
+		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
+		4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103272AA618B50059C4C2 /* DiaryView.swift */; };
+		4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */; };
+		4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032F2AA619140059C4C2 /* ProfileView.swift */; };
 		AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6115D2A94B54300D63657 /* WeeingApp.swift */; };
 		AFA611622A94B54400D63657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611612A94B54400D63657 /* Assets.xcassets */; };
 		AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611642A94B54400D63657 /* Preview Assets.xcassets */; };
@@ -47,6 +51,10 @@
 		4CF103122AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
 		4CF103132AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
+		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
+		4CF1032F2AA619140059C4C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AFA6115A2A94B54300D63657 /* Weeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6115D2A94B54300D63657 /* WeeingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingApp.swift; sourceTree = "<group>"; };
 		AFA611612A94B54400D63657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +99,70 @@
 			isa = PBXGroup;
 			children = (
 				4CF1031F2AA600C00059C4C2 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CF103212AA618540059C4C2 /* BoardGameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4CF103222AA6186C0059C4C2 /* View */,
+			);
+			path = BoardGameScreen;
+			sourceTree = "<group>";
+		};
+		4CF103222AA6186C0059C4C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CF103232AA618790059C4C2 /* BoardGameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CF103252AA618820059C4C2 /* DiaryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4CF103262AA618A50059C4C2 /* View */,
+			);
+			path = DiaryScreen;
+			sourceTree = "<group>";
+		};
+		4CF103262AA618A50059C4C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CF103272AA618B50059C4C2 /* DiaryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CF103292AA618C00059C4C2 /* ConsultationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1032A2AA618E40059C4C2 /* View */,
+			);
+			path = ConsultationScreen;
+			sourceTree = "<group>";
+		};
+		4CF1032A2AA618E40059C4C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CF1032D2AA618F70059C4C2 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1032E2AA619050059C4C2 /* View */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		4CF1032E2AA619050059C4C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CF1032F2AA619140059C4C2 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +232,10 @@
 		AFA611C32A9F007500D63657 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				4CF1032D2AA618F70059C4C2 /* ProfileScreen */,
+				4CF103292AA618C00059C4C2 /* ConsultationScreen */,
+				4CF103252AA618820059C4C2 /* DiaryScreen */,
+				4CF103212AA618540059C4C2 /* BoardGameScreen */,
 				4CF1031D2AA6009D0059C4C2 /* MainScreen */,
 				AFA611C82A9F02C200D63657 /* SplashScreen */,
 				AFA611C62A9F026000D63657 /* SignUpScreen */,
@@ -357,8 +433,12 @@
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
+				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
+				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
+				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* User_InformationView.swift in Sources */,
+				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* MainView.swift in Sources */,
 				AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */,
 			);
