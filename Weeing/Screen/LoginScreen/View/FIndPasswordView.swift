@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+enum findPassword: Hashable {
+    case email
+    case confirmNumber
+}
+
 struct FIndPasswordView: View {
     
     @State private var textEmail = ""
     @State private var confirmNumber = ""
     @State private var pressedConfirm = false
     @Environment(\.dismiss) var dismiss
+    @FocusState private var focusField: findPassword?
     
     var backButton : some View {
         Button {
@@ -40,6 +46,11 @@ struct FIndPasswordView: View {
                     
                     WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
                         .padding(.top,63)
+                        .focused($focusField, equals: .email)
+                        .onSubmit {
+                            focusField = .confirmNumber
+                            pressedConfirm = true
+                        }
                     
                     if pressedConfirm == false {
                         Text("회원가입 시 사용하신 이메일을 입력해주세요.")
@@ -51,6 +62,8 @@ struct FIndPasswordView: View {
                     
                     if pressedConfirm == true {
                         WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
+                            .focused($focusField, equals: .confirmNumber)
+                            .submitLabel(.done)
                     }
                     
                     Button {

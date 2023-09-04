@@ -1,11 +1,17 @@
 import SwiftUI
 
+enum signUp: Hashable {
+    case email
+    case confirmNumber
+}
+
 struct SignupView: View {
     
     @State private var pressedConfirm = false
     @State private var emailText = ""
     @State private var confirmNumber = ""
     @Environment(\.dismiss) var dismiss
+    @FocusState private var focusField: signUp?
     
     var backButton : some View {
         Button {
@@ -33,9 +39,16 @@ struct SignupView: View {
                     
                     WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
                         .padding(.top,51)
+                        .focused($focusField, equals: .email)
+                        .onSubmit {
+                            focusField = .confirmNumber
+                            pressedConfirm = true
+                        }
                     
                     if pressedConfirm == true {
                         WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
+                            .focused($focusField, equals: .confirmNumber)
+                            .submitLabel(.done)
                     }
                     
                     Button {

@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+enum checkPassword: Hashable {
+    case password
+    case checkPassword
+}
+
 struct makePasswordView: View {
     
     @State private var passwordText = ""
     @State private var checkPasswordText = ""
     @State private var showPassword = false
+    @FocusState private var focusField: checkPassword?
     
     var body: some View {
         ZStack {
@@ -25,6 +31,10 @@ struct makePasswordView: View {
                 
                 WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
                     .padding(.top,51)
+                    .focused($focusField, equals: .password)
+                    .onSubmit {
+                        focusField = .checkPassword
+                    }
                 
                     Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                         .font(.custom("AppleSDGothicNeoM00", size: 9))
@@ -34,6 +44,8 @@ struct makePasswordView: View {
                 
                 WeeingCheckPasswordTextField(titleColor: .joinColor, textFieldColor: .joinTextFieldColor, textFieldText: $checkPasswordText)
                     .padding(.top,16)
+                    .focused($focusField, equals: .checkPassword)
+                    .submitLabel(.done)
                 
                 startPageButton(buttonText: "회원가입", buttonColor: .joinColor)
                         .padding(.top,36)

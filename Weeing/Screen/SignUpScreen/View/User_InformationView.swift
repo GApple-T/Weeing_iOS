@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+enum userInfo: Hashable {
+    case name
+    case studentID
+}
+
 struct User_InformationView: View {
     
     @State private var textName = ""
     @State private var textStudentID = ""
+    @FocusState private var focusedField: userInfo?
     
     var body: some View {
         ZStack {
@@ -37,6 +43,10 @@ struct User_InformationView: View {
                             .font(.system(size:12))
                             .padding(.leading,64)
                             .padding(.trailing,45)
+                            .focused($focusedField,equals: .name)
+                            .onSubmit {
+                                focusedField = .studentID
+                            }
                     )
                 
                 Text("학번")
@@ -44,6 +54,8 @@ struct User_InformationView: View {
                     .padding(.top,24)
                     .padding(.leading,54)
                     .padding(.trailing,311)
+                    .focused($focusedField, equals: .studentID)
+                    .submitLabel(.done)
                 
                 Rectangle()
                     .cornerRadius(10)
