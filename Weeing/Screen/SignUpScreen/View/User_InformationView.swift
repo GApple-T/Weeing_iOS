@@ -19,13 +19,13 @@ struct User_InformationView: View {
                 Text("Weeing")
                     .font(.custom("Nunito-Black", size: 45))
                     .foregroundColor(.loginColor)
-                    .padding(.top,93)
+                    .padding(.top,109)
                 
                 Text("이름")
                     .font(.custom("AppleSDGothicNeoB00", size: 14))
                     .padding(.leading,54)
                     .padding(.trailing,311)
-                    .padding(.top,60)
+                    .padding(.top,50)
                 
                 Rectangle()
                     .cornerRadius(10)
@@ -41,7 +41,7 @@ struct User_InformationView: View {
                 
                 Text("학번")
                     .font(.custom("AppleSDGothicNeoB00", size: 14))
-                    .padding(.top,16)
+                    .padding(.top,24)
                     .padding(.leading,54)
                     .padding(.trailing,311)
                 
@@ -57,18 +57,8 @@ struct User_InformationView: View {
                             .padding(.trailing,45)
                     )
                 
-                Rectangle()
-                    .frame(height:40)
-                    .foregroundColor(.joinColor)
-                    .cornerRadius(10)
-                    .padding(.horizontal,50)
-                    .padding(.top,48)
-                    .overlay(
-                        Text("확인")
-                            .foregroundColor(.white)
-                            .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                            .padding(.top,48)
-                    )
+                startPageButton(buttonText: "확인", buttonColor: .joinColor)
+                    .padding(.top,44)
                 
                 Spacer()
             }

@@ -38,30 +38,8 @@ struct FIndPasswordView: View {
                         .padding(.top,66)
                         .padding(.horizontal,70)
                     
-                    Text("Email")
-                        .font(.custom("AppleSDGothicNeoM00", size: 16))
-                        .foregroundColor(.findPasswordColor)
-                        .padding(.top,pressedConfirm ? 65 : 113)
-                        .padding(.leading,54)
-                        .padding(.trailing,297)
-                    
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.findPasswordTextFieldColor)
-                        .frame(height:40)
-                        .padding(.horizontal,50)
-                        .overlay(
-                            ZStack {
-                                Text("@gsm.hs.kr")
-                                    .font(.custom("AppleSDGothicNeoM00", size: 14))
-                                    .foregroundColor(.grayColor)
-                                    .padding(.leading,210)
-                                
-                                TextField("",text: $textEmail)
-                                    .font(.system(size:12))
-                                    .padding(.leading,60)
-                                    .padding(.trailing,130)
-                            }
-                        )
+                    WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
+                        .padding(.top,63)
                     
                     if pressedConfirm == false {
                         Text("회원가입 시 사용하신 이메일을 입력해주세요.")
@@ -72,39 +50,14 @@ struct FIndPasswordView: View {
                     }
                     
                     if pressedConfirm == true {
-                        Text("인증번호")
-                            .font(.custom("AppleSDGothicNeoM00", size: 15))
-                            .foregroundColor(.findPasswordColor)
-                            .padding(.top,12)
-                            .padding(.leading,56)
-                            .padding(.trailing,282)
-                        
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.findPasswordTextFieldColor)
-                            .frame(height:40)
-                            .padding(.horizontal,50)
-                            .overlay(
-                                TextField("인증번호를 입력해주세요.",text: $textEmail)
-                                    .font(.system(size:12))
-                                    .padding(.leading,60)
-                                    .padding(.trailing,130)
-                            )
+                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
                     }
                     
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        Rectangle()
-                            .foregroundColor(.findPasswordButtonColor)
-                            .frame(height:40)
-                            .cornerRadius(10)
-                            .overlay(
-                                Text(pressedConfirm ? "완료" : "확인")
-                                    .font(.custom("AppleSDGothicNeoM00", size: 15))
-                                    .foregroundColor(.white)
-                            )
-                            .padding(.horizontal,50)
-                            .padding(.top,34)
+                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .findPasswordColor)
+                            .padding(.top, 44)
                     }
                     
                     Spacer()

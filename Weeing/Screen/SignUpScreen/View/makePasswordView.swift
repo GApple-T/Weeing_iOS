@@ -21,94 +21,22 @@ struct makePasswordView: View {
                     .font(.custom("Nunito-Black", size: 44))
                     .foregroundColor(.joinColor)
                     .padding(.horizontal,112)
-                    .padding(.top,115)
+                    .padding(.top,109)
                 
-                Group {
-                    Text("Password")
-                        .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoM00", size:16))
-                        .padding(.top,66)
-                        .padding(.trailing,263)
-                        .padding(.leading,58)
-
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.joinTextFieldColor)
-                        .frame(height:40)
-                        .padding(.horizontal,50)
-                        .overlay(
-                            HStack {
-                                if showPassword == false {
-                                    SecureField("",text: $passwordText)
-                                        .font(.system(size:12))
-                                        .padding(.leading,60)
-                                        .padding(.trailing,130)
-                                } else {
-                                    TextField("",text: $passwordText)
-                                        .font(.system(size:12))
-                                        .padding(.leading,60)
-                                        .padding(.trailing,130)
-                                }
-                                
-                                Button {
-                                    self.showPassword.toggle()
-                                } label: {
-                                    if showPassword == false {
-                                        Image(systemName: "eye")
-                                            .resizable()
-                                            .frame(width:15,height: 10)
-                                            .foregroundColor(.grayColor)
-                                            .padding(.trailing,62)
-                                    } else {
-                                        Image(systemName: "eye.slash")
-                                            .resizable()
-                                            .frame(width:15,height: 10)
-                                            .foregroundColor(.grayColor)
-                                            .padding(.trailing,62)
-                                    }
-                                    
-                                }
-                            }
-                        )
-                    
-                    
+                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
+                    .padding(.top,51)
+                
                     Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                         .font(.custom("AppleSDGothicNeoM00", size: 9))
                         .foregroundColor(.grayColor)
                         .padding(.leading,58)
                         .padding(.trailing,112)
-                }
                 
-                Group {
-                    Text("Check Password")
-                        .foregroundColor(.joinColor)
-                        .font(.custom("AppleSDGothicNeoM00", size:15))
-                        .padding(.top,12)
-                        .padding(.trailing,223)
-                        .padding(.leading,58)
-                    
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.joinTextFieldColor)
-                        .frame(height:40)
-                        .padding(.horizontal,50)
-                        .overlay(
-                                SecureField("",text: $checkPasswordText)
-                                    .font(.system(size:12))
-                                    .padding(.leading,60)
-                                    .padding(.trailing,130)
-                        )
-                }
+                WeeingCheckPasswordTextField(titleColor: .joinColor, textFieldColor: .joinTextFieldColor, textFieldText: $checkPasswordText)
+                    .padding(.top,16)
                 
-                    Rectangle()
-                        .foregroundColor(.joinColor)
-                        .frame(height:40)
-                        .cornerRadius(10)
-                        .overlay(
-                            Text("회원가입")
-                                .font(.custom("AppleSDGothicNeoM00", size: 15))
-                                .foregroundColor(.white)
-                        )
-                        .padding(.horizontal,50)
-                        .padding(.top,48)
+                startPageButton(buttonText: "회원가입", buttonColor: .joinColor)
+                        .padding(.top,36)
 
                 Spacer()
                 
@@ -116,6 +44,7 @@ struct makePasswordView: View {
         }
     }
 }
+
 
 struct makePasswordView_Previews: PreviewProvider {
     static var previews: some View {
