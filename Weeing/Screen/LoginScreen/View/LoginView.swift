@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+enum login: Hashable {
+    case email
+    case password
+}
+
 struct LoginView: View {
     
     @State private var emailText = ""
     @State private var passwordText = ""
     @State private var showPassword = false
     @State private var showLoginView = false
+    @FocusState private var focusField: login?
     
     var body: some View {
         ZStack {
@@ -29,9 +35,15 @@ struct LoginView: View {
                             
                             WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
                                 .padding(.top,50)
+                                .focused($focusField, equals: .email)
+                                .onSubmit {
+                                    focusField = .password
+                                }
                             
                             WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
                                 .padding(.top,20)
+                                .focused($focusField, equals: .password)
+                                .submitLabel(.done)
                                 
                                 NavigationLink {
                                     FIndPasswordView()
