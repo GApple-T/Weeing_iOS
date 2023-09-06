@@ -61,7 +61,7 @@ let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "cale
             }
         }
         .background(Color.loginColor)
-    }ㄴㅈ
+    }
 }
 
 
