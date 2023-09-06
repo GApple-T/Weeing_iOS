@@ -46,7 +46,7 @@ let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "cale
                 VStack {
                     Image(systemName: tabBarImangeNames[num])
                         .font(.system(size: 26, weight: .light))
-                        .foregroundColor(selectedIndex == num ? Color.joinColor : Color(.white))
+                        .foregroundColor(selectedIndex == num ? Color.joinColor : Color.white)
                         .padding(.top, 5)
                         .padding(.bottom, -10)
                 }
@@ -61,5 +61,7 @@ let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "cale
             }
         }
         .background(Color.loginColor)
-    }
+    }ㄴㅈ
 }
+
+

@@ -18,7 +18,6 @@ struct HomeView: View {
                         Text("Weeing")
                             .font(.custom("Nunito-Black", size: 30))
                             .foregroundColor(Color.loginColor)
-//                            .padding(.top, 10)
                         Spacer()
                     }
                     .padding(.leading, 33)
@@ -26,7 +25,6 @@ struct HomeView: View {
                     
                     Image("Wee")
                         .resizable()
-//                        .scaledToFit()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 360, height: 240)
                         .cornerRadius(20)
