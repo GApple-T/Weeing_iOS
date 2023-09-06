@@ -22,7 +22,6 @@
 		4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */; };
 		4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032F2AA619140059C4C2 /* ProfileView.swift */; };
 		4CF103342AA620C90059C4C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103332AA620C90059C4C2 /* MainView.swift */; };
-		4CF1033B2AA623BF0059C4C2 /* screenTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1033A2AA623BF0059C4C2 /* screenTapBar.swift */; };
 		AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6115D2A94B54300D63657 /* WeeingApp.swift */; };
 		AFA611622A94B54400D63657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611612A94B54400D63657 /* Assets.xcassets */; };
 		AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611642A94B54400D63657 /* Preview Assets.xcassets */; };
@@ -58,7 +57,6 @@
 		4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
 		4CF1032F2AA619140059C4C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4CF103332AA620C90059C4C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		4CF1033A2AA623BF0059C4C2 /* screenTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenTapBar.swift; sourceTree = "<group>"; };
 		AFA6115A2A94B54300D63657 /* Weeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6115D2A94B54300D63657 /* WeeingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingApp.swift; sourceTree = "<group>"; };
 		AFA611612A94B54400D63657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,14 +183,6 @@
 				4CF103332AA620C90059C4C2 /* MainView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4CF103352AA6227E0059C4C2 /* TapBar */ = {
-			isa = PBXGroup;
-			children = (
-				4CF1033A2AA623BF0059C4C2 /* screenTapBar.swift */,
-			);
-			path = TapBar;
 			sourceTree = "<group>";
 		};
 		AFA611512A94B54300D63657 = {
@@ -337,7 +327,6 @@
 		AFA611CC2A9F635500D63657 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4CF103352AA6227E0059C4C2 /* TapBar */,
 				AFA611D42AA1E8EB00D63657 /* Button */,
 				AFA611CD2A9F636700D63657 /* TextField */,
 			);
@@ -463,7 +452,6 @@
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
-				4CF1033B2AA623BF0059C4C2 /* screenTapBar.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,

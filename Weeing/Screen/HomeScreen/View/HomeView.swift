@@ -13,16 +13,21 @@ struct HomeView: View {
         NavigationView{
             ZStack{
                 Color.backgroundColor.ignoresSafeArea()
-                VStack{
+                VStack(spacing: 0){
                     HStack{
                         Text("Weeing")
-                            .font(.custom("Nunito-Black", size: 40))
+                            .font(.custom("Nunito-Black", size: 30))
                             .foregroundColor(Color.loginColor)
-                            .padding(.leading, 30)
+//                            .padding(.top, 10)
                         Spacer()
                     }
+                    .padding(.leading, 33)
+                    .padding(.bottom, 17)
+                    
                     Image("Wee")
                         .resizable()
+//                        .scaledToFit()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 360, height: 240)
                         .cornerRadius(20)
                         .overlay(
@@ -30,23 +35,40 @@ struct HomeView: View {
                                 .inset(by: 0.5)
                                 .stroke(Color.loginColor, lineWidth: 1)
                         )
-                        .padding(.bottom, 23)
-                    
+                        .overlay(alignment: .bottomTrailing) {
+                            Text("1 / 1")
+                                .font(.system(size: 10))
+                                .background {
+                                    Rectangle()
+                                        .padding(.vertical, 2)
+                                        .padding(.horizontal)
+                                        .foregroundColor(.clear)
+                                        .background(.black.opacity(0.3))
+                                        .cornerRadius(10)
+                                }
+                                .padding([.bottom, .trailing], 13)
+                        }
+                        .padding(.bottom, 30)
+                        .padding(.horizontal, 15)
+                            
                     ZStack{
                         RoundedRectangle(cornerRadius: 8)
                             .foregroundColor(Color.loginTextFieldColor)
                             .frame(width: 360, height: 360)
+                            .aspectRatio(contentMode: .fit)
                         DatePicker(
                             "DatePicker",
                             selection: $date,
                             displayedComponents: [.date]
                         )
-                        .datePickerStyle(.graphical)
                         .background(Color.loginTextFieldColor)
-                        .cornerRadius(8)
-                        .frame(width: 340, height: 340)
+                        .frame(width: 350, height: 350)
+                        .aspectRatio(contentMode: .fit)
+                        .datePickerStyle(.graphical)
                         .accentColor(.orange)
                     }
+                        
+                        
                     
                     Spacer()
                     
