@@ -24,7 +24,7 @@ public struct WeeingEmailTextField: View {
     }
     
     public var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             Text("Email")
                 .foregroundColor(titleColor)
                 .font(.custom("AppleSDGothicNeoM00", size:16))
@@ -35,6 +35,7 @@ public struct WeeingEmailTextField: View {
                 .foregroundColor(textFieldColor)
                 .frame(height:40)
                 .padding(.horizontal,50)
+                .padding(.top,6)
                 .overlay(
                     ZStack {
                         TextField("",text: $textFieldText)

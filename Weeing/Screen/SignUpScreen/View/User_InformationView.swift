@@ -21,22 +21,44 @@ struct User_InformationView: View {
     var body: some View {
         ZStack {
             Color.backgroundColor.ignoresSafeArea()
-            VStack {
+            VStack(spacing: 0) {
                 Text("Weeing")
                     .font(.custom("Nunito-Black", size: 45))
                     .foregroundColor(.loginColor)
                     .padding(.top,109)
                 
-                Text("이름")
+                Text("학번")
                     .font(.custom("AppleSDGothicNeoB00", size: 14))
+                    .padding(.top,65)
                     .padding(.leading,54)
                     .padding(.trailing,311)
-                    .padding(.top,50)
+                    .focused($focusedField, equals: .studentID)
+                    .submitLabel(.done)
                 
                 Rectangle()
                     .cornerRadius(10)
                     .frame(height:40)
                     .padding(.horizontal,50)
+                    .padding(.top,4)
+                    .foregroundColor(.loginTextFieldColor)
+                    .overlay(
+                        TextField("학번을 입력해주세요",text: $textStudentID)
+                            .font(.system(size:12))
+                            .padding(.leading,64)
+                            .padding(.trailing,45)
+                    )
+                
+                Text("이름")
+                    .font(.custom("AppleSDGothicNeoB00", size: 14))
+                    .padding(.leading,54)
+                    .padding(.trailing,311)
+                    .padding(.top,24)
+                
+                Rectangle()
+                    .cornerRadius(10)
+                    .frame(height:40)
+                    .padding(.horizontal,50)
+                    .padding(.top,4)
                     .foregroundColor(.loginTextFieldColor)
                     .overlay(
                         TextField("이름을 입력해주세요",text: $textName)
@@ -47,26 +69,6 @@ struct User_InformationView: View {
                             .onSubmit {
                                 focusedField = .studentID
                             }
-                    )
-                
-                Text("학번")
-                    .font(.custom("AppleSDGothicNeoB00", size: 14))
-                    .padding(.top,24)
-                    .padding(.leading,54)
-                    .padding(.trailing,311)
-                    .focused($focusedField, equals: .studentID)
-                    .submitLabel(.done)
-                
-                Rectangle()
-                    .cornerRadius(10)
-                    .frame(height:40)
-                    .padding(.horizontal,50)
-                    .foregroundColor(.loginTextFieldColor)
-                    .overlay(
-                        TextField("학번을 입력해주세요",text: $textStudentID)
-                            .font(.system(size:12))
-                            .padding(.leading,64)
-                            .padding(.trailing,45)
                     )
                 
                 startPageButton(buttonText: "확인", buttonColor: .joinColor)

@@ -26,7 +26,7 @@ struct LoginView: View {
                 NavigationView {
                     ZStack {
                         Color.backgroundColor.ignoresSafeArea()
-                        VStack {
+                        VStack(spacing:0) {
                             Text("Login")
                                 .foregroundColor(.loginColor)
                                 .font(.custom("Nunito-Black",size: 45))
@@ -34,7 +34,7 @@ struct LoginView: View {
                                 .padding(.top,109)
                             
                             WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
-                                .padding(.top,50)
+                                .padding(.top,65)
                                 .focused($focusField, equals: .email)
                                 .onSubmit {
                                     focusField = .password
@@ -48,11 +48,12 @@ struct LoginView: View {
                                 NavigationLink {
                                     FIndPasswordView()
                                 } label: {
-                                    Text("Forgot Password?")
+                                    Text("비밀번호를 잊어버리셨나요?")
                                         .foregroundColor(.grayColor)
                                         .font(.custom("AppleSDGothicNeoM00", size: 12))
                                         .padding(.leading,56)
-                                        .padding(.trailing,244)
+                                        .padding(.trailing,200)
+                                        .padding(.top,4)
                                 }
                             
                             startPageButton(buttonText: "로그인", buttonColor: .loginColor)

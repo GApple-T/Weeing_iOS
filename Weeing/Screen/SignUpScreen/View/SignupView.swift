@@ -30,15 +30,15 @@ struct SignupView: View {
         NavigationView {
             ZStack {
                 Color.backgroundColor.ignoresSafeArea()
-                VStack {
+                VStack(spacing: 0) {
                     Text("Sign Up")
                         .font(.custom("Nunito-Black", size: 44))
                         .foregroundColor(.joinColor)
                         .padding(.horizontal,112)
-                        .padding(.top,109)
+                        .padding(.top,66)
                     
                     WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
-                        .padding(.top,51)
+                        .padding(.top,66)
                         .focused($focusField, equals: .email)
                         .onSubmit {
                             focusField = .confirmNumber
@@ -49,6 +49,7 @@ struct SignupView: View {
                         WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
+                            .padding(.top,24)
                     }
                     
                     Button {
@@ -69,7 +70,7 @@ struct SignupView: View {
                                 .font(.custom("AppleSDGothicNeoM00", size: 12))
                                 .padding(.bottom,44)
                         } else if pressedConfirm == false {
-                            Text("이미 계정이 있있으신가요?")
+                            Text("이미 계정이 있으신가요?")
                                 .foregroundColor(.grayColor)
                                 .font(.custom("AppleSDGothicNeoM00",size:12))
                                 .padding(.bottom,44)

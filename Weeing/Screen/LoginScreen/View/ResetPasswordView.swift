@@ -22,14 +22,14 @@ struct ResetPasswordView: View {
     var body: some View {
         ZStack {
             Color.backgroundColor.ignoresSafeArea()
-            VStack {
+            VStack(spacing: 0) {
                 Text("Reset Password")
                     .font(.custom("Nunito-Black", size: 35))
                     .foregroundColor(.findPasswordColor)
                     .padding(.top,109)
                 
                 WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
-                    .padding(.top,63)
+                    .padding(.top,78)
                     .focused($focusField, equals: .password)
                     .onSubmit {
                         focusField = .checkPassword
@@ -38,11 +38,12 @@ struct ResetPasswordView: View {
                 Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                     .font(.custom("AppleSDGothicNeoM00", size: 9))
                     .foregroundColor(.grayColor)
+                    .padding(.top,4)
                     .padding(.leading,58)
                     .padding(.trailing,112)
                 
                 WeeingCheckPasswordTextField(titleColor: .findPasswordColor, textFieldColor: .findPasswordTextFieldColor, textFieldText: $checkPasswordText)
-                    .padding(.top,12)
+                    .padding(.top,16)
                     .submitLabel(.done)
                 
                 startPageButton(buttonText: "완료", buttonColor: .findPasswordButtonColor)
