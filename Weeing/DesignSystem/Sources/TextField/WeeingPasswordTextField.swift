@@ -25,7 +25,7 @@ public struct WeeingPasswordTextField: View {
         self.titleColor = titleColor
     }
     public var body: some View {
-        VStack {
+        VStack(spacing:0) {
             Text("Password")
                 .foregroundColor(titleColor)
                 .font(.custom("AppleSDGothicNeoM00", size:16))
@@ -36,8 +36,9 @@ public struct WeeingPasswordTextField: View {
                 .foregroundColor(textFieldColor)
                 .frame(height:40)
                 .padding(.horizontal,50)
+                .padding(.top,6)
                 .overlay(
-                    HStack {
+                    HStack(spacing:0) {
                         if pressedEye == false {
                             SecureField("",text: $textFieldText)
                                 .font(.system(size:12))
@@ -67,9 +68,8 @@ public struct WeeingPasswordTextField: View {
                                     .padding(.trailing,62)
                             }
                         }
-                        
+                        .padding(.top,10)
                     }
-                    
                 )
         }
     }

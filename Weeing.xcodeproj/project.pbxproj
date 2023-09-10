@@ -12,10 +12,7 @@
 		4CF103162AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */; };
 		4CF103172AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030E2AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf */; };
 		4CF103182AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030F2AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf */; };
-		4CF103192AA6007D0059C4C2 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF103102AA6007D0059C4C2 /* AppleSDGothicNeoM00.ttf */; };
 		4CF1031A2AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF103112AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf */; };
-		4CF1031B2AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF103122AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf */; };
-		4CF1031C2AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF103132AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
 		4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103272AA618B50059C4C2 /* DiaryView.swift */; };
@@ -23,6 +20,9 @@
 		4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032F2AA619140059C4C2 /* ProfileView.swift */; };
 		4CF103342AA620C90059C4C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103332AA620C90059C4C2 /* MainView.swift */; };
 		4CF1033B2AA623BF0059C4C2 /* screenTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1033A2AA623BF0059C4C2 /* screenTapBar.swift */; };
+		AF3F9C042AA816F300DC2C4A /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF3F9C012AA816F300DC2C4A /* AppleSDGothicNeoM00.ttf */; };
+		AF3F9C052AA816F300DC2C4A /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF3F9C022AA816F300DC2C4A /* AppleSDGothicNeoSB00.ttf */; };
+		AF3F9C062AA816F300DC2C4A /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF3F9C032AA816F300DC2C4A /* AppleSDGothicNeoB00.ttf */; };
 		AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6115D2A94B54300D63657 /* WeeingApp.swift */; };
 		AFA611622A94B54400D63657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611612A94B54400D63657 /* Assets.xcassets */; };
 		AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611642A94B54400D63657 /* Preview Assets.xcassets */; };
@@ -48,10 +48,7 @@
 		4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR00.ttf; sourceTree = "<group>"; };
 		4CF1030E2AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoT00.ttf; sourceTree = "<group>"; };
 		4CF1030F2AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoH00.ttf; sourceTree = "<group>"; };
-		4CF103102AA6007D0059C4C2 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		4CF103112AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoUL00.ttf; sourceTree = "<group>"; };
-		4CF103122AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
-		4CF103132AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -59,6 +56,9 @@
 		4CF1032F2AA619140059C4C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4CF103332AA620C90059C4C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4CF1033A2AA623BF0059C4C2 /* screenTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screenTapBar.swift; sourceTree = "<group>"; };
+		AF3F9C012AA816F300DC2C4A /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
+		AF3F9C022AA816F300DC2C4A /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
+		AF3F9C032AA816F300DC2C4A /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoB00.ttf; sourceTree = "<group>"; };
 		AFA6115A2A94B54300D63657 /* Weeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6115D2A94B54300D63657 /* WeeingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingApp.swift; sourceTree = "<group>"; };
 		AFA611612A94B54400D63657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,13 +244,13 @@
 			isa = PBXGroup;
 			children = (
 				AFA611762A94C8B400D63657 /* Nunito-Black.ttf */,
-				4CF103132AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf */,
+				AF3F9C032AA816F300DC2C4A /* AppleSDGothicNeoB00.ttf */,
+				AF3F9C012AA816F300DC2C4A /* AppleSDGothicNeoM00.ttf */,
+				AF3F9C022AA816F300DC2C4A /* AppleSDGothicNeoSB00.ttf */,
 				4CF1030C2AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf */,
 				4CF1030F2AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf */,
 				4CF1030B2AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf */,
-				4CF103102AA6007D0059C4C2 /* AppleSDGothicNeoM00.ttf */,
 				4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */,
-				4CF103122AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf */,
 				4CF1030E2AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf */,
 				4CF103112AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf */,
 			);
@@ -433,14 +433,14 @@
 				4CF1031A2AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf in Resources */,
 				4CF103172AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf in Resources */,
 				4CF103152AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf in Resources */,
-				4CF1031B2AA6007D0059C4C2 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				AF3F9C052AA816F300DC2C4A /* AppleSDGothicNeoSB00.ttf in Resources */,
 				4CF103142AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf in Resources */,
 				4CF103162AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf in Resources */,
+				AF3F9C042AA816F300DC2C4A /* AppleSDGothicNeoM00.ttf in Resources */,
 				4CF103182AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				4CF103192AA6007D0059C4C2 /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
-				4CF1031C2AA6007D0059C4C2 /* AppleSDGothicNeoB00.ttf in Resources */,
+				AF3F9C062AA816F300DC2C4A /* AppleSDGothicNeoB00.ttf in Resources */,
 				AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ struct makePasswordView: View {
     var body: some View {
         ZStack {
             Color.backgroundColor.ignoresSafeArea()
-            VStack {
+            VStack(spacing: 0) {
                 Text("Sign Up")
                     .font(.custom("Nunito-Black", size: 44))
                     .foregroundColor(.joinColor)
@@ -30,7 +30,7 @@ struct makePasswordView: View {
                     .padding(.top,109)
                 
                 WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
-                    .padding(.top,51)
+                    .padding(.top,66)
                     .focused($focusField, equals: .password)
                     .onSubmit {
                         focusField = .checkPassword
@@ -39,6 +39,7 @@ struct makePasswordView: View {
                     Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                         .font(.custom("AppleSDGothicNeoM00", size: 9))
                         .foregroundColor(.grayColor)
+                        .padding(.top,4)
                         .padding(.leading,58)
                         .padding(.trailing,112)
                 

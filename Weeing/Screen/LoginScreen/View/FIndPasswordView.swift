@@ -37,7 +37,7 @@ struct FIndPasswordView: View {
         NavigationView {
             ZStack {
                 Color.backgroundColor.ignoresSafeArea()
-                VStack {
+                VStack(spacing: 0) {
                     Text("Find Password")
                         .font(.custom("Nunito-Black", size: 35))
                         .foregroundColor(.findPasswordColor)
@@ -45,7 +45,7 @@ struct FIndPasswordView: View {
                         .padding(.horizontal,70)
                     
                     WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
-                        .padding(.top,63)
+                        .padding(.top,78)
                         .focused($focusField, equals: .email)
                         .onSubmit {
                             focusField = .confirmNumber
@@ -58,6 +58,7 @@ struct FIndPasswordView: View {
                             .font(.custom("AppleSDGothicNeoM00", size: 10))
                             .padding(.leading,58)
                             .padding(.trailing,154)
+                            .padding(.top,4)
                     }
                     
                     if pressedConfirm == true {
