@@ -37,11 +37,11 @@ struct makePasswordView: View {
                     }
                 
                     Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
-                        .font(.custom("AppleSDGothicNeoM00", size: 9))
+                        .font(.custom("AppleSDGothicNeoM00", size: 10))
                         .foregroundColor(.grayColor)
                         .padding(.top,4)
-                        .padding(.leading,58)
-                        .padding(.trailing,112)
+                        .padding(.leading,52)
+                        .padding(.trailing,92)
                 
                 WeeingCheckPasswordTextField(titleColor: .joinColor, textFieldColor: .joinTextFieldColor, textFieldText: $checkPasswordText)
                     .padding(.top,16)

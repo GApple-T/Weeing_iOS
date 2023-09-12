@@ -56,7 +56,7 @@ struct FIndPasswordView: View {
                         Text("회원가입 시 사용하신 이메일을 입력해주세요.")
                             .foregroundColor(.grayColor)
                             .font(.custom("AppleSDGothicNeoM00", size: 10))
-                            .padding(.leading,58)
+                            .padding(.leading,52)
                             .padding(.trailing,154)
                             .padding(.top,4)
                     }
@@ -65,12 +65,13 @@ struct FIndPasswordView: View {
                         WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
+                            .padding(.top,15)
                     }
                     
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .findPasswordColor)
+                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .findPasswordButtonColor)
                             .padding(.top, 44)
                     }
                     

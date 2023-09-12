@@ -29,26 +29,26 @@ public struct WeeingPasswordTextField: View {
             Text("Password")
                 .foregroundColor(titleColor)
                 .font(.custom("AppleSDGothicNeoM00", size:16))
-                .padding(.trailing,265)
-                .padding(.leading,56)
+                .padding(.trailing,268)
+                .padding(.leading,50)
             
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(textFieldColor)
                 .frame(height:40)
-                .padding(.horizontal,50)
+                .padding(.horizontal,45)
                 .padding(.top,6)
                 .overlay(
                     HStack(spacing:0) {
                         if pressedEye == false {
                             SecureField("",text: $textFieldText)
                                 .font(.system(size:12))
-                                .padding(.leading,60)
-                                .padding(.trailing,48)
+                                .padding(.leading,55)
+                                .padding(.trailing,10)
                         } else {
                             TextField("",text: $textFieldText)
                                 .font(.system(size:12))
-                                .padding(.leading,60)
-                                .padding(.trailing,48)
+                                .padding(.leading,55)
+                                .padding(.trailing,10)
                         }
                         
                         Button {
@@ -59,13 +59,13 @@ public struct WeeingPasswordTextField: View {
                                     .resizable()
                                     .frame(width:15,height: 10)
                                     .foregroundColor(.grayColor)
-                                    .padding(.trailing,62)
+                                    .padding(.trailing,59)
                             } else {
                                 Image(systemName: "eye.slash")
                                     .resizable()
                                     .frame(width:15,height: 10)
                                     .foregroundColor(.grayColor)
-                                    .padding(.trailing,62)
+                                    .padding(.trailing,59)
                             }
                         }
                         .padding(.top,10)

@@ -28,24 +28,24 @@ public struct WeeingEmailTextField: View {
             Text("Email")
                 .foregroundColor(titleColor)
                 .font(.custom("AppleSDGothicNeoM00", size:16))
-                .padding(.trailing,295)
-                .padding(.leading,56)
+                .padding(.trailing,298)
+                .padding(.leading,52)
             
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(textFieldColor)
                 .frame(height:40)
-                .padding(.horizontal,50)
+                .padding(.horizontal,45)
                 .padding(.top,6)
                 .overlay(
                     ZStack {
                         TextField("",text: $textFieldText)
-                            .padding(.leading,60)
+                            .padding(.leading,55)
                             .padding(.trailing,130)
                         
                         Text("@gsm.hs.kr")
                             .font(.custom("AppleSDGothicNeoM00", size: 14))
                             .foregroundColor(.grayColor)
-                            .padding(.leading,210)
+                            .padding(.leading,218)
                     }
                 )
         }

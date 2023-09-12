@@ -51,8 +51,8 @@ struct LoginView: View {
                                     Text("비밀번호를 잊어버리셨나요?")
                                         .foregroundColor(.grayColor)
                                         .font(.custom("AppleSDGothicNeoM00", size: 12))
-                                        .padding(.leading,56)
-                                        .padding(.trailing,200)
+                                        .padding(.leading,52)
+                                        .padding(.trailing,202)
                                         .padding(.top,4)
                                 }
                             

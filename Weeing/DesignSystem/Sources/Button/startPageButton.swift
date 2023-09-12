@@ -29,6 +29,6 @@ public struct startPageButton: View {
                     .foregroundColor(.white)
                     .font(.system(size:15))
             )
-            .padding(.horizontal,50)
+            .padding(.horizontal,45)
     }
 }

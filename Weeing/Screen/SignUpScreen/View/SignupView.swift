@@ -49,7 +49,7 @@ struct SignupView: View {
                         WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
-                            .padding(.top,24)
+                            .padding(.top,15)
                     }
                     
                     Button {

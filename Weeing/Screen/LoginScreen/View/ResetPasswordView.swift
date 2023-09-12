@@ -39,8 +39,8 @@ struct ResetPasswordView: View {
                     .font(.custom("AppleSDGothicNeoM00", size: 9))
                     .foregroundColor(.grayColor)
                     .padding(.top,4)
-                    .padding(.leading,58)
-                    .padding(.trailing,112)
+                    .padding(.leading,52)
+                    .padding(.trailing,110)
                 
                 WeeingCheckPasswordTextField(titleColor: .findPasswordColor, textFieldColor: .findPasswordTextFieldColor, textFieldText: $checkPasswordText)
                     .padding(.top,16)
