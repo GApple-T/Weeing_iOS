@@ -145,7 +145,7 @@ struct HomeView: View {
                                 }
                             }
                             Button{
-                                
+                                //
                             }label: {
                                 Text("상담 예약")
                                     .font(Font.custom("AppleSDGothicNeoB00", size: 18))
