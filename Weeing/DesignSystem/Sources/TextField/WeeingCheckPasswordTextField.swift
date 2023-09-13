@@ -25,7 +25,7 @@ public struct WeeingCheckPasswordTextField: View {
     public var body: some View {
         VStack(spacing: 0) {
             Text("Check Password")
-                .font(.custom("AppleSDGothicNeoM00", size: 15))
+                .font(.custom("AppleSDGothicNeoB00", size: 15))
                 .foregroundColor(titleColor)
                 .padding(.leading,52)
                 .padding(.trailing,226)

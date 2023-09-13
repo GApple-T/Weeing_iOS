@@ -28,6 +28,7 @@ struct User_InformationView: View {
                     .padding(.top,109)
                 
                 Text("학번")
+                    .foregroundColor(.N10)
                     .font(.custom("AppleSDGothicNeoB00", size: 14))
                     .padding(.top,65)
                     .padding(.leading,52)
@@ -43,12 +44,13 @@ struct User_InformationView: View {
                     .foregroundColor(.S10)
                     .overlay(
                         TextField("학번을 입력해주세요",text: $textStudentID)
-                            .font(.system(size:12))
+                            .font(.custom("AppleSDGothicNeoM00", size: 12))
                             .padding(.leading,55)
                             .padding(.trailing,113)
                     )
                 
                 Text("이름")
+                    .foregroundColor(.N10)
                     .font(.custom("AppleSDGothicNeoB00", size: 14))
                     .padding(.leading,52)
                     .padding(.trailing,314)
@@ -62,7 +64,7 @@ struct User_InformationView: View {
                     .foregroundColor(.S10)
                     .overlay(
                         TextField("이름을 입력해주세요",text: $textName)
-                            .font(.system(size:12))
+                            .font(.custom("AppleSDGothicNeoM00", size: 12))
                             .padding(.leading,55)
                             .padding(.trailing,45)
                             .focused($focusedField,equals: .name)

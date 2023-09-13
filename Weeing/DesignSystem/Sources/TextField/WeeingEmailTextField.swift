@@ -27,7 +27,7 @@ public struct WeeingEmailTextField: View {
         VStack(spacing: 0) {
             Text("Email")
                 .foregroundColor(titleColor)
-                .font(.custom("AppleSDGothicNeoM00", size:16))
+                .font(.custom("AppleSDGothicNeoB00", size:16))
                 .padding(.trailing,298)
                 .padding(.leading,52)
             

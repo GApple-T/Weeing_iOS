@@ -26,7 +26,7 @@ public struct WeeingConfirmTextField: View {
         VStack(spacing: 0) {
             Text("인증번호")
                 .foregroundColor(titleColor)
-                .font(.custom("AppleSDGothicNeoM00", size:15))
+                .font(.custom("AppleSDGothicNeoB00", size:15))
                 .padding(.top,12)
                 .padding(.trailing,284)
                 .padding(.leading,52)
@@ -38,7 +38,7 @@ public struct WeeingConfirmTextField: View {
                 .padding(.top,7)
                 .overlay(
                     TextField("인증번호를 입력해주세요.",text: $textFieldText)
-                        .font(.system(size:12))
+                        .font(.custom("AppleSDGothicNeoM00", size: 12))
                         .padding(.leading,55)
                         .padding(.trailing,50)
                         .padding(.top,10)

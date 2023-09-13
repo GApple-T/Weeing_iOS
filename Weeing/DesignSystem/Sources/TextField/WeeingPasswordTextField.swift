@@ -28,7 +28,7 @@ public struct WeeingPasswordTextField: View {
         VStack(spacing:0) {
             Text("Password")
                 .foregroundColor(titleColor)
-                .font(.custom("AppleSDGothicNeoM00", size:16))
+                .font(.custom("AppleSDGothicNeoB00", size:16))
                 .padding(.trailing,268)
                 .padding(.leading,50)
             

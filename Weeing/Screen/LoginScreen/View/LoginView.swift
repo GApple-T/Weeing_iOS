@@ -40,7 +40,7 @@ struct LoginView: View {
                                     focusField = .password
                                 }
                             
-                            WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .S10, titleColor: .P30)
+                            WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .S10, titleColor: .S20)
                                 .padding(.top,20)
                                 .focused($focusField, equals: .password)
                                 .submitLabel(.done)
@@ -66,7 +66,7 @@ struct LoginView: View {
                             } label: {
                                 Text("아직 계정이 없으신가요?")
                                     .foregroundColor(.N20)
-                                    .font(.custom("Apple", size: 12))
+                                    .font(.custom("AppleSDGothicNeoM00", size: 12))
                                     .padding(.bottom,44)
                             }
                         }

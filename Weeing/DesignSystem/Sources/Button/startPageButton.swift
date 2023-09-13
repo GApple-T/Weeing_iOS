@@ -27,7 +27,7 @@ public struct startPageButton: View {
             .overlay(
                 Text("\(buttonText)")
                     .foregroundColor(.white)
-                    .font(.system(size:15))
+                    .font(.custom("AppleSDGothicNeoSB00", size: 15))
             )
             .padding(.horizontal,45)
     }
