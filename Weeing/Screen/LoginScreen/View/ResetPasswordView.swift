@@ -21,14 +21,14 @@ struct ResetPasswordView: View {
     
     var body: some View {
         ZStack {
-            Color.backgroundColor.ignoresSafeArea()
+            Color.BG.ignoresSafeArea()
             VStack(spacing: 0) {
                 Text("Reset Password")
                     .font(.custom("Nunito-Black", size: 35))
-                    .foregroundColor(.findPasswordColor)
+                    .foregroundColor(.P10)
                     .padding(.top,109)
                 
-                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
+                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .O10, titleColor: .P10)
                     .padding(.top,78)
                     .focused($focusField, equals: .password)
                     .onSubmit {
@@ -37,16 +37,16 @@ struct ResetPasswordView: View {
                 
                 Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                     .font(.custom("AppleSDGothicNeoM00", size: 9))
-                    .foregroundColor(.grayColor)
+                    .foregroundColor(.N20)
                     .padding(.top,4)
                     .padding(.leading,52)
                     .padding(.trailing,110)
                 
-                WeeingCheckPasswordTextField(titleColor: .findPasswordColor, textFieldColor: .findPasswordTextFieldColor, textFieldText: $checkPasswordText)
+                WeeingCheckPasswordTextField(titleColor: .P10, textFieldColor: .O10, textFieldText: $checkPasswordText)
                     .padding(.top,16)
                     .submitLabel(.done)
                 
-                startPageButton(buttonText: "완료", buttonColor: .findPasswordButtonColor)
+                startPageButton(buttonText: "완료", buttonColor: .P10)
                     .padding(.top,37)
                 
                 Spacer()

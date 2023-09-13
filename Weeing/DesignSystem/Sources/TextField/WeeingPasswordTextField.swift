@@ -58,13 +58,13 @@ public struct WeeingPasswordTextField: View {
                                 Image(systemName: "eye")
                                     .resizable()
                                     .frame(width:15,height: 10)
-                                    .foregroundColor(.grayColor)
+                                    .foregroundColor(.N20)
                                     .padding(.trailing,59)
                             } else {
                                 Image(systemName: "eye.slash")
                                     .resizable()
                                     .frame(width:15,height: 10)
-                                    .foregroundColor(.grayColor)
+                                    .foregroundColor(.N20)
                                     .padding(.trailing,59)
                             }
                         }

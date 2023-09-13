@@ -20,7 +20,7 @@ struct SignupView: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.joinColor)
+                    .foregroundColor(.P30)
             }
         }
         
@@ -29,15 +29,15 @@ struct SignupView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.backgroundColor.ignoresSafeArea()
+                Color.BG.ignoresSafeArea()
                 VStack(spacing: 0) {
                     Text("Sign Up")
                         .font(.custom("Nunito-Black", size: 44))
-                        .foregroundColor(.joinColor)
+                        .foregroundColor(.P20)
                         .padding(.horizontal,112)
                         .padding(.top,66)
                     
-                    WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
+                    WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .O30, titleColor: .P20)
                         .padding(.top,66)
                         .focused($focusField, equals: .email)
                         .onSubmit {
@@ -46,7 +46,7 @@ struct SignupView: View {
                         }
                     
                     if pressedConfirm == true {
-                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .joinTextFieldColor, titleColor: .joinColor)
+                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .O30, titleColor: .P20)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
                             .padding(.top,15)
@@ -55,7 +55,7 @@ struct SignupView: View {
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: "확인", buttonColor: .joinColor)
+                        startPageButton(buttonText: "확인", buttonColor: .P20)
                             .padding(.top,44)
                     }
                     
@@ -66,12 +66,12 @@ struct SignupView: View {
                     } label: {
                         if pressedConfirm == true {
                             Text("인증번호가 발송되지 않았나요?")
-                                .foregroundColor(.grayColor)
+                                .foregroundColor(.N20)
                                 .font(.custom("AppleSDGothicNeoM00", size: 12))
                                 .padding(.bottom,44)
                         } else if pressedConfirm == false {
                             Text("이미 계정이 있으신가요?")
-                                .foregroundColor(.grayColor)
+                                .foregroundColor(.N20)
                                 .font(.custom("AppleSDGothicNeoM00",size:12))
                                 .padding(.bottom,44)
                         }

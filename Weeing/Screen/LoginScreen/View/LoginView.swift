@@ -25,22 +25,22 @@ struct LoginView: View {
             if showLoginView {
                 NavigationView {
                     ZStack {
-                        Color.backgroundColor.ignoresSafeArea()
+                        Color.BG.ignoresSafeArea()
                         VStack(spacing:0) {
                             Text("Login")
-                                .foregroundColor(.loginColor)
+                                .foregroundColor(Color.P30)
                                 .font(.custom("Nunito-Black",size: 45))
                                 .padding(.horizontal,134)
                                 .padding(.top,109)
                             
-                            WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
+                            WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .S10, titleColor: .S20)
                                 .padding(.top,65)
                                 .focused($focusField, equals: .email)
                                 .onSubmit {
                                     focusField = .password
                                 }
                             
-                            WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .loginTextFieldColor, titleColor: .loginColor)
+                            WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .S10, titleColor: .P30)
                                 .padding(.top,20)
                                 .focused($focusField, equals: .password)
                                 .submitLabel(.done)
@@ -49,14 +49,14 @@ struct LoginView: View {
                                     FIndPasswordView()
                                 } label: {
                                     Text("비밀번호를 잊어버리셨나요?")
-                                        .foregroundColor(.grayColor)
+                                        .foregroundColor(.N20)
                                         .font(.custom("AppleSDGothicNeoM00", size: 12))
                                         .padding(.leading,52)
                                         .padding(.trailing,202)
                                         .padding(.top,4)
                                 }
                             
-                            startPageButton(buttonText: "로그인", buttonColor: .loginColor)
+                            startPageButton(buttonText: "로그인", buttonColor: .P30)
                                 .padding(.top,40)
                             
                             Spacer()
@@ -65,7 +65,7 @@ struct LoginView: View {
                                 SignupView()
                             } label: {
                                 Text("아직 계정이 없으신가요?")
-                                    .foregroundColor(.grayColor)
+                                    .foregroundColor(.N20)
                                     .font(.custom("Apple", size: 12))
                                     .padding(.bottom,44)
                             }

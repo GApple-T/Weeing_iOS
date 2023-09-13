@@ -20,11 +20,11 @@ struct User_InformationView: View {
     
     var body: some View {
         ZStack {
-            Color.backgroundColor.ignoresSafeArea()
+            Color.BG.ignoresSafeArea()
             VStack(spacing: 0) {
                 Text("Weeing")
                     .font(.custom("Nunito-Black", size: 45))
-                    .foregroundColor(.loginColor)
+                    .foregroundColor(.P30)
                     .padding(.top,109)
                 
                 Text("학번")
@@ -40,7 +40,7 @@ struct User_InformationView: View {
                     .frame(height:40)
                     .padding(.horizontal,45)
                     .padding(.top,4)
-                    .foregroundColor(.loginTextFieldColor)
+                    .foregroundColor(.S10)
                     .overlay(
                         TextField("학번을 입력해주세요",text: $textStudentID)
                             .font(.system(size:12))
@@ -59,7 +59,7 @@ struct User_InformationView: View {
                     .frame(height:40)
                     .padding(.horizontal,45)
                     .padding(.top,4)
-                    .foregroundColor(.loginTextFieldColor)
+                    .foregroundColor(.S10)
                     .overlay(
                         TextField("이름을 입력해주세요",text: $textName)
                             .font(.system(size:12))
@@ -71,7 +71,7 @@ struct User_InformationView: View {
                             }
                     )
                 
-                startPageButton(buttonText: "확인", buttonColor: .joinColor)
+                startPageButton(buttonText: "확인", buttonColor: .P20)
                     .padding(.top,44)
                 
                 Spacer()
