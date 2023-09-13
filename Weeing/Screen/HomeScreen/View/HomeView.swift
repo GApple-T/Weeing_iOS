@@ -26,14 +26,14 @@ struct HomeView: View {
                         VStack(spacing: 0){
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(Color.ImgbackgroundColor)
+                                    .foregroundColor(Color.N30)
                                     .frame(width: 360, height: 240)
                                 Text("불편했던 위클래스 사용,\nWeeing으로\n편리하게 상담을 신청해보세요!")
                                     .padding(.trailing, 180)
                                     .padding(.bottom, 164)
                                     .padding(.top, 28)
                                     .padding(.leading, 27)
-                                    .font(Font.custom("NotoSansKR-Bold", size: 14))
+                                    .font(.custom("NotoSansKR-Bold", size: 14))
                                 Image("Wee")
                                     .resizable()
                                     .shadow(color: Color(red: 0.44, green: 0.56, blue: 0.69).opacity(0.2), radius: 3, x: 7, y: 6)
@@ -70,14 +70,14 @@ struct HomeView: View {
                             HStack(spacing: 0){
                                 VStack(spacing: 0){
                                     Text("상담 시간표")
-                                        .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
+                                        .font(.custom("AppleSDGothicNeoSB00", size: 15))
                                         .padding(.bottom, 12)
                                     ZStack {
                                         HStack(spacing: 0) {
                                             VStack(spacing: 0){ // n교시
                                                 ForEach(1...7, id: \.self){ i in
                                                     Text("\(i)교시")
-                                                        .font(Font.custom("AppleSDGothicNeoB00", size: 12))
+                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                         .foregroundColor(Color.P20)
                                                         .padding(.bottom, 8)
                                                         .padding(.trailing, 16)
@@ -85,11 +85,11 @@ struct HomeView: View {
                                             }
                                             Divider()
                                                 .frame(height: 160)
-                                                .background(Color.P30)
+                                                .background(Color.S20)
                                             VStack(spacing: 0){ // 상담 가능
                                                 ForEach(1...7, id: \.self){ _ in
                                                     Text("상담 가능")
-                                                        .font(Font.custom("AppleSDGothicNeoB00", size: 12))
+                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                         .foregroundColor(Color.N10)
                                                         .padding(.bottom, 8)
                                                         .padding(.leading, 16)
@@ -108,14 +108,14 @@ struct HomeView: View {
                                 .padding(.trailing, 10)
                                 VStack(spacing: 0){
                                     Text("시간표")
-                                        .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
+                                        .font(.custom("AppleSDGothicNeoSB00", size: 15))
                                         .padding(.bottom, 12)
                                     ZStack {
                                         HStack(spacing: 0) {
                                             VStack(spacing: 0){ // n교시
                                                 ForEach(1...7, id: \.self){ i in
                                                     Text("\(i)교시")
-                                                        .font(Font.custom("AppleSDGothicNeoB00", size: 12))
+                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                         .foregroundColor(Color.P20)
                                                         .padding(.bottom, 8)
                                                         .padding(.trailing, 16)
@@ -123,11 +123,11 @@ struct HomeView: View {
                                             }
                                             Divider()
                                                 .frame(height: 160)
-                                                .background(Color.P30)
+                                                .background(Color.S20)
                                             VStack(spacing: 0){ // 상담 가능
                                                 ForEach(1...7, id: \.self){ _ in
                                                     Text("프로그래밍")
-                                                        .font(Font.custom("AppleSDGothicNeoB00", size: 12))
+                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                         .foregroundColor(Color.N10)
                                                         .padding(.bottom, 8)
                                                         .padding(.leading, 16)
@@ -145,10 +145,10 @@ struct HomeView: View {
                                 }
                             }
                             Button{
-                                //예약창으로 넘어감
+                                // 예약창으로 넘어감
                             }label: {
                                 Text("상담 예약")
-                                    .font(Font.custom("AppleSDGothicNeoB00", size: 18))
+                                    .font(.custom("AppleSDGothicNeoB00", size: 18))
                                     .foregroundColor(.white)
                                     .frame(width: 360, height: 54)
                                     .background(Color.P30)

@@ -21,6 +21,5 @@ extension Color {
     static let O10 = Color("O10")
     static let O20 = Color("O20")
     static let O30 = Color("O30")
-    static let ImgbackgroundColor = Color("ImgbackgroundColor")
 }
 
