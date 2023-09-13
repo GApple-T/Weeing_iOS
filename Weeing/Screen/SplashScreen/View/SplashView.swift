@@ -10,7 +10,7 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         ZStack {
-            Color.loginColor.ignoresSafeArea()
+            Color.P30.ignoresSafeArea()
             Text("Weeing")
                 .font(.custom("Nunito-Black", size: 45))
                 .foregroundColor(.white)

@@ -27,7 +27,7 @@ struct FIndPasswordView: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.findPasswordColor)
+                    .foregroundColor(Color.P10)
             }
         }
 
@@ -36,15 +36,15 @@ struct FIndPasswordView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.backgroundColor.ignoresSafeArea()
+                Color.BG.ignoresSafeArea()
                 VStack(spacing: 0) {
                     Text("Find Password")
                         .font(.custom("Nunito-Black", size: 35))
-                        .foregroundColor(.findPasswordColor)
+                        .foregroundColor(Color.P10)
                         .padding(.top,66)
                         .padding(.horizontal,70)
                     
-                    WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
+                    WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .O10, titleColor: .P10)
                         .padding(.top,78)
                         .focused($focusField, equals: .email)
                         .onSubmit {
@@ -54,7 +54,7 @@ struct FIndPasswordView: View {
                     
                     if pressedConfirm == false {
                         Text("회원가입 시 사용하신 이메일을 입력해주세요.")
-                            .foregroundColor(.grayColor)
+                            .foregroundColor(Color.N20)
                             .font(.custom("AppleSDGothicNeoM00", size: 10))
                             .padding(.leading,52)
                             .padding(.trailing,154)
@@ -62,7 +62,7 @@ struct FIndPasswordView: View {
                     }
                     
                     if pressedConfirm == true {
-                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .findPasswordTextFieldColor, titleColor: .findPasswordColor)
+                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .O10, titleColor: .P10)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
                             .padding(.top,15)
@@ -71,14 +71,14 @@ struct FIndPasswordView: View {
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .findPasswordButtonColor)
+                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .P10)
                             .padding(.top, 44)
                     }
                     
                     Spacer()
                     
                     Text(pressedConfirm ? "인증번호가 발송되지 않았나요?" : "")
-                        .foregroundColor(.grayColor)
+                        .foregroundColor(Color.N20)
                         .font(.custom("AppleSDGothicNeoM00", size: 12))
                         .padding(.bottom,44)
                     

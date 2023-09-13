@@ -44,7 +44,7 @@ public struct WeeingEmailTextField: View {
                         
                         Text("@gsm.hs.kr")
                             .font(.custom("AppleSDGothicNeoM00", size: 14))
-                            .foregroundColor(.grayColor)
+                            .foregroundColor(.N20)
                             .padding(.leading,218)
                     }
                 )
