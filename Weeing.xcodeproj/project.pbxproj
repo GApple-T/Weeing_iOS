@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3639ED2AB7F33200DD8F30 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3639EA2AB7F33200DD8F30 /* AppleSDGothicNeoSB00.ttf */; };
+		4C3639EE2AB7F33200DD8F30 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3639EB2AB7F33200DD8F30 /* AppleSDGothicNeoB00.ttf */; };
+		4C3639EF2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3639EC2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf */; };
+		4C3639F22AB7F36F00DD8F30 /* SwiftUICalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 4C3639F12AB7F36F00DD8F30 /* SwiftUICalendar */; };
+		4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3639F52AB86D3400DD8F30 /* RecordView.swift */; };
 		4CF103142AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030B2AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf */; };
 		4CF103152AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030C2AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf */; };
 		4CF103162AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */; };
@@ -37,12 +42,13 @@
 		AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */; };
 		AFA611D62AA1E94900D63657 /* startPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* startPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
-		AFBF58D92AB1866000AE8B07 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFBF58D82AB1866000AE8B07 /* AppleSDGothicNeoB00.ttf */; };
-		AFBF58DB2AB1866E00AE8B07 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFBF58DA2AB1866E00AE8B07 /* AppleSDGothicNeoM00.ttf */; };
-		AFBF58DD2AB1867700AE8B07 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFBF58DC2AB1867700AE8B07 /* AppleSDGothicNeoSB00.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C3639EA2AB7F33200DD8F30 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
+		4C3639EB2AB7F33200DD8F30 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
+		4C3639EC2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
+		4C3639F52AB86D3400DD8F30 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		4CF1030B2AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoL00.ttf; sourceTree = "<group>"; };
 		4CF1030C2AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoEB00.ttf; sourceTree = "<group>"; };
 		4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR00.ttf; sourceTree = "<group>"; };
@@ -75,9 +81,6 @@
 		AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingPasswordTextField.swift; sourceTree = "<group>"; };
 		AFA611D52AA1E94900D63657 /* startPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
-		AFBF58D82AB1866000AE8B07 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoB00.ttf; sourceTree = "<group>"; };
-		AFBF58DA2AB1866E00AE8B07 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
-		AFBF58DC2AB1867700AE8B07 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = ../../../../../../../../Downloads/AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +88,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3639F22AB7F36F00DD8F30 /* SwiftUICalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C3639F32AB86D1100DD8F30 /* RecordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4C3639F42AB86D2100DD8F30 /* View */,
+			);
+			path = RecordScreen;
+			sourceTree = "<group>";
+		};
+		4C3639F42AB86D2100DD8F30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C3639F52AB86D3400DD8F30 /* RecordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4CF1031D2AA6009D0059C4C2 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,15 +257,15 @@
 			children = (
 				4CF103482AAF4B230059C4C2 /* NotoSansKR-Bold.ttf */,
 				AFA611762A94C8B400D63657 /* Nunito-Black.ttf */,
-				AFBF58DA2AB1866E00AE8B07 /* AppleSDGothicNeoM00.ttf */,
-				AFBF58D82AB1866000AE8B07 /* AppleSDGothicNeoB00.ttf */,
 				4CF1030C2AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf */,
-				AFBF58DC2AB1867700AE8B07 /* AppleSDGothicNeoSB00.ttf */,
 				4CF1030F2AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf */,
 				4CF1030B2AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf */,
 				4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */,
 				4CF1030E2AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf */,
 				4CF103112AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf */,
+				4C3639EB2AB7F33200DD8F30 /* AppleSDGothicNeoB00.ttf */,
+				4C3639EC2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf */,
+				4C3639EA2AB7F33200DD8F30 /* AppleSDGothicNeoSB00.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -253,6 +273,7 @@
 		AFA611C32A9F007500D63657 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				4C3639F32AB86D1100DD8F30 /* RecordScreen */,
 				4CF103312AA620B40059C4C2 /* MainScreen */,
 				4CF1032D2AA618F70059C4C2 /* ProfileScreen */,
 				4CF103292AA618C00059C4C2 /* ConsultationScreen */,
@@ -380,6 +401,9 @@
 			dependencies = (
 			);
 			name = Weeing;
+			packageProductDependencies = (
+				4C3639F12AB7F36F00DD8F30 /* SwiftUICalendar */,
+			);
 			productName = Weeing;
 			productReference = AFA6115A2A94B54300D63657 /* Weeing.app */;
 			productType = "com.apple.product-type.application";
@@ -408,6 +432,9 @@
 				Base,
 			);
 			mainGroup = AFA611512A94B54300D63657;
+			packageReferences = (
+				4C3639F02AB7F36F00DD8F30 /* XCRemoteSwiftPackageReference "SwiftUICalendar" */,
+			);
 			productRefGroup = AFA6115B2A94B54300D63657 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,15 +452,15 @@
 				4CF1031A2AA6007D0059C4C2 /* AppleSDGothicNeoUL00.ttf in Resources */,
 				4CF103172AA6007D0059C4C2 /* AppleSDGothicNeoT00.ttf in Resources */,
 				4CF103152AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf in Resources */,
-				AFBF58DD2AB1867700AE8B07 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				4C3639ED2AB7F33200DD8F30 /* AppleSDGothicNeoSB00.ttf in Resources */,
 				4CF103142AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf in Resources */,
-				AFBF58D92AB1866000AE8B07 /* AppleSDGothicNeoB00.ttf in Resources */,
-				AFBF58DB2AB1866E00AE8B07 /* AppleSDGothicNeoM00.ttf in Resources */,
 				4CF103162AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf in Resources */,
 				4CF103182AA6007D0059C4C2 /* AppleSDGothicNeoH00.ttf in Resources */,
 				4CF103492AAF4B230059C4C2 /* NotoSansKR-Bold.ttf in Resources */,
+				4C3639EF2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
+				4C3639EE2AB7F33200DD8F30 /* AppleSDGothicNeoB00.ttf in Resources */,
 				AFA611772A94C8B400D63657 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +482,7 @@
 				AFA611D62AA1E94900D63657 /* startPageButton.swift in Sources */,
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
+				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
@@ -665,6 +693,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C3639F02AB7F36F00DD8F30 /* XCRemoteSwiftPackageReference "SwiftUICalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GGJJack/SwiftUICalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C3639F12AB7F36F00DD8F30 /* SwiftUICalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C3639F02AB7F36F00DD8F30 /* XCRemoteSwiftPackageReference "SwiftUICalendar" */;
+			productName = SwiftUICalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFA611522A94B54300D63657 /* Project object */;
 }
