@@ -66,6 +66,7 @@ struct HomeView: View {
                                         Image(systemName: "chevron.left")
                                             .foregroundColor(Color.S20)
                                     }
+                                    .padding(.trailing, 30)
                                     Button{
                                         controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
                                     }label: {
@@ -79,35 +80,39 @@ struct HomeView: View {
                                 CalendarView(controller, header: { week in
                                     GeometryReader { geometry in
                                         Text(week.shortString)
-                                            .font(.subheadline)
+                                            .font(.system(size: 12))
+                                            .fontWeight(.semibold)
                                             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
                                     }
                                 }, component: { date in
                                     GeometryReader { geometry in
                                         if date.isToday{
                                             Text("\(date.day)")
-                                                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
-                                                .font(.system(size: 10, weight: .bold, design: .default))
+                                                .frame(width: geometry.size.width-6, height: geometry.size.height-3, alignment: .center)
+                                                .font(.system(size: 12, weight: .bold, design: .default))
                                                 .foregroundColor(.white)
                                                 .background(focusDate == date ? Color.S20 : .P30)
+                                                .clipShape(RoundedRectangle(cornerRadius: 8))
                                                 .onTapGesture {
                                                     focusDate = (date != focusDate ? date : nil)
                                                 }
                                         }
                                         else{
                                             Text("\(date.day)")
-                                                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
-                                                .font(.system(size: 10, weight: .light, design: .default))
+                                                .frame(width: geometry.size.width-6, height: geometry.size.height-3, alignment: .center)
+                                                .font(.system(size: 12, weight: .light, design: .default))
                                                 .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
                                                 .foregroundColor(focusDate == date ? .white : .black)
                                                 .background(focusDate == date ? Color.S20 : .S10)
                                                 .cornerRadius(2)
                                                 .contentShape(Rectangle())
+                                                .clipShape(RoundedRectangle(cornerRadius: 8))
                                                 .onTapGesture {
                                                     focusDate = (date != focusDate ? date : nil)
                                                 }
                                         }
                                     }
+                                    .padding(.leading, 5)
                                 })
                             }
                             .frame(width: 360, height: 360)
@@ -195,8 +200,8 @@ struct HomeView: View {
                                     .frame(width: 360, height: 54)
                                     .background(Color.P30)
                                     .cornerRadius(10)
-                                    .padding(.top, 10)
-                                    .padding(.bottom, 18)
+                                    .padding(.top, 13)
+                                    .padding(.bottom, 13)
                             }
                         }
                     }
