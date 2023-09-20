@@ -86,24 +86,26 @@ struct HomeView: View {
                                     }
                                 }, component: { date in
                                     if date.isToday{
-                                        calenderday(day: "\(date.day)")
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(.white)
+                                        calenderday(day: "\(date.day)", isToday: true)
                                             .background(focusDate == date ? Color.S20 : .P30)
+                                            .clipShape(RoundedRectangle(cornerRadius: 8))
                                             .onTapGesture {
                                                 focusDate = (date != focusDate ? date : nil)
                                             }
-                                            .padding(.leading, 5)
+                                            .padding(.leading, 2)
+                                            .padding(.trailing, 2)
                                     }
                                     else{
-                                        calenderday(day: "\(date.day)")
+                                        calenderday(day: "\(date.day)", isToday: false)
                                             .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
                                             .foregroundColor(focusDate == date ? .white : .black)
                                             .background(focusDate == date ? Color.S20 : .S10)
+                                            .clipShape(RoundedRectangle(cornerRadius: 8))
                                             .onTapGesture {
                                                 focusDate = (date != focusDate ? date : nil)
                                             }
-                                            .padding(.leading, 5)
+                                            .padding(.leading, 2)
+                                            .padding(.trailing, 2)
                                     }
                                 })
                                 
