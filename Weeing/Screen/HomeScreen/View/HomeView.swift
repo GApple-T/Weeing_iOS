@@ -188,7 +188,7 @@ struct HomeView: View {
                                 .frame(width: 175, height: 232)
                             }
                             NavigationLink{
-//                                ConsultationView()
+                                ConsultationView()
                             }label: {
                                 Text("상담 예약")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
@@ -204,6 +204,7 @@ struct HomeView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

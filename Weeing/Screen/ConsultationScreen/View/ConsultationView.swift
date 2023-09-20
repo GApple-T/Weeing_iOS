@@ -33,9 +33,21 @@ struct ConsultationView: View {
                         
                         if isSelecting {
                             VStack(spacing: 0) {
-                                DropdownItem(isSelecting: $isSelecting, selectiontitle: $selectionTitle, selectionId: $selectedRowId, item: .init(id: 1, title: "5교시", onSelect: {}))
-                                DropdownItem(isSelecting: $isSelecting, selectiontitle: $selectionTitle, selectionId: $selectedRowId, item: .init(id: 2, title: "6교시", onSelect: {}))
-                                DropdownItem(isSelecting: $isSelecting, selectiontitle: $selectionTitle, selectionId: $selectedRowId, item: .init(id: 3, title: "7교시", onSelect: {}))
+                                DropdownItem(isSelecting: $isSelecting,
+                                             selectiontitle: $selectionTitle,
+                                             selectionId: $selectedRowId,
+                                             item: .init(id: 1, title: "5교시",
+                                                         onSelect: {}))
+                                DropdownItem(isSelecting: $isSelecting,
+                                             selectiontitle: $selectionTitle,
+                                             selectionId: $selectedRowId,
+                                             item: .init(id: 2, title: "6교시",
+                                                         onSelect: {}))
+                                DropdownItem(isSelecting: $isSelecting,
+                                             selectiontitle: $selectionTitle,
+                                             selectionId: $selectedRowId,
+                                             item: .init(id: 3, title: "7교시",
+                                                         onSelect: {}))
                             }
                             .padding(.bottom, 10)
                         }
@@ -80,7 +92,7 @@ struct ConsultationView: View {
                             }
                             Spacer()
                             NavigationLink{ // 완료 버튼
-                                ConsultationView()
+                                HomeView()
                             }label: {
                                 Text("완료")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
