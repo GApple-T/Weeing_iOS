@@ -12,6 +12,8 @@
 		4C3639EF2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C3639EC2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf */; };
 		4C3639F22AB7F36F00DD8F30 /* SwiftUICalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 4C3639F12AB7F36F00DD8F30 /* SwiftUICalendar */; };
 		4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3639F52AB86D3400DD8F30 /* RecordView.swift */; };
+		4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */; };
+		4C3639FA2ABAE8D100DD8F30 /* Calender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3639F92ABAE8D100DD8F30 /* Calender.swift */; };
 		4CF103142AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030B2AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf */; };
 		4CF103152AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030C2AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf */; };
 		4CF103162AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */; };
@@ -49,6 +51,8 @@
 		4C3639EB2AB7F33200DD8F30 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		4C3639EC2AB7F33200DD8F30 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		4C3639F52AB86D3400DD8F30 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItem.swift; sourceTree = "<group>"; };
+		4C3639F92ABAE8D100DD8F30 /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
 		4CF1030B2AA6007D0059C4C2 /* AppleSDGothicNeoL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoL00.ttf; sourceTree = "<group>"; };
 		4CF1030C2AA6007D0059C4C2 /* AppleSDGothicNeoEB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoEB00.ttf; sourceTree = "<group>"; };
 		4CF1030D2AA6007D0059C4C2 /* AppleSDGothicNeoR00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR00.ttf; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF1031E2AA600AA0059C4C2 /* View */,
+				4C3639F92ABAE8D100DD8F30 /* Calender.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF1032A2AA618E40059C4C2 /* View */,
+				4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */,
 			);
 			path = ConsultationScreen;
 			sourceTree = "<group>";
@@ -481,11 +487,13 @@
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
 				AFA611D62AA1E94900D63657 /* startPageButton.swift in Sources */,
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
+				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
+				4C3639FA2ABAE8D100DD8F30 /* Calender.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,

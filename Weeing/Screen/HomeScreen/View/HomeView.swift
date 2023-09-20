@@ -85,40 +85,34 @@ struct HomeView: View {
                                             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
                                     }
                                 }, component: { date in
-                                    GeometryReader { geometry in
-                                        if date.isToday{
-                                            Text("\(date.day)")
-                                                .frame(width: geometry.size.width-6, height: geometry.size.height-3, alignment: .center)
-                                                .font(.system(size: 12, weight: .bold, design: .default))
-                                                .foregroundColor(.white)
-                                                .background(focusDate == date ? Color.S20 : .P30)
-                                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                                .onTapGesture {
-                                                    focusDate = (date != focusDate ? date : nil)
-                                                }
-                                        }
-                                        else{
-                                            Text("\(date.day)")
-                                                .frame(width: geometry.size.width-6, height: geometry.size.height-3, alignment: .center)
-                                                .font(.system(size: 12, weight: .light, design: .default))
-                                                .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
-                                                .foregroundColor(focusDate == date ? .white : .black)
-                                                .background(focusDate == date ? Color.S20 : .S10)
-                                                .cornerRadius(2)
-                                                .contentShape(Rectangle())
-                                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                                .onTapGesture {
-                                                    focusDate = (date != focusDate ? date : nil)
-                                                }
-                                        }
+                                    if date.isToday{
+                                        calenderday(day: "\(date.day)")
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(.white)
+                                            .background(focusDate == date ? Color.S20 : .P30)
+                                            .onTapGesture {
+                                                focusDate = (date != focusDate ? date : nil)
+                                            }
+                                            .padding(.leading, 5)
                                     }
-                                    .padding(.leading, 5)
+                                    else{
+                                        calenderday(day: "\(date.day)")
+                                            .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
+                                            .foregroundColor(focusDate == date ? .white : .black)
+                                            .background(focusDate == date ? Color.S20 : .S10)
+                                            .onTapGesture {
+                                                focusDate = (date != focusDate ? date : nil)
+                                            }
+                                            .padding(.leading, 5)
+                                    }
                                 })
+                                
                             }
                             .frame(width: 360, height: 360)
                             .background(Color.S10)
                             .cornerRadius(16)
                             .padding(.bottom, 12)
+                            
                             HStack(spacing: 10){
                                 VStack(spacing: 0){
                                     Text("상담 시간표")
