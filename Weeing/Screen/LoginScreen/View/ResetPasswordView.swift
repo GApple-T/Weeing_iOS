@@ -25,10 +25,10 @@ struct ResetPasswordView: View {
             VStack(spacing: 0) {
                 Text("Reset Password")
                     .font(.custom("Nunito-Black", size: 35))
-                    .foregroundColor(.P10)
+                    .foregroundColor(.S40)
                     .padding(.top,109)
                 
-                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .O10, titleColor: .P10)
+                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .SO4020, titleColor: .S40)
                     .padding(.top,78)
                     .focused($focusField, equals: .password)
                     .onSubmit {
@@ -42,11 +42,11 @@ struct ResetPasswordView: View {
                     .padding(.leading,52)
                     .padding(.trailing,110)
                 
-                WeeingCheckPasswordTextField(titleColor: .P10, textFieldColor: .O10, textFieldText: $checkPasswordText)
+                WeeingCheckPasswordTextField(titleColor: .S40, textFieldColor: .SO4020, textFieldText: $checkPasswordText)
                     .padding(.top,16)
                     .submitLabel(.done)
                 
-                startPageButton(buttonText: "완료", buttonColor: .P10)
+                startPageButton(buttonText: "완료", buttonColor: .SO4080)
                     .padding(.top,37)
                 
                 Spacer()

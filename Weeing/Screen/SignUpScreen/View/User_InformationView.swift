@@ -73,7 +73,7 @@ struct User_InformationView: View {
                             }
                     )
                 
-                startPageButton(buttonText: "확인", buttonColor: .P20)
+                startPageButton(buttonText: "확인", buttonColor: .P30)
                     .padding(.top,44)
                 
                 Spacer()

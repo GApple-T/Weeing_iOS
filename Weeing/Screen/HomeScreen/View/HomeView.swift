@@ -28,7 +28,7 @@ struct HomeView: View {
                         VStack(spacing: 0){
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(Color.N30)
+                                    .foregroundColor(Color.N40)
                                     .frame(width: 360, height: 240)
                                 Text("불편했던 위클래스 사용,\nWeeing으로\n편리하게 상담을 신청해보세요!")
                                     .padding(.trailing, 180)
@@ -55,7 +55,7 @@ struct HomeView: View {
                             
                             //캘린더
                             VStack(spacing: 0) {
-                                HStack{
+                                HStack(spacing: 0){
                                     Text("\(controller.yearMonth.monthShortString)")
                                         .font(.custom("AppleSDGothicNeoB00", size: 30))
                                         .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
@@ -126,7 +126,7 @@ struct HomeView: View {
                                             ForEach(1...7, id: \.self){ i in
                                                 Text("\(i)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                    .foregroundColor(Color.P20)
+                                                    .foregroundColor(Color.S40)
                                                     .padding(.bottom, 8)
                                                     .padding(.trailing, 16)
                                             }
@@ -161,7 +161,7 @@ struct HomeView: View {
                                             ForEach(1...7, id: \.self){ i in
                                                 Text("\(i)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                    .foregroundColor(Color.P20)
+                                                    .foregroundColor(Color.S40)
                                                     .padding(.bottom, 8)
                                                     .padding(.trailing, 16)
                                             }
@@ -183,7 +183,7 @@ struct HomeView: View {
                                     .padding(.leading, 28)
                                     .padding(.bottom, 16)
                                 }
-                                .background(Color.O20)
+                                .background(Color.SO3015)
                                 .cornerRadius(5)
                                 .frame(width: 175, height: 232)
                             }

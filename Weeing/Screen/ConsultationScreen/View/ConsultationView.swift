@@ -6,28 +6,93 @@
 //
 
 import SwiftUI
+import SwiftUICalendar
 
 struct ConsultationView: View {
     @State var isSelecting = false
+    @State var isSelected = false
     @State var selectionTitle = "교시를 선택하세요"
     @State var selectedRowId = 0
     @State var texteditor = ""
+    @Environment(\.dismiss) var dismiss
+    @ObservedObject var controller: CalendarController = CalendarController()
+    @State var focusDate: YearMonthDay? = YearMonthDay.current
     var body: some View {
         NavigationView{
             ZStack{
                 Color.BG.ignoresSafeArea()
                 VStack(spacing: 0){
+                    if isSelected != true{
+                        VStack(spacing: 0){ // 캘린더
+                            HStack(spacing: 0){
+                                Text("\(controller.yearMonth.monthShortString)")
+                                    .font(.custom("AppleSDGothicNeoB00", size: 30))
+                                    .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                                Spacer()
+                                Button{
+                                    controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
+                                }label: {
+                                    Image(systemName: "chevron.left")
+                                        .foregroundColor(Color.S20)
+                                }
+                                .padding(.trailing, 30)
+                                Button{
+                                    controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
+                                }label: {
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(Color.S20)
+                                }
+                            }
+                            .padding(.horizontal)
+                            Divider()
+                                .frame(width: 320)
+                            CalendarView(controller, header: { week in
+                                GeometryReader { geometry in
+                                    Text(week.shortString)
+                                        .font(.system(size: 12))
+                                        .fontWeight(.semibold)
+                                        .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                                }
+                            }, component: { date in
+                                if date.isToday{
+                                    calenderday(day: "\(date.day)", isToday: true)
+                                        .background(focusDate == date ? Color.S20 : .P30)
+                                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                                        .onTapGesture {
+                                            focusDate = (date != focusDate ? date : nil)
+                                        }
+                                        .padding(.leading, 2)
+                                        .padding(.trailing, 2)
+                                }
+                                else{
+                                    calenderday(day: "\(date.day)", isToday: false)
+                                        .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
+                                        .foregroundColor(focusDate == date ? .white : .black)
+                                        .background(focusDate == date ? Color.S20 : .S10)
+                                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                                        .onTapGesture {
+                                            focusDate = (date != focusDate ? date : nil)
+                                        }
+                                        .padding(.leading, 2)
+                                        .padding(.trailing, 2)
+                                }
+                            })
+                        }
+                        .frame(width: 360, height: 360)
+                        .background(Color.S10)
+                        .cornerRadius(16)
+                        .padding(.bottom, 10)
+                    }
+                    
                     VStack(spacing: 0) { //교시 선택 버튼
-                        HStack(spacing: 0) {
+                        ZStack {
                             Spacer()
                             Text(selectionTitle)
                                 .font(.custom("AppleSDGothicNeoB00", size: 18))
-                                .padding(.leading, 55)
-                            Spacer()
-                            Image(systemName: "chevron.down")
+                            Image(systemName: isSelecting ? "chevron.up" : "chevron.down")
                                 .resizable()
                                 .frame(width: 16, height: 9)
-                                .padding(.trailing, 24)
+                                .padding(.leading, 312)
                         }
                         .padding(.vertical, 19)
                         
@@ -53,12 +118,12 @@ struct ConsultationView: View {
                         }
                     }
                     .frame(width: 360)
-                    .background(Color.S10)
+                    .background(.white)
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 1, green: 0.68, blue: 0.2), lineWidth: 1)
+                            .stroke(.black, lineWidth: 1)
                     )
                     .onTapGesture {
                         isSelecting.toggle()
@@ -66,13 +131,33 @@ struct ConsultationView: View {
                     Spacer()
                     VStack(spacing: 0){
                         if selectedRowId != 0{
+                            if isSelected != true{
+                                Button{
+                                    isSelected.toggle() //상담 사유 적는 페이지로 넘어가기
+                                    if isSelecting{
+                                        isSelecting.toggle() //교시 선택 버튼
+                                    }
+                                }label: {
+                                    Text("완료")
+                                        .font(.custom("AppleSDGothicNeoB00", size: 18))
+                                        .foregroundColor(.white)
+                                        .frame(width: 360, height: 54)
+                                        .background(Color.P30)
+                                        .cornerRadius(10)
+                                        .padding(.top, 10)
+                                        .padding(.bottom, 18)
+                                }
+                            }
+                        }
+                        if isSelected{
                             VStack(spacing: 0){
                                 HStack(spacing: 0){
                                     Text("상담 사유")
                                         .font(.custom("AppleSDGothicNeoEB00", size: 18))
                                         .padding(.top, 10)
+                                        .padding(.leading, 20)
                                     Spacer()
-                                }.padding(.horizontal)
+                                }
                                 TextEditor(text: $texteditor)
                                     .cornerRadius(10)
                                     .frame(width: 360, height: 180)
@@ -86,13 +171,14 @@ struct ConsultationView: View {
                                     Text("상담 신청 이유를 간결하게 적어주세요.")
                                         .font(.custom("AppleSDGothicNeoM00", size: 12))
                                         .foregroundColor(Color.N10)
+                                        .frame(height: 22)
+                                        .padding(.leading, 22)
                                     Spacer()
                                 }
-                                .padding(.horizontal)
                             }
                             Spacer()
-                            NavigationLink{ // 완료 버튼
-                                HomeView()
+                            Button{ // 완료 버튼
+                                dismiss()
                             }label: {
                                 Text("완료")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
