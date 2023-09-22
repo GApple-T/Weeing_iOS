@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftUICalendar
 
 struct HomeView: View {
-    @State var date = Date()
+    @ObservedObject var controller: CalendarController = CalendarController()
+    @State var focusDate: YearMonthDay? = YearMonthDay.current
     var body: some View {
         NavigationView{
             ZStack{
@@ -50,102 +52,143 @@ struct HomeView: View {
                                     .padding(.trailing, 14)
                             }
                             .padding(.bottom, 12)
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 8)
-                                    .foregroundColor(Color.S10)
-                                    .frame(width: 360, height: 360)
-                                    .aspectRatio(contentMode: .fit)
-                                DatePicker(
-                                    "DatePicker",
-                                    selection: $date,
-                                    displayedComponents: [.date]
-                                )
-                                .background(Color.S10)
-                                .frame(width: 350)
-                                .aspectRatio(contentMode: .fit)
-                                .datePickerStyle(.graphical)
-                                .accentColor(.orange)
+                            
+                            //캘린더
+                            VStack(spacing: 0) {
+                                HStack{
+                                    Text("\(controller.yearMonth.monthShortString)")
+                                        .font(.custom("AppleSDGothicNeoB00", size: 30))
+                                        .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                                    Spacer()
+                                    Button{
+                                        controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
+                                    }label: {
+                                        Image(systemName: "chevron.left")
+                                            .foregroundColor(Color.S20)
+                                    }
+                                    .padding(.trailing, 30)
+                                    Button{
+                                        controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
+                                    }label: {
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(Color.S20)
+                                    }
+                                }
+                                .padding(.horizontal)
+                                Divider()
+                                    .frame(width: 320)
+                                CalendarView(controller, header: { week in
+                                    GeometryReader { geometry in
+                                        Text(week.shortString)
+                                            .font(.system(size: 12))
+                                            .fontWeight(.semibold)
+                                            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                                    }
+                                }, component: { date in
+                                    if date.isToday{
+                                        calenderday(day: "\(date.day)", isToday: true)
+                                            .background(focusDate == date ? Color.S20 : .P30)
+                                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                                            .onTapGesture {
+                                                focusDate = (date != focusDate ? date : nil)
+                                            }
+                                            .padding(.leading, 2)
+                                            .padding(.trailing, 2)
+                                    }
+                                    else{
+                                        calenderday(day: "\(date.day)", isToday: false)
+                                            .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
+                                            .foregroundColor(focusDate == date ? .white : .black)
+                                            .background(focusDate == date ? Color.S20 : .S10)
+                                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                                            .onTapGesture {
+                                                focusDate = (date != focusDate ? date : nil)
+                                            }
+                                            .padding(.leading, 2)
+                                            .padding(.trailing, 2)
+                                    }
+                                })
+                                
                             }
+                            .frame(width: 360, height: 360)
+                            .background(Color.S10)
+                            .cornerRadius(16)
                             .padding(.bottom, 12)
-                            HStack(spacing: 0){
+                            
+                            HStack(spacing: 10){
                                 VStack(spacing: 0){
                                     Text("상담 시간표")
                                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                                        .padding(.bottom, 12)
-                                    ZStack {
-                                        HStack(spacing: 0) {
-                                            VStack(spacing: 0){ // n교시
-                                                ForEach(1...7, id: \.self){ i in
-                                                    Text("\(i)교시")
-                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                        .foregroundColor(Color.P20)
-                                                        .padding(.bottom, 8)
-                                                        .padding(.trailing, 16)
-                                                }
+                                        .padding(.top, 10)
+                                        .padding(.bottom, 10)
+                                    HStack(spacing: 0) {
+                                        VStack(spacing: 0){ // n교시
+                                            ForEach(1...7, id: \.self){ i in
+                                                Text("\(i)교시")
+                                                    .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                    .foregroundColor(Color.P20)
+                                                    .padding(.bottom, 8)
+                                                    .padding(.trailing, 16)
                                             }
-                                            Divider()
-                                                .frame(height: 160)
-                                                .background(Color.S20)
-                                            VStack(spacing: 0){ // 상담 가능
-                                                ForEach(1...7, id: \.self){ _ in
-                                                    Text("상담 가능")
-                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                        .foregroundColor(Color.N10)
-                                                        .padding(.bottom, 8)
-                                                        .padding(.leading, 16)
-                                                }
-                                            }
-                                            Spacer()
                                         }
-                                        .padding(.leading, 20)
-                                        .padding(.top, 11)
-                                        .padding(.bottom, 11)
+                                        Divider()
+                                            .frame(height: 160)
+                                            .background(Color.S20)
+                                        VStack(spacing: 0){ // 상담 가능
+                                            ForEach(1...7, id: \.self){ _ in
+                                                Text("상담 가능")
+                                                    .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                    .foregroundColor(Color.N10)
+                                                    .padding(.bottom, 8)
+                                                    .padding(.leading, 16)
+                                            }
+                                        }
+                                        Spacer()
                                     }
-                                    .background(Color.S10)
-                                    .frame(width: 175, height: 190)
-                                    .cornerRadius(5)
+                                    .padding(.leading, 32)
+                                    .padding(.bottom, 16)
                                 }
-                                .padding(.trailing, 10)
+                                .background(Color.S10)
+                                .cornerRadius(5)
+                                .frame(width: 175, height: 232)
                                 VStack(spacing: 0){
                                     Text("시간표")
                                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                                        .padding(.bottom, 12)
-                                    ZStack {
-                                        HStack(spacing: 0) {
-                                            VStack(spacing: 0){ // n교시
-                                                ForEach(1...7, id: \.self){ i in
-                                                    Text("\(i)교시")
-                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                        .foregroundColor(Color.P20)
-                                                        .padding(.bottom, 8)
-                                                        .padding(.trailing, 16)
-                                                }
+                                        .padding(.top, 10)
+                                        .padding(.bottom, 10)
+                                    HStack(spacing: 0) {
+                                        VStack(spacing: 0){ // n교시
+                                            ForEach(1...7, id: \.self){ i in
+                                                Text("\(i)교시")
+                                                    .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                    .foregroundColor(Color.P20)
+                                                    .padding(.bottom, 8)
+                                                    .padding(.trailing, 16)
                                             }
-                                            Divider()
-                                                .frame(height: 160)
-                                                .background(Color.S20)
-                                            VStack(spacing: 0){ // 상담 가능
-                                                ForEach(1...7, id: \.self){ _ in
-                                                    Text("프로그래밍")
-                                                        .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                        .foregroundColor(Color.N10)
-                                                        .padding(.bottom, 8)
-                                                        .padding(.leading, 16)
-                                                }
-                                            }
-                                            Spacer()
                                         }
-                                        .padding(.leading, 20)
-                                        .padding(.top, 11)
-                                        .padding(.bottom, 11)
+                                        Divider()
+                                            .frame(height: 160)
+                                            .background(Color.S20)
+                                        VStack(spacing: 0){ // 상담 가능
+                                            ForEach(1...7, id: \.self){ _ in
+                                                Text("프로그래밍")
+                                                    .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                    .foregroundColor(Color.N10)
+                                                    .padding(.bottom, 8)
+                                                    .padding(.leading, 16)
+                                            }
+                                        }
+                                        Spacer()
                                     }
-                                    .background(Color.O20)
-                                    .frame(width: 175, height: 190)
-                                    .cornerRadius(5)
+                                    .padding(.leading, 28)
+                                    .padding(.bottom, 16)
                                 }
+                                .background(Color.O20)
+                                .cornerRadius(5)
+                                .frame(width: 175, height: 232)
                             }
-                            Button{
-                                // 예약창으로 넘어감
+                            NavigationLink{
+                                ConsultationView()
                             }label: {
                                 Text("상담 예약")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
@@ -153,14 +196,15 @@ struct HomeView: View {
                                     .frame(width: 360, height: 54)
                                     .background(Color.P30)
                                     .cornerRadius(10)
-                                    .padding(.top, 18)
-                                    .padding(.bottom, 18)
+                                    .padding(.top, 13)
+                                    .padding(.bottom, 13)
                             }
                         }
                     }
                 }
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

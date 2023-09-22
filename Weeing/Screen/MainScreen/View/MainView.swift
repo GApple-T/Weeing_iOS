@@ -20,8 +20,8 @@ struct MainView_Previews: PreviewProvider {
 }
 
 struct screenTapBar: View {
-@State private var selectedIndex = 0
-let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
+    @State private var selectedIndex = 0
+    let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
     var selected = 0
     var body: some View {
         VStack{
@@ -34,33 +34,38 @@ let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "cale
                 case 2:
                     HomeView()
                 case 3:
-                    ConsultationView()
+                    RecordView()
                 default:
                     ProfileView()
                 }
             }
             Spacer()
-            HStack{
-            Spacer()
-            ForEach(0..<tabBarImangeNames.count){ num in
-                VStack {
-                    Image(systemName: tabBarImangeNames[num])
-                        .font(.system(size: 26, weight: .light))
-                        .foregroundColor(selectedIndex == num ? Color.P30 : Color.white)
-                        .padding(.top, 5)
-                        .padding(.bottom, -10)
-                }
-                .gesture(
-                    TapGesture()
-                        .onEnded { _ in
-                            selectedIndex = num
+            VStack(spacing: 0){
+                Divider()
+                    .background(Color.black)
+                    .padding(.top, -8)
+                HStack(spacing: 0){
+                    Spacer()
+                    ForEach(0..<tabBarImangeNames.count){ num in
+                        VStack {
+                            Image(systemName: tabBarImangeNames[num])
+                                .font(.system(size: 24, weight: .light))
+                                .foregroundColor(selectedIndex == num ? Color.S20 : Color.S10)
+                                .padding(.top, 5)
+                                .padding(.bottom, -11)
                         }
-                )
-                Spacer()
+                        .gesture(
+                            TapGesture()
+                                .onEnded { _ in
+                                    selectedIndex = num
+                                }
+                        )
+                        Spacer()
+                    }
                 }
             }
         }
-        .background(Color.P30)
+        .background(Color.BG)
     }
 }
 
