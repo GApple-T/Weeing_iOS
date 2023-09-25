@@ -27,7 +27,7 @@ struct FIndPasswordView: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(Color.P10)
+                    .foregroundColor(Color.SO4080)
             }
         }
 
@@ -40,11 +40,11 @@ struct FIndPasswordView: View {
                 VStack(spacing: 0) {
                     Text("Find Password")
                         .font(.custom("Nunito-Black", size: 35))
-                        .foregroundColor(Color.P10)
+                        .foregroundColor(Color.S40)
                         .padding(.top,66)
                         .padding(.horizontal,70)
                     
-                    WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .O10, titleColor: .P10)
+                    WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .SO4020, titleColor: .S40)
                         .padding(.top,78)
                         .focused($focusField, equals: .email)
                         .onSubmit {
@@ -62,7 +62,7 @@ struct FIndPasswordView: View {
                     }
                     
                     if pressedConfirm == true {
-                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .O10, titleColor: .P10)
+                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .SO4020, titleColor: .S40)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
                             .padding(.top,15)
@@ -71,7 +71,7 @@ struct FIndPasswordView: View {
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .P10)
+                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .SO4080)
                             .padding(.top, 44)
                     }
                     
@@ -86,7 +86,7 @@ struct FIndPasswordView: View {
                 
             }
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden()
         .navigationBarItems(leading: backButton)
     }
 }

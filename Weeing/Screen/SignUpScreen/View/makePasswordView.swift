@@ -25,11 +25,11 @@ struct makePasswordView: View {
             VStack(spacing: 0) {
                 Text("Sign Up")
                     .font(.custom("Nunito-Black", size: 44))
-                    .foregroundColor(.P20)
+                    .foregroundColor(.S30)
                     .padding(.horizontal,112)
                     .padding(.top,109)
                 
-                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .O30, titleColor: .P20)
+                WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .SO3020, titleColor: .S30)
                     .padding(.top,66)
                     .focused($focusField, equals: .password)
                     .onSubmit {
@@ -43,12 +43,12 @@ struct makePasswordView: View {
                         .padding(.leading,52)
                         .padding(.trailing,92)
                 
-                WeeingCheckPasswordTextField(titleColor: .P20, textFieldColor: .O30, textFieldText: $checkPasswordText)
+                WeeingCheckPasswordTextField(titleColor: .S30, textFieldColor: .SO3020, textFieldText: $checkPasswordText)
                     .padding(.top,16)
                     .focused($focusField, equals: .checkPassword)
                     .submitLabel(.done)
                 
-                startPageButton(buttonText: "회원가입", buttonColor: .P20)
+                startPageButton(buttonText: "회원가입", buttonColor: .S30)
                         .padding(.top,36)
 
                 Spacer()

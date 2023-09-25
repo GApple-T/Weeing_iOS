@@ -20,7 +20,7 @@ struct SignupView: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.P30)
+                    .foregroundColor(.S40)
             }
         }
         
@@ -33,11 +33,11 @@ struct SignupView: View {
                 VStack(spacing: 0) {
                     Text("Sign Up")
                         .font(.custom("Nunito-Black", size: 44))
-                        .foregroundColor(.P20)
+                        .foregroundColor(.S30)
                         .padding(.horizontal,112)
                         .padding(.top,66)
                     
-                    WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .O30, titleColor: .P20)
+                    WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .SO3020, titleColor: .S30)
                         .padding(.top,66)
                         .focused($focusField, equals: .email)
                         .onSubmit {
@@ -46,7 +46,7 @@ struct SignupView: View {
                         }
                     
                     if pressedConfirm == true {
-                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .O30, titleColor: .P20)
+                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .SO3020, titleColor: .S30)
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
                             .padding(.top,15)
@@ -55,7 +55,7 @@ struct SignupView: View {
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: "확인", buttonColor: .P20)
+                        startPageButton(buttonText: "확인", buttonColor: .S30)
                             .padding(.top,44)
                     }
                     
