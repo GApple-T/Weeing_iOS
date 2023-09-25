@@ -148,9 +148,10 @@ struct HomeView: View {
                                     .padding(.leading, 32)
                                     .padding(.bottom, 16)
                                 }
-                                .background(Color.S10)
+                                .background(Color.SO5020)
                                 .cornerRadius(5)
                                 .frame(width: 175, height: 232)
+                                
                                 VStack(spacing: 0){
                                     Text("시간표")
                                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
