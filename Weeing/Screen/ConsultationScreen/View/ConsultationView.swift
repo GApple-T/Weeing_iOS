@@ -7,10 +7,12 @@
 
 import SwiftUI
 import SwiftUICalendar
+import PopupView
 
 struct ConsultationView: View {
     @State var isSelecting = false
     @State var isSelected = false
+    @State var isPresentedFloating = false
     @State var selectionTitle = "교시를 선택하세요"
     @State var selectedRowId = 0
     @State var texteditor = ""
@@ -178,7 +180,7 @@ struct ConsultationView: View {
                             }
                             Spacer()
                             Button{ // 완료 버튼
-                                dismiss()
+                                isPresentedFloating.toggle()
                             }label: {
                                 Text("완료")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
@@ -192,6 +194,39 @@ struct ConsultationView: View {
                         }
                     }
                 }
+            }
+            .popup(isPresented: $isPresentedFloating) {
+                VStack(spacing: 0){
+                    Text("상담 신청이 완료 되었습니다.")
+                        .font(.custom("AppleSDGothicNeoSB00", size: 16))
+                        .background(RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.white)
+                        )
+                        .padding(.top, 52)
+                    Divider()
+                        .padding(.top, 48)
+                        .padding(.bottom, 12)
+                    Button{
+                        dismiss()
+                    }label: {
+                        Text("확인")
+                            .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                            .foregroundColor(.black)
+                            .frame(width: 320)
+                    }
+                    .padding(.bottom, 12)
+                }
+                .frame(width: 320, height: 168)
+                .background(Color.white)
+                .cornerRadius(10)
+            } customize: {
+                $0
+                    .type(.default)
+                    .position(.center)
+                    .animation(.spring())
+                    .backgroundColor(.black.opacity(0.3))
+                    .closeOnTap(false)
+                    .dragToDismiss(false)
             }
         }
         .navigationBarBackButtonHidden()
