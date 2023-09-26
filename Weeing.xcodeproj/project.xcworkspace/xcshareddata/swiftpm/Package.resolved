@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "popupview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/PopupView.git",
+      "state" : {
+        "revision" : "7cfd26db6cc8a4aedb1a80a5df669019a417bfd2",
+        "version" : "2.7.0"
+      }
+    },
+    {
       "identity" : "swiftuicalendar",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GGJJack/SwiftUICalendar",
