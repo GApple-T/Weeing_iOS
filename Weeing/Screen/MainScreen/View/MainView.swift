@@ -34,7 +34,7 @@ struct screenTapBar: View {
                 case 2:
                     HomeView()
                 case 3:
-                    RecordView()
+                    ConsultLogView()
                 default:
                     ProfileView()
                 }
