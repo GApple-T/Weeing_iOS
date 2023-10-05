@@ -118,7 +118,6 @@ struct ConsultLogView: View {
                         )
                         .padding(.top, 52)
                     Divider()
-                        //.frame(height: 2)
                         .padding(.top, 48)
                         .padding(.bottom, 12)
                     
