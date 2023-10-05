@@ -20,15 +20,15 @@ struct ConsultLogView: View {
                 Color.BG.ignoresSafeArea()
 
                 VStack(spacing: 0) {
-                    HStack {
+
                         Text("Weeing")
                             .font(.custom("Nunito-Black", size: 30))
                             .foregroundColor(Color.P30)
-                        Spacer()
-                    }
-                    .padding(.leading, 22)
-                    .padding(.bottom, 10)
-                    .padding(.top, 55)
+                            .padding(.trailing, 240)
+                            .padding(.bottom, 10)
+                            .padding(.top, 55)
+                    
+                    
                     ScrollView(showsIndicators: false) {
                         LazyVStack {
                             HStack {
@@ -38,7 +38,7 @@ struct ConsultLogView: View {
                                 Spacer()
                             }
                             .padding(.horizontal, 23)
-                            //.padding(.top,)
+                            
                             Button(action: {
                                 isShowingInitialPopup.toggle()
                             }) {
@@ -118,13 +118,14 @@ struct ConsultLogView: View {
                         )
                         .padding(.top, 52)
                     Divider()
-                        .frame(height: 2)
+                        //.frame(height: 2)
                         .padding(.top, 48)
                         .padding(.bottom, 12)
                     
                     HStack {
                         Button {
                             isShowingInitialPopup = false
+                            
                         } label: {
                             Text("변경")
                                 .font(.custom("AppleSDGothicNeoSB00", size: 13))
