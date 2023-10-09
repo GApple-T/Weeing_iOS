@@ -44,7 +44,6 @@ struct ConsultLogView: View {
                         }
                     }
                     .frame(height: 750)
-                    //.border(Color.gray)
                 }
             }
             .overlay(
