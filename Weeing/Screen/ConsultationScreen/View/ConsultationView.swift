@@ -209,7 +209,7 @@ struct ConsultationView: View {
                         dismiss()
                     }label: {
                         Text("확인")
-                            .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                            .font(.custom("AppleSDGothicNeoSB00", size: 15))
                             .foregroundColor(.black)
                             .frame(width: 320)
                     }
