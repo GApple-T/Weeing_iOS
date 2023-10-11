@@ -27,8 +27,8 @@ struct ConsultLogView: View {
                         .fontWeight(.bold)
                             .padding(.trailing, 250)
                             .padding(.bottom, 30)
-                            .padding(.top, 058)
-                    
+                            .padding(.top, 90)
+                    Spacer()
                     
                     ScrollView(showsIndicators: false) {
                         LazyVStack {
@@ -43,7 +43,8 @@ struct ConsultLogView: View {
                             }
                         }
                     }
-                    .frame(height: 750)
+                    .frame(height: 790)
+                    .border(.gray)
                 }
             }
             .overlay(
@@ -63,8 +64,8 @@ struct ConsultLogView: View {
                         )
                         .padding(.top, 52)
                     Divider()
-                        .padding(.top, 48)
-                        .padding(.bottom, 12)
+                        .padding(.top, 45)
+                        .padding(.bottom, 0)
                     
                     HStack {
                         Button {
@@ -72,9 +73,10 @@ struct ConsultLogView: View {
                             
                         } label: {
                             Text("변경")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
+                                .font(Font.custom("AppleSDGothicNeoSB00", size: 13).bold())
                                 .foregroundColor(.black)
                                 .frame(width: 150)
+                                .padding(.top,10)
                         }
                         
                         Divider()
@@ -85,8 +87,10 @@ struct ConsultLogView: View {
                         } label: {
                             Text("취소")
                                 .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
-                                .foregroundColor(Color(red: 0.86, green: 0, blue: 0))
+                                .foregroundColor(Color("Popupred"))
                                 .frame(width: 150)
+                                .bold()
+                                .padding(.top,10)
                         }
                     }
                     .padding(.bottom, 12)
@@ -100,7 +104,7 @@ struct ConsultLogView: View {
                     Text("정말로 취소 하시겠습니까?")
                         .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.86, green: 0, blue: 0))
+                        .foregroundColor(Color("Popupred"))
                         .frame(width: 300, alignment: .top)
                         .background(RoundedRectangle(cornerRadius: 10)
                             .foregroundColor(.white)
@@ -121,6 +125,7 @@ struct ConsultLogView: View {
                                 .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
                                 .foregroundColor(.black)
                                 .frame(width: 150)
+                                .bold()
                         }
                         Divider()
                         
