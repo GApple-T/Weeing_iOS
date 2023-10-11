@@ -64,7 +64,6 @@ struct ConsultLogView: View {
                         .padding(.top, 52)
                     Divider()
                         .padding(.top, 45)
-                        .padding(.bottom, 0)
                     
                     HStack {
                         Button {
@@ -111,9 +110,7 @@ struct ConsultLogView: View {
                         .padding(.top, 52)
                         .lineLimit(nil)
                     Divider()
-                        .frame(height: 2)
-                        .padding(.top, 48)
-                        .padding(.bottom, 12)
+                        .padding(.top, 45)
 
 
                     HStack {
