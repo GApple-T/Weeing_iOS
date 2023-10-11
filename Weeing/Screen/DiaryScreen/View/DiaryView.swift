@@ -1,22 +1,24 @@
 //
-//  DiaryView.swift
+//  ConsultLogView.swift
 //  Weeing
 //
-//  Created by 한재형 on 2023/09/04.
+//  Created by 서지완 on 2023/09/26.
 //
 
 import SwiftUI
+import PopupView
 
 struct DiaryView: View {
     var body: some View {
-        NavigationView{
-            Text("Diary!")
+        NavigationView {
         }
     }
 }
+
 
 struct DiaryView_Previews: PreviewProvider {
     static var previews: some View {
         DiaryView()
     }
 }
+
