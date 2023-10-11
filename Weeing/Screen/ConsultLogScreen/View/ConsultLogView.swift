@@ -49,7 +49,7 @@ struct ConsultLogView: View {
             .overlay(
                 ZStack {
                     if isShowingInitialPopup || isShowingCancelConfirmation || isShowingCancellationComplete {
-                        Color.black.opacity(0.3)
+                        Color.black.opacity(0.5)
                             .ignoresSafeArea()
                     }
                 }
@@ -177,14 +177,20 @@ func popupScreen(listColor: Color) -> some View {
             .font(.system(size: 18).bold())
             .foregroundColor(listColor)
             .padding(.top, -8)
+            .padding([.leading, .trailing], 15)
         Text("상담사유")
             .foregroundColor(.black)
             .font(.system(size: 13).bold())
+            .padding([.leading, .trailing], 15)
         Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
             .font(.system(size: 10))
             .foregroundColor(.gray)
             .padding(.top, -5)
             .multilineTextAlignment(.leading)
+            .lineLimit(2)
+            .truncationMode(.tail)
+            .lineSpacing(5)
+            .padding([.leading, .trailing], 15)
     }
     .padding(16)
     .background(
@@ -193,7 +199,7 @@ func popupScreen(listColor: Color) -> some View {
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(listColor, lineWidth: 1)
-            )
+            ).padding([.leading, .trailing], 15)
     )
 }
 
@@ -202,3 +208,4 @@ struct ConsultLogView_Previews: PreviewProvider {
         ConsultLogView()
     }
 }
+
