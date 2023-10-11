@@ -22,7 +22,7 @@ struct ConsultLogView: View {
                 VStack(spacing: 0) {
 
                 
-                    Text("상담예약")
+                    Text("상담내역")
                         .font(.system(size: 27))
                         .fontWeight(.bold)
                             .padding(.trailing, 250)
@@ -182,12 +182,12 @@ func popupScreen(listColor: Color) -> some View {
             .foregroundColor(.black)
             .font(.system(size: 13).bold())
             .padding([.leading, .trailing], 15)
+            .padding(.top,-4)
         Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
             .font(.system(size: 10))
             .foregroundColor(.gray)
-            .padding(.top, -5)
+            .padding(.top, -2)
             .multilineTextAlignment(.leading)
-            .lineLimit(2)
             .truncationMode(.tail)
             .lineSpacing(5)
             .padding([.leading, .trailing], 15)
