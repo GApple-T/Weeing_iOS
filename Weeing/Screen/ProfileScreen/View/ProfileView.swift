@@ -62,13 +62,14 @@ struct ProfileView_Previews: PreviewProvider {
                 .foregroundStyle(.white)
                 .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
             HStack(spacing: 0){
-                HStack{
+                Group{
                     Text("야구장 가는 날")
                         .font(Font.custom("AppleSDGothicNeoSB00", size: 18))
                         .foregroundStyle(.black)
                     Text("1206 류지민")
                         .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                         .foregroundStyle(.gray)
+                        .padding(.leading, -15)
                 }
                 .padding(.leading, 30)
                 Spacer()
