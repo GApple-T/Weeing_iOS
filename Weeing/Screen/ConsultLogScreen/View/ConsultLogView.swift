@@ -17,7 +17,7 @@ struct ConsultLogView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("BackColor").ignoresSafeArea()
+                Color.BG.ignoresSafeArea()
 
                 VStack(spacing: 0) {
 
@@ -204,7 +204,7 @@ func popupScreen(listColor: Color) -> some View {
                     .strokeBorder(.white, lineWidth: 1)                
                     
             )
-        .padding([.leading, .trailing], 15)
+            .padding(.horizontal, 15)
     )
 }
 
