@@ -201,9 +201,7 @@ func popupScreen(listColor: Color) -> some View {
             .shadow(color: Color("Shadow"), radius: 10, x: 10, y: 0)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(.white, lineWidth: 1)
-                    //.modifier(ShadowModifier())
-                
+                    .strokeBorder(.white, lineWidth: 1)                
                     
             )
         .padding([.leading, .trailing], 15)
