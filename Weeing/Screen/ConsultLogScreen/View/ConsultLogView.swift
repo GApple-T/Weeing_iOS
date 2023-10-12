@@ -27,7 +27,7 @@ struct ConsultLogView: View {
                         .fontWeight(.bold)
                             .padding(.trailing, 250)
                             .padding(.bottom, 30)
-                            .padding(.top, 90)
+                            .padding(.top, 120)
                     Spacer()
                     
                     ScrollView(showsIndicators: false) {
@@ -36,14 +36,16 @@ struct ConsultLogView: View {
                                 isShowingInitialPopup.toggle()
                             }) {
                                 popupScreen(listColor: Color.P30)
+                                    .padding(.top,15)
                             }
 
                             ForEach(0 ..< 6, id: \.self) { _ in
                                 popupScreen(listColor: Color.gray)
+                                    .padding(.top,5)
                             }
                         }
                     }
-                    .frame(height: 790)
+                    .frame(height: 820)
                 }
             }
             .overlay(
@@ -111,8 +113,7 @@ struct ConsultLogView: View {
                         .lineLimit(nil)
                     Divider()
                         .padding(.top, 45)
-
-
+                    
                     HStack {
                         Button {
                             isShowingCancelConfirmation = false
@@ -197,10 +198,13 @@ func popupScreen(listColor: Color) -> some View {
     .background(
         RoundedRectangle(cornerRadius: 10)
             .fill(Color.white)
+            .shadow(color: Color("Shadow"), radius: 10, x: 10, y: 0)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(listColor, lineWidth: 1)
-            ).padding([.leading, .trailing], 15)
+                    .strokeBorder(.white, lineWidth: 1)                
+                    
+            )
+            .padding(.horizontal, 15)
     )
 }
 
