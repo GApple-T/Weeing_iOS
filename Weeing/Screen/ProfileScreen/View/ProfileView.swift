@@ -36,7 +36,6 @@ struct ProfileView: View {
                     ScrollView{
                         ForEach(1..<5){_ in
                             diarylist()
-                                .padding(.bottom, 10)
                         }
                     }
                     Spacer()
