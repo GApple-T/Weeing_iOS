@@ -10,7 +10,7 @@ import PopupView
 
 struct BoardGameView: View {
     let rows = [GridItem(.flexible())]
-    @State private var isShownheet = false
+    @State private var isShownsheet = false
     @State private var isShownSuccess = false
     @Environment(\.dismiss) var dismiss
     
@@ -28,11 +28,11 @@ struct BoardGameView: View {
                     LazyHGrid(rows: rows) {
                         ForEach(0..<3) { board in
                             Button {
-                                self.isShownheet.toggle()
+                                self.isShownsheet.toggle()
                             } label: {
-                                reservationGrid(backColor: .white, itemColor: .S30, name: "개최자 : 1206 류지민", status: "남은 자리 2개")
+                                reservationGrid(backColor: .white, itemColor: .S30, name: "개최자 : 1206 류지민", status: "남은 자리 2개", isShownSheet: isShownsheet)
                             }
-                            .sheet(isPresented: $isShownheet) {
+                            .sheet(isPresented: $isShownsheet) {
                                 reservationList()
                                     .presentationDetents([.height(300)])
                             }
@@ -52,7 +52,6 @@ struct BoardGameView: View {
                         .padding(.trailing,15)
                         .padding(.bottom,15)
                 }
-
                 }
             }
         }
@@ -60,13 +59,17 @@ struct BoardGameView: View {
 }
 
 @ViewBuilder
-func reservationGrid(backColor: Color, itemColor: Color, name: String, status: String) -> some View {
+func reservationGrid(backColor: Color, itemColor: Color, name: String, status: String, isShownSheet: Bool) -> some View {
     VStack {
         ZStack {
             RoundedRectangle(cornerRadius: 13)
                 .foregroundStyle(backColor)
                 .frame(width:112, height: 140)
                 .shadow(color: Color("Shadow"), radius: 15, y: -7)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(isShownSheet ? Color .S30 : .white, lineWidth: 1)
+                )
             VStack(spacing: 0) {
                 Image(systemName: "dice.fill")
                     .resizable()
