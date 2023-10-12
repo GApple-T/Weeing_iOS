@@ -33,6 +33,7 @@ struct ProfileView: View {
                     Text("1206 류지민")
                         .font(.custom("AppleSDGothicNeoEB00", size: 20))
                         .padding(.bottom, 22)
+                        .padding(.top, 7)
                     ScrollView{
                         ForEach(1..<5){_ in
                             diarylist()
