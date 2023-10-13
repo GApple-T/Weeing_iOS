@@ -65,7 +65,6 @@ struct ConsultLogView: View {
                         
                     }
                     Rectangle()
-                      .foregroundColor(.clear)
                       .frame(width: 320, height: 0.5)
                       .background(Color.black)
                     .padding(.top,76)
@@ -121,7 +120,6 @@ struct ConsultLogView: View {
                             .lineLimit(nil)
                     }
                     Rectangle()
-                      .foregroundStyle(.clear)
                       .frame(width: 320, height: 0.5)
                       .background(Color.black)
                     .padding(.top,76)
@@ -172,7 +170,6 @@ struct ConsultLogView: View {
                     }
                     
                     Rectangle()
-                      .foregroundStyle(.clear)
                       .frame(width: 320, height: 0.5)
                       .background(Color.black)
                     .padding(.top,76)
