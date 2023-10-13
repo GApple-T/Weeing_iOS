@@ -77,7 +77,7 @@ struct BoardGameView: View {
             }
             .frame(width: 320, height: 168)
             .background(Color.white)
-            .cornerRadius(10)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
         } customize: {
             $0
                 .type(.default)
