@@ -23,12 +23,11 @@ struct ConsultLogView: View {
 
                 
                     Text("상담내역")
-                        .font(.system(size: 27))
+                        .font(.system(size: 24))
                         .fontWeight(.bold)
-                            .padding(.trailing, 250)
-                            .padding(.bottom, 30)
-                            .padding(.top, 120)
-                    Spacer()
+                            .padding(.trailing, 288)
+                            .padding(.leading,20)
+                            .padding(.top, 11)
                     
                     ScrollView(showsIndicators: false) {
                         LazyVStack {
@@ -36,16 +35,15 @@ struct ConsultLogView: View {
                                 isShowingInitialPopup.toggle()
                             }) {
                                 popupScreen(listColor: Color.P30)
-                                    .padding(.top,15)
+                                    .padding(.top,30)
                             }
 
                             ForEach(0 ..< 6, id: \.self) { _ in
                                 popupScreen(listColor: Color.gray)
-                                    .padding(.top,5)
+                                    .padding(.top,10)
                             }
                         }
                     }
-                    .frame(height: 820)
                 }
             }
             .overlay(
@@ -57,15 +55,21 @@ struct ConsultLogView: View {
                 }
             )
             .popup(isPresented: $isShowingInitialPopup) {
-                VStack(spacing: 0) {
-                    Text("2023.11.21 (7교시) 상담")
-                        .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
-                        .background(RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.white)
-                        )
-                        .padding(.top, 52)
-                    Divider()
-                        .padding(.top, 45)
+                ZStack {
+                    VStack{
+                        Text("2023.11.21 (7교시) 상담")
+                            .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
+                            .padding(.top,-30)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(.white)
+                            )
+                        
+                    }
+                    Rectangle()
+                      .foregroundColor(.clear)
+                      .frame(width: 320, height: 0.5)
+                      .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                    .padding(.top,76)
                     
                     HStack {
                         Button {
@@ -76,10 +80,13 @@ struct ConsultLogView: View {
                                 .font(Font.custom("AppleSDGothicNeoSB00", size: 13).bold())
                                 .foregroundColor(.black)
                                 .frame(width: 150)
-                                .padding(.top,10)
+                                .padding(.top,130)
                         }
                         
-                        Divider()
+                        Rectangle()
+                        .frame(width: 0.5, height: 46)
+                        .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                        .padding(.top,135)
                         
                         Button {
                             isShowingInitialPopup = false
@@ -90,8 +97,10 @@ struct ConsultLogView: View {
                                 .foregroundColor(Color("Popupred"))
                                 .frame(width: 150)
                                 .bold()
-                                .padding(.top,10)
+                                .padding(.top,130)
                         }
+                        
+                        
                     }
                     .padding(.bottom, 12)
                 }
@@ -100,19 +109,24 @@ struct ConsultLogView: View {
                 .cornerRadius(10)
             }
             .popup(isPresented: $isShowingCancelConfirmation) {
-                VStack(spacing: 0) {
-                    Text("정말로 취소 하시겠습니까?")
-                        .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color("Popupred"))
-                        .frame(width: 300, alignment: .top)
-                        .background(RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.white)
-                        )
-                        .padding(.top, 52)
-                        .lineLimit(nil)
-                    Divider()
-                        .padding(.top, 45)
+                ZStack {
+                    VStack{
+                        Text("정말로 취소 하시겠습니까?")
+                            .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color("Popupred"))
+                            .padding(.top, -30)
+                            .frame(width: 300, alignment: .top)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(.white)
+                            )
+                            .lineLimit(nil)
+                    }
+                    Rectangle()
+                      .foregroundColor(.clear)
+                      .frame(width: 320, height: 0.5)
+                      .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                    .padding(.top,76)
                     
                     HStack {
                         Button {
@@ -122,9 +136,14 @@ struct ConsultLogView: View {
                                 .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
                                 .foregroundColor(.black)
                                 .frame(width: 150)
+                                .padding(.top,130)
                                 .bold()
                         }
-                        Divider()
+                        Rectangle()
+                        //.foregroundColor(.clear)
+                        .frame(width: 0.5, height: 46)
+                        .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                        .padding(.top,135)
                         
                         Button {
                             isShowingCancelConfirmation = false
@@ -134,6 +153,7 @@ struct ConsultLogView: View {
                                 .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
                                 .foregroundColor(.black)
                                 .frame(width: 150)
+                                .padding(.top,130)
                         }
                     }
                     .padding(.bottom, 12)
@@ -143,17 +163,22 @@ struct ConsultLogView: View {
                 .cornerRadius(10)
             }
             .popup(isPresented: $isShowingCancellationComplete) {
-                VStack(spacing: 0) {
-                    Text("상담 취소가 완료되었습니다.")
-                        .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
-                        .background(RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.white)
-                        )
-                        .padding(.top, 52)
-                    Divider()
-                        .frame(height: 2)
-                        .padding(.top, 48)
-                        .padding(.bottom, 12)
+                ZStack {
+                    VStack{
+                        Text("상담 취소가 완료되었습니다.")
+                            .font(.custom("AppleSDGothicNeoSB00", size: 16))
+                            .padding(.top,-55)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(.white)
+                            )
+                            .padding(.top, 52)
+                    }
+                    
+                    Rectangle()
+                      .foregroundColor(.clear)
+                      .frame(width: 320, height: 0.5)
+                      .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                    .padding(.top,76)
                     
                     Button {
                         isShowingCancellationComplete = false
@@ -161,6 +186,7 @@ struct ConsultLogView: View {
                         Text("확인")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
                             .foregroundColor(.black)
+                            .padding(.top,130)
                             .frame(width: 320)
                     }
                     .padding(.bottom, 12)
@@ -173,39 +199,37 @@ struct ConsultLogView: View {
     }
 }
 
+@ViewBuilder
 func popupScreen(listColor: Color) -> some View {
-    return VStack(alignment: .leading) {
-        Text("2023.11.21 (6교시) 상담 신청")
-            .font(.system(size: 18).bold())
-            .foregroundColor(listColor)
-            .padding(.top, -8)
-            .padding([.leading, .trailing], 15)
-        Text("상담사유")
-            .foregroundColor(.black)
-            .font(.system(size: 13).bold())
-            .padding([.leading, .trailing], 15)
-            .padding(.top,-4)
-        Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
-            .font(.system(size: 10))
-            .foregroundColor(.gray)
-            .padding(.top, -2)
-            .multilineTextAlignment(.leading)
-            .truncationMode(.tail)
-            .lineSpacing(5)
-            .padding([.leading, .trailing], 15)
+    ZStack{
+        Rectangle()
+            .cornerRadius(10)
+            .foregroundStyle(.white)
+            .shadow(radius: 5, x: 3, y: 2)
+            .frame(width: 360,height: 102)
+        
+        
+        VStack(alignment: .leading, spacing: 7) {
+            Text("2023.11.21 (6교시) 상담 신청")
+                .font(.custom("AppleSDGothicNeoSB00", size: 18))
+                .foregroundColor(listColor)
+                
+
+            Text("상담사유")
+                .foregroundColor(.black)
+                .font(.custom("AppleSDGothicNeoB00", size: 13))
+                
+            
+            Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
+                .frame(width: 338)
+                .font(.system(size: 10))
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.leading)
+                .lineLimit(2)
+                .lineSpacing(5)
+                
+        }.padding(.leading,12)
     }
-    .padding(16)
-    .background(
-        RoundedRectangle(cornerRadius: 10)
-            .fill(Color.white)
-            .shadow(color: Color("Shadow"), radius: 10, x: 10, y: 0)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(.white, lineWidth: 1)                
-                    
-            )
-            .padding(.horizontal, 15)
-    )
 }
 
 struct ConsultLogView_Previews: PreviewProvider {
