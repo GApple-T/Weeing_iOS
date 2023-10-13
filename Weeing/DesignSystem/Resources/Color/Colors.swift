@@ -17,7 +17,7 @@ extension Color {
     static let S30 = Color("S30")
     static let S40 = Color("S40")
     
-    static let ERORR = Color("ERROR")
+    static let ERORR = Color("ERORR")
     
     static let N10 = Color("N10")
     static let N20 = Color("N20")

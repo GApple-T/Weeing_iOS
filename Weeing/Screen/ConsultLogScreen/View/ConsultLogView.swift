@@ -92,7 +92,7 @@ struct ConsultLogView: View {
                         } label: {
                             Text("취소")
                                 .font(.custom("AppleSDGothicNeoSB00", size: 13))
-                                .foregroundStyle(Color("ERROR"))
+                                .foregroundStyle(Color.ERORR)
                                 .frame(width: 150)
                                 .padding(.top,130)
                         }
@@ -111,7 +111,7 @@ struct ConsultLogView: View {
                         Text("정말로 취소 하시겠습니까?")
                             .font(.custom("AppleSDGothicNeoSB00", size: 16))
                             .multilineTextAlignment(.center)
-                            .foregroundStyle(Color("ERROR"))
+                            .foregroundStyle(Color.ERORR)
                             .padding(.top, -30)
                             .frame(width: 300, alignment: .top)
                             .background(RoundedRectangle(cornerRadius: 10)
