@@ -1,3 +1,4 @@
+
 //
 //  ConsultLogView.swift
 //  Weeing
@@ -9,12 +10,12 @@ import SwiftUI
 import PopupView
 
 struct DiaryView: View {
+
     var body: some View {
         NavigationView {
         }
     }
 }
-
 
 struct DiaryView_Previews: PreviewProvider {
     static var previews: some View {
