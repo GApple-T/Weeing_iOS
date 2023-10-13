@@ -120,7 +120,7 @@ func reservationList() -> some View {
                     .font(.custom("AppleSDGothicNeoB00", size: 18))
                     .frame(width: 360, height: 54)
                     .background(Color .S30)
-                    .cornerRadius(12)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
                     .foregroundStyle(Color .white)
                     .padding(.top,65)
             }
