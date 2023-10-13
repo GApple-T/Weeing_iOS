@@ -59,7 +59,7 @@ struct BoardGameView: View {
                 Text("보드게임 그룹 만들기 신청")
                     .font(.custom("AppleSDGothicNeoSB00", size: 16))
                     .background(RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.white)
+                        .foregroundStyle(Color .white)
                     )
                     .padding(.top, 52)
                 Divider()
