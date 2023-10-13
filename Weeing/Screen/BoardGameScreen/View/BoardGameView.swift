@@ -12,7 +12,6 @@ struct BoardGameView: View {
     let rows = [GridItem(.flexible())]
     @State private var isShownsheet = false
     @State private var isAlert = false
-    @State private var isConfirm = false
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
