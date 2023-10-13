@@ -26,6 +26,7 @@ struct LoginView: View {
                 NavigationView {
                     ZStack {
                         Color.BG.ignoresSafeArea()
+                        
                         VStack(spacing:0) {
                             Text("Login")
                                 .foregroundColor(Color.P30)

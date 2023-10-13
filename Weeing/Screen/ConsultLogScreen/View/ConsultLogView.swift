@@ -21,7 +21,6 @@ struct ConsultLogView: View {
 
                 VStack(spacing: 0) {
 
-                
                     Text("상담내역")
                         .font(.system(size: 24))
                         .fontWeight(.bold)
@@ -34,12 +33,12 @@ struct ConsultLogView: View {
                             Button(action: {
                                 isShowingInitialPopup.toggle()
                             }) {
-                                popupScreen(listColor: Color.P30)
+                                popupScreen(listColor: Color.P30,listname:"신청",listtime: 7)
                                     .padding(.top,30)
                             }
 
                             ForEach(0 ..< 6, id: \.self) { _ in
-                                popupScreen(listColor: Color.gray)
+                                popupScreen(listColor: Color.gray,listname:"완료",listtime: 6)
                                     .padding(.top,10)
                             }
                         }
@@ -58,17 +57,17 @@ struct ConsultLogView: View {
                 ZStack {
                     VStack{
                         Text("2023.11.21 (7교시) 상담")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
+                            .font(.custom("AppleSDGothicNeoSB00", size: 16))
                             .padding(.top,-30)
                             .background(RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.white)
+                                .foregroundStyle(.white)
                             )
                         
                     }
                     Rectangle()
                       .foregroundColor(.clear)
                       .frame(width: 320, height: 0.5)
-                      .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                      .background(Color.black)
                     .padding(.top,76)
                     
                     HStack {
@@ -77,15 +76,15 @@ struct ConsultLogView: View {
                             
                         } label: {
                             Text("변경")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 13).bold())
-                                .foregroundColor(.black)
+                                .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                                .foregroundStyle(.black)
                                 .frame(width: 150)
                                 .padding(.top,130)
                         }
                         
                         Rectangle()
                         .frame(width: 0.5, height: 46)
-                        .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                        .background(Color.black)
                         .padding(.top,135)
                         
                         Button {
@@ -93,10 +92,9 @@ struct ConsultLogView: View {
                             isShowingCancelConfirmation = true
                         } label: {
                             Text("취소")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
-                                .foregroundColor(Color("Popupred"))
+                                .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                                .foregroundStyle(Color("Popupred"))
                                 .frame(width: 150)
-                                .bold()
                                 .padding(.top,130)
                         }
                         
@@ -106,26 +104,26 @@ struct ConsultLogView: View {
                 }
                 .frame(width: 320, height: 168)
                 .background(Color.white)
-                .cornerRadius(10)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             .popup(isPresented: $isShowingCancelConfirmation) {
                 ZStack {
                     VStack{
                         Text("정말로 취소 하시겠습니까?")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
+                            .font(.custom("AppleSDGothicNeoSB00", size: 16))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Color("Popupred"))
+                            .foregroundStyle(Color("Popupred"))
                             .padding(.top, -30)
                             .frame(width: 300, alignment: .top)
                             .background(RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.white)
+                                .foregroundStyle(.white)
                             )
                             .lineLimit(nil)
                     }
                     Rectangle()
-                      .foregroundColor(.clear)
+                      .foregroundStyle(.clear)
                       .frame(width: 320, height: 0.5)
-                      .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                      .background(Color.black)
                     .padding(.top,76)
                     
                     HStack {
@@ -133,16 +131,15 @@ struct ConsultLogView: View {
                             isShowingCancelConfirmation = false
                         } label: {
                             Text("취소")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
-                                .foregroundColor(.black)
+                                .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                                .foregroundStyle(.black)
                                 .frame(width: 150)
                                 .padding(.top,130)
                                 .bold()
                         }
                         Rectangle()
-                        //.foregroundColor(.clear)
                         .frame(width: 0.5, height: 46)
-                        .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                        .background(Color.black)
                         .padding(.top,135)
                         
                         Button {
@@ -150,8 +147,8 @@ struct ConsultLogView: View {
                             isShowingCancellationComplete = true
                         } label: {
                             Text("확인")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
-                                .foregroundColor(.black)
+                                .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                                .foregroundStyle(.black)
                                 .frame(width: 150)
                                 .padding(.top,130)
                         }
@@ -160,7 +157,7 @@ struct ConsultLogView: View {
                 }
                 .frame(width: 320, height: 168)
                 .background(Color.white)
-                .cornerRadius(10)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             .popup(isPresented: $isShowingCancellationComplete) {
                 ZStack {
@@ -169,23 +166,23 @@ struct ConsultLogView: View {
                             .font(.custom("AppleSDGothicNeoSB00", size: 16))
                             .padding(.top,-55)
                             .background(RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.white)
+                                .foregroundStyle(.white)
                             )
                             .padding(.top, 52)
                     }
                     
                     Rectangle()
-                      .foregroundColor(.clear)
+                      .foregroundStyle(.clear)
                       .frame(width: 320, height: 0.5)
-                      .background(Color(red: 0.33, green: 0.33, blue: 0.33))
+                      .background(Color.black)
                     .padding(.top,76)
                     
                     Button {
                         isShowingCancellationComplete = false
                     } label: {
                         Text("확인")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 13))
-                            .foregroundColor(.black)
+                            .font(.custom("AppleSDGothicNeoSB00", size: 13))
+                            .foregroundStyle(.black)
                             .padding(.top,130)
                             .frame(width: 320)
                     }
@@ -193,37 +190,37 @@ struct ConsultLogView: View {
                 }
                 .frame(width: 320, height: 168)
                 .background(Color.white)
-                .cornerRadius(10)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }
     }
 }
 
 @ViewBuilder
-func popupScreen(listColor: Color) -> some View {
+func popupScreen(listColor: Color,listname: String,listtime: Int) -> some View {
     ZStack{
         Rectangle()
-            .cornerRadius(10)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
             .foregroundStyle(.white)
-            .shadow(radius: 5, x: 3, y: 2)
+            .shadow(color: Color("Shadow"), radius: 15, x: 3, y: 2)
             .frame(width: 360,height: 102)
         
         
         VStack(alignment: .leading, spacing: 7) {
-            Text("2023.11.21 (6교시) 상담 신청")
+            Text("2023.11.21 (\(listtime)교시) 상담 \(listname)")
                 .font(.custom("AppleSDGothicNeoSB00", size: 18))
-                .foregroundColor(listColor)
+                .foregroundStyle(listColor)
                 
 
             Text("상담사유")
-                .foregroundColor(.black)
+                .foregroundStyle(.black)
                 .font(.custom("AppleSDGothicNeoB00", size: 13))
                 
             
             Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
                 .frame(width: 338)
                 .font(.system(size: 10))
-                .foregroundColor(.gray)
+                .foregroundStyle(.gray)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
                 .lineSpacing(5)

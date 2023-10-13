@@ -30,5 +30,7 @@ extension Color {
     static let SO3020 = Color("SO3020")
     static let SO3015 = Color("SO3015")
     static let SO5020 = Color("SO5020")
+    
+    static let Shadow = Color("Shadow")
 }
 
