@@ -70,7 +70,7 @@ struct BoardGameView: View {
                 }label: {
                     Text("확인")
                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                        .foregroundColor(.black)
+                        .foregroundStyle(Color .black)
                         .frame(width: 320)
                 }
                 .padding(.bottom, 12)
