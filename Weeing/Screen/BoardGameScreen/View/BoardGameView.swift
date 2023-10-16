@@ -48,10 +48,10 @@ struct BoardGameView: View {
                         .resizable()
                         .frame(width: 70, height: 70)
                         .foregroundStyle(Color .S40)
-                        .padding(.leading,305)
-                        .padding(.trailing,15)
-                        .padding(.bottom,15)
                 }
+                .padding(.leading,305)
+                .padding(.trailing,15)
+                .padding(.bottom,15)
                 }
             }
         .popup(isPresented: $isAlert) {
