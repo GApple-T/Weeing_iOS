@@ -34,6 +34,9 @@
 		AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */; };
 		AFA611D62AA1E94900D63657 /* startPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* startPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
+		EA0E7BBB2ADCC1D40014F4AA /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E7BBA2ADCC1D40014F4AA /* Diarywriting.swift */; };
+		EA0E7BBE2ADD4B700014F4AA /* Nunito-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA0E7BBC2ADD4B700014F4AA /* Nunito-Italic-VariableFont_wght.ttf */; };
+		EA0E7BBF2ADD4B700014F4AA /* Nunito-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA0E7BBD2ADD4B700014F4AA /* Nunito-VariableFont_wght.ttf */; };
 		EAC662722AD8ED32008E26B3 /* NotoSansKR-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAC662712AD8ED32008E26B3 /* NotoSansKR-VariableFont_wght.ttf */; };
 		EAC6627C2AD8ED3E008E26B3 /* AppleSDGothicNeoH00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAC662732AD8ED3E008E26B3 /* AppleSDGothicNeoH00.ttf */; };
 		EAC6627D2AD8ED3E008E26B3 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAC662742AD8ED3E008E26B3 /* AppleSDGothicNeoB00.ttf */; };
@@ -44,7 +47,6 @@
 		EAC662822AD8ED3E008E26B3 /* AppleSDGothicNeoL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAC662792AD8ED3E008E26B3 /* AppleSDGothicNeoL00.ttf */; };
 		EAC662832AD8ED3E008E26B3 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAC6627A2AD8ED3E008E26B3 /* AppleSDGothicNeoM00.ttf */; };
 		EAC662842AD8ED3E008E26B3 /* AppleSDGothicNeoUL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAC6627B2AD8ED3E008E26B3 /* AppleSDGothicNeoUL00.ttf */; };
-		EAC662862ADABBAA008E26B3 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC662852ADABBAA008E26B3 /* Diarywriting.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,9 @@
 		AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingPasswordTextField.swift; sourceTree = "<group>"; };
 		AFA611D52AA1E94900D63657 /* startPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
+		EA0E7BBA2ADCC1D40014F4AA /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
+		EA0E7BBC2ADD4B700014F4AA /* Nunito-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Italic-VariableFont_wght.ttf"; path = "../../../../../Fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		EA0E7BBD2ADD4B700014F4AA /* Nunito-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-VariableFont_wght.ttf"; path = "../../../../../Fonts/Nunito/Nunito-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EAC662712AD8ED32008E26B3 /* NotoSansKR-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-VariableFont_wght.ttf"; path = "../../../../../Fonts/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EAC662732AD8ED3E008E26B3 /* AppleSDGothicNeoH00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoH00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoH00.ttf"; sourceTree = "<group>"; };
 		EAC662742AD8ED3E008E26B3 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
@@ -86,7 +91,6 @@
 		EAC662792AD8ED3E008E26B3 /* AppleSDGothicNeoL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoL00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoL00.ttf"; sourceTree = "<group>"; };
 		EAC6627A2AD8ED3E008E26B3 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		EAC6627B2AD8ED3E008E26B3 /* AppleSDGothicNeoUL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoUL00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoUL00.ttf"; sourceTree = "<group>"; };
-		EAC662852ADABBAA008E26B3 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF103262AA618A50059C4C2 /* View */,
+				EA0E7BBA2ADCC1D40014F4AA /* Diarywriting.swift */,
 			);
 			path = DiaryScreen;
 			sourceTree = "<group>";
@@ -164,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				4CF103272AA618B50059C4C2 /* DiaryView.swift */,
-				EAC662852ADABBAA008E26B3 /* Diarywriting.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +278,8 @@
 				EAC6627A2AD8ED3E008E26B3 /* AppleSDGothicNeoM00.ttf */,
 				EAC662762AD8ED3E008E26B3 /* AppleSDGothicNeoR00.ttf */,
 				EAC662772AD8ED3E008E26B3 /* AppleSDGothicNeoSB00.ttf */,
+				EA0E7BBC2ADD4B700014F4AA /* Nunito-Italic-VariableFont_wght.ttf */,
+				EA0E7BBD2ADD4B700014F4AA /* Nunito-VariableFont_wght.ttf */,
 				EAC662782AD8ED3E008E26B3 /* AppleSDGothicNeoT00.ttf */,
 				EAC6627B2AD8ED3E008E26B3 /* AppleSDGothicNeoUL00.ttf */,
 			);
@@ -484,7 +490,9 @@
 				EAC662812AD8ED3E008E26B3 /* AppleSDGothicNeoT00.ttf in Resources */,
 				EAC662832AD8ED3E008E26B3 /* AppleSDGothicNeoM00.ttf in Resources */,
 				EAC6627C2AD8ED3E008E26B3 /* AppleSDGothicNeoH00.ttf in Resources */,
+				EA0E7BBE2ADD4B700014F4AA /* Nunito-Italic-VariableFont_wght.ttf in Resources */,
 				EAC662802AD8ED3E008E26B3 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				EA0E7BBF2ADD4B700014F4AA /* Nunito-VariableFont_wght.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
 				EAC6627F2AD8ED3E008E26B3 /* AppleSDGothicNeoR00.ttf in Resources */,
 				EAC662722AD8ED32008E26B3 /* NotoSansKR-VariableFont_wght.ttf in Resources */,
@@ -514,7 +522,7 @@
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
-				EAC662862ADABBAA008E26B3 /* Diarywriting.swift in Sources */,
+				EA0E7BBB2ADCC1D40014F4AA /* Diarywriting.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
