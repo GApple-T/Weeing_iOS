@@ -22,7 +22,7 @@ struct Diarywriting: View {
                     Text("일기 쓰기")
                         .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.black)
+                        .foregroundStyle(.black)
                         .frame(width: 82, height: 22)
                     Spacer()
                 }
@@ -62,12 +62,6 @@ struct Diarywriting: View {
                     
                 
                 ZStack(alignment: .topLeading) {
-                    TextEditor(text: $DiaryContent)
-                        .background(Color.BG)
-                        .font(.custom("AppleSDGothicNeoB00", size: 15))
-                        .frame(width: 330)
-                        .colorMultiply(.BG)
-                    
                     TextEditor(text: $DiaryContent)
                         .background(Color.BG)
                         .font(.custom("AppleSDGothicNeoB00", size: 15))
