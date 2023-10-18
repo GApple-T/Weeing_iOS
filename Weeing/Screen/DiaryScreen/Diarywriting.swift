@@ -20,7 +20,6 @@ struct Diarywriting: View {
                     Text("일기 쓰기")
                         .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .multilineTextAlignment(.center)
-                        .foregroundStyle(.black)
                         .frame(width: 82, height: 22)
                     Spacer()
                 }
