@@ -54,7 +54,7 @@ struct Diarywriting: View {
                 TextField("일기 제목을 입력해주세요 (최대 20글자)", text: $DiaryTitle)
                     .font(.custom("AppleSDGothicNeoSB00", size: 18))
                     .padding(.top, 30)
-                    .foregroundColor(Color.black)
+                    .foregroundStyle(Color.black)
                     .padding(.leading,56)
                 
                 Rectangle()
