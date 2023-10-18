@@ -26,7 +26,6 @@ struct Diarywriting: View {
                     Spacer()
                 }
             }
-            VStack {
                 HStack {
                     Spacer()
                     VStack {
@@ -43,9 +42,6 @@ struct Diarywriting: View {
                         Spacer()
                     }
                 }
-            }
-            .padding(.leading, 27)
-            .padding(.bottom, 15)
             VStack {
                 
                 let placeholder = "오늘은 어떤 하루 였나요?\n공유하고 싶은 이야기를 마음껏 작성해주세요."
