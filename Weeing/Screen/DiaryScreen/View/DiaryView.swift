@@ -1,5 +1,3 @@
-
-//
 //  ConsultLogView.swift
 //  Weeing
 //
@@ -10,9 +8,47 @@ import SwiftUI
 import PopupView
 
 struct DiaryView: View {
-
     var body: some View {
         NavigationView {
+            ZStack {
+                Color.BG.ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Text("공유일기")
+                            .font(.custom("AppleSDGothicNeoB00", size: 24))
+                            .padding(.leading, 20)
+                            .padding(.bottom, 20)
+                        Spacer()
+                    }
+                    ScrollView {
+                        ForEach(0 ..< 12) { _ in
+                            diarylog()
+                        }.padding(.top, 10)
+                    }
+                }
+
+                VStack {
+                    Spacer()
+                    NavigationLink(
+                        destination: Diarywriting(),
+                        label: {
+                            Spacer()
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                                .foregroundStyle(Color.S40)
+                                .background(
+                                    Rectangle()
+                                        .frame(width: 50, height: 50)
+                                        .foregroundStyle(.white)
+                                )
+                        }
+                    )
+                    .padding(.leading, 305)
+                    .padding(.trailing, 15)
+                    .padding(.bottom, 15)
+                }
+            }
         }
     }
 }
@@ -23,3 +59,38 @@ struct DiaryView_Previews: PreviewProvider {
     }
 }
 
+@ViewBuilder func diarylog() -> some View {
+    Button {
+
+    } label: {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
+                .frame(width: 360, height: 70)
+                .foregroundStyle(.white)
+
+            HStack(spacing: 0) {
+                Group {
+                    Text("야구장 가는 날")
+                        .font(.custom("AppleSDGothicNeoSB00", size: 18))
+                        .foregroundStyle(.black)
+                    Text("1314 서지완")
+                        .font(.custom("AppleSDGothicNeoM00", size: 12))
+                        .foregroundStyle(.gray)
+                        .padding(.leading, -15)
+                }
+                .padding(.leading, 30)
+                Spacer()
+                VStack(spacing: 0) {
+                    Spacer()
+                    Text("작성일 : 2023.10.12")
+                        .font(.custom("AppleSDGothicNeoM00", size: 12))
+                        .foregroundStyle(.gray)
+                        .padding(.trailing, 26)
+                        .padding(.bottom, 6)
+                }
+                .frame(height: 70)
+            }
+        }
+    }
+}
