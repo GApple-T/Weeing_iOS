@@ -20,7 +20,7 @@ struct Diarywriting: View {
                 Spacer()
                 VStack {
                     Text("일기 쓰기")
-                        .font(Font.custom("AppleSDGothicNeoB00", size: 22))
+                        .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.black)
                         .frame(width: 82, height: 22)
@@ -58,7 +58,8 @@ struct Diarywriting: View {
                     .padding(.leading,56)
                 
                 Rectangle()
-                    .frame(width: 330, height: 1)
+                    .frame(width: 330,height: 1)
+                    
                 
                 ZStack(alignment: .topLeading) {
                     TextEditor(text: $DiaryContent)
