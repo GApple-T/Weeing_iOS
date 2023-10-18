@@ -17,7 +17,6 @@ struct Diarywriting: View {
         ZStack {
             Color.BG.ignoresSafeArea()
             VStack(spacing: 0){
-                //                VStack {
                 
                 let placeholder = "오늘은 어떤 하루 였나요?\n공유하고 싶은 이야기를 마음껏 작성해주세요."
                 TextField("일기 제목을 입력해주세요 (최대 20글자)", text: $DiaryTitle)
@@ -46,12 +45,6 @@ struct Diarywriting: View {
                             .padding(.leading, 6)
                     }
                 }
-                
-                
-                
-                //                }
-                //                .padding(.top, 49)
-                
             }
         }
         .navigationTitle("일기 쓰기")
