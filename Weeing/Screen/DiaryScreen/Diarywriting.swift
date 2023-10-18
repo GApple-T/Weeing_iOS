@@ -78,12 +78,17 @@ struct Diarywriting: View {
                         Text(placeholder)
                             .font(.custom("AppleSDGothicNeoSB00", size: 15))
                             .foregroundStyle(Color.Textholder)
-                            .padding(.top, 18)
+                            .padding(.top, 8)
                             .padding(.leading, 6)
                     }
                 }
+                
+                
+                
             }
             .padding(.top, 49)
+            
+            
         }
         .navigationBarBackButtonHidden(true)
     }

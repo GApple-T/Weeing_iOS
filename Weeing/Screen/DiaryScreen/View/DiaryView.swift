@@ -94,3 +94,4 @@ struct DiaryView_Previews: PreviewProvider {
         }
     }
 }
+
