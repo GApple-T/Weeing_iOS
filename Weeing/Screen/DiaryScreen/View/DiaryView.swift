@@ -72,10 +72,10 @@ struct DiaryView_Previews: PreviewProvider {
             HStack(spacing: 0) {
                 Group {
                     Text("야구장 가는 날")
-                        .font(Font.custom("AppleSDGothicNeoSB00", size: 18))
+                        .font(.custom("AppleSDGothicNeoSB00", size: 18))
                         .foregroundStyle(.black)
                     Text("1314 서지완")
-                        .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                        .font(.custom("AppleSDGothicNeoM00", size: 12))
                         .foregroundStyle(.gray)
                         .padding(.leading, -15)
                 }
@@ -84,7 +84,7 @@ struct DiaryView_Previews: PreviewProvider {
                 VStack(spacing: 0) {
                     Spacer()
                     Text("작성일 : 2023.10.12")
-                        .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                        .font(.custom("AppleSDGothicNeoM00", size: 12))
                         .foregroundStyle(.gray)
                         .padding(.trailing, 26)
                         .padding(.bottom, 6)
