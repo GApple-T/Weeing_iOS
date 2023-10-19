@@ -32,7 +32,5 @@ extension Color {
     static let SO5020 = Color("SO5020")
     
     static let Shadow = Color("Shadow")
-    
-    static let Textholder = Color("Textholder")
 }
 

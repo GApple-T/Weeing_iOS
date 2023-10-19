@@ -22,7 +22,6 @@ struct Diarywriting: View {
                 TextField("일기 제목을 입력해주세요 (최대 20글자)", text: $DiaryTitle)
                     .font(.custom("AppleSDGothicNeoSB00", size: 18))
                     .padding(.top, 30)
-                    .foregroundStyle(Color.black)
                     .padding(.leading,56)
                 
                 Rectangle()
@@ -35,13 +34,13 @@ struct Diarywriting: View {
                         .font(.custom("AppleSDGothicNeoB00", size: 15))
                         .frame(width: 330)
                         .colorMultiply(.BG)
-                        .padding(.top,10)
+                        .padding(.top,8)
                     
                     
                     if DiaryContent.isEmpty {
                         Text(placeholder)
                             .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                            .foregroundStyle(Color.Textholder)
+                            .foregroundStyle(Color.N20)
                             .padding(.top, 18)
                             .padding(.leading, 6)
                     }
