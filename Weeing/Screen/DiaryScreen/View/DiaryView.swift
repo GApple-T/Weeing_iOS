@@ -9,7 +9,7 @@ import PopupView
 
 struct DiaryView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color.BG.ignoresSafeArea()
                 VStack {
