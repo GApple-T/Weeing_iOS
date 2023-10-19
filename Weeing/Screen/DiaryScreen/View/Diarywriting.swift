@@ -35,6 +35,7 @@ struct Diarywriting: View {
                         .font(.custom("AppleSDGothicNeoB00", size: 15))
                         .frame(width: 330)
                         .colorMultiply(.BG)
+                        .padding(.top,10)
                     
                     
                     if DiaryContent.isEmpty {
