@@ -32,7 +32,6 @@ struct DiaryView: View {
                     NavigationLink(
                         destination: Diarywriting(),
                         label: {
-                            Spacer()
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
                                 .frame(width: 70, height: 70)
