@@ -22,7 +22,8 @@ public struct startPageButton: View {
     public var body: some View {
         Rectangle()
             .foregroundColor(buttonColor)
-            .frame(height:40)
+            .frame(maxWidth: .infinity)
+            .frame(height: 40)
             .cornerRadius(10)
             .overlay(
                 Text("\(buttonText)")
