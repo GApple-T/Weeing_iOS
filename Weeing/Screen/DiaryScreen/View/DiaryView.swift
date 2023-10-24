@@ -10,25 +10,16 @@ import PopupView
 struct DiaryView: View {
     var body: some View {
         NavigationStack {
-            ZStack {
+            ZStack(alignment: .bottomTrailing) {
                 Color.BG.ignoresSafeArea()
                 VStack {
-                    HStack {
-                        Text("공유일기")
-                            .font(.custom("AppleSDGothicNeoB00", size: 24))
-                            .padding(.leading, 20)
-                            .padding(.bottom, 20)
-                        Spacer()
-                    }
                     ScrollView {
                         ForEach(0 ..< 12) { _ in
                             diarylog()
                         }.padding(.top, 10)
                     }
                 }
-
-                VStack {
-                    Spacer()
+                
                     NavigationLink(
                         destination: Diarywriting(),
                         label: {
@@ -46,8 +37,7 @@ struct DiaryView: View {
                     .padding(.leading, 305)
                     .padding(.trailing, 15)
                     .padding(.bottom, 15)
-                }
-            }
+            }.navigationBarItems(leading: Text("공유일기").font(.custom("AppleSDGothicNeoB00", size: 24)))
         }
     }
 }
@@ -59,7 +49,7 @@ struct DiaryView_Previews: PreviewProvider {
 }
 
 @ViewBuilder func diarylog() -> some View {
-    Button {
+    NavigationLink {
 
     } label: {
         ZStack {
