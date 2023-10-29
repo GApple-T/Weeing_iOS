@@ -24,7 +24,7 @@ struct screenTapBar: View {
     let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
     var selected = 0
     var body: some View {
-        VStack{
+        VStack {
             ZStack {
                 switch selectedIndex {
                 case 0:
@@ -40,13 +40,13 @@ struct screenTapBar: View {
                 }
             }
             Spacer()
-            VStack(spacing: 0){
+            VStack(spacing: 0) {
                 Divider()
                     .background(Color.black)
                     .padding(.top, -8)
-                HStack(spacing: 0){
+                HStack(spacing: 0) {
                     Spacer()
-                    ForEach(0..<tabBarImangeNames.count){ num in
+                    ForEach(0 ..< tabBarImangeNames.count) { num in
                         VStack {
                             Image(systemName: tabBarImangeNames[num])
                                 .font(.system(size: 24, weight: .light))
@@ -68,5 +68,3 @@ struct screenTapBar: View {
         .background(Color.BG)
     }
 }
-
-

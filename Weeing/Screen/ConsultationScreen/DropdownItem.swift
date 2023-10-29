@@ -10,9 +10,9 @@ struct DropdownItem: View {
     @Binding var isSelecting: Bool
     @Binding var selectiontitle: String
     @Binding var selectionId: Int
-    
+
     let item: dropdownitem
-    
+
     var body: some View {
         Button(action: {
             isSelecting = false
@@ -20,7 +20,7 @@ struct DropdownItem: View {
             selectionId = item.id
             item.onSelect()
         }) {
-            VStack(spacing: 0){
+            VStack(spacing: 0) {
                 Divider()
                     .background(.white)
                     .padding(.horizontal)
@@ -37,4 +37,3 @@ struct DropdownItem: View {
         }
     }
 }
-

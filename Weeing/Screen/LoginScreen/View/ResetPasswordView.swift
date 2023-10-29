@@ -13,12 +13,11 @@ enum resetPassword: Hashable {
 }
 
 struct ResetPasswordView: View {
-    
     @State private var showPassword = false
     @State private var passwordText = ""
     @State private var checkPasswordText = ""
     @FocusState private var focusField: resetPassword?
-    
+
     var body: some View {
         ZStack {
             Color.BG.ignoresSafeArea()
@@ -26,29 +25,29 @@ struct ResetPasswordView: View {
                 Text("Reset Password")
                     .font(.custom("Nunito-Black", size: 35))
                     .foregroundColor(.S40)
-                    .padding(.top,109)
-                
+                    .padding(.top, 109)
+
                 WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .SO4020, titleColor: .S40)
-                    .padding(.top,78)
+                    .padding(.top, 78)
                     .focused($focusField, equals: .password)
                     .onSubmit {
                         focusField = .checkPassword
                     }
-                
+
                 Text("비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
                     .font(.custom("AppleSDGothicNeoM00", size: 9))
                     .foregroundColor(.N20)
-                    .padding(.top,4)
-                    .padding(.leading,52)
-                    .padding(.trailing,110)
-                
+                    .padding(.top, 4)
+                    .padding(.leading, 52)
+                    .padding(.trailing, 110)
+
                 WeeingCheckPasswordTextField(titleColor: .S40, textFieldColor: .SO4020, textFieldText: $checkPasswordText)
-                    .padding(.top,16)
+                    .padding(.top, 16)
                     .submitLabel(.done)
-                
+
                 startPageButton(buttonText: "완료", buttonColor: .SO4080)
-                    .padding(.top,37)
-                
+                    .padding(.top, 37)
+
                 Spacer()
             }
         }

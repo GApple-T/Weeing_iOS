@@ -5,9 +5,9 @@
 //  Created by 한재형 on 2023/09/04.
 //
 
+import PopupView
 import SwiftUI
 import SwiftUICalendar
-import PopupView
 
 struct ConsultationView: View {
     @State var isSelecting = false
@@ -17,30 +17,30 @@ struct ConsultationView: View {
     @State var selectedRowId = 0
     @State var texteditor = ""
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var controller: CalendarController = CalendarController()
+    @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
     var body: some View {
-        NavigationView{
-            ZStack{
+        NavigationView {
+            ZStack {
                 Color.BG.ignoresSafeArea()
-                VStack(spacing: 0){
-                    if isSelected != true{
-                        VStack(spacing: 0){ // 캘린더
-                            HStack(spacing: 0){
+                VStack(spacing: 0) {
+                    if isSelected != true {
+                        VStack(spacing: 0) { // 캘린더
+                            HStack(spacing: 0) {
                                 Text("\(controller.yearMonth.monthShortString)")
                                     .font(.custom("AppleSDGothicNeoB00", size: 30))
                                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                                 Spacer()
-                                Button{
+                                Button {
                                     controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
-                                }label: {
+                                } label: {
                                     Image(systemName: "chevron.left")
                                         .foregroundColor(Color.S20)
                                 }
                                 .padding(.trailing, 30)
-                                Button{
+                                Button {
                                     controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
-                                }label: {
+                                } label: {
                                     Image(systemName: "chevron.right")
                                         .foregroundColor(Color.S20)
                                 }
@@ -56,7 +56,7 @@ struct ConsultationView: View {
                                         .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
                                 }
                             }, component: { date in
-                                if date.isToday{
+                                if date.isToday {
                                     calenderday(day: "\(date.day)", isToday: true)
                                         .background(focusDate == date ? Color.S20 : .P30)
                                         .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -65,8 +65,7 @@ struct ConsultationView: View {
                                         }
                                         .padding(.leading, 2)
                                         .padding(.trailing, 2)
-                                }
-                                else{
+                                } else {
                                     calenderday(day: "\(date.day)", isToday: false)
                                         .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
                                         .foregroundColor(focusDate == date ? .white : .black)
@@ -85,8 +84,8 @@ struct ConsultationView: View {
                         .cornerRadius(16)
                         .padding(.bottom, 10)
                     }
-                    
-                    VStack(spacing: 0) { //교시 선택 버튼
+
+                    VStack(spacing: 0) { // 교시 선택 버튼
                         ZStack {
                             Spacer()
                             Text(selectionTitle)
@@ -97,7 +96,7 @@ struct ConsultationView: View {
                                 .padding(.leading, 312)
                         }
                         .padding(.vertical, 19)
-                        
+
                         if isSelecting {
                             VStack(spacing: 0) {
                                 DropdownItem(isSelecting: $isSelecting,
@@ -131,15 +130,15 @@ struct ConsultationView: View {
                         isSelecting.toggle()
                     }
                     Spacer()
-                    VStack(spacing: 0){
-                        if selectedRowId != 0{
-                            if isSelected != true{
-                                Button{
-                                    isSelected.toggle() //상담 사유 적는 페이지로 넘어가기
-                                    if isSelecting{
-                                        isSelecting.toggle() //교시 선택 버튼
+                    VStack(spacing: 0) {
+                        if selectedRowId != 0 {
+                            if isSelected != true {
+                                Button {
+                                    isSelected.toggle() // 상담 사유 적는 페이지로 넘어가기
+                                    if isSelecting {
+                                        isSelecting.toggle() // 교시 선택 버튼
                                     }
-                                }label: {
+                                } label: {
                                     Text("완료")
                                         .font(.custom("AppleSDGothicNeoB00", size: 18))
                                         .foregroundColor(.white)
@@ -151,9 +150,9 @@ struct ConsultationView: View {
                                 }
                             }
                         }
-                        if isSelected{
-                            VStack(spacing: 0){
-                                HStack(spacing: 0){
+                        if isSelected {
+                            VStack(spacing: 0) {
+                                HStack(spacing: 0) {
                                     Text("상담 사유")
                                         .font(.custom("AppleSDGothicNeoEB00", size: 18))
                                         .padding(.top, 10)
@@ -163,13 +162,13 @@ struct ConsultationView: View {
                                 TextEditor(text: $texteditor)
                                     .cornerRadius(10)
                                     .frame(width: 360, height: 180)
-                                    .overlay{
+                                    .overlay {
                                         RoundedRectangle(cornerRadius: 10)
                                             .inset(by: 0.5)
                                             .stroke(Color.N20, lineWidth: 1)
                                     }
                                     .padding(.top, 8)
-                                HStack(spacing: 0){
+                                HStack(spacing: 0) {
                                     Text("상담 신청 이유를 간결하게 적어주세요.")
                                         .font(.custom("AppleSDGothicNeoM00", size: 12))
                                         .foregroundColor(Color.N10)
@@ -179,9 +178,9 @@ struct ConsultationView: View {
                                 }
                             }
                             Spacer()
-                            Button{ // 완료 버튼
+                            Button { // 완료 버튼
                                 isPresentedFloating.toggle()
-                            }label: {
+                            } label: {
                                 Text("완료")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
                                     .foregroundColor(.white)
@@ -195,7 +194,7 @@ struct ConsultationView: View {
                     }
                 }
             }.popup(isPresented: $isPresentedFloating) {
-                VStack(spacing: 0){
+                VStack(spacing: 0) {
                     Text("상담 신청이 완료 되었습니다.")
                         .font(.custom("AppleSDGothicNeoSB00", size: 16))
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -205,9 +204,9 @@ struct ConsultationView: View {
                     Divider()
                         .padding(.top, 48)
                         .padding(.bottom, 12)
-                    Button{
+                    Button {
                         dismiss()
-                    }label: {
+                    } label: {
                         Text("확인")
                             .font(.custom("AppleSDGothicNeoSB00", size: 15))
                             .foregroundColor(.black)

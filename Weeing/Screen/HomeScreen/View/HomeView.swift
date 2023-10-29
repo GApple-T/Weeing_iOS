@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  HomeView.swift
 //  Weeing
 //
 //  Created by 한재형 on 2023/09/04.
@@ -9,14 +9,14 @@ import SwiftUI
 import SwiftUICalendar
 
 struct HomeView: View {
-    @ObservedObject var controller: CalendarController = CalendarController()
+    @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
     var body: some View {
-        NavigationView{
-            ZStack{
+        NavigationView {
+            ZStack {
                 Color.BG.ignoresSafeArea()
-                VStack(spacing: 0){
-                    HStack{
+                VStack(spacing: 0) {
+                    HStack {
                         Text("Weeing")
                             .font(.custom("Nunito-Black", size: 30))
                             .foregroundColor(Color.P30)
@@ -24,9 +24,9 @@ struct HomeView: View {
                     }
                     .padding(.leading, 22)
                     .padding(.bottom, 10)
-                    ScrollView(showsIndicators: false){
-                        VStack(spacing: 0){
-                            ZStack{
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 0) {
+                            ZStack {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(Color.N40)
                                     .frame(width: 360, height: 240)
@@ -52,24 +52,24 @@ struct HomeView: View {
                                     .padding(.trailing, 14)
                             }
                             .padding(.bottom, 12)
-                            
-                            //캘린더
+
+                            // 캘린더
                             VStack(spacing: 0) {
-                                HStack(spacing: 0){
+                                HStack(spacing: 0) {
                                     Text("\(controller.yearMonth.monthShortString)")
                                         .font(.custom("AppleSDGothicNeoB00", size: 30))
                                         .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                                     Spacer()
-                                    Button{
+                                    Button {
                                         controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
-                                    }label: {
+                                    } label: {
                                         Image(systemName: "chevron.left")
                                             .foregroundColor(Color.S20)
                                     }
                                     .padding(.trailing, 30)
-                                    Button{
+                                    Button {
                                         controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
-                                    }label: {
+                                    } label: {
                                         Image(systemName: "chevron.right")
                                             .foregroundColor(Color.S20)
                                     }
@@ -85,7 +85,7 @@ struct HomeView: View {
                                             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
                                     }
                                 }, component: { date in
-                                    if date.isToday{
+                                    if date.isToday {
                                         calenderday(day: "\(date.day)", isToday: true)
                                             .background(focusDate == date ? Color.S20 : .P30)
                                             .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -94,8 +94,7 @@ struct HomeView: View {
                                             }
                                             .padding(.leading, 2)
                                             .padding(.trailing, 2)
-                                    }
-                                    else{
+                                    } else {
                                         calenderday(day: "\(date.day)", isToday: false)
                                             .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
                                             .foregroundColor(focusDate == date ? .white : .black)
@@ -108,22 +107,21 @@ struct HomeView: View {
                                             .padding(.trailing, 2)
                                     }
                                 })
-                                
                             }
                             .frame(width: 360, height: 360)
                             .background(Color.S10)
                             .cornerRadius(16)
                             .padding(.bottom, 12)
-                            
-                            HStack(spacing: 10){
-                                VStack(spacing: 0){
+
+                            HStack(spacing: 10) {
+                                VStack(spacing: 0) {
                                     Text("상담 시간표")
                                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
                                         .padding(.top, 10)
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
-                                        VStack(spacing: 0){ // n교시
-                                            ForEach(1...7, id: \.self){ i in
+                                        VStack(spacing: 0) { // n교시
+                                            ForEach(1 ... 7, id: \.self) { i in
                                                 Text("\(i)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                     .foregroundColor(Color.S40)
@@ -134,8 +132,8 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(spacing: 0){ // 상담 가능
-                                            ForEach(1...7, id: \.self){ _ in
+                                        VStack(spacing: 0) { // 상담 가능
+                                            ForEach(1 ... 7, id: \.self) { _ in
                                                 Text("상담 가능")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                     .foregroundColor(Color.N10)
@@ -151,15 +149,15 @@ struct HomeView: View {
                                 .background(Color.SO5020)
                                 .cornerRadius(5)
                                 .frame(width: 175, height: 232)
-                                
-                                VStack(spacing: 0){
+
+                                VStack(spacing: 0) {
                                     Text("시간표")
                                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
                                         .padding(.top, 10)
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
-                                        VStack(spacing: 0){ // n교시
-                                            ForEach(1...7, id: \.self){ i in
+                                        VStack(spacing: 0) { // n교시
+                                            ForEach(1 ... 7, id: \.self) { i in
                                                 Text("\(i)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                     .foregroundColor(Color.S40)
@@ -170,8 +168,8 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(spacing: 0){ // 상담 가능
-                                            ForEach(1...7, id: \.self){ _ in
+                                        VStack(spacing: 0) { // 상담 가능
+                                            ForEach(1 ... 7, id: \.self) { _ in
                                                 Text("프로그래밍")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                     .foregroundColor(Color.N10)
@@ -188,9 +186,9 @@ struct HomeView: View {
                                 .cornerRadius(5)
                                 .frame(width: 175, height: 232)
                             }
-                            NavigationLink{
+                            NavigationLink {
                                 ConsultationView()
-                            }label: {
+                            } label: {
                                 Text("상담 예약")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))
                                     .foregroundColor(.white)

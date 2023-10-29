@@ -5,11 +5,11 @@
 ////  Created by 한재형 on 2023/09/04.
 ////
 //
-//import SwiftUI
+// import SwiftUI
 //
-//public struct screenTapBar: View {
-//@State private var selectedIndex = 0
-//let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
+// public struct screenTapBar: View {
+// @State private var selectedIndex = 0
+// let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
 //    var selected = 0
 //    public var body: some View {
 //        VStack{
@@ -50,4 +50,4 @@
 //        }
 //        .background(Color.loginColor)
 //    }
-//}
+// }
