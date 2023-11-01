@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct dropdownitem: Identifiable {
+struct Dropdownitem: Identifiable {
     let id: Int
     let title: String
     let onSelect: () -> Void
@@ -11,7 +11,7 @@ struct DropdownItem: View {
     @Binding var selectiontitle: String
     @Binding var selectionId: Int
 
-    let item: dropdownitem
+    let item: Dropdownitem
 
     var body: some View {
         Button(action: {

@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-enum userInfo: Hashable {
+enum UserInfo: Hashable {
     case name
     case studentID
 }
 
-struct User_InformationView: View {
+struct UserInformationView: View {
     @State private var textName = ""
     @State private var textStudentID = ""
-    @FocusState private var focusedField: userInfo?
+    @FocusState private var focusedField: UserInfo?
 
     var body: some View {
         ZStack {
@@ -72,7 +72,7 @@ struct User_InformationView: View {
                             }
                     )
 
-                startPageButton(buttonText: "확인", buttonColor: .P30)
+                StartPageButton(buttonText: "확인", buttonColor: .P30)
                     .padding(.top, 44)
 
                 Spacer()
@@ -81,8 +81,8 @@ struct User_InformationView: View {
     }
 }
 
-struct User_InformationView_Previews: PreviewProvider {
+struct UserInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        User_InformationView()
+        UserInformationView()
     }
 }

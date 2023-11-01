@@ -121,8 +121,8 @@ struct HomeView: View {
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
                                         VStack(spacing: 0) { // n교시
-                                            ForEach(1 ... 7, id: \.self) { i in
-                                                Text("\(i)교시")
+                                            ForEach(1 ... 7, id: \.self) { num in
+                                                Text("\(num)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                     .foregroundColor(Color.S40)
                                                     .padding(.bottom, 8)
@@ -157,8 +157,8 @@ struct HomeView: View {
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
                                         VStack(spacing: 0) { // n교시
-                                            ForEach(1 ... 7, id: \.self) { i in
-                                                Text("\(i)교시")
+                                            ForEach(1 ... 7, id: \.self) { num in
+                                                Text("\(num)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                     .foregroundColor(Color.S40)
                                                     .padding(.bottom, 8)

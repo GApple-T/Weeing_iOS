@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum resetPassword: Hashable {
+enum ResetPassword: Hashable {
     case password
     case checkPassword
 }
@@ -16,7 +16,7 @@ struct ResetPasswordView: View {
     @State private var showPassword = false
     @State private var passwordText = ""
     @State private var checkPasswordText = ""
-    @FocusState private var focusField: resetPassword?
+    @FocusState private var focusField: ResetPassword?
 
     var body: some View {
         ZStack {
@@ -45,7 +45,7 @@ struct ResetPasswordView: View {
                     .padding(.top, 16)
                     .submitLabel(.done)
 
-                startPageButton(buttonText: "완료", buttonColor: .SO4080)
+                StartPageButton(buttonText: "완료", buttonColor: .SO4080)
                     .padding(.top, 37)
 
                 Spacer()

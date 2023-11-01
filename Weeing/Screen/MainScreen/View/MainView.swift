@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        screenTapBar()
+        ScreenTapBar()
     }
 }
 
@@ -19,7 +19,7 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 
-struct screenTapBar: View {
+struct ScreenTapBar: View {
     @State private var selectedIndex = 0
     let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
     var selected = 0
