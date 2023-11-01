@@ -1,12 +1,14 @@
 ---
 name: "\bgithub issue template"
-about: github issue 등록을 위한 공통 템플릿
+about: Weeing issue template
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-## 목적
+## 개요
 
 ## 작업 상세 내용
+
+## 변경사항
