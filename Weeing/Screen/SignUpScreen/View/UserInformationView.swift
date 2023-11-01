@@ -1,5 +1,5 @@
 //
-//  User_InformationView.swift
+//  UserInformationView.swift
 //  Weeing
 //
 //  Created by 이승화 on 2023/08/25.
