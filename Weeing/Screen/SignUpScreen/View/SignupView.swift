@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum signUp: Hashable {
+enum SignUp: Hashable {
     case email
     case confirmNumber
 }
@@ -10,7 +10,7 @@ struct SignupView: View {
     @State private var emailText = ""
     @State private var confirmNumber = ""
     @Environment(\.dismiss) var dismiss
-    @FocusState private var focusField: signUp?
+    @FocusState private var focusField: SignUp?
 
     var backButton: some View {
         Button {
@@ -53,7 +53,7 @@ struct SignupView: View {
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: "확인", buttonColor: .S30)
+                        StartPageButton(buttonText: "확인", buttonColor: .S30)
                             .padding(.top, 44)
                     }
 

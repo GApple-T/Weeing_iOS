@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-enum checkPassword: Hashable {
+enum CheckPassword: Hashable {
     case password
     case checkPassword
 }
 
-struct makePasswordView: View {
+struct MakePasswordView: View {
     @State private var passwordText = ""
     @State private var checkPasswordText = ""
     @State private var showPassword = false
-    @FocusState private var focusField: checkPassword?
+    @FocusState private var focusField: CheckPassword?
 
     var body: some View {
         ZStack {
@@ -47,7 +47,7 @@ struct makePasswordView: View {
                     .focused($focusField, equals: .checkPassword)
                     .submitLabel(.done)
 
-                startPageButton(buttonText: "회원가입", buttonColor: .S30)
+                StartPageButton(buttonText: "회원가입", buttonColor: .S30)
                     .padding(.top, 36)
 
                 Spacer()
@@ -56,8 +56,8 @@ struct makePasswordView: View {
     }
 }
 
-struct makePasswordView_Previews: PreviewProvider {
+struct MakePasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        makePasswordView()
+        MakePasswordView()
     }
 }

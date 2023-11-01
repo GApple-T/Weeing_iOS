@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum findPassword: Hashable {
+enum FindPassword: Hashable {
     case email
     case confirmNumber
 }
@@ -17,7 +17,7 @@ struct FIndPasswordView: View {
     @State private var confirmNumber = ""
     @State private var pressedConfirm = false
     @Environment(\.dismiss) var dismiss
-    @FocusState private var focusField: findPassword?
+    @FocusState private var focusField: FindPassword?
 
     var backButton: some View {
         Button {
@@ -69,7 +69,7 @@ struct FIndPasswordView: View {
                     Button {
                         self.pressedConfirm.toggle()
                     } label: {
-                        startPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .SO4080)
+                        StartPageButton(buttonText: pressedConfirm ? "완료" : "확인", buttonColor: .SO4080)
                             .padding(.top, 44)
                     }
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct startPageButton: View {
+public struct StartPageButton: View {
     var buttonText: String
     var buttonColor: Color
 

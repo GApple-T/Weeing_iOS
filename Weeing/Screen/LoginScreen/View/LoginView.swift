@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum login: Hashable {
+enum Login: Hashable {
     case email
     case password
 }
@@ -17,7 +17,7 @@ struct LoginView: View {
     @State private var passwordText = ""
     @State private var showPassword = false
     @State private var showLoginView = false
-    @FocusState private var focusField: login?
+    @FocusState private var focusField: Login?
 
     var body: some View {
         ZStack {
@@ -56,7 +56,7 @@ struct LoginView: View {
                                     .padding(.top, 4)
                             }
 
-                            startPageButton(buttonText: "로그인", buttonColor: .P30)
+                            StartPageButton(buttonText: "로그인", buttonColor: .P30)
                                 .padding(.top, 40)
 
                             Spacer()
