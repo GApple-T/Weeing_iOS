@@ -1,5 +1,5 @@
 //
-//  startPageButton.swift
+//  StartPageButton.swift
 //  Weeing
 //
 //  Created by 이승화 on 2023/09/01.
