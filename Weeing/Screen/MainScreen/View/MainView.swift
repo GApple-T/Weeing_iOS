@@ -20,7 +20,7 @@ struct MainView_Previews: PreviewProvider {
 }
 
 struct ScreenTapBar: View {
-    @State private var selectedIndex = 0
+    @State private var selectedIndex = 2
     let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
     var selected = 0
     var body: some View {
