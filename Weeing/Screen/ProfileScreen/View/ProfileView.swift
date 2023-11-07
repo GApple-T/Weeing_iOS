@@ -32,9 +32,7 @@ struct ProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu(content: {
-                        Button{
-                            
-                        }label: {
+                        Button{}label: {
                             Text("팀 GApple notion 보러 가기")
                         }
                         Button(role: .destructive){
