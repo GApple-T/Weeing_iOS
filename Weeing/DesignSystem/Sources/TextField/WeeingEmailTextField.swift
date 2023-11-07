@@ -1,26 +1,25 @@
-//
-//  WeeingEmailTextField.swift
-//  Weeing
-//
-//  Created by 이승화 on 2023/08/30.
-//
-
 import SwiftUI
 
 public struct WeeingEmailTextField: View {
     @Binding var textFieldText: String
     var textFieldColor: Color
     var titleColor: Color
+    var helpMessage: String
+    var isError: Bool
 
     public init(
         textFieldText: Binding<String>,
         textFieldColor: Color,
-        titleColor: Color
+        titleColor: Color,
+        helpMessage: String = "",
+        isError: Bool = false
 
     ) {
         _textFieldText = textFieldText
         self.textFieldColor = textFieldColor
         self.titleColor = titleColor
+        self.helpMessage = helpMessage
+        self.isError = isError
     }
 
     public var body: some View {
@@ -32,6 +31,7 @@ public struct WeeingEmailTextField: View {
                 .padding(.leading, 52)
 
             RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(isError ? Color.ERORR : textFieldColor)
                 .foregroundColor(textFieldColor)
                 .frame(height: 40)
                 .padding(.horizontal, 45)
@@ -48,6 +48,10 @@ public struct WeeingEmailTextField: View {
                             .padding(.leading, 218)
                     }
                 )
+            
+            Text(helpMessage)
+                .font(.system(size: 10))
+                .foregroundStyle(isError ? Color.ERORR : Color.N20)
         }
     }
 }

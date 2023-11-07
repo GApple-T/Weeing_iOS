@@ -11,7 +11,7 @@ import SwiftUI
 struct WeeingApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            LoginView(viewModel: LoginViewModel())
         }
     }
 }

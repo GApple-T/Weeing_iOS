@@ -1,28 +1,27 @@
-//
-//  WeeingPasswordTextField.swift
-//  Weeing
-//
-//  Created by 이승화 on 2023/09/01.
-//
-
 import SwiftUI
 
 public struct WeeingPasswordTextField: View {
     @Binding var textFieldText: String
     @Binding var pressedEye: Bool
+    var helpMessage: String
     var textFieldColor: Color
     var titleColor: Color
+    var isError: Bool
 
     public init(
         textFieldText: Binding<String>,
         pressedEye: Binding<Bool>,
         textFieldColor: Color,
-        titleColor: Color
+        titleColor: Color,
+        helpMessage: String = "",
+        isError: Bool = false
     ) {
         _textFieldText = textFieldText
         _pressedEye = pressedEye
         self.textFieldColor = textFieldColor
         self.titleColor = titleColor
+        self.helpMessage = helpMessage
+        self.isError = isError
     }
 
     public var body: some View {
@@ -34,6 +33,7 @@ public struct WeeingPasswordTextField: View {
                 .padding(.leading, 50)
 
             RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(isError ? Color.ERORR : textFieldColor)
                 .foregroundColor(textFieldColor)
                 .frame(height: 40)
                 .padding(.horizontal, 45)
@@ -72,6 +72,10 @@ public struct WeeingPasswordTextField: View {
                         .padding(.top, 10)
                     }
                 )
+            
+            Text(helpMessage)
+                .font(.system(size: 10))
+                .foregroundStyle(isError ? Color.ERORR : Color.N20)
         }
     }
 }
