@@ -39,7 +39,7 @@ struct ProfileView: View {
                             Text("로그아웃")
                         }
                         Button(role: .destructive) {} label: {
-                            Text("회원 가입")
+                            Text("회원 탈퇴")
                         }
                     }, label: {
                         Image(systemName: "ellipsis")
