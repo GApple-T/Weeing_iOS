@@ -13,19 +13,6 @@ struct ProfileView: View {
             ZStack {
                 Color.BG.ignoresSafeArea()
                 VStack(spacing: 0) {
-                    HStack(spacing: 0) {
-                        Spacer()
-                        Menu {
-                            Text("팀 GApple notion 보러 가기")
-                            Text("로그아웃")
-                            Text("회원 탈퇴")
-                        } label: {
-                            Label("", systemImage: "ellipsis")
-                                .rotationEffect(.degrees(-90))
-                                .foregroundStyle(.black)
-                                .padding(.trailing, 20)
-                        }
-                    }
                     Image(systemName: "person.circle.fill")
                         .resizable()
                         .frame(width: 75, height: 75)
@@ -40,6 +27,31 @@ struct ProfileView: View {
                         }
                     }
                     Spacer()
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu(content: {
+                        Button{
+                            
+                        }label: {
+                            Text("팀 GApple notion 보러 가기")
+                        }
+                        Button(role: .destructive){
+                            
+                        }label: {
+                            Text("로그아웃")
+                        }
+                        Button(role: .destructive){
+                            
+                        }label: {
+                            Text("회원 가입")
+                        }
+                    }, label: {
+                        Image(systemName: "ellipsis")
+                            .foregroundStyle(.black)
+                            .rotationEffect(.degrees(-90))
+                    })
                 }
             }
         }
