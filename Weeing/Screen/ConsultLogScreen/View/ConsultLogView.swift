@@ -97,7 +97,6 @@ struct ConsultLogView: View {
                                 .padding(.top,130)
                         }
                         
-                        
                     }
                     .padding(.bottom, 12)
                 }

@@ -49,6 +49,7 @@
 		EABE8ECD2AE01DCB0052B2A3 /* Nunito-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EABE8ECB2AE01DCB0052B2A3 /* Nunito-VariableFont_wght.ttf */; };
 		EABE8ECF2AE01DF20052B2A3 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABE8ECE2AE01DF20052B2A3 /* Diarywriting.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
+		EAE5147E2AFBABC500096FA6 /* TestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5147D2AFBABC500096FA6 /* TestPopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		EABE8ECB2AE01DCB0052B2A3 /* Nunito-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-VariableFont_wght.ttf"; path = "../../../../../Fonts/Nunito/Nunito-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EABE8ECE2AE01DF20052B2A3 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
+		EAE5147D2AFBABC500096FA6 /* TestPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				4CF103272AA618B50059C4C2 /* DiaryView.swift */,
 				EABE8ECE2AE01DF20052B2A3 /* Diarywriting.swift */,
+				EAE5147D2AFBABC500096FA6 /* TestPopup.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
+				EAE5147E2AFBABC500096FA6 /* TestPopup.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* makePasswordView.swift in Sources */,
 				EABE8ECF2AE01DF20052B2A3 /* Diarywriting.swift in Sources */,
