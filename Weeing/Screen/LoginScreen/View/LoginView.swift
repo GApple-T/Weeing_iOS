@@ -1,10 +1,3 @@
-//
-//  LoginView.swift
-//  Weeing
-//
-//  Created by 이승화 on 2023/08/22.
-//
-
 import SwiftUI
 
 enum Login: Hashable {
@@ -18,6 +11,7 @@ struct LoginView: View {
     @State private var showPassword = false
     @State private var showLoginView = false
     @FocusState private var focusField: Login?
+    @StateObject var viewModel: LoginViewModel
 
     var body: some View {
         ZStack {
@@ -33,14 +27,25 @@ struct LoginView: View {
                                 .padding(.horizontal, 134)
                                 .padding(.top, 109)
 
-                            WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .S10, titleColor: .S20)
+                            WeeingEmailTextField(
+                                textFieldText: $emailText,
+                                textFieldColor: .S10,
+                                titleColor: .S20,
+                                isError: viewModel.isEmailErrorOccured
+                            )
                                 .padding(.top, 65)
                                 .focused($focusField, equals: .email)
                                 .onSubmit {
                                     focusField = .password
                                 }
 
-                            WeeingPasswordTextField(textFieldText: $passwordText, pressedEye: $showPassword, textFieldColor: .S10, titleColor: .S20)
+                            WeeingPasswordTextField(
+                                textFieldText: $passwordText,
+                                pressedEye: $showPassword,
+                                textFieldColor: .S10,
+                                titleColor: .S20,
+                                isError: viewModel.isPasswordErrorOcuured
+                            )
                                 .padding(.top, 20)
                                 .focused($focusField, equals: .password)
                                 .submitLabel(.done)
@@ -83,11 +88,5 @@ struct LoginView: View {
                     }
             }
         }
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }
