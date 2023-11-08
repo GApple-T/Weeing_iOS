@@ -60,7 +60,6 @@ struct Diarywriting: View {
                             }
                             textNum = newText.count
                         }
-                        .border(Color.gray)
                     Spacer()
                 }.padding(.top, 95)
 
