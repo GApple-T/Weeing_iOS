@@ -13,7 +13,8 @@ struct DiaryView: View {
                     ScrollView {
                         ForEach(0 ..< 12) { _ in
                             diarylog()
-                        }.padding(.top, 10)
+                        }
+                        .padding(.top, 10)
                     }
                 }
 
@@ -34,7 +35,8 @@ struct DiaryView: View {
                     .padding(.leading, 305)
                     .padding(.trailing, 15)
                     .padding(.bottom, 15)
-            }.navigationBarItems(leading: Text("공유일기").font(.custom("AppleSDGothicNeoB00", size: 24)))
+            }.navigationBarItems(leading: Text("공유일기")
+            .font(.custom("AppleSDGothicNeoB00", size: 24)))
         }
     }
 }

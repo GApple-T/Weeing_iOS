@@ -52,7 +52,6 @@ struct Diarywriting: View {
                 VStack {
                     TextEditor(text: $DiaryContent)
                         .frame(width: 318, height: 400)
-                        //.border(Color.gray)
                         .padding(.trailing,10)
                         .font(.custom("AppleSDGothicNeoB00", size: 14))
                         .onChange(of: DiaryContent) { newText in
