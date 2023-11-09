@@ -53,6 +53,8 @@ struct Diarywriting: View {
                 VStack {
                     TextEditor(text: $DiaryContent)
                         .frame(width: 318, height: 400)
+                        //.border(Color.gray)
+                        .padding(.trailing,10)
                         .font(.custom("AppleSDGothicNeoB00", size: 14))
                         .onChange(of: DiaryContent) { newText in
                             if newText.count > 500 {
@@ -72,7 +74,7 @@ struct Diarywriting: View {
                                     .font(.custom("Pretendard", size: 14))
                                     .foregroundStyle(Color.N20)
                                 Spacer()
-                            }.padding(.top,100)
+                            }.padding(.top,105)
                             Spacer()
                         }.padding(.leading,36)
                     }
