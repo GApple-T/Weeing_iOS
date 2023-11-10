@@ -9,18 +9,6 @@ struct DiaryView: View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 Color.BG.ignoresSafeArea()
-                // 지완: 가로로 스크롤 되는부분 근데 살짝 존망느낌 내일 할꼬얌 / 11월 9일 23시 35분
-                VStack{
-                    HStack{
-                        ScrollView(.horizontal){
-                            ForEach(0..<3){ _ in
-                                Rectangle()
-                                    .frame(width: 50,height: 30)
-                            }
-                        }
-                    }
-                    Spacer()
-                }
                 VStack {
                     ScrollView {
                         ForEach(0 ..< 12) { _ in

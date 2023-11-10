@@ -49,6 +49,7 @@
 		EA5472732AFCB069004B2623 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA5472722AFCB069004B2623 /* NotoSansKR-Bold.ttf */; };
 		EA5472752AFCB0F9004B2623 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5472742AFCB0F9004B2623 /* Diarywriting.swift */; };
 		EA5472772AFD1AE6004B2623 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5472762AFD1AE6004B2623 /* DiaryLog.swift */; };
+		EA5472792AFD9AE6004B2623 /* TestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5472782AFD9AE6004B2623 /* TestPopup.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		EA5472722AFCB069004B2623 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.ttf"; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		EA5472742AFCB0F9004B2623 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EA5472762AFD1AE6004B2623 /* DiaryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog.swift; sourceTree = "<group>"; };
+		EA5472782AFD9AE6004B2623 /* TestPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPopup.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 				4CF103272AA618B50059C4C2 /* DiaryView.swift */,
 				EA5472742AFCB0F9004B2623 /* Diarywriting.swift */,
 				EA5472762AFD1AE6004B2623 /* DiaryLog.swift */,
+				EA5472782AFD9AE6004B2623 /* TestPopup.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				EA5472772AFD1AE6004B2623 /* DiaryLog.swift in Sources */,
+				EA5472792AFD9AE6004B2623 /* TestPopup.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
