@@ -5,18 +5,55 @@ import SwiftUI
 import PopupView
 
 struct DiaryView: View {
+    @State private var selectedButton1: Int? = nil
+    @State private var selectedButton2: Int? = nil
+
     var body: some View {
         NavigationStack {
-            ZStack(alignment: .bottomTrailing) {
-                Color.BG.ignoresSafeArea()
-                VStack {
-                    ScrollView {
-                        ForEach(0 ..< 12) { _ in
-                            diarylog()
+            VStack {
+                ZStack(alignment: .bottomTrailing) {
+                    Color.BG.ignoresSafeArea()
+                    VStack {
+                        HStack{
+                            Text("공유일기")
+                                .font(Font.custom("AppleSDGothicNeoB00", size: 24))
+                                .padding(.leading, 20)
+                            Spacer()
+                        }
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                Entire(isSelected: selectedButton1 == nil)
+                                    .onTapGesture {
+                                        selectedButton1 = nil
+                                    }
+
+                                ForEach(1..<4) { group1 in
+                                    HScrollView(HNum1: group1, isSelected1: selectedButton1 == group1)
+                                        .onTapGesture {
+                                            selectedButton1 = group1
+                                        }
+                                }
+
+                                ForEach(1..<5) { class1 in
+                                    Class(HLabel: class1, isSelected2: selectedButton2 == class1)
+                                        .onTapGesture {
+                                            selectedButton1 = 0
+                                            selectedButton2 = class1
+                                        }
+                                }
+                            }
+                        }
+                        .padding(.top, 4)
+                        .padding(.leading, 20)
+
+                        ScrollView(showsIndicators: false) {
+                            ForEach(0..<12) { _ in
+                                diarylog()
+                            }
+                            .padding(.top, 14)
                         }
                         .padding(.top, 10)
                     }
-                }
 
                     NavigationLink(
                         destination: Diarywriting(),
@@ -35,14 +72,65 @@ struct DiaryView: View {
                     .padding(.leading, 305)
                     .padding(.trailing, 15)
                     .padding(.bottom, 15)
-            }.navigationBarItems(leading: Text("공유일기")
-            .font(.custom("AppleSDGothicNeoB00", size: 24)))
+                }
+            }
         }
     }
 }
 
 
-@ViewBuilder func diarylog() -> some View {
+@ViewBuilder
+func HScrollView(HNum1: Int, isSelected1: Bool) -> some View {
+    ZStack {
+        RoundedRectangle(cornerRadius: 10)
+            .frame(width: 51, height: 32)
+            .foregroundColor(isSelected1 ? Color.P30 : Color.white)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray, lineWidth: 1)
+            )
+
+        Text("\(HNum1)학년")
+            .foregroundColor(isSelected1 ? Color.white : Color.black)
+            .font(.system(size: 12))
+    }
+}
+
+@ViewBuilder
+func Entire(isSelected: Bool) -> some View {
+    ZStack {
+        RoundedRectangle(cornerRadius: 10)
+            .frame(width: 45, height: 32)
+            .foregroundColor(isSelected ? Color.P30 : Color.white)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray, lineWidth: 0.2)
+            )
+
+        Text("전체")
+            .foregroundColor(isSelected ? Color.white : Color.black)
+            .font(.system(size: 12).bold())
+    }
+}
+
+@ViewBuilder
+func Class(HLabel: Int,isSelected2: Bool) -> some View {
+    ZStack {
+        RoundedRectangle(cornerRadius: 10)
+            .frame(width: 69, height: 32)
+            .foregroundColor(isSelected2 ? Color.P30 : Color.white)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray, lineWidth: 0.2)
+            )
+
+        Text("1학년\(HLabel)반")
+            .foregroundColor(isSelected2 ? Color.white : Color.black)
+            .font(.system(size: 12))
+    }
+}
+@ViewBuilder
+func diarylog() -> some View {
     NavigationLink {
         DiaryLog()
     } label: {

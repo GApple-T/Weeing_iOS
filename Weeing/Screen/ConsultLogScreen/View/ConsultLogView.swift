@@ -26,6 +26,7 @@ struct ConsultLogView: View {
                         .padding(.trailing, 288)
                         .padding(.leading, 20)
                         .padding(.top, 11)
+                        .padding(.bottom,20)
 
                     ScrollView(showsIndicators: false) {
                         LazyVStack {
@@ -33,7 +34,7 @@ struct ConsultLogView: View {
                                 isShowingInitialPopup.toggle()
                             }) {
                                 popupScreen(listColor: Color.P30, listname: "신청", listtime: 7)
-                                    .padding(.top, 30)
+                                    .padding(.top, 10)
                             }
 
                             ForEach(0 ..< 6, id: \.self) { _ in
