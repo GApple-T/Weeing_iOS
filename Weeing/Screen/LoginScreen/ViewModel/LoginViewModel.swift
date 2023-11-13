@@ -7,15 +7,21 @@ final class LoginViewModel: ObservableObject {
     @Published var passwordHelpMessage = "비밀번호를 잊어버리셨나요?"
     
     var isEmailErrorOccured: Bool {
+        if emailText.isEmpty {
+            return false
+        }
         if checkEmail(emailText) {
             return false
         } else {
-            emailHelpMessage = "학교 이메일을 입력해주세요."
+//            emailHelpMessage = "학교 이메일을 입력해주세요."
             return true
         }
     }
     
     var isPasswordErrorOcuured: Bool {
+        if passwordText.isEmpty {
+            return false
+        }
         if checkPassword(passwordText) {
             return false
         } else {

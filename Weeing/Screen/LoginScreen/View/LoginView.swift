@@ -29,7 +29,6 @@ struct LoginView: View {
 
                             WeeingEmailTextField(
                                 textFieldText: $emailText,
-                                textFieldColor: .S10,
                                 titleColor: .S20,
                                 isError: viewModel.isEmailErrorOccured
                             )
@@ -41,25 +40,15 @@ struct LoginView: View {
 
                             WeeingPasswordTextField(
                                 textFieldText: $passwordText,
-                                pressedEye: $showPassword,
-                                textFieldColor: .S10,
+                                isSecure: $showPassword,
                                 titleColor: .S20,
+                                helpMessage: "비밀번호를 잊어버리셨나요?",
+                                link: "비밀번호 찾기",
                                 isError: viewModel.isPasswordErrorOcuured
                             )
                                 .padding(.top, 20)
                                 .focused($focusField, equals: .password)
                                 .submitLabel(.done)
-
-                            NavigationLink {
-                                FIndPasswordView()
-                            } label: {
-                                Text("비밀번호를 잊어버리셨나요?")
-                                    .foregroundColor(.N20)
-                                    .font(.custom("AppleSDGothicNeoM00", size: 12))
-                                    .padding(.leading, 52)
-                                    .padding(.trailing, 202)
-                                    .padding(.top, 4)
-                            }
 
                             StartPageButton(buttonText: "로그인", buttonColor: .P30)
                                 .padding(.top, 40)
@@ -89,4 +78,8 @@ struct LoginView: View {
             }
         }
     }
+}
+
+#Preview {
+    LoginView(viewModel: LoginViewModel())
 }
