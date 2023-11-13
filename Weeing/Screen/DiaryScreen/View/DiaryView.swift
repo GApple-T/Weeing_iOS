@@ -87,7 +87,7 @@ func HScrollView(HNum1: Int, isSelected1: Bool) -> some View {
             .foregroundColor(isSelected1 ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray, lineWidth: 1)
+                    .stroke(Color.gray, lineWidth: 0.2)
             )
 
         Text("\(HNum1)학년")
