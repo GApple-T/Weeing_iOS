@@ -136,7 +136,7 @@ func diarylog() -> some View {
     } label: {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
+                .shadow(color: .Shadow, radius: 12.5, x: 3, y: 2)
                 .frame(width: 360, height: 70)
                 .foregroundStyle(.white)
 
