@@ -63,11 +63,21 @@ struct TestPopup: View {
                         guard let phoneURL = URL(string: "tel://109") else { return }
                         UIApplication.shared.open(phoneURL)
                     }label: {
-                        Text("자살예방 상담전화는 109")
-                            .font(Font.custom("AppleSDGothicNeoEB00", size: 12))
-                            .foregroundStyle(Color.P30)
-                            .frame(height: 22)
-                            .padding(.top,5)
+                        HStack(spacing: 0){
+                            Text("자살예방 상담전화는")
+                                .font(Font.custom("AppleSDGothicNeoEB00", size: 12))
+                                .foregroundStyle(Color.black)
+                                .frame(height: 22)
+                                .padding(.top,5)
+                            
+                            Text(" 109")
+                                .font(Font.custom("AppleSDGothicNeoEB00", size: 12))
+                                .foregroundStyle(Color.P30)
+                                .frame(height: 22)
+                                .padding(.top,5)
+                            
+                            
+                        }
                     }
                     
                     
