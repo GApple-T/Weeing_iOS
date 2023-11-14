@@ -41,10 +41,11 @@ public struct WeeingPasswordTextField: View {
                             TextField("", text: $textFieldText)
                         }
                     }
+                    .frame(height: 40)
+                    .padding(.leading, 12)
                     .focused($isFocused)
                     .font(.custom("AppleSDGothicNeoM00", size: 14))
                     .foregroundStyle(Color.N20)
-                    .background(Color.T10)
 
                     Button {
                         isSecure.toggle()
@@ -56,13 +57,13 @@ public struct WeeingPasswordTextField: View {
                     .foregroundStyle(Color.N30)
                     .padding(.trailing, 14)
                 }
-                .frame(height: 40)
                 .background(Color.T10)
-                .cornerRadius(8)
+                .cornerRadius(10)
                 .overlay {
                     RoundedRectangle(cornerRadius: 8)
                         .strokeBorder(isError ? Color.ERORR : Color.T10)
-                        .padding(.horizontal, 20)
+                        .frame(height: 40)
+                        .foregroundStyle(Color.T10)
                 }
                 .padding(.top, 6)
                 .padding(.horizontal, 45)
