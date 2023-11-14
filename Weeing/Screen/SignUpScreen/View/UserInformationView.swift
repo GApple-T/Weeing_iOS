@@ -40,7 +40,7 @@ struct UserInformationView: View {
                     .frame(height: 40)
                     .padding(.horizontal, 45)
                     .padding(.top, 4)
-                    .foregroundColor(.S10)
+                    .foregroundStyle(Color.T10)
                     .overlay(
                         TextField("학번을 입력해주세요", text: $textStudentID)
                             .font(.custom("AppleSDGothicNeoM00", size: 12))
@@ -60,7 +60,7 @@ struct UserInformationView: View {
                     .frame(height: 40)
                     .padding(.horizontal, 45)
                     .padding(.top, 4)
-                    .foregroundColor(.S10)
+                    .foregroundStyle(Color.T10)
                     .overlay(
                         TextField("이름을 입력해주세요", text: $textName)
                             .font(.custom("AppleSDGothicNeoM00", size: 12))

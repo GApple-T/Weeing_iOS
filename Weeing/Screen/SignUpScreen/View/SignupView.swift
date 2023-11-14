@@ -35,7 +35,10 @@ struct SignupView: View {
                         .padding(.horizontal, 112)
                         .padding(.top, 66)
 
-                    WeeingEmailTextField(textFieldText: $emailText, textFieldColor: .SO3020, titleColor: .S30)
+                    WeeingEmailTextField(
+                        textFieldText: $emailText,
+                        titleColor: .S30
+                    )
                         .padding(.top, 66)
                         .focused($focusField, equals: .email)
                         .onSubmit {
@@ -44,10 +47,12 @@ struct SignupView: View {
                         }
 
                     if pressedConfirm == true {
-                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .SO3020, titleColor: .S30)
+                        WeeingConfirmTextField(
+                            textFieldText: $confirmNumber,
+                            titleColor: .S30
+                        )
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
-                            .padding(.top, 15)
                     }
 
                     Button {

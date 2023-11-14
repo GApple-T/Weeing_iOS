@@ -42,7 +42,11 @@ struct FIndPasswordView: View {
                         .padding(.top, 66)
                         .padding(.horizontal, 70)
 
-                    WeeingEmailTextField(textFieldText: $textEmail, textFieldColor: .SO4020, titleColor: .S40)
+                    WeeingEmailTextField(
+                        textFieldText: $textEmail,
+                        titleColor: .S40,
+                        helpMessage: pressedConfirm ? "" : "회원가입 시 사용하신 이메일을 입력해주세요."
+                    )
                         .padding(.top, 78)
                         .focused($focusField, equals: .email)
                         .onSubmit {
@@ -50,20 +54,14 @@ struct FIndPasswordView: View {
                             pressedConfirm = true
                         }
 
-                    if pressedConfirm == false {
-                        Text("회원가입 시 사용하신 이메일을 입력해주세요.")
-                            .foregroundColor(Color.N20)
-                            .font(.custom("AppleSDGothicNeoM00", size: 10))
-                            .padding(.leading, 52)
-                            .padding(.trailing, 154)
-                            .padding(.top, 4)
-                    }
-
                     if pressedConfirm == true {
-                        WeeingConfirmTextField(textFieldText: $confirmNumber, textFieldColor: .SO4020, titleColor: .S40)
+                        WeeingConfirmTextField(
+                            textFieldText: $confirmNumber,
+                            titleColor: .S40
+                        )
                             .focused($focusField, equals: .confirmNumber)
                             .submitLabel(.done)
-                            .padding(.top, 15)
+                            .padding(.top, 5)
                     }
 
                     Button {

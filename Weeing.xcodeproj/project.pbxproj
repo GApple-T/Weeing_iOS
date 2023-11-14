@@ -354,8 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				AFA611CE2A9F638200D63657 /* WeeingEmailTextField.swift */,
-				AFA611D02AA1724000D63657 /* WeeingConfirmTextField.swift */,
 				AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */,
+				AFA611D02AA1724000D63657 /* WeeingConfirmTextField.swift */,
 				AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */,
 			);
 			path = TextField;

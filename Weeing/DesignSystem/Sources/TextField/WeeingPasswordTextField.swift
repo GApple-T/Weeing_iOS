@@ -2,25 +2,26 @@ import SwiftUI
 
 public struct WeeingPasswordTextField: View {
     @Binding var textFieldText: String
-    @Binding var pressedEye: Bool
+    @Binding var isSecure: Bool
+    @FocusState var isFocused: Bool
     var helpMessage: String
-    var textFieldColor: Color
+    var link: String
     var titleColor: Color
     var isError: Bool
 
     public init(
         textFieldText: Binding<String>,
-        pressedEye: Binding<Bool>,
-        textFieldColor: Color,
+        isSecure: Binding<Bool>,
         titleColor: Color,
         helpMessage: String = "",
+        link: String = "",
         isError: Bool = false
     ) {
         _textFieldText = textFieldText
-        _pressedEye = pressedEye
-        self.textFieldColor = textFieldColor
+        _isSecure = isSecure
         self.titleColor = titleColor
         self.helpMessage = helpMessage
+        self.link = link
         self.isError = isError
     }
 
@@ -31,51 +32,55 @@ public struct WeeingPasswordTextField: View {
                 .font(.custom("AppleSDGothicNeoB00", size: 16))
                 .padding(.trailing, 268)
                 .padding(.leading, 50)
-
-            RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(isError ? Color.ERORR : textFieldColor)
-                .foregroundColor(textFieldColor)
-                .frame(height: 40)
-                .padding(.horizontal, 45)
-                .padding(.top, 6)
-                .overlay(
-                    HStack(spacing: 0) {
-                        if pressedEye == false {
+            
+                HStack {
+                    Group {
+                        if isSecure {
                             SecureField("", text: $textFieldText)
-                                .font(.system(size: 12))
-                                .padding(.leading, 55)
-                                .padding(.trailing, 10)
                         } else {
                             TextField("", text: $textFieldText)
-                                .font(.system(size: 12))
-                                .padding(.leading, 55)
-                                .padding(.trailing, 10)
                         }
-
-                        Button {
-                            self.pressedEye.toggle()
-                        } label: {
-                            if pressedEye == false {
-                                Image(systemName: "eye")
-                                    .resizable()
-                                    .frame(width: 15, height: 10)
-                                    .foregroundColor(.N20)
-                                    .padding(.trailing, 59)
-                            } else {
-                                Image(systemName: "eye.slash")
-                                    .resizable()
-                                    .frame(width: 15, height: 10)
-                                    .foregroundColor(.N20)
-                                    .padding(.trailing, 59)
-                            }
-                        }
-                        .padding(.top, 10)
                     }
-                )
-            
-            Text(helpMessage)
-                .font(.system(size: 10))
-                .foregroundStyle(isError ? Color.ERORR : Color.N20)
-        }
+                    .focused($isFocused)
+                    .font(.custom("AppleSDGothicNeoM00", size: 14))
+                    .foregroundStyle(Color.N20)
+                    .background(Color.T10)
+
+                    Button {
+                        isSecure.toggle()
+                    } label: {
+                        isSecure ?
+                            Image(systemName: "eye") :
+                            Image(systemName: "eye.slash")
+                    }
+                    .foregroundStyle(Color.N30)
+                    .padding(.trailing, 14)
+                }
+                .frame(height: 40)
+                .background(Color.T10)
+                .cornerRadius(8)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .strokeBorder(isError ? Color.ERORR : Color.T10)
+                        .padding(.horizontal, 20)
+                }
+                .padding(.top, 6)
+                .padding(.horizontal, 45)
+
+                HStack {
+                    Text(helpMessage)
+                        .font(.custom("AppleSDGothicNeoM00", size: 10))
+                        .foregroundStyle(isError ? Color.ERORR : Color.N20)
+                        .padding(.leading, 58)
+
+                    Spacer()
+
+                    Text(link)
+                        .font(.custom("AppleSDGothicNeoSB00", size: 10))
+                        .foregroundStyle(Color.S20)
+                        .padding(.trailing, 52)
+                }
+                .padding(.top, 4)
+            }
     }
 }
