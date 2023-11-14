@@ -26,7 +26,7 @@ struct DiaryLog: View {
                 
                 VStack(alignment: .leading){
                     Text("야구장 가는 날")
-                        .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
+                        .font(.custom("AppleSDGothicNeoSB00", size: 16))
                         .padding(.leading,16)
                         .padding(.top,56)
                     
