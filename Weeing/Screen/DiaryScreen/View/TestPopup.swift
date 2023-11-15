@@ -45,7 +45,7 @@ struct TestPopup: View {
                     Link(destination: URL(string: "https://www.cyber1388.kr:447/")!) {
                         HStack(spacing: 0) {
                             Text("청소년사이버상담센터  ")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
+                                .font(.custom("AppleSDGothicNeoSB00", size: 12))
                                 .foregroundStyle(Color.N10)
                                 .frame(height: 22)
                                 .padding(.top, 4)
