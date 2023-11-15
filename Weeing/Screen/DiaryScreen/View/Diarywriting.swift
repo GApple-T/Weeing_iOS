@@ -108,10 +108,6 @@ struct Diarywriting: View {
     }
 }
 
-struct Diarywriting_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            Diarywriting()
-        }
-    }
+#Preview {
+    Diarywriting()
 }
