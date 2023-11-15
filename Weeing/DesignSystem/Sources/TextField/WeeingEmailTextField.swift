@@ -30,11 +30,11 @@ public struct WeeingEmailTextField: View {
             
                 TextField("                                                           @gsm.hs.kr", text: $textFieldText)
                     .frame(height: 40)
+                    .padding(.leading, 12)
                     .focused($isFocused)
                     .foregroundStyle(Color.N20)
                     .background(Color.T10)
                     .font(.custom("AppleSDGothicNeoM00", size: 14))
-                    .frame(height: 40)
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
