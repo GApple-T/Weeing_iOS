@@ -1,83 +1,86 @@
+import PopupView
 //  ConsultLogView.swift
 //  Weeing
 //
 import SwiftUI
-import PopupView
 
 struct DiaryView: View {
     @State private var selectedButton1: Int? = nil
     @State private var selectedButton2: Int? = nil
+    @State private var allSelected: Bool = false
 
     var body: some View {
         NavigationStack {
-            VStack {
-                ZStack(alignment: .bottomTrailing) {
-                    Color.BG.ignoresSafeArea()
-                    VStack {
-                        HStack{
-                            Text("공유일기")
-                                .font(Font.custom("AppleSDGothicNeoB00", size: 24))
-                                .padding(.leading, 20)
-                            Spacer()
-                        }
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                Entire(isSelected: selectedButton1 == nil)
+            ZStack(alignment: .bottomTrailing) {
+                Color.BG.ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Text("공유일기")
+                            .font(Font.custom("AppleSDGothicNeoB00", size: 24))
+                            .padding(.leading, 20)
+                        Spacer()
+                    }
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            Entire(isSelected: allSelected)
+                                .onTapGesture {
+                                    allSelected.toggle()
+                                    selectedButton1 = nil
+                                    selectedButton2 = nil
+                                }
+
+                            ForEach(1 ..< 4) { group1 in
+                                HScrollView(HNum1: group1, isSelected1: selectedButton1 == group1)
+                                    .onTapGesture {
+                                        selectedButton1 = group1
+                                        selectedButton2 = nil
+                                        allSelected = false
+                                    }
+                            }
+
+                            ForEach(1 ..< 5) { class1 in
+                                Class(HLabel: class1, isSelected2: selectedButton2 == class1)
                                     .onTapGesture {
                                         selectedButton1 = nil
+                                        selectedButton2 = class1
+                                        allSelected = false
                                     }
-
-                                ForEach(1..<4) { group1 in
-                                    HScrollView(HNum1: group1, isSelected1: selectedButton1 == group1)
-                                        .onTapGesture {
-                                            selectedButton1 = group1
-                                        }
-                                }
-
-                                ForEach(1..<5) { class1 in
-                                    Class(HLabel: class1, isSelected2: selectedButton2 == class1)
-                                        .onTapGesture {
-                                            selectedButton1 = 0
-                                            selectedButton2 = class1
-                                        }
-                                }
                             }
                         }
-                        .padding(.top, 4)
-                        .padding(.leading, 20)
-
-                        ScrollView(showsIndicators: false) {
-                            ForEach(0..<12) { _ in
-                                diarylog()
-                            }
-                            .padding(.top, 14)
-                        }
-                        .padding(.top, 10)
                     }
+                    .padding(.top, 4)
+                    .padding(.leading, 20)
 
-                    NavigationLink(
-                        destination: Diarywriting(),
-                        label: {
-                            Image(systemName: "plus.circle.fill")
-                                .resizable()
-                                .frame(width: 70, height: 70)
-                                .foregroundStyle(Color.S40)
-                                .background(
-                                    Rectangle()
-                                        .frame(width: 50, height: 50)
-                                        .foregroundStyle(.white)
-                                )
+                    ScrollView(showsIndicators: false) {
+                        ForEach(0 ..< 12) { _ in
+                            diarylog()
                         }
-                    )
-                    .padding(.leading, 305)
-                    .padding(.trailing, 15)
-                    .padding(.bottom, 15)
+                        .padding(.top, 14)
+                    }
+                    .padding(.top, 10)
                 }
+
+                NavigationLink(
+                    destination: Diarywriting(),
+                    label: {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width: 70, height: 70)
+                            .foregroundStyle(Color.S40)
+                            .background(
+                                Rectangle()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundStyle(.white)
+                            )
+                    }
+                )
+                .padding(.leading, 305)
+                .padding(.trailing, 15)
+                .padding(.bottom, 15)
             }
         }
     }
 }
-
 
 @ViewBuilder
 func HScrollView(HNum1: Int, isSelected1: Bool) -> some View {
@@ -114,7 +117,7 @@ func Entire(isSelected: Bool) -> some View {
 }
 
 @ViewBuilder
-func Class(HLabel: Int,isSelected2: Bool) -> some View {
+func Class(HLabel: Int, isSelected2: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 69, height: 32)
@@ -129,6 +132,7 @@ func Class(HLabel: Int,isSelected2: Bool) -> some View {
             .font(.system(size: 12))
     }
 }
+
 @ViewBuilder
 func diarylog() -> some View {
     NavigationLink {

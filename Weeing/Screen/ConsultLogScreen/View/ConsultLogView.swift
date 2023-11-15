@@ -26,7 +26,7 @@ struct ConsultLogView: View {
                         .padding(.trailing, 288)
                         .padding(.leading, 20)
                         .padding(.top, 11)
-                        .padding(.bottom,20)
+                        .padding(.bottom, 20)
 
                     ScrollView(showsIndicators: false) {
                         LazyVStack {

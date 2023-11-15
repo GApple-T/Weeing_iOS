@@ -12,7 +12,6 @@ struct Diarywriting: View {
     @Environment(\.dismiss) var dismiss
     @State private var textNum = 0
 
-
     var body: some View {
         ZStack {
             Color.BG.ignoresSafeArea()
@@ -28,10 +27,9 @@ struct Diarywriting: View {
                     .padding(.bottom, 174)
                     .padding(.top, 42)
 
-                VStack{
-
+                VStack {
                     ZStack(alignment: .leading) {
-                        if DiaryTitle.isEmpty{
+                        if DiaryTitle.isEmpty {
                             Text("일기 제목을 입력해주세요 (최대 20글자)")
                                 .font(.custom("AppleSDGothicNeoSB00", size: 16))
                                 .foregroundStyle(Color.N10)
@@ -41,18 +39,17 @@ struct Diarywriting: View {
                     Spacer()
 
                 }.padding(.top, 56)
-                    .padding(.leading,36)
-                VStack{
+                    .padding(.leading, 36)
+                VStack {
                     Divider()
                         .frame(width: 350)
                     Spacer()
-                }.padding(.top,92)
-
+                }.padding(.top, 92)
 
                 VStack {
                     TextEditor(text: $DiaryContent)
                         .frame(width: 318, height: 400)
-                        .padding(.trailing,10)
+                        .padding(.trailing, 10)
                         .font(.custom("AppleSDGothicNeoB00", size: 14))
                         .onChange(of: DiaryContent) { newText in
                             if newText.count > 500 {
@@ -64,49 +61,45 @@ struct Diarywriting: View {
                 }.padding(.top, 95)
 
                 if DiaryContent.isEmpty {
-                    ZStack{
+                    ZStack {
                         let placeholder = "오늘은 어떤 하루 였나요?\n공유하고 싶은 이야기를 마음껏 작성해주세요."
-                        HStack{
-                            VStack{
+                        HStack {
+                            VStack {
                                 Text(placeholder)
                                     .font(.custom("Pretendard", size: 14))
                                     .foregroundStyle(Color.N20)
                                 Spacer()
-                            }.padding(.top,105)
+                            }.padding(.top, 105)
                             Spacer()
-                        }.padding(.leading,36)
+                        }.padding(.leading, 36)
                     }
                 }
-                VStack{
+                VStack {
                     Spacer()
-                    HStack{
+                    HStack {
                         Spacer()
                         Text("\(textNum) / 500")
                             .foregroundStyle(Color.N20)
                             .font(.system(size: 14))
 
+                    }.padding(.trailing, 32)
 
-                    }.padding(.trailing,32)
-
-                }.padding(.bottom,190)
-
+                }.padding(.bottom, 190)
             }
         }
         .toolbar {
-
             ToolbarItem(placement: .topBarTrailing) {
-                HStack{
-
+                HStack {
                     Text("일기 쓰기")
                         .font(.custom("AppleSDGothicNeoB00", size: 22))
-                        .padding(.trailing,84)
+                        .padding(.trailing, 84)
                     Button {
                         dismiss()
                     } label: {
                         Text("완료")
                             .font(.custom("AppleSDGothicNeoB00", size: 18))
                             .foregroundStyle(Color.P30)
-                            .padding(.trailing,7)
+                            .padding(.trailing, 7)
                     }
                 }
             }

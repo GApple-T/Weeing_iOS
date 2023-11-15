@@ -48,7 +48,7 @@ public struct WeeingEmailTextField: View {
                             .padding(.leading, 218)
                     }
                 )
-            
+
             Text(helpMessage)
                 .font(.system(size: 10))
                 .foregroundStyle(isError ? Color.ERORR : Color.N20)

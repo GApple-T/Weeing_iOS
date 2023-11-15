@@ -127,6 +127,21 @@
                   endingLineNumber = "57"
                   offsetFromSymbolStart = "240">
                </Location>
+               <Location
+                  uuid = "51B321DD-5799-4A2B-854A-346FE7BF7250 - 4a94b143bb8ba647"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0) -&gt; some&gt;&gt;.0 in Weeing.DiaryLog.body.getter : some"
+                  moduleName = "Weeing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seojiwan/Desktop/weeing/Weeing_iOS/Weeing/Screen/DiaryScreen/View/DiaryLog.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "692">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
