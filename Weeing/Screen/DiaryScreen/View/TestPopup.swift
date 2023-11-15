@@ -67,7 +67,7 @@ struct TestPopup: View {
                                 .padding(.top, 5)
 
                             Text(" 109")
-                                .font(Font.custom("AppleSDGothicNeoEB00", size: 12))
+                                .font(.custom("AppleSDGothicNeoEB00", size: 12))
                                 .foregroundStyle(Color.P30)
                                 .frame(height: 22)
                                 .padding(.top, 5)
