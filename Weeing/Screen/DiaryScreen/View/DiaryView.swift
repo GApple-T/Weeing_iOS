@@ -16,7 +16,7 @@ struct DiaryView: View {
                 VStack {
                     HStack {
                         Text("공유일기")
-                            .font(Font.custom("AppleSDGothicNeoB00", size: 24))
+                            .font(.custom("AppleSDGothicNeoB00", size: 24))
                             .padding(.leading, 20)
                         Spacer()
                     }
@@ -87,10 +87,12 @@ func HScrollView(HNum1: Int, isSelected1: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 51, height: 32)
-            .foregroundColor(isSelected1 ? Color.P30 : Color.white)
+            .foregroundStyle(isSelected1 ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray, lineWidth: 0.2)
+                    .inset(by: 0.5)
+                    .stroke(isSelected1 ? Color.P30 : Color.N30, lineWidth: 1)
+                    .foregroundStyle(isSelected1 ? Color.P30 : Color.white)
             )
 
         Text("\(HNum1)학년")
@@ -104,14 +106,16 @@ func Entire(isSelected: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 45, height: 32)
-            .foregroundColor(isSelected ? Color.P30 : Color.white)
+            .foregroundStyle(isSelected ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray, lineWidth: 0.2)
+                    .inset(by: 0.5)
+                    .stroke(isSelected ? Color.P30 : Color.N30, lineWidth: 1)
+                    .foregroundStyle(isSelected ? Color.P30 : Color.white)
             )
 
         Text("전체")
-            .foregroundColor(isSelected ? Color.white : Color.black)
+            .foregroundStyle(isSelected ? Color.white : Color.black)
             .font(.system(size: 12).bold())
     }
 }
@@ -120,11 +124,12 @@ func Entire(isSelected: Bool) -> some View {
 func Class(HLabel: Int, isSelected2: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
-            .frame(width: 69, height: 32)
+            .frame(width: 70, height: 33)
             .foregroundColor(isSelected2 ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.gray, lineWidth: 0.2)
+                    .inset(by: 0.5)
+                    .stroke(isSelected2 ? Color.P30 : Color.N30, lineWidth: 1)
             )
 
         Text("1학년\(HLabel)반")

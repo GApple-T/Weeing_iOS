@@ -18,7 +18,7 @@ struct Diarywriting: View {
 
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
+                    .foregroundStyle(Color.white)
                     .frame(width: 350, height: 512)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)

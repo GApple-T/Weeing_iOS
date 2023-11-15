@@ -46,10 +46,10 @@
 		EA54726B2AFCAD62004B2623 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA5472632AFCAD62004B2623 /* AppleSDGothicNeoM00.ttf */; };
 		EA54726D2AFCAE12004B2623 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA54726C2AFCAE12004B2623 /* AppleSDGothicNeoSB00.ttf */; };
 		EA54726F2AFCAE82004B2623 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA54726E2AFCAE82004B2623 /* Nunito-Black.ttf */; };
-		EA5472732AFCB069004B2623 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA5472722AFCB069004B2623 /* NotoSansKR-Bold.ttf */; };
 		EA5472752AFCB0F9004B2623 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5472742AFCB0F9004B2623 /* Diarywriting.swift */; };
 		EA5472772AFD1AE6004B2623 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5472762AFD1AE6004B2623 /* DiaryLog.swift */; };
 		EA5472792AFD9AE6004B2623 /* TestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5472782AFD9AE6004B2623 /* TestPopup.swift */; };
+		EA9E4DBC2B050C9300497CCD /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4DBB2B050C9300497CCD /* NotoSansKR-Bold.ttf */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,10 +93,10 @@
 		EA5472632AFCAD62004B2623 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		EA54726C2AFCAE12004B2623 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
 		EA54726E2AFCAE82004B2623 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Black.ttf"; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/Nunito/Nunito-Black.ttf"; sourceTree = "<group>"; };
-		EA5472722AFCB069004B2623 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.ttf"; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		EA5472742AFCB0F9004B2623 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EA5472762AFD1AE6004B2623 /* DiaryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog.swift; sourceTree = "<group>"; };
 		EA5472782AFD9AE6004B2623 /* TestPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPopup.swift; sourceTree = "<group>"; };
+		EA9E4DBB2B050C9300497CCD /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.ttf"; path = "../../../../../../Fonts/NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,7 +288,7 @@
 				EA54725F2AFCAD62004B2623 /* AppleSDGothicNeoR00.ttf */,
 				EA5472612AFCAD62004B2623 /* AppleSDGothicNeoT00.ttf */,
 				EA54725D2AFCAD62004B2623 /* AppleSDGothicNeoUL00.ttf */,
-				EA5472722AFCB069004B2623 /* NotoSansKR-Bold.ttf */,
+				EA9E4DBB2B050C9300497CCD /* NotoSansKR-Bold.ttf */,
 				EA54726E2AFCAE82004B2623 /* Nunito-Black.ttf */,
 			);
 			path = Font;
@@ -508,7 +508,7 @@
 				EA5472692AFCAD62004B2623 /* AppleSDGothicNeoT00.ttf in Resources */,
 				EA54726B2AFCAD62004B2623 /* AppleSDGothicNeoM00.ttf in Resources */,
 				EA5472642AFCAD62004B2623 /* AppleSDGothicNeoH00.ttf in Resources */,
-				EA5472732AFCB069004B2623 /* NotoSansKR-Bold.ttf in Resources */,
+				EA9E4DBC2B050C9300497CCD /* NotoSansKR-Bold.ttf in Resources */,
 				EA5472662AFCAD62004B2623 /* AppleSDGothicNeoL00.ttf in Resources */,
 				EA54726D2AFCAE12004B2623 /* AppleSDGothicNeoSB00.ttf in Resources */,
 				EA5472672AFCAD62004B2623 /* AppleSDGothicNeoR00.ttf in Resources */,

@@ -11,7 +11,7 @@ struct TestPopup: View {
         NavigationView {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
+                    .foregroundStyle(Color.white)
                     .frame(width: 320, height: 340)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
@@ -34,7 +34,7 @@ struct TestPopup: View {
                     Link(destination: URL(string: "https://www.lifeline.or.kr/")!) {
                         HStack(spacing: 0) {
                             Text("한국생명의전화  ")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
+                                .font(.custom("AppleSDGothicNeoSB00", size: 12))
                                 .foregroundStyle(Color.N10)
                                 .frame(height: 22)
 
@@ -45,7 +45,7 @@ struct TestPopup: View {
                     Link(destination: URL(string: "https://www.cyber1388.kr:447/")!) {
                         HStack(spacing: 0) {
                             Text("청소년사이버상담센터  ")
-                                .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
+                                .font(.custom("AppleSDGothicNeoSB00", size: 12))
                                 .foregroundStyle(Color.N10)
                                 .frame(height: 22)
                                 .padding(.top, 4)
@@ -61,13 +61,13 @@ struct TestPopup: View {
                     } label: {
                         HStack(spacing: 0) {
                             Text("자살예방 상담전화는")
-                                .font(Font.custom("AppleSDGothicNeoEB00", size: 12))
+                                .font(.custom("AppleSDGothicNeoEB00", size: 12))
                                 .foregroundStyle(Color.black)
                                 .frame(height: 22)
                                 .padding(.top, 5)
 
                             Text(" 109")
-                                .font(Font.custom("AppleSDGothicNeoEB00", size: 12))
+                                .font(.custom("AppleSDGothicNeoEB00", size: 12))
                                 .foregroundStyle(Color.P30)
                                 .frame(height: 22)
                                 .padding(.top, 5)
