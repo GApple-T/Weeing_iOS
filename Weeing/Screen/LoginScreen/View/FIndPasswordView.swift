@@ -47,21 +47,21 @@ struct FIndPasswordView: View {
                         titleColor: .S40,
                         helpMessage: pressedConfirm ? "" : "회원가입 시 사용하신 이메일을 입력해주세요."
                     )
-                        .padding(.top, 78)
-                        .focused($focusField, equals: .email)
-                        .onSubmit {
-                            focusField = .confirmNumber
-                            pressedConfirm = true
-                        }
+                    .padding(.top, 78)
+                    .focused($focusField, equals: .email)
+                    .onSubmit {
+                        focusField = .confirmNumber
+                        pressedConfirm = true
+                    }
 
                     if pressedConfirm == true {
                         WeeingConfirmTextField(
                             textFieldText: $confirmNumber,
                             titleColor: .S40
                         )
-                            .focused($focusField, equals: .confirmNumber)
-                            .submitLabel(.done)
-                            .padding(.top, 5)
+                        .focused($focusField, equals: .confirmNumber)
+                        .submitLabel(.done)
+                        .padding(.top, 5)
                     }
 
                     Button {

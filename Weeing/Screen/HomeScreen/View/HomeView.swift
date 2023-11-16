@@ -11,6 +11,8 @@ import SwiftUICalendar
 struct HomeView: View {
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
+    let date = Date()
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -56,9 +58,8 @@ struct HomeView: View {
                             // 캘린더
                             VStack(spacing: 0) {
                                 HStack(spacing: 0) {
-                                    Text("\(controller.yearMonth.monthShortString)")
-                                        .font(.custom("AppleSDGothicNeoB00", size: 30))
-                                        .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                                    Text("\(date.formatted(.dateTime.month(.wide)))")
+                                        .font(.custom("AppleSDGothicNeoB00", size: 20))
                                     Spacer()
                                     Button {
                                         controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
@@ -74,7 +75,9 @@ struct HomeView: View {
                                             .foregroundColor(Color.S20)
                                     }
                                 }
-                                .padding(.horizontal)
+                                .padding(.top, 40)
+                                .padding(.bottom, 8)
+                                .padding(.horizontal, 26)
                                 Divider()
                                     .frame(width: 320)
                                 CalendarView(controller, header: { week in

@@ -12,6 +12,9 @@
 		4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */; };
 		4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3639F92ABAE8D100DD8F30 /* Calenderday.swift */; };
 		4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C72B2D72AEA6110003AD638 /* .swiftlint.yml */; };
+		4CACACBA2B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */; };
+		4CACACBB2B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */; };
+		4CACACBC2B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
@@ -35,9 +38,6 @@
 		AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */; };
 		AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* StartPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
-		AFD02CE02AF9B70A000CF617 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD02CDF2AF9B70A000CF617 /* AppleSDGothicNeoB00.ttf */; };
-		AFD02CE22AF9B719000CF617 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD02CE12AF9B719000CF617 /* AppleSDGothicNeoSB00.ttf */; };
-		AFD02CE42AF9B724000CF617 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD02CE32AF9B724000CF617 /* AppleSDGothicNeoM00.ttf */; };
 		AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +47,9 @@
 		4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItem.swift; sourceTree = "<group>"; };
 		4C3639F92ABAE8D100DD8F30 /* Calenderday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calenderday.swift; sourceTree = "<group>"; };
 		4C72B2D72AEA6110003AD638 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
+		4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
+		4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -71,9 +74,6 @@
 		AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingPasswordTextField.swift; sourceTree = "<group>"; };
 		AFA611D52AA1E94900D63657 /* StartPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
-		AFD02CDF2AF9B70A000CF617 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoB00.ttf; sourceTree = "<group>"; };
-		AFD02CE12AF9B719000CF617 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
-		AFD02CE32AF9B724000CF617 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = ../../../../../../Downloads/AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,9 +254,9 @@
 		AFA611752A94C85700D63657 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				AFD02CDF2AF9B70A000CF617 /* AppleSDGothicNeoB00.ttf */,
-				AFD02CE32AF9B724000CF617 /* AppleSDGothicNeoM00.ttf */,
-				AFD02CE12AF9B719000CF617 /* AppleSDGothicNeoSB00.ttf */,
+				4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */,
+				4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */,
+				4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -445,11 +445,12 @@
 			};
 			buildConfigurationList = AFA611552A94B54300D63657 /* Build configuration list for PBXProject "Weeing" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = AFA611512A94B54300D63657;
 			packageReferences = (
@@ -470,11 +471,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD02CE22AF9B719000CF617 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				4CACACBB2B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf in Resources */,
 				4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				AFD02CE42AF9B724000CF617 /* AppleSDGothicNeoM00.ttf in Resources */,
-				AFD02CE02AF9B70A000CF617 /* AppleSDGothicNeoB00.ttf in Resources */,
+				4CACACBC2B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf in Resources */,
+				4CACACBA2B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

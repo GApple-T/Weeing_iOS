@@ -32,12 +32,13 @@ struct MakePasswordView: View {
                     textFieldText: $passwordText,
                     isSecure: $showPassword,
                     titleColor: .S30,
-                    helpMessage: "비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다.")
-                    .padding(.top, 66)
-                    .focused($focusField, equals: .password)
-                    .onSubmit {
-                        focusField = .checkPassword
-                    }
+                    helpMessage: "비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다."
+                )
+                .padding(.top, 66)
+                .focused($focusField, equals: .password)
+                .onSubmit {
+                    focusField = .checkPassword
+                }
 
                 WeeingCheckPasswordTextField(titleColor: .S30, textFieldText: $checkPasswordText)
                     .padding(.top, 16)
