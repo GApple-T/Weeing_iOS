@@ -22,29 +22,29 @@ public struct WeeingEmailTextField: View {
 
     public var body: some View {
         VStack(spacing: 0) {
-                Text("Email")
-                    .foregroundColor(titleColor)
-                    .font(.custom("AppleSDGothicNeoB00", size: 16))
-                    .padding(.trailing, 298)
-                    .padding(.leading, 52)
-            
-                TextField("                                                           @gsm.hs.kr", text: $textFieldText)
-                    .frame(height: 40)
-                    .padding(.leading, 12)
-                    .focused($isFocused)
-                    .foregroundStyle(Color.N20)
-                    .background(Color.T10)
-                    .font(.custom("AppleSDGothicNeoM00", size: 14))
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder(isError ? Color.ERORR : Color.T10)
-                            .frame(height: 40)
-                            .foregroundStyle(Color.T10)
-                    )
-                    .padding(.horizontal, 45)
-                    .padding(.top, 6)
-            
+            Text("Email")
+                .foregroundColor(titleColor)
+                .font(.custom("AppleSDGothicNeoB00", size: 16))
+                .padding(.trailing, 298)
+                .padding(.leading, 52)
+
+            TextField("                                                           @gsm.hs.kr", text: $textFieldText)
+                .frame(height: 40)
+                .padding(.leading, 12)
+                .focused($isFocused)
+                .foregroundStyle(Color.N20)
+                .background(Color.T10)
+                .font(.custom("AppleSDGothicNeoM00", size: 14))
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(isError ? Color.ERORR : Color.T10)
+                        .frame(height: 40)
+                        .foregroundStyle(Color.T10)
+                )
+                .padding(.horizontal, 45)
+                .padding(.top, 6)
+
             Text(helpMessage)
                 .font(.system(size: 10))
                 .foregroundStyle(isError ? Color.ERORR : Color.N20)

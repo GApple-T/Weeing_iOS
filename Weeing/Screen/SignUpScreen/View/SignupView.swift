@@ -39,20 +39,20 @@ struct SignupView: View {
                         textFieldText: $emailText,
                         titleColor: .S30
                     )
-                        .padding(.top, 66)
-                        .focused($focusField, equals: .email)
-                        .onSubmit {
-                            focusField = .confirmNumber
-                            pressedConfirm = true
-                        }
+                    .padding(.top, 66)
+                    .focused($focusField, equals: .email)
+                    .onSubmit {
+                        focusField = .confirmNumber
+                        pressedConfirm = true
+                    }
 
                     if pressedConfirm == true {
                         WeeingConfirmTextField(
                             textFieldText: $confirmNumber,
                             titleColor: .S30
                         )
-                            .focused($focusField, equals: .confirmNumber)
-                            .submitLabel(.done)
+                        .focused($focusField, equals: .confirmNumber)
+                        .submitLabel(.done)
                     }
 
                     Button {
