@@ -56,64 +56,71 @@ struct HomeView: View {
                             .padding(.bottom, 12)
 
                             // 캘린더
-                            VStack(spacing: 0) {
-                                HStack(spacing: 0) {
-                                    Text("\(date.formatted(.dateTime.month(.wide)))")
-                                        .font(.custom("AppleSDGothicNeoB00", size: 20))
-                                    Spacer()
-                                    Button {
-                                        controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
-                                    } label: {
-                                        Image(systemName: "chevron.left")
-                                            .foregroundColor(Color.S20)
+
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 16)
+                                    .frame(width: 360, height: 360)
+                                    .foregroundStyle(Color.S10)
+
+                                VStack(spacing: 0) {
+                                    HStack(spacing: 0) {
+                                        Text("\(date.formatted(.dateTime.month(.wide)))")
+                                            .font(.custom("AppleSDGothicNeoB00", size: 20))
+                                        Spacer()
+                                        Button {
+                                            controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
+                                        } label: {
+                                            Image(systemName: "chevron.left")
+                                                .foregroundColor(Color.S20)
+                                        }
+                                        .padding(.trailing, 30)
+                                        Button {
+                                            controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
+                                        } label: {
+                                            Image(systemName: "chevron.right")
+                                                .foregroundColor(Color.S20)
+                                        }
                                     }
-                                    .padding(.trailing, 30)
-                                    Button {
-                                        controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
-                                    } label: {
-                                        Image(systemName: "chevron.right")
-                                            .foregroundColor(Color.S20)
-                                    }
+                                    .padding(.top, 15)
+                                    .padding(.bottom, 10)
+                                    .padding(.horizontal, 13)
+                                    Divider()
+                                        .frame(width: 320)
+                                    CalendarView(controller, header: { week in
+                                        GeometryReader { geometry in
+                                            Text(week.shortString)
+                                                .font(.system(size: 12))
+                                                .fontWeight(.semibold)
+                                                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                                        }
+                                    }, component: { date in
+                                        if date.isToday {
+                                            calenderday(day: "\(date.day)", isToday: true)
+                                                .background(focusDate == date ? Color.S20 : .P30)
+                                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                                .onTapGesture {
+                                                    focusDate = (date != focusDate ? date : nil)
+                                                }
+                                                .padding(.leading, 2)
+                                                .padding(.trailing, 2)
+                                        } else {
+                                            calenderday(day: "\(date.day)", isToday: false)
+                                                .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
+                                                .foregroundColor(focusDate == date ? .white : .black)
+                                                .background(focusDate == date ? Color.S20 : .S10)
+                                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                                .onTapGesture {
+                                                    focusDate = (date != focusDate ? date : nil)
+                                                }
+                                                .padding(.leading, 2)
+                                                .padding(.trailing, 2)
+                                        }
+                                    })
                                 }
-                                .padding(.top, 40)
-                                .padding(.bottom, 8)
-                                .padding(.horizontal, 26)
-                                Divider()
-                                    .frame(width: 320)
-                                CalendarView(controller, header: { week in
-                                    GeometryReader { geometry in
-                                        Text(week.shortString)
-                                            .font(.system(size: 12))
-                                            .fontWeight(.semibold)
-                                            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
-                                    }
-                                }, component: { date in
-                                    if date.isToday {
-                                        calenderday(day: "\(date.day)", isToday: true)
-                                            .background(focusDate == date ? Color.S20 : .P30)
-                                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                                            .onTapGesture {
-                                                focusDate = (date != focusDate ? date : nil)
-                                            }
-                                            .padding(.leading, 2)
-                                            .padding(.trailing, 2)
-                                    } else {
-                                        calenderday(day: "\(date.day)", isToday: false)
-                                            .opacity(date.isFocusYearMonth == true ? 1 : 0.4)
-                                            .foregroundColor(focusDate == date ? .white : .black)
-                                            .background(focusDate == date ? Color.S20 : .S10)
-                                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                                            .onTapGesture {
-                                                focusDate = (date != focusDate ? date : nil)
-                                            }
-                                            .padding(.leading, 2)
-                                            .padding(.trailing, 2)
-                                    }
-                                })
+                                .frame(width: 340, height: 340)
+                                .background(Color.S10)
+                                .cornerRadius(16)
                             }
-                            .frame(width: 360, height: 360)
-                            .background(Color.S10)
-                            .cornerRadius(16)
                             .padding(.bottom, 12)
 
                             HStack(spacing: 10) {
