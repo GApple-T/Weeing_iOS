@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiaryLog: View {
     @Environment(\.dismiss) var dismiss
-    @State private var DiaryTextNumber = 449
+    @State private var DiaryTextcount = 449
     var body: some View {
         ZStack {
             Color.BG.ignoresSafeArea()
@@ -39,7 +39,7 @@ struct DiaryLog: View {
                     .padding(.top, 8)
                     .lineSpacing(8)
 
-                Text("\(DiaryTextNumber) / 500")
+                Text("\(DiaryTextcount) / 500")
                     .foregroundStyle(Color.N20)
                     .font(.system(size: 14))
                     .padding(.leading, 276)
