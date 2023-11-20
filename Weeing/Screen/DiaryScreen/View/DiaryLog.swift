@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiaryLog: View {
     @Environment(\.dismiss) var dismiss
-    @State private var textNum = 449
+    @State private var DiaryTextNumber = 449
     var body: some View {
         ZStack {
             Color.BG.ignoresSafeArea()
@@ -39,7 +39,7 @@ struct DiaryLog: View {
                     .padding(.top, 8)
                     .lineSpacing(8)
 
-                Text("\(textNum) / 500")
+                Text("\(DiaryTextNumber) / 500")
                     .foregroundStyle(Color.N20)
                     .font(.system(size: 14))
                     .padding(.leading, 276)
@@ -49,19 +49,21 @@ struct DiaryLog: View {
             }
         }.padding(.horizontal, 36)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     HStack {
-                        Text("일기 쓰기")
-                            .font(.custom("AppleSDGothicNeoB00", size: 22))
-                            .padding(.trailing, 84)
                         Button {
                             dismiss()
                         } label: {
-                            Text("완료")
+                            Image(systemName: "chevron.left")
                                 .font(.custom("AppleSDGothicNeoB00", size: 18))
                                 .foregroundStyle(Color.P30)
                                 .padding(.trailing, 7)
                         }
+
+                        Text("2023.10.10 일기")
+                            .font(.custom("AppleSDGothicNeoB00", size: 22))
+                            .padding(.trailing, 50)
+                        Spacer()
                     }
                 }
             }

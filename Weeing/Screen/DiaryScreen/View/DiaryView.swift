@@ -5,9 +5,9 @@ import PopupView
 import SwiftUI
 
 struct DiaryView: View {
-    @State private var selectedButton1: Int? = nil
-    @State private var selectedButton2: Int? = nil
-    @State private var allSelected: Bool = false
+    @State private var GradeSelectButton: Int? = nil
+    @State private var ClassSelectButton: Int? = nil
+    @State private var AllSelectBotton: Bool = false
 
     var body: some View {
         NavigationStack {
@@ -20,30 +20,31 @@ struct DiaryView: View {
                             .padding(.leading, 20)
                         Spacer()
                     }
+
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            EntireFillterButton(isSelected: allSelected)
+                            EntireFillterButton(EntireButtonColor: AllSelectBotton)
                                 .onTapGesture {
-                                    allSelected.toggle()
-                                    selectedButton1 = nil
-                                    selectedButton2 = nil
+                                    AllSelectBotton.toggle()
+                                    GradeSelectButton = nil
+                                    ClassSelectButton = nil
                                 }
 
-                            ForEach(1 ..< 4) { group1 in
-                                GradeFillterButton(HNum1: group1, isSelected1: selectedButton1 == group1)
+                            ForEach(1 ..< 4) { GradeFor in
+                                GradeFillterButton(GradeChange: GradeFor, GradeButtonColor: GradeSelectButton == GradeFor)
                                     .onTapGesture {
-                                        selectedButton1 = group1
-                                        selectedButton2 = nil
-                                        allSelected = false
+                                        GradeSelectButton = GradeFor
+                                        ClassSelectButton = nil
+                                        AllSelectBotton = false
                                     }
                             }
 
-                            ForEach(1 ..< 5) { class1 in
-                                ClassFillterButton(HLabel: class1, isSelected2: selectedButton2 == class1)
+                            ForEach(1 ..< 5) { ClassFor in
+                                ClassFillterButton(ClassChange: ClassFor, ClassButtonColor: ClassSelectButton == ClassFor)
                                     .onTapGesture {
-                                        selectedButton1 = nil
-                                        selectedButton2 = class1
-                                        allSelected = false
+                                        GradeSelectButton = nil
+                                        ClassSelectButton = ClassFor
+                                        AllSelectBotton = false
                                     }
                             }
                         }
@@ -83,57 +84,57 @@ struct DiaryView: View {
 }
 
 @ViewBuilder
-func GradeFillterButton(HNum1: Int, isSelected1: Bool) -> some View {
+func GradeFillterButton(GradeChange: Int, GradeButtonColor: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 51, height: 32)
-            .foregroundStyle(isSelected1 ? Color.P30 : Color.white)
+            .foregroundStyle(GradeButtonColor ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .inset(by: 0.5)
-                    .stroke(isSelected1 ? Color.P30 : Color.N30, lineWidth: 1)
-                    .foregroundStyle(isSelected1 ? Color.P30 : Color.white)
+                    .stroke(GradeButtonColor ? Color.P30 : Color.N30, lineWidth: 1)
+                    .foregroundStyle(GradeButtonColor ? Color.P30 : Color.white)
             )
 
-        Text("\(HNum1)학년")
-            .foregroundColor(isSelected1 ? Color.white : Color.black)
+        Text("\(GradeChange)학년")
+            .foregroundColor(GradeButtonColor ? Color.white : Color.black)
             .font(.system(size: 12))
     }
 }
 
 @ViewBuilder
-func EntireFillterButton(isSelected: Bool) -> some View {
+func EntireFillterButton(EntireButtonColor: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 45, height: 32)
-            .foregroundStyle(isSelected ? Color.P30 : Color.white)
+            .foregroundStyle(EntireButtonColor ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .inset(by: 0.5)
-                    .stroke(isSelected ? Color.P30 : Color.N30, lineWidth: 1)
-                    .foregroundStyle(isSelected ? Color.P30 : Color.white)
+                    .stroke(EntireButtonColor ? Color.P30 : Color.N30, lineWidth: 1)
+                    .foregroundStyle(EntireButtonColor ? Color.P30 : Color.white)
             )
 
         Text("전체")
-            .foregroundStyle(isSelected ? Color.white : Color.black)
+            .foregroundStyle(EntireButtonColor ? Color.white : Color.black)
             .font(.system(size: 12).bold())
     }
 }
 
 @ViewBuilder
-func ClassFillterButton(HLabel: Int, isSelected2: Bool) -> some View {
+func ClassFillterButton(ClassChange: Int, ClassButtonColor: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 70, height: 33)
-            .foregroundColor(isSelected2 ? Color.P30 : Color.white)
+            .foregroundColor(ClassButtonColor ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .inset(by: 0.5)
-                    .stroke(isSelected2 ? Color.P30 : Color.N30, lineWidth: 1)
+                    .stroke(ClassButtonColor ? Color.P30 : Color.N30, lineWidth: 1)
             )
 
-        Text("1학년\(HLabel)반")
-            .foregroundColor(isSelected2 ? Color.white : Color.black)
+        Text("1학년\(ClassChange)반")
+            .foregroundColor(ClassButtonColor ? Color.white : Color.black)
             .font(.system(size: 12))
     }
 }

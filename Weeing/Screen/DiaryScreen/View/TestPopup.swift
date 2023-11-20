@@ -56,7 +56,7 @@ struct TestPopup: View {
                         }
                     }
                     Button {
-                        guard let phoneURL = URL(string: "tel://109") else { return }
+                        guard let phoneURL = URL(string: "tel://01096352722") else { return }
                         UIApplication.shared.open(phoneURL)
                     } label: {
                         HStack(spacing: 0) {
@@ -66,7 +66,7 @@ struct TestPopup: View {
                                 .frame(height: 22)
                                 .padding(.top, 5)
 
-                            Text(" 109")
+                            Text(" 01096352722")
                                 .font(.custom("AppleSDGothicNeoEB00", size: 12))
                                 .foregroundStyle(Color.P30)
                                 .frame(height: 22)
