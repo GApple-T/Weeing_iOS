@@ -49,7 +49,53 @@
                   endingLineNumber = "12"
                   offsetFromSymbolStart = "36">
                </Location>
+               <Location
+                  uuid = "5EDC36FB-A43F-4494-9E45-17CA0C8CD89D - a851d2c0035ab1b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Weeing.ConsultLogView.isShowingInitialPopup : Swift.Bool"
+                  moduleName = "Weeing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seojiwan/Desktop/Weeing/Weeing_iOS/Weeing/Screen/ConsultLogScreen/View/ConsultLogView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "5EDC36FB-A43F-4494-9E45-17CA0C8CD89D - 5fe69cece5608816"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weeing.ConsultLogView.init(dismiss: SwiftUI.Environment&lt;SwiftUI.DismissAction&gt;) -&gt; Weeing.ConsultLogView"
+                  moduleName = "Weeing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seojiwan/Desktop/Weeing/Weeing_iOS/Weeing/Screen/ConsultLogScreen/View/ConsultLogView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "36">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "483782D9-9E85-44AD-81FA-91861050C33C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weeing/Screen/MainScreen/View/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

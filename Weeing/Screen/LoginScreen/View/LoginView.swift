@@ -32,11 +32,11 @@ struct LoginView: View {
                                 titleColor: .S20,
                                 isError: viewModel.isEmailErrorOccured
                             )
-                                .padding(.top, 65)
-                                .focused($focusField, equals: .email)
-                                .onSubmit {
-                                    focusField = .password
-                                }
+                            .padding(.top, 65)
+                            .focused($focusField, equals: .email)
+                            .onSubmit {
+                                focusField = .password
+                            }
 
                             WeeingPasswordTextField(
                                 textFieldText: $passwordText,
@@ -46,9 +46,9 @@ struct LoginView: View {
                                 link: "비밀번호 찾기",
                                 isError: viewModel.isPasswordErrorOcuured
                             )
-                                .padding(.top, 20)
-                                .focused($focusField, equals: .password)
-                                .submitLabel(.done)
+                            .padding(.top, 20)
+                            .focused($focusField, equals: .password)
+                            .submitLabel(.done)
 
                             StartPageButton(buttonText: "로그인", buttonColor: .P30)
                                 .padding(.top, 40)

@@ -33,18 +33,18 @@ struct ResetPasswordView: View {
                     titleColor: .S40,
                     helpMessage: "비밀번호는 8~24자 사이여야되며, 특수문자를 포함해야합니다."
                 )
-                    .padding(.top, 78)
-                    .focused($focusField, equals: .password)
-                    .onSubmit {
-                        focusField = .checkPassword
-                    }
+                .padding(.top, 78)
+                .focused($focusField, equals: .password)
+                .onSubmit {
+                    focusField = .checkPassword
+                }
 
                 WeeingCheckPasswordTextField(
                     titleColor: .S40,
                     textFieldText: $checkPasswordText
                 )
-                    .padding(.top, 16)
-                    .submitLabel(.done)
+                .padding(.top, 16)
+                .submitLabel(.done)
 
                 StartPageButton(buttonText: "완료", buttonColor: .SO4080)
                     .padding(.top, 37)
