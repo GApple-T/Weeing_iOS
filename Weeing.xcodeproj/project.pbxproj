@@ -39,6 +39,20 @@
 		AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* StartPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
 		AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */; };
+		EA8D26052B06044400F8D244 /* AppleSDGothicNeoUL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FC2B06044400F8D244 /* AppleSDGothicNeoUL00.ttf */; };
+		EA8D26062B06044400F8D244 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FD2B06044400F8D244 /* AppleSDGothicNeoM00.ttf */; };
+		EA8D26072B06044400F8D244 /* AppleSDGothicNeoR00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FE2B06044400F8D244 /* AppleSDGothicNeoR00.ttf */; };
+		EA8D26082B06044400F8D244 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FF2B06044400F8D244 /* AppleSDGothicNeoSB00.ttf */; };
+		EA8D26092B06044400F8D244 /* AppleSDGothicNeoH00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26002B06044400F8D244 /* AppleSDGothicNeoH00.ttf */; };
+		EA8D260A2B06044400F8D244 /* AppleSDGothicNeoEB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26012B06044400F8D244 /* AppleSDGothicNeoEB00.ttf */; };
+		EA8D260B2B06044400F8D244 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26022B06044400F8D244 /* AppleSDGothicNeoB00.ttf */; };
+		EA8D260C2B06044400F8D244 /* AppleSDGothicNeoT00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26032B06044400F8D244 /* AppleSDGothicNeoT00.ttf */; };
+		EA8D260D2B06044400F8D244 /* AppleSDGothicNeoL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26042B06044400F8D244 /* AppleSDGothicNeoL00.ttf */; };
+		EA8D260F2B06045C00F8D244 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D260E2B06045C00F8D244 /* NotoSansKR-Bold.ttf */; };
+		EA8D26112B06047300F8D244 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26102B06047300F8D244 /* Nunito-Black.ttf */; };
+		EA8D26132B06049100F8D244 /* TestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* TestPopup.swift */; };
+		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
+		EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26162B0604E000F8D244 /* DiaryLog.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +89,20 @@
 		AFA611D52AA1E94900D63657 /* StartPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EA8D25FC2B06044400F8D244 /* AppleSDGothicNeoUL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoUL00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoUL00.ttf"; sourceTree = "<group>"; };
+		EA8D25FD2B06044400F8D244 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
+		EA8D25FE2B06044400F8D244 /* AppleSDGothicNeoR00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoR00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoR00.ttf"; sourceTree = "<group>"; };
+		EA8D25FF2B06044400F8D244 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
+		EA8D26002B06044400F8D244 /* AppleSDGothicNeoH00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoH00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoH00.ttf"; sourceTree = "<group>"; };
+		EA8D26012B06044400F8D244 /* AppleSDGothicNeoEB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoEB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoEB00.ttf"; sourceTree = "<group>"; };
+		EA8D26022B06044400F8D244 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
+		EA8D26032B06044400F8D244 /* AppleSDGothicNeoT00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoT00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoT00.ttf"; sourceTree = "<group>"; };
+		EA8D26042B06044400F8D244 /* AppleSDGothicNeoL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoL00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoL00.ttf"; sourceTree = "<group>"; };
+		EA8D260E2B06045C00F8D244 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.ttf"; path = "../../../../../../Fonts/Noto_Sans_KR/NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
+		EA8D26102B06047300F8D244 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Black.ttf"; path = "../../../../../../Fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
+		EA8D26122B06049100F8D244 /* TestPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPopup.swift; sourceTree = "<group>"; };
+		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
+		EA8D26162B0604E000F8D244 /* DiaryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				4CF103272AA618B50059C4C2 /* DiaryView.swift */,
+				EA8D26142B0604AF00F8D244 /* Diarywriting.swift */,
+				EA8D26122B06049100F8D244 /* TestPopup.swift */,
+				EA8D26162B0604E000F8D244 /* DiaryLog.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,9 +285,17 @@
 		AFA611752A94C85700D63657 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */,
-				4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */,
-				4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */,
+				EA8D260E2B06045C00F8D244 /* NotoSansKR-Bold.ttf */,
+				EA8D26102B06047300F8D244 /* Nunito-Black.ttf */,
+				EA8D26022B06044400F8D244 /* AppleSDGothicNeoB00.ttf */,
+				EA8D26012B06044400F8D244 /* AppleSDGothicNeoEB00.ttf */,
+				EA8D26002B06044400F8D244 /* AppleSDGothicNeoH00.ttf */,
+				EA8D26042B06044400F8D244 /* AppleSDGothicNeoL00.ttf */,
+				EA8D25FD2B06044400F8D244 /* AppleSDGothicNeoM00.ttf */,
+				EA8D25FE2B06044400F8D244 /* AppleSDGothicNeoR00.ttf */,
+				EA8D25FF2B06044400F8D244 /* AppleSDGothicNeoSB00.ttf */,
+				EA8D26032B06044400F8D244 /* AppleSDGothicNeoT00.ttf */,
+				EA8D25FC2B06044400F8D244 /* AppleSDGothicNeoUL00.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -471,11 +510,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CACACBB2B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf in Resources */,
+				EA8D260B2B06044400F8D244 /* AppleSDGothicNeoB00.ttf in Resources */,
+				EA8D26112B06047300F8D244 /* Nunito-Black.ttf in Resources */,
+				EA8D26062B06044400F8D244 /* AppleSDGothicNeoM00.ttf in Resources */,
 				4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */,
+				EA8D26072B06044400F8D244 /* AppleSDGothicNeoR00.ttf in Resources */,
+				EA8D260C2B06044400F8D244 /* AppleSDGothicNeoT00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				4CACACBC2B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf in Resources */,
-				4CACACBA2B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				EA8D26092B06044400F8D244 /* AppleSDGothicNeoH00.ttf in Resources */,
+				EA8D26082B06044400F8D244 /* AppleSDGothicNeoSB00.ttf in Resources */,
+				EA8D260D2B06044400F8D244 /* AppleSDGothicNeoL00.ttf in Resources */,
+				EA8D260F2B06045C00F8D244 /* NotoSansKR-Bold.ttf in Resources */,
+				EA8D26052B06044400F8D244 /* AppleSDGothicNeoUL00.ttf in Resources */,
+				EA8D260A2B06044400F8D244 /* AppleSDGothicNeoEB00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
+				EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */,
 				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
@@ -538,12 +586,14 @@
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
+				EA8D26132B06049100F8D244 /* TestPopup.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
+				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
@@ -681,6 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
+				DEVELOPMENT_TEAM = 7DAQAFQ2TX;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -711,6 +762,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
+				DEVELOPMENT_TEAM = 7DAQAFQ2TX;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
