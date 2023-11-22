@@ -53,7 +53,6 @@ struct Diarywriting: View {
                                     focusField = .DiaryTitle
                                 }
                         }
-                        // .padding(.top, 56)
                         .padding(.leading, 36)
 
                         Divider()
@@ -66,7 +65,8 @@ struct Diarywriting: View {
                                 .frame(width: 318, height: 400)
                                 .onTapGesture {
                                     focusField = .DiaryContent
-                                }.padding(.trailing, 5)
+                                }
+                                .padding(.trailing, 5)
                                 .overlay(
                                     VStack {
                                         Text(placeholder)
