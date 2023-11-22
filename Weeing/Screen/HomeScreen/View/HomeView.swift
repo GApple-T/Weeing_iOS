@@ -11,7 +11,13 @@ import SwiftUICalendar
 struct HomeView: View {
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
-    let date = Date()
+    static let dateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("yyyy MMMM")
+        return formatter
+    }()
+
+    @State var date = Date()
 
     var body: some View {
         NavigationView {
@@ -68,6 +74,7 @@ struct HomeView: View {
                                             .font(.custom("AppleSDGothicNeoB00", size: 20))
                                         Spacer()
                                         Button {
+                                            self.changeDateBy(-1)
                                             controller.scrollTo(controller.yearMonth.addMonth(value: -1), isAnimate: true)
                                         } label: {
                                             Image(systemName: "chevron.left")
@@ -75,6 +82,7 @@ struct HomeView: View {
                                         }
                                         .padding(.trailing, 30)
                                         Button {
+                                            self.changeDateBy(1)
                                             controller.scrollTo(controller.yearMonth.addMonth(value: 1), isAnimate: true)
                                         } label: {
                                             Image(systemName: "chevron.right")
@@ -214,6 +222,12 @@ struct HomeView: View {
             }
         }
         .navigationBarBackButtonHidden()
+    }
+
+    func changeDateBy(_ months: Int) {
+        if let date = Calendar.current.date(byAdding: .month, value: months, to: date) {
+            self.date = date
+        }
     }
 }
 
