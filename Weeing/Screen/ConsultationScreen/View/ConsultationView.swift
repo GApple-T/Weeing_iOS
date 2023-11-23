@@ -245,6 +245,7 @@ struct ConsultationView: View {
         }
         .navigationBarBackButtonHidden()
     }
+
     func changeDateBy(_ months: Int) {
         if let date = Calendar.current.date(byAdding: .month, value: months, to: date) {
             self.date = date

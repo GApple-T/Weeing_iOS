@@ -49,6 +49,7 @@ struct Diarywriting: View {
                                     .foregroundStyle(Color.gray)
                             }
                             TextField("", text: $diaryTitleText)
+                                .font(.custom("AppleSDGothicNeoSB00", size: 16))
                                 .onTapGesture {
                                     focusField = .DiaryTitle
                                 }
@@ -63,6 +64,7 @@ struct Diarywriting: View {
 
                             TextEditor(text: $diaryContentText)
                                 .frame(width: 318, height: 400)
+                                .font(.custom("AppleSDGothicNeoM00", size: 15))
                                 .onTapGesture {
                                     focusField = .DiaryContent
                                 }
