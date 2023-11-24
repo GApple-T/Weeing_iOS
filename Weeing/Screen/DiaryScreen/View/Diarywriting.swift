@@ -19,7 +19,6 @@ struct Diarywriting: View {
     @State private var DiaryContent = ""
     @Environment(\.dismiss) var dismiss
     @State private var textNum = 0
-    @State private var keyboardHeight: CGFloat = 0
 
     enum Field {
         case DiaryTitle
