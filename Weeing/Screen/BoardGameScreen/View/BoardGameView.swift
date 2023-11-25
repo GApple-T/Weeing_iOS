@@ -1,10 +1,3 @@
-//
-//  BoardGameView.swift
-//  Weeing
-//
-//  Created by 한재형 on 2023/09/04.
-//
-
 import PopupView
 import SwiftUI
 
@@ -20,7 +13,7 @@ struct BoardGameView: View {
                 Color.BG.ignoresSafeArea()
                 VStack(spacing: 0) {
                     Text("보드게임 예약")
-                        .font(.custom("AppleSDGothicNeoB00", size: 24))
+                        .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .padding(.leading, 20)
                         .padding(.trailing, 241)
                         .padding(.top, 11)
