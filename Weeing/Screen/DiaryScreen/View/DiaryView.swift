@@ -97,7 +97,7 @@ func GradeFillterButton(GradeChange: Int, GradeButtonColor: Bool) -> some View {
             )
 
         Text("\(GradeChange)학년")
-            .foregroundColor(GradeButtonColor ? Color.white : Color.black)
+            .foregroundStyle(GradeButtonColor ? Color.white : Color.black)
             .font(.system(size: 12))
     }
 }
@@ -126,7 +126,7 @@ func ClassFillterButton(ClassChange: Int, ClassButtonColor: Bool) -> some View {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 70, height: 33)
-            .foregroundColor(ClassButtonColor ? Color.P30 : Color.white)
+            .foregroundStyle(ClassButtonColor ? Color.P30 : Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .inset(by: 0.5)
@@ -134,7 +134,7 @@ func ClassFillterButton(ClassChange: Int, ClassButtonColor: Bool) -> some View {
             )
 
         Text("1학년\(ClassChange)반")
-            .foregroundColor(ClassButtonColor ? Color.white : Color.black)
+            .foregroundStyle(ClassButtonColor ? Color.white : Color.black)
             .font(.system(size: 12))
     }
 }

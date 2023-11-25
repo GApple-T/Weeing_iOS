@@ -50,7 +50,7 @@
 		EA8D260D2B06044400F8D244 /* AppleSDGothicNeoL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26042B06044400F8D244 /* AppleSDGothicNeoL00.ttf */; };
 		EA8D260F2B06045C00F8D244 /* NotoSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D260E2B06045C00F8D244 /* NotoSansKR-Bold.ttf */; };
 		EA8D26112B06047300F8D244 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D26102B06047300F8D244 /* Nunito-Black.ttf */; };
-		EA8D26132B06049100F8D244 /* TestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* TestPopup.swift */; };
+		EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */; };
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
 		EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26162B0604E000F8D244 /* DiaryLog.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
@@ -100,7 +100,7 @@
 		EA8D26042B06044400F8D244 /* AppleSDGothicNeoL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoL00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoL00.ttf"; sourceTree = "<group>"; };
 		EA8D260E2B06045C00F8D244 /* NotoSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.ttf"; path = "../../../../../../Fonts/Noto_Sans_KR/NotoSansKR-Bold.ttf"; sourceTree = "<group>"; };
 		EA8D26102B06047300F8D244 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Black.ttf"; path = "../../../../../../Fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
-		EA8D26122B06049100F8D244 /* TestPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPopup.swift; sourceTree = "<group>"; };
+		EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupScreen.swift; sourceTree = "<group>"; };
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EA8D26162B0604E000F8D244 /* DiaryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 			children = (
 				4CF103272AA618B50059C4C2 /* DiaryView.swift */,
 				EA8D26142B0604AF00F8D244 /* Diarywriting.swift */,
-				EA8D26122B06049100F8D244 /* TestPopup.swift */,
+				EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */,
 				EA8D26162B0604E000F8D244 /* DiaryLog.swift */,
 			);
 			path = View;
@@ -586,7 +586,7 @@
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
-				EA8D26132B06049100F8D244 /* TestPopup.swift in Sources */,
+				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
