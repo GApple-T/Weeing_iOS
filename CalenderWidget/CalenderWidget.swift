@@ -20,7 +20,6 @@ struct Provider: AppIntentTimelineProvider {
     func timeline(for _: ConfigurationAppIntent, in _: Context) async -> Timeline<SimpleEntry> {
         var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
@@ -84,23 +83,8 @@ struct CalenderWidget: Widget {
     }
 }
 
-// private extension ConfigurationAppIntent {
-//    static var smiley: ConfigurationAppIntent {
-//        let intent = ConfigurationAppIntent()
-//        intent.favoriteEmoji = "😀"
-//        return intent
-//    }
-
-//    static var starEyes: ConfigurationAppIntent {
-//        let intent = ConfigurationAppIntent()
-//        intent.favoriteEmoji = "🤩"
-//        return intent
-//    }
-// }
-
 #Preview(as: .systemSmall) {
     CalenderWidget()
 } timeline: {
     SimpleEntry(date: .now)
-    //    SimpleEntry(date: .now, configuration: .starEyes)
 }

@@ -12,6 +12,5 @@ import WidgetKit
 struct CalenderWidgetBundle: WidgetBundle {
     var body: some Widget {
         CalenderWidget()
-//        CalenderWidgetLiveActivity()
     }
 }
