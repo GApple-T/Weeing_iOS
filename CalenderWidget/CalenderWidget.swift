@@ -64,9 +64,6 @@ struct CalenderWidgetEntryView: View {
             .padding(.top, 10)
             Spacer()
         }
-        .containerBackground(for: .widget) {
-            Color.bg
-        }
     }
 }
 
@@ -76,7 +73,9 @@ struct CalenderWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             CalenderWidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+                .containerBackground(for: .widget) {
+                    Color.bg
+                }
         }
         .supportedFamilies([.systemSmall])
         .description("상담 예정 교시를 보여주는 위젯입니다.")
