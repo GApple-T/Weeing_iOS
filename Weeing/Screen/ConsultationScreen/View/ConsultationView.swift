@@ -19,11 +19,6 @@ struct ConsultationView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
-    static let dateFormat: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.setLocalizedDateFormatFromTemplate("yyyy MMMM")
-        return formatter
-    }()
 
     @State var date = Date()
     var body: some View {
