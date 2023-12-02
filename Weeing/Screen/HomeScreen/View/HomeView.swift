@@ -12,6 +12,7 @@ struct HomeView: View {
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
     @State var date = Date()
+    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
 
     var body: some View {
         NavigationView {
@@ -180,13 +181,23 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(spacing: 0) { // 상담 가능
-                                            ForEach(1 ... 7, id: \.self) { _ in
-                                                Text("프로그래밍")
-                                                    .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                    .foregroundColor(Color.N10)
-                                                    .padding(.bottom, 8)
-                                                    .padding(.leading, 16)
+                                        VStack(alignment: .leading ,spacing: 0) { // 상담 가능
+                                            if viewModel.TF{
+                                                ForEach(1 ... 7, id: \.self) { i in
+                                                    if viewModel.information["\(i)"] == "파이썬프로그래밍"{
+                                                        Text("\(viewModel.information["\(i)"] ?? "자습")")
+                                                            .font(.custom("AppleSDGothicNeoB00", size: 10))
+                                                            .foregroundColor(Color.N10)
+                                                            .padding(.bottom, 6)
+                                                            .padding(.leading, 16)
+                                                    } else {
+                                                        Text("\(viewModel.information["\(i)"] ?? "자습")")
+                                                            .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                            .foregroundColor(Color.N10)
+                                                            .padding(.bottom, 10)
+                                                            .padding(.leading, 16)
+                                                    }
+                                                }
                                             }
                                         }
                                         Spacer()
@@ -215,6 +226,7 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear(perform: viewModel.loadData)
         .navigationBarBackButtonHidden()
     }
 
@@ -227,6 +239,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel())
     }
 }

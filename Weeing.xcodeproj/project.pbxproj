@@ -27,6 +27,13 @@
 		4CACACBA2B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */; };
 		4CACACBB2B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */; };
 		4CACACBC2B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */; };
+		4CACC5D92B1B573800DEC251 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CACC5D82B1B573800DEC251 /* Model.swift */; };
+		4CACC5DD2B1B575600DEC251 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CACC5DC2B1B575600DEC251 /* HomeViewModel.swift */; };
+		4CACC5E02B1B576600DEC251 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CACC5DF2B1B576600DEC251 /* API.swift */; };
+		4CACC5E32B1B577B00DEC251 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4CACC5E22B1B577B00DEC251 /* CombineMoya */; };
+		4CACC5E52B1B577B00DEC251 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4CACC5E42B1B577B00DEC251 /* Moya */; };
+		4CACC5E72B1B577B00DEC251 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4CACC5E62B1B577B00DEC251 /* ReactiveMoya */; };
+		4CACC5E92B1B577B00DEC251 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4CACC5E82B1B577B00DEC251 /* RxMoya */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
@@ -99,6 +106,9 @@
 		4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
 		4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
+		4CACC5D82B1B573800DEC251 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4CACC5DC2B1B575600DEC251 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4CACC5DF2B1B576600DEC251 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -141,8 +151,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CACC5E92B1B577B00DEC251 /* RxMoya in Frameworks */,
 				4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */,
 				4C3639F22AB7F36F00DD8F30 /* SwiftUICalendar in Frameworks */,
+				4CACC5E52B1B577B00DEC251 /* Moya in Frameworks */,
+				4CACC5E72B1B577B00DEC251 /* ReactiveMoya in Frameworks */,
+				4CACC5E32B1B577B00DEC251 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +237,36 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
+		4CACC5DA2B1B573E00DEC251 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CACC5D82B1B573800DEC251 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CACC5DB2B1B574700DEC251 /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CACC5DC2B1B575600DEC251 /* HomeViewModel.swift */,
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
+		4CACC5DE2B1B575E00DEC251 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4CACC5DF2B1B576600DEC251 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		4CF1031D2AA6009D0059C4C2 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4CACC5DE2B1B575E00DEC251 /* API */,
+				4CACC5DB2B1B574700DEC251 /* HomeViewModel */,
+				4CACC5DA2B1B573E00DEC251 /* Model */,
 				4CF1031E2AA600AA0059C4C2 /* View */,
 				4C3639F92ABAE8D100DD8F30 /* Calenderday.swift */,
 			);
@@ -561,6 +602,10 @@
 			packageProductDependencies = (
 				4C3639F12AB7F36F00DD8F30 /* SwiftUICalendar */,
 				4CAED9622AC3023E00A1EE76 /* PopupView */,
+				4CACC5E22B1B577B00DEC251 /* CombineMoya */,
+				4CACC5E42B1B577B00DEC251 /* Moya */,
+				4CACC5E62B1B577B00DEC251 /* ReactiveMoya */,
+				4CACC5E82B1B577B00DEC251 /* RxMoya */,
 			);
 			productName = Weeing;
 			productReference = AFA6115A2A94B54300D63657 /* Weeing.app */;
@@ -597,6 +642,7 @@
 			packageReferences = (
 				4C3639F02AB7F36F00DD8F30 /* XCRemoteSwiftPackageReference "SwiftUICalendar" */,
 				4CAED9612AC3023E00A1EE76 /* XCRemoteSwiftPackageReference "PopupView" */,
+				4CACC5E12B1B577B00DEC251 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = AFA6115B2A94B54300D63657 /* Products */;
 			projectDirPath = "";
@@ -697,10 +743,12 @@
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
 				EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
+				4CACC5E02B1B576600DEC251 /* API.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
 				AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */,
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
+				4CACC5DD2B1B575600DEC251 /* HomeViewModel.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
@@ -710,6 +758,7 @@
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
+				4CACC5D92B1B573800DEC251 /* Model.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
@@ -1010,6 +1059,14 @@
 				minimumVersion = 0.1.14;
 			};
 		};
+		4CACC5E12B1B577B00DEC251 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		4CAED9612AC3023E00A1EE76 /* XCRemoteSwiftPackageReference "PopupView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
@@ -1025,6 +1082,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4C3639F02AB7F36F00DD8F30 /* XCRemoteSwiftPackageReference "SwiftUICalendar" */;
 			productName = SwiftUICalendar;
+		};
+		4CACC5E22B1B577B00DEC251 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CACC5E12B1B577B00DEC251 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		4CACC5E42B1B577B00DEC251 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CACC5E12B1B577B00DEC251 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		4CACC5E62B1B577B00DEC251 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CACC5E12B1B577B00DEC251 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		4CACC5E82B1B577B00DEC251 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CACC5E12B1B577B00DEC251 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 		4CAED9622AC3023E00A1EE76 /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
