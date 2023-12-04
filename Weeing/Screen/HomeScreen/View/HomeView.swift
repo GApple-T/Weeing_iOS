@@ -56,8 +56,6 @@ struct HomeView: View {
                             }
                             .padding(.bottom, 12)
 
-                            // 캘린더
-
                             ZStack {
                                 RoundedRectangle(cornerRadius: 16)
                                     .frame(width: 360, height: 360)
@@ -133,7 +131,7 @@ struct HomeView: View {
                                         .padding(.top, 10)
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
-                                        VStack(spacing: 0) { // n교시
+                                        VStack(spacing: 0) {
                                             ForEach(1 ... 7, id: \.self) { num in
                                                 Text("\(num)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
@@ -145,7 +143,7 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(spacing: 0) { // 상담 가능
+                                        VStack(spacing: 0) {
                                             ForEach(1 ... 7, id: \.self) { _ in
                                                 Text("상담 가능")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
@@ -169,7 +167,7 @@ struct HomeView: View {
                                         .padding(.top, 10)
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
-                                        VStack(spacing: 0) { // n교시
+                                        VStack(spacing: 0) {
                                             ForEach(1 ... 7, id: \.self) { num in
                                                 Text("\(num)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
@@ -181,7 +179,7 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(alignment: .leading, spacing: 0) { // 상담 가능
+                                        VStack(alignment: .leading, spacing: 0) {
                                             if viewModel.TF {
                                                 ForEach(1 ... 7, id: \.self) { i in
                                                     if viewModel.information["\(i)"] == "파이썬프로그래밍" {

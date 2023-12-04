@@ -96,7 +96,7 @@ struct ConsultationView: View {
                         .padding(.bottom, 12)
                     }
 
-                    VStack(spacing: 0) { // 교시 선택 버튼
+                    VStack(spacing: 0) {
                         ZStack {
                             Spacer()
                             Text(selectionTitle)
@@ -145,9 +145,9 @@ struct ConsultationView: View {
                         if selectedRowId != 0 {
                             if isSelected != true {
                                 Button {
-                                    isSelected.toggle() // 상담 사유 적는 페이지로 넘어가기
+                                    isSelected.toggle()
                                     if isSelecting {
-                                        isSelecting.toggle() // 교시 선택 버튼
+                                        isSelecting.toggle()
                                     }
                                 } label: {
                                     Text("완료")
@@ -189,7 +189,7 @@ struct ConsultationView: View {
                                 }
                             }
                             Spacer()
-                            Button { // 완료 버튼
+                            Button {
                                 isPresentedFloating.toggle()
                             } label: {
                                 Text("완료")
