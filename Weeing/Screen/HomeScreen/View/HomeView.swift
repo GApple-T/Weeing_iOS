@@ -12,7 +12,7 @@ struct HomeView: View {
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
     @State var date = Date()
-    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel = .init()
 
     var body: some View {
         NavigationView {
@@ -181,20 +181,20 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(alignment: .leading ,spacing: 0) { // 상담 가능
-                                            if viewModel.TF{
+                                        VStack(alignment: .leading, spacing: 0) { // 상담 가능
+                                            if viewModel.TF {
                                                 ForEach(1 ... 7, id: \.self) { i in
-                                                    if viewModel.information["\(i)"] == "파이썬프로그래밍"{
-                                                        Text("\(viewModel.information["\(i)"] ?? "자습")")
+                                                    if viewModel.information["\(i)"] == "파이썬프로그래밍" {
+                                                        Text("\(viewModel.information["\(i)"] ?? "")")
                                                             .font(.custom("AppleSDGothicNeoB00", size: 10))
                                                             .foregroundColor(Color.N10)
                                                             .padding(.bottom, 6)
                                                             .padding(.leading, 16)
                                                     } else {
-                                                        Text("\(viewModel.information["\(i)"] ?? "자습")")
+                                                        Text("\(viewModel.information["\(i)"] ?? "")")
                                                             .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                             .foregroundColor(Color.N10)
-                                                            .padding(.bottom, 10)
+                                                            .padding(.bottom, 8)
                                                             .padding(.leading, 16)
                                                     }
                                                 }
@@ -226,7 +226,7 @@ struct HomeView: View {
                 }
             }
         }
-        .onAppear(perform: viewModel.loadData)
+        .onAppear(perform: viewModel.loadTimeTable)
         .navigationBarBackButtonHidden()
     }
 

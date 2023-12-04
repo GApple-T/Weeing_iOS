@@ -8,25 +8,25 @@
 import Foundation
 import Moya
 
-enum SearchService {
-    case justGet
+enum GetTimeTable {
+    case getTimeTable
 }
 
-extension SearchService: TargetType {
+extension GetTimeTable: TargetType {
     var baseURL: URL {
-        return URL(string: "https://open.neis.go.kr/hub/hisTimetable?KEY=5f6e46f771b746f4b874756a6d7617e5&Type=json&pIndex=1&pSize=8&ATPT_OFCDC_SC_CODE=F10&SD_SCHUL_CODE=7380292&ALL_TI_YMD=20231204&GRADE=1&CLRM_NM=4")!
+        return URL(string: "https://open.neis.go.kr/hub/hisTimetable?KEY=5f6e46f771b746f4b874756a6d7617e5&Type=json&pIndex=1&pSize=8&ATPT_OFCDC_SC_CODE=F10&SD_SCHUL_CODE=7380292&ALL_TI_YMD=20231203&GRADE=1&CLRM_NM=4")!
     }
 
     var path: String {
         switch self {
-        case .justGet:
+        case .getTimeTable:
             return ""
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .justGet:
+        case .getTimeTable:
             return .get
         }
     }
@@ -37,7 +37,7 @@ extension SearchService: TargetType {
 
     var task: Task {
         switch self {
-        case .justGet:
+        case .getTimeTable:
             return .requestPlain
         }
     }

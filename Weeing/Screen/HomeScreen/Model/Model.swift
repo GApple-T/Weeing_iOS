@@ -8,7 +8,7 @@
 import Foundation
 import Moya
 
-struct ClassAPI: Codable {
+struct TimeTable: Codable {
     var hisTimetable: [HisTimetable]?
 
     struct HisTimetable: Codable {

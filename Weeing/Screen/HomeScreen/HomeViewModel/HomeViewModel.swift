@@ -12,14 +12,14 @@ final class HomeViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var information: [String: String] = [:]
     @Published var TF = false
-    let provider = MoyaProvider<SearchService>()
+    let provider = MoyaProvider<GetTimeTable>()
 
-    func loadData() {
-        provider.request(.justGet) { result in
+    func loadTimeTable() {
+        provider.request(.getTimeTable) { result in
             switch result {
             case let .success(response):
                 do {
-                    let information = try JSONDecoder().decode(ClassAPI.self, from: response.data)
+                    let information = try JSONDecoder().decode(TimeTable.self, from: response.data)
 
                     guard let x = information.hisTimetable?.last?.row else {
                         return print("nil")
@@ -35,7 +35,7 @@ final class HomeViewModel: ObservableObject {
                 self.errorMessage = "네트워크 요청 실패: \(error.localizedDescription)"
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
             self.TF.toggle()
         }
     }
