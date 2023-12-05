@@ -182,14 +182,20 @@ struct HomeView: View {
                                         VStack(alignment: .leading, spacing: 0) {
                                             if viewModel.TF {
                                                 ForEach(1 ... 7, id: \.self) { i in
-                                                    if viewModel.information["\(i)"] == "파이썬프로그래밍" {
-                                                        Text("\(viewModel.information["\(i)"] ?? "")")
+                                                    if viewModel.information["\(i)"] == nil {
+                                                        Text("")
                                                             .font(.custom("AppleSDGothicNeoB00", size: 10))
                                                             .foregroundColor(Color.N10)
-                                                            .padding(.bottom, 6)
+                                                            .padding(.bottom, 4)
+                                                            .padding(.leading, 16)
+                                                    } else if viewModel.information["\(i)"] == "파이썬프로그래밍" {
+                                                        Text("\(viewModel.information["\(i)"]!)")
+                                                            .font(.custom("AppleSDGothicNeoB00", size: 10))
+                                                            .foregroundColor(Color.N10)
+                                                            .padding(.bottom, 10)
                                                             .padding(.leading, 16)
                                                     } else {
-                                                        Text("\(viewModel.information["\(i)"] ?? "")")
+                                                        Text("\(viewModel.information["\(i)"]!)")
                                                             .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                             .foregroundColor(Color.N10)
                                                             .padding(.bottom, 8)
