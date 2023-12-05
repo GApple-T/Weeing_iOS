@@ -12,7 +12,7 @@ struct HomeView: View {
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
     @State var date = Date()
-    @ObservedObject var viewModel: HomeViewModel = .init()
+    @StateObject var viewModel: HomeViewModel = .init()
 
     var body: some View {
         NavigationView {
