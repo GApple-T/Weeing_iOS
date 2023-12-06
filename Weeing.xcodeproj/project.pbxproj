@@ -24,9 +24,6 @@
 		4C8A39002B0ED38100306580 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A38FD2B0ED38100306580 /* AppleSDGothicNeoM00.ttf */; };
 		4C8A39012B0ED38100306580 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A38FE2B0ED38100306580 /* AppleSDGothicNeoSB00.ttf */; };
 		4C8A39032B0ED3AE00306580 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A39022B0ED3AE00306580 /* Colors.swift */; };
-		4CACACBA2B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */; };
-		4CACACBB2B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */; };
-		4CACACBC2B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
@@ -51,6 +48,7 @@
 		AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* StartPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
 		AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */; };
+		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
 		EA8D26052B06044400F8D244 /* AppleSDGothicNeoUL00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FC2B06044400F8D244 /* AppleSDGothicNeoUL00.ttf */; };
 		EA8D26062B06044400F8D244 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FD2B06044400F8D244 /* AppleSDGothicNeoM00.ttf */; };
 		EA8D26072B06044400F8D244 /* AppleSDGothicNeoR00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8D25FE2B06044400F8D244 /* AppleSDGothicNeoR00.ttf */; };
@@ -110,9 +108,6 @@
 		4C8A38FD2B0ED38100306580 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
 		4C8A38FE2B0ED38100306580 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
 		4C8A39022B0ED3AE00306580 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		4CACACB72B05F41900CD7D42 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
-		4CACACB82B05F41900CD7D42 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
-		4CACACB92B05F41900CD7D42 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -138,6 +133,7 @@
 		AFA611D52AA1E94900D63657 /* StartPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
 		EA8D25FC2B06044400F8D244 /* AppleSDGothicNeoUL00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoUL00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoUL00.ttf"; sourceTree = "<group>"; };
 		EA8D25FD2B06044400F8D244 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoM00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoM00.ttf"; sourceTree = "<group>"; };
 		EA8D25FE2B06044400F8D244 /* AppleSDGothicNeoR00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoR00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoR00.ttf"; sourceTree = "<group>"; };
@@ -422,6 +418,7 @@
 		AFA611C32A9F007500D63657 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				EA7FFBA52B21374000132C8E /* CounselingCheckScreen */,
 				EAE14ABE2ACDA64000C99D60 /* ConsultLogScreen */,
 				4C3639F32AB86D1100DD8F30 /* RecordScreen */,
 				4CF103312AA620B40059C4C2 /* MainScreen */,
@@ -542,6 +539,22 @@
 				AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA7FFBA52B21374000132C8E /* CounselingCheckScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EA7FFBA62B21375300132C8E /* View */,
+			);
+			path = CounselingCheckScreen;
+			sourceTree = "<group>";
+		};
+		EA7FFBA62B21375300132C8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EAE14ABE2ACDA64000C99D60 /* ConsultLogScreen */ = {
@@ -760,6 +773,7 @@
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
+				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
