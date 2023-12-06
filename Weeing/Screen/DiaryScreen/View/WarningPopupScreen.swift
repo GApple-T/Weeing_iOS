@@ -1,8 +1,8 @@
 //
-//  TestPopup.swift
+//  WarningPopupScreen.swift
 //  Weeing
 //
-//  Created by 서지완 on 11/8/23.
+//  Created by 서지완 on 2023/09/26.
 //
 import SwiftUI
 
