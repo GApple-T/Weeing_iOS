@@ -2,7 +2,7 @@
 //  CounselingCheckView.swift
 //  Weeing
 //
-//  Created by 서지완 on 12/5/23.
+//  Created by 서지완 on 12/5/23..
 //
 
 import SwiftUI
