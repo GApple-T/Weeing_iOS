@@ -37,7 +37,7 @@ struct CheckView: View {
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 360, height: 260)
                 .foregroundStyle(.white)
-                .shadow(color: Color("Shadow"), radius: 8, x: 3, y: 2)
+                .shadow(color: Color("Shadow"), radius: 10, x: 0, y: 4)
             HStack {
                 VStack(alignment: .leading) {
                     Text("1314 서지완")
