@@ -11,8 +11,7 @@ import SwiftUI
 struct WeeingApp: App {
     var body: some Scene {
         WindowGroup {
-            // LoginView(viewModel: LoginViewModel())
-            WarningPopupScreen()
+            LoginView(viewModel: LoginViewModel())
         }
     }
 }
