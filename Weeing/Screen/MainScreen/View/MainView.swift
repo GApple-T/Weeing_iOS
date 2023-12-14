@@ -32,7 +32,7 @@ struct ScreenTapBar: View {
                 case 1:
                     DiaryView()
                 case 2:
-                    HomeView()
+                    HomeView(viewModel: HomeViewModel())
                 case 3:
                     ConsultLogView()
                 default:
