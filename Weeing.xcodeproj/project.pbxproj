@@ -177,12 +177,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C3639F32AB86D1100DD8F30 /* RecordScreen */ = {
+		4C3639F32AB86D1100DD8F30 /* RecordFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4C3639F42AB86D2100DD8F30 /* View */,
 			);
-			path = RecordScreen;
+			path = RecordFeature;
 			sourceTree = "<group>";
 		};
 		4C3639F42AB86D2100DD8F30 /* View */ = {
@@ -275,7 +275,7 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
-		4CF1031D2AA6009D0059C4C2 /* HomeScreen */ = {
+		4CF1031D2AA6009D0059C4C2 /* HomeFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4C396FCF2B2B1F2000F8C19D /* API */,
@@ -284,7 +284,7 @@
 				4CF1031E2AA600AA0059C4C2 /* View */,
 				4C3639F92ABAE8D100DD8F30 /* Calenderday.swift */,
 			);
-			path = HomeScreen;
+			path = HomeFeature;
 			sourceTree = "<group>";
 		};
 		4CF1031E2AA600AA0059C4C2 /* View */ = {
@@ -295,12 +295,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4CF103212AA618540059C4C2 /* BoardGameScreen */ = {
+		4CF103212AA618540059C4C2 /* BoardGameFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4CF103222AA6186C0059C4C2 /* View */,
 			);
-			path = BoardGameScreen;
+			path = BoardGameFeature;
 			sourceTree = "<group>";
 		};
 		4CF103222AA6186C0059C4C2 /* View */ = {
@@ -311,12 +311,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4CF103252AA618820059C4C2 /* DiaryScreen */ = {
+		4CF103252AA618820059C4C2 /* DiaryFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4CF103262AA618A50059C4C2 /* View */,
 			);
-			path = DiaryScreen;
+			path = DiaryFeature;
 			sourceTree = "<group>";
 		};
 		4CF103262AA618A50059C4C2 /* View */ = {
@@ -330,13 +330,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4CF103292AA618C00059C4C2 /* ConsultationScreen */ = {
+		4CF103292AA618C00059C4C2 /* ConsultationFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4CF1032A2AA618E40059C4C2 /* View */,
 				4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */,
 			);
-			path = ConsultationScreen;
+			path = ConsultationFeature;
 			sourceTree = "<group>";
 		};
 		4CF1032A2AA618E40059C4C2 /* View */ = {
@@ -347,12 +347,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4CF1032D2AA618F70059C4C2 /* ProfileScreen */ = {
+		4CF1032D2AA618F70059C4C2 /* ProfileFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4CF1032E2AA619050059C4C2 /* View */,
 			);
-			path = ProfileScreen;
+			path = ProfileFeature;
 			sourceTree = "<group>";
 		};
 		4CF1032E2AA619050059C4C2 /* View */ = {
@@ -363,12 +363,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4CF103312AA620B40059C4C2 /* MainScreen */ = {
+		4CF103312AA620B40059C4C2 /* MainFeature */ = {
 			isa = PBXGroup;
 			children = (
 				4CF103322AA620BC0059C4C2 /* View */,
 			);
-			path = MainScreen;
+			path = MainFeature;
 			sourceTree = "<group>";
 		};
 		4CF103322AA620BC0059C4C2 /* View */ = {
@@ -406,7 +406,7 @@
 				AFA611612A94B54400D63657 /* Assets.xcassets */,
 				AFA6115D2A94B54300D63657 /* WeeingApp.swift */,
 				AFA611CB2A9F62CC00D63657 /* DesignSystem */,
-				AFA611C32A9F007500D63657 /* Screen */,
+				AFA611C32A9F007500D63657 /* Feature */,
 				AFA611632A94B54400D63657 /* Preview Content */,
 			);
 			path = Weeing;
@@ -441,32 +441,32 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		AFA611C32A9F007500D63657 /* Screen */ = {
+		AFA611C32A9F007500D63657 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				EA7FFBA52B21374000132C8E /* CounselingCheckScreen */,
-				EAE14ABE2ACDA64000C99D60 /* ConsultLogScreen */,
-				4C3639F32AB86D1100DD8F30 /* RecordScreen */,
-				4CF103312AA620B40059C4C2 /* MainScreen */,
-				4CF1032D2AA618F70059C4C2 /* ProfileScreen */,
-				4CF103292AA618C00059C4C2 /* ConsultationScreen */,
-				4CF103252AA618820059C4C2 /* DiaryScreen */,
-				4CF103212AA618540059C4C2 /* BoardGameScreen */,
-				4CF1031D2AA6009D0059C4C2 /* HomeScreen */,
-				AFA611C82A9F02C200D63657 /* SplashScreen */,
-				AFA611C62A9F026000D63657 /* SignUpScreen */,
-				AFA611C42A9F012B00D63657 /* LoginScreen */,
+				EA7FFBA52B21374000132C8E /* CounselingCheckFeature */,
+				EAE14ABE2ACDA64000C99D60 /* ConsultLogFeature */,
+				4C3639F32AB86D1100DD8F30 /* RecordFeature */,
+				4CF103312AA620B40059C4C2 /* MainFeature */,
+				4CF1032D2AA618F70059C4C2 /* ProfileFeature */,
+				4CF103292AA618C00059C4C2 /* ConsultationFeature */,
+				4CF103252AA618820059C4C2 /* DiaryFeature */,
+				4CF103212AA618540059C4C2 /* BoardGameFeature */,
+				4CF1031D2AA6009D0059C4C2 /* HomeFeature */,
+				AFA611C82A9F02C200D63657 /* SplashFeature */,
+				AFA611C62A9F026000D63657 /* SignUpFeature */,
+				AFA611C42A9F012B00D63657 /* LoginFeature */,
 			);
-			path = Screen;
+			path = Feature;
 			sourceTree = "<group>";
 		};
-		AFA611C42A9F012B00D63657 /* LoginScreen */ = {
+		AFA611C42A9F012B00D63657 /* LoginFeature */ = {
 			isa = PBXGroup;
 			children = (
 				AFD02CE52AF9B821000CF617 /* ViewModel */,
 				AFA611C52A9F014600D63657 /* View */,
 			);
-			path = LoginScreen;
+			path = LoginFeature;
 			sourceTree = "<group>";
 		};
 		AFA611C52A9F014600D63657 /* View */ = {
@@ -479,12 +479,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AFA611C62A9F026000D63657 /* SignUpScreen */ = {
+		AFA611C62A9F026000D63657 /* SignUpFeature */ = {
 			isa = PBXGroup;
 			children = (
 				AFA611C72A9F027C00D63657 /* View */,
 			);
-			path = SignUpScreen;
+			path = SignUpFeature;
 			sourceTree = "<group>";
 		};
 		AFA611C72A9F027C00D63657 /* View */ = {
@@ -497,12 +497,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AFA611C82A9F02C200D63657 /* SplashScreen */ = {
+		AFA611C82A9F02C200D63657 /* SplashFeature */ = {
 			isa = PBXGroup;
 			children = (
 				AFA611C92A9F02D400D63657 /* View */,
 			);
-			path = SplashScreen;
+			path = SplashFeature;
 			sourceTree = "<group>";
 		};
 		AFA611C92A9F02D400D63657 /* View */ = {
@@ -567,12 +567,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		EA7FFBA52B21374000132C8E /* CounselingCheckScreen */ = {
+		EA7FFBA52B21374000132C8E /* CounselingCheckFeature */ = {
 			isa = PBXGroup;
 			children = (
 				EA7FFBA62B21375300132C8E /* View */,
 			);
-			path = CounselingCheckScreen;
+			path = CounselingCheckFeature;
 			sourceTree = "<group>";
 		};
 		EA7FFBA62B21375300132C8E /* View */ = {
@@ -583,12 +583,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EAE14ABE2ACDA64000C99D60 /* ConsultLogScreen */ = {
+		EAE14ABE2ACDA64000C99D60 /* ConsultLogFeature */ = {
 			isa = PBXGroup;
 			children = (
 				EAE14ABF2ACDA66100C99D60 /* View */,
 			);
-			path = ConsultLogScreen;
+			path = ConsultLogFeature;
 			sourceTree = "<group>";
 		};
 		EAE14ABF2ACDA66100C99D60 /* View */ = {
