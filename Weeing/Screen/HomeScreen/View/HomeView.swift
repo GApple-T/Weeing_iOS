@@ -12,6 +12,7 @@ struct HomeView: View {
     @ObservedObject var controller: CalendarController = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
     @State var date = Date()
+    @StateObject var viewModel: HomeViewModel = .init()
 
     var body: some View {
         NavigationView {
@@ -54,14 +55,10 @@ struct HomeView: View {
                                     .padding(.trailing, 14)
                             }
                             .padding(.bottom, 12)
-
-                            // 캘린더
-
                             ZStack {
                                 RoundedRectangle(cornerRadius: 16)
                                     .frame(width: 360, height: 360)
                                     .foregroundStyle(Color.S10)
-
                                 VStack(spacing: 0) {
                                     HStack(spacing: 0) {
                                         Text("\(date.formatted(.dateTime.month(.wide)))")
@@ -124,7 +121,6 @@ struct HomeView: View {
                                 .cornerRadius(16)
                             }
                             .padding(.bottom, 12)
-
                             HStack(spacing: 10) {
                                 VStack(spacing: 0) {
                                     Text("상담 시간표")
@@ -132,7 +128,7 @@ struct HomeView: View {
                                         .padding(.top, 10)
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
-                                        VStack(spacing: 0) { // n교시
+                                        VStack(spacing: 0) {
                                             ForEach(1 ... 7, id: \.self) { num in
                                                 Text("\(num)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
@@ -144,7 +140,7 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(spacing: 0) { // 상담 가능
+                                        VStack(spacing: 0) {
                                             ForEach(1 ... 7, id: \.self) { _ in
                                                 Text("상담 가능")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
@@ -161,14 +157,13 @@ struct HomeView: View {
                                 .background(Color.SO5020)
                                 .cornerRadius(5)
                                 .frame(width: 175, height: 232)
-
                                 VStack(spacing: 0) {
                                     Text("시간표")
                                         .font(.custom("AppleSDGothicNeoSB00", size: 15))
                                         .padding(.top, 10)
                                         .padding(.bottom, 10)
                                     HStack(spacing: 0) {
-                                        VStack(spacing: 0) { // n교시
+                                        VStack(spacing: 0) {
                                             ForEach(1 ... 7, id: \.self) { num in
                                                 Text("\(num)교시")
                                                     .font(.custom("AppleSDGothicNeoB00", size: 12))
@@ -180,13 +175,23 @@ struct HomeView: View {
                                         Divider()
                                             .frame(height: 160)
                                             .background(Color.S20)
-                                        VStack(spacing: 0) { // 상담 가능
-                                            ForEach(1 ... 7, id: \.self) { _ in
-                                                Text("프로그래밍")
-                                                    .font(.custom("AppleSDGothicNeoB00", size: 12))
-                                                    .foregroundColor(Color.N10)
-                                                    .padding(.bottom, 8)
-                                                    .padding(.leading, 16)
+                                        VStack(alignment: .leading, spacing: 0) {
+                                            if viewModel.TF {
+                                                ForEach(1 ... 7, id: \.self) { i in
+                                                    if let x = viewModel.information["\(i)"] {
+                                                        Text(x)
+                                                            .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                            .foregroundColor(Color.N10)
+                                                            .padding(.bottom, 4)
+                                                            .padding(.leading, 10)
+                                                    } else {
+                                                        Text("")
+                                                            .font(.custom("AppleSDGothicNeoB00", size: 12))
+                                                            .foregroundColor(Color.N10)
+                                                            .padding(.bottom, 4)
+                                                            .padding(.leading, 10)
+                                                    }
+                                                }
                                             }
                                         }
                                         Spacer()
@@ -215,6 +220,7 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear(perform: viewModel.loadTimeTable)
         .navigationBarBackButtonHidden()
     }
 
@@ -227,6 +233,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel())
     }
 }
