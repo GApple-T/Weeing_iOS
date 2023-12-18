@@ -4,6 +4,7 @@ import SwiftUI
 struct BoardGameView: View {
     let rows = [GridItem(.flexible())]
     @State private var isShownsheet = false
+    @State private var isApplication = false
     @State private var isAlert = false
     @Environment(\.dismiss) var dismiss
 
@@ -35,7 +36,7 @@ struct BoardGameView: View {
                     Spacer()
 
                     Button {
-                        self.isAlert.toggle()
+                        self.isApplication.toggle()
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -45,40 +46,10 @@ struct BoardGameView: View {
                     .padding(.leading, 305)
                     .padding(.trailing, 15)
                     .padding(.bottom, 15)
-                }
-            }
-            .popup(isPresented: $isAlert) {
-                VStack(spacing: 0) {
-                    Text("보드게임 그룹 만들기 신청")
-                        .font(.custom("AppleSDGothicNeoSB00", size: 16))
-                        .background(RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(Color.white)
-                        )
-                        .padding(.top, 52)
-                    Divider()
-                        .padding(.top, 48)
-                        .padding(.bottom, 12)
-                    Button {
-                        isAlert = false
-                    } label: {
-                        Text("확인")
-                            .font(.custom("AppleSDGothicNeoSB00", size: 15))
-                            .foregroundStyle(Color.black)
-                            .frame(width: 320)
+                    .fullScreenCover(isPresented: $isApplication) {
+                        BoardGameApplicationView()
                     }
-                    .padding(.bottom, 12)
                 }
-                .frame(width: 320, height: 168)
-                .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            } customize: {
-                $0
-                    .type(.default)
-                    .position(.center)
-                    .animation(.spring())
-                    .backgroundColor(.black.opacity(0.3))
-                    .closeOnTap(false)
-                    .dragToDismiss(false)
             }
         }
     }
