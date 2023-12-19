@@ -18,7 +18,7 @@ struct WarningPopupScreen: View {
                             .stroke(Color.gray, lineWidth: 0.2)
                     )
                 VStack {
-                    Image("popupimg")
+                    Image("Popupimg")
                         .resizable()
                         .frame(width: 198, height: 132)
                         .padding(.top, 225)

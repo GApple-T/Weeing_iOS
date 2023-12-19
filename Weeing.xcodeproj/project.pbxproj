@@ -20,7 +20,6 @@
 		4C396FCC2B2B1F0F00F8C19D /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C396FCB2B2B1F0F00F8C19D /* ReactiveMoya */; };
 		4C396FCE2B2B1F0F00F8C19D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C396FCD2B2B1F0F00F8C19D /* RxMoya */; };
 		4C396FD12B2B1F2900F8C19D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C396FD02B2B1F2900F8C19D /* API.swift */; };
-		4C396FD62B2B22F000F8C19D /* AppleSDGothicNeoEB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C396FD22B2B22F000F8C19D /* AppleSDGothicNeoEB00.ttf */; };
 		4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C72B2D72AEA6110003AD638 /* .swiftlint.yml */; };
 		4C8A38E22B0EC5F800306580 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A38E12B0EC5F800306580 /* WidgetKit.framework */; };
 		4C8A38E42B0EC5F800306580 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A38E32B0EC5F800306580 /* SwiftUI.framework */; };
@@ -58,8 +57,10 @@
 		AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* StartPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
 		AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */; };
-		AFF300232B2FEC490008F8F9 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFF300222B2FEC490008F8F9 /* AppleSDGothicNeoB00.ttf */; };
 		AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */; };
+		EA2C57E82B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2C57E72B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf */; };
+		EA2C57FC2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2C57FB2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf */; };
+		EA2C57FE2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2C57FD2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf */; };
 		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
 		EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */; };
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
@@ -100,7 +101,6 @@
 		4C396FC12B2B1EA800F8C19D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4C396FC42B2B1EDC00F8C19D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4C396FD02B2B1F2900F8C19D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		4C396FD22B2B22F000F8C19D /* AppleSDGothicNeoEB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoEB00.ttf; sourceTree = "<group>"; };
 		4C72B2D72AEA6110003AD638 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4C8A38DF2B0EC5F800306580 /* CalenderWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalenderWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8A38E12B0EC5F800306580 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -140,8 +140,10 @@
 		AFA611D52AA1E94900D63657 /* StartPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		AFF300222B2FEC490008F8F9 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../../Downloads/OnlineWebFonts_COM_c337ee010bdfc8144fba6e4a4294a751 (1)/AppleSDGothicNeoB00/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameApplicationView.swift; sourceTree = "<group>"; };
+		EA2C57E72B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoEB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoEB00.ttf"; sourceTree = "<group>"; };
+		EA2C57FB2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
+		EA2C57FD2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = CalenderWidget/DesignSystem/Resources/Font/AppleSDGothicNeoB00.ttf; sourceTree = SOURCE_ROOT; };
 		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
 		EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupScreen.swift; sourceTree = "<group>"; };
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
@@ -430,10 +432,11 @@
 		AFA611752A94C85700D63657 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				EA2C57FB2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf */,
+				EA2C57FD2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf */,
 				4C396FBE2B2B1E8300F8C19D /* NotoSansKR-Bold.ttf */,
 				4C396FBC2B2B1E6800F8C19D /* Nunito-Black.ttf */,
-				AFF300222B2FEC490008F8F9 /* AppleSDGothicNeoB00.ttf */,
-				4C396FD22B2B22F000F8C19D /* AppleSDGothicNeoEB00.ttf */,
+				EA2C57E72B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -564,6 +567,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		EA2C57EB2B306CE400AD6DE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA2C57EE2B306D2200AD6DE6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		EA7FFBA52B21374000132C8E /* CounselingCheckFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +600,8 @@
 		EAE14ABE2ACDA64000C99D60 /* ConsultLogFeature */ = {
 			isa = PBXGroup;
 			children = (
+				EA2C57EE2B306D2200AD6DE6 /* API */,
+				EA2C57EB2B306CE400AD6DE6 /* Model */,
 				EAE14ABF2ACDA66100C99D60 /* View */,
 			);
 			path = ConsultLogFeature;
@@ -704,12 +723,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF300232B2FEC490008F8F9 /* AppleSDGothicNeoB00.ttf in Resources */,
 				4C396FBD2B2B1E6800F8C19D /* Nunito-Black.ttf in Resources */,
+				EA2C57E82B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf in Resources */,
 				4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */,
 				4C396FBF2B2B1E8300F8C19D /* NotoSansKR-Bold.ttf in Resources */,
+				EA2C57FC2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				4C396FD62B2B22F000F8C19D /* AppleSDGothicNeoEB00.ttf in Resources */,
+				EA2C57FE2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
