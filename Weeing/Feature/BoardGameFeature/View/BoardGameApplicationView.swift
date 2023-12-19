@@ -5,8 +5,8 @@
 //  Created by 이승화 on 12/18/23.
 //
 
-import SwiftUI
 import PopupView
+import SwiftUI
 
 struct BoardGameApplicationView: View {
     @State var isClicked = false
@@ -14,7 +14,7 @@ struct BoardGameApplicationView: View {
     @State var selectedRowId = 0
     @State var isSelect = false
     @Environment(\.dismiss) private var dismiss
-    
+
     var body: some View {
         ZStack {
             Color.BG.ignoresSafeArea()
@@ -23,10 +23,10 @@ struct BoardGameApplicationView: View {
                     Text("보드게임 예약")
                         .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .padding(.leading, 20)
-                    
+
                     Spacer()
                 }
-                
+
                 VStack(spacing: 0) {
                     ZStack {
                         Spacer()
@@ -72,9 +72,9 @@ struct BoardGameApplicationView: View {
                     isClicked.toggle()
                 }
                 .padding(.top, 32)
-                
+
                 Spacer()
-                
+
                 if selectedRowId != 0 {
                     VStack(spacing: 0) {
                         Text("완료")
