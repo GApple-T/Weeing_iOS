@@ -28,6 +28,9 @@
 		4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */; };
 		4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032F2AA619140059C4C2 /* ProfileView.swift */; };
 		4CF103342AA620C90059C4C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103332AA620C90059C4C2 /* MainView.swift */; };
+		AF61A9E72B32B50D008F292A /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61A9E62B32B50D008F292A /* TokenDTO.swift */; };
+		AF61A9E92B32B525008F292A /* JwtPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61A9E82B32B525008F292A /* JwtPlugin.swift */; };
+		AF61A9EB2B32B541008F292A /* JwtAuthorizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61A9EA2B32B541008F292A /* JwtAuthorizable.swift */; };
 		AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6115D2A94B54300D63657 /* WeeingApp.swift */; };
 		AFA611622A94B54400D63657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611612A94B54400D63657 /* Assets.xcassets */; };
 		AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA611642A94B54400D63657 /* Preview Assets.xcassets */; };
@@ -59,9 +62,6 @@
 		AFF14EAF2B327CB30017CC40 /* RefreshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EAE2B327CB30017CC40 /* RefreshAPI.swift */; };
 		AFF14EB22B327CD10017CC40 /* BaseRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EB12B327CD10017CC40 /* BaseRemoteDataSource.swift */; };
 		AFF14EB52B327CF50017CC40 /* RefreshError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EB42B327CF50017CC40 /* RefreshError.swift */; };
-		AFF14EB92B327D420017CC40 /* JwtAuthorizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EB82B327D420017CC40 /* JwtAuthorizable.swift */; };
-		AFF14EBB2B327D530017CC40 /* JwtPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EBA2B327D530017CC40 /* JwtPlugin.swift */; };
-		AFF14EBD2B327D690017CC40 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EBC2B327D690017CC40 /* TokenDTO.swift */; };
 		AFF14EBF2B327DA00017CC40 /* WeeingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EBE2B327DA00017CC40 /* WeeingAPI.swift */; };
 		AFF14EC32B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EC22B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift */; };
 		AFF14EC62B327E1F0017CC40 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EC52B327E1F0017CC40 /* AuthAPI.swift */; };
@@ -115,6 +115,9 @@
 		4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
 		4CF1032F2AA619140059C4C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4CF103332AA620C90059C4C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AF61A9E62B32B50D008F292A /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
+		AF61A9E82B32B525008F292A /* JwtPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtPlugin.swift; sourceTree = "<group>"; };
+		AF61A9EA2B32B541008F292A /* JwtAuthorizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtAuthorizable.swift; sourceTree = "<group>"; };
 		AFA6115A2A94B54300D63657 /* Weeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6115D2A94B54300D63657 /* WeeingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingApp.swift; sourceTree = "<group>"; };
 		AFA611612A94B54400D63657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,9 +149,6 @@
 		AFF14EAE2B327CB30017CC40 /* RefreshAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAPI.swift; sourceTree = "<group>"; };
 		AFF14EB12B327CD10017CC40 /* BaseRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRemoteDataSource.swift; sourceTree = "<group>"; };
 		AFF14EB42B327CF50017CC40 /* RefreshError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshError.swift; sourceTree = "<group>"; };
-		AFF14EB82B327D420017CC40 /* JwtAuthorizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtAuthorizable.swift; sourceTree = "<group>"; };
-		AFF14EBA2B327D530017CC40 /* JwtPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtPlugin.swift; sourceTree = "<group>"; };
-		AFF14EBC2B327D690017CC40 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
 		AFF14EBE2B327DA00017CC40 /* WeeingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingAPI.swift; sourceTree = "<group>"; };
 		AFF14EC22B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthDataSourceImpl.swift; sourceTree = "<group>"; };
 		AFF14EC52B327E1F0017CC40 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
@@ -342,6 +342,24 @@
 				4CF103332AA620C90059C4C2 /* MainView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AF61A9E42B32B4F9008F292A /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				AF61A9E52B32B501008F292A /* Jwt */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		AF61A9E52B32B501008F292A /* Jwt */ = {
+			isa = PBXGroup;
+			children = (
+				AF61A9E62B32B50D008F292A /* TokenDTO.swift */,
+				AF61A9E82B32B525008F292A /* JwtPlugin.swift */,
+				AF61A9EA2B32B541008F292A /* JwtAuthorizable.swift */,
+			);
+			path = Jwt;
 			sourceTree = "<group>";
 		};
 		AFA611512A94B54300D63657 = {
@@ -623,7 +641,7 @@
 		AFF14EAC2B327C9D0017CC40 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AFF14EB62B327D1F0017CC40 /* Plugins */,
+				AF61A9E42B32B4F9008F292A /* Plugins */,
 				AFF14EB32B327CEC0017CC40 /* Error */,
 				AFF14EB02B327CC50017CC40 /* Base */,
 				AFF14EAD2B327CA70017CC40 /* API */,
@@ -654,25 +672,6 @@
 				AFF14EB42B327CF50017CC40 /* RefreshError.swift */,
 			);
 			path = Error;
-			sourceTree = "<group>";
-		};
-		AFF14EB62B327D1F0017CC40 /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				AFF14EB72B327D360017CC40 /* Jwt */,
-			);
-			name = Plugins;
-			path = "ㅖㅣㅕㅎ냐ㅜ";
-			sourceTree = "<group>";
-		};
-		AFF14EB72B327D360017CC40 /* Jwt */ = {
-			isa = PBXGroup;
-			children = (
-				AFF14EB82B327D420017CC40 /* JwtAuthorizable.swift */,
-				AFF14EBA2B327D530017CC40 /* JwtPlugin.swift */,
-				AFF14EBC2B327D690017CC40 /* TokenDTO.swift */,
-			);
-			path = Jwt;
 			sourceTree = "<group>";
 		};
 		AFF14EC02B327DD50017CC40 /* Sources */ = {
@@ -1041,12 +1040,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
-				AFF14EBD2B327D690017CC40 /* TokenDTO.swift in Sources */,
 				EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */,
 				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
-				AFF14EB92B327D420017CC40 /* JwtAuthorizable.swift in Sources */,
 				AFF14E972B327B2B0017CC40 /* BaseViewModel.swift in Sources */,
 				AFF14E922B327AF00017CC40 /* DateUtil.swift in Sources */,
 				EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */,
@@ -1079,6 +1076,7 @@
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,
+				AF61A9E72B32B50D008F292A /* TokenDTO.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFF14ED72B327F0C0017CC40 /* LoginUseCase.swift in Sources */,
@@ -1093,12 +1091,13 @@
 				AFF14EB52B327CF50017CC40 /* RefreshError.swift in Sources */,
 				AFF14EBF2B327DA00017CC40 /* WeeingAPI.swift in Sources */,
 				AFF14ECB2B327E6B0017CC40 /* LoginRequestDTO.swift in Sources */,
+				AF61A9E92B32B525008F292A /* JwtPlugin.swift in Sources */,
 				AFF14EE52B3280250017CC40 /* Keychain.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
+				AF61A9EB2B32B541008F292A /* JwtAuthorizable.swift in Sources */,
 				AFF14E9F2B327BC90017CC40 /* LoginComponent.swift in Sources */,
 				AFF14EE02B327FDB0017CC40 /* AuthRepositoryImpl.swift in Sources */,
 				4C396FC52B2B1EDC00F8C19D /* HomeViewModel.swift in Sources */,
-				AFF14EBB2B327D530017CC40 /* JwtPlugin.swift in Sources */,
 				AFF14EEF2B3280BA0017CC40 /* AppComponent+Auth.swift in Sources */,
 				4C396FD12B2B1F2900F8C19D /* API.swift in Sources */,
 				AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */,
