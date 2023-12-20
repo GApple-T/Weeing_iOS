@@ -11,7 +11,7 @@ import SwiftUI
 struct WeeingApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: LoginViewModel())
+            LoginView(viewModel: LoginViewModel(loginUseCase: LoginUseCaseImpl(authRepository: AuthRepositoryImpl(remoteAuthDataSource: RemoteAuthDataSourceImpl(keychain: KeychainImpl())))))
         }
     }
 }

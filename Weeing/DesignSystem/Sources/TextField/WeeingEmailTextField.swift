@@ -28,7 +28,7 @@ public struct WeeingEmailTextField: View {
                 .padding(.trailing, 298)
                 .padding(.leading, 52)
 
-            TextField("                                                           @gsm.hs.kr", text: $textFieldText)
+            TextField("                                                  @gsm.hs.kr", text: $textFieldText)
                 .frame(height: 40)
                 .padding(.leading, 12)
                 .focused($isFocused)
