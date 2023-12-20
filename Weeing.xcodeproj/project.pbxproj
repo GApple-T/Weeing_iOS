@@ -21,18 +21,6 @@
 		4C396FCE2B2B1F0F00F8C19D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C396FCD2B2B1F0F00F8C19D /* RxMoya */; };
 		4C396FD12B2B1F2900F8C19D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C396FD02B2B1F2900F8C19D /* API.swift */; };
 		4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C72B2D72AEA6110003AD638 /* .swiftlint.yml */; };
-		4C8A38E22B0EC5F800306580 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A38E12B0EC5F800306580 /* WidgetKit.framework */; };
-		4C8A38E42B0EC5F800306580 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8A38E32B0EC5F800306580 /* SwiftUI.framework */; };
-		4C8A38E72B0EC5F800306580 /* CalenderWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A38E62B0EC5F800306580 /* CalenderWidgetBundle.swift */; };
-		4C8A38E92B0EC5F800306580 /* CalenderWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A38E82B0EC5F800306580 /* CalenderWidgetLiveActivity.swift */; };
-		4C8A38EB2B0EC5F800306580 /* CalenderWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A38EA2B0EC5F800306580 /* CalenderWidget.swift */; };
-		4C8A38ED2B0EC5F800306580 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A38EC2B0EC5F800306580 /* AppIntent.swift */; };
-		4C8A38EF2B0EC5FA00306580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A38EE2B0EC5FA00306580 /* Assets.xcassets */; };
-		4C8A38F32B0EC5FA00306580 /* CalenderWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4C8A38DF2B0EC5F800306580 /* CalenderWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4C8A38FF2B0ED38100306580 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A38FC2B0ED38100306580 /* AppleSDGothicNeoB00.ttf */; };
-		4C8A39002B0ED38100306580 /* AppleSDGothicNeoM00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A38FD2B0ED38100306580 /* AppleSDGothicNeoM00.ttf */; };
-		4C8A39012B0ED38100306580 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A38FE2B0ED38100306580 /* AppleSDGothicNeoSB00.ttf */; };
-		4C8A39032B0ED3AE00306580 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A39022B0ED3AE00306580 /* Colors.swift */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
@@ -57,26 +45,44 @@
 		AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* StartPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
 		AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */; };
+		AFF14E8C2B327A840017CC40 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AFF14E8B2B327A840017CC40 /* NeedleFoundation */; };
+		AFF14E8E2B327A840017CC40 /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = AFF14E8D2B327A840017CC40 /* NeedleFoundationTest */; };
+		AFF14E922B327AF00017CC40 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14E912B327AF00017CC40 /* DateUtil.swift */; };
+		AFF14E942B327B010017CC40 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14E932B327B010017CC40 /* ViewUtil.swift */; };
+		AFF14E972B327B2B0017CC40 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14E962B327B2B0017CC40 /* BaseViewModel.swift */; };
+		AFF14E9A2B327B4C0017CC40 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14E992B327B4C0017CC40 /* SceneState.swift */; };
+		AFF14E9D2B327B650017CC40 /* SceneFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14E9C2B327B650017CC40 /* SceneFlow.swift */; };
+		AFF14E9F2B327BC90017CC40 /* LoginComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14E9E2B327BC90017CC40 /* LoginComponent.swift */; };
+		AFF14EA22B327BEB0017CC40 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EA12B327BEB0017CC40 /* LoginFactory.swift */; };
+		AFF14EA52B327C450017CC40 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EA42B327C450017CC40 /* RootComponent.swift */; };
+		AFF14EA72B327C530017CC40 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EA62B327C530017CC40 /* RootView.swift */; };
+		AFF14EAF2B327CB30017CC40 /* RefreshAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EAE2B327CB30017CC40 /* RefreshAPI.swift */; };
+		AFF14EB22B327CD10017CC40 /* BaseRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EB12B327CD10017CC40 /* BaseRemoteDataSource.swift */; };
+		AFF14EB52B327CF50017CC40 /* RefreshError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EB42B327CF50017CC40 /* RefreshError.swift */; };
+		AFF14EB92B327D420017CC40 /* JwtAuthorizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EB82B327D420017CC40 /* JwtAuthorizable.swift */; };
+		AFF14EBB2B327D530017CC40 /* JwtPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EBA2B327D530017CC40 /* JwtPlugin.swift */; };
+		AFF14EBD2B327D690017CC40 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EBC2B327D690017CC40 /* TokenDTO.swift */; };
+		AFF14EBF2B327DA00017CC40 /* WeeingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EBE2B327DA00017CC40 /* WeeingAPI.swift */; };
+		AFF14EC32B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EC22B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift */; };
+		AFF14EC62B327E1F0017CC40 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EC52B327E1F0017CC40 /* AuthAPI.swift */; };
+		AFF14ECB2B327E6B0017CC40 /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14ECA2B327E6B0017CC40 /* LoginRequestDTO.swift */; };
+		AFF14ECE2B327E910017CC40 /* RemoteAuthDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14ECD2B327E910017CC40 /* RemoteAuthDataSource.swift */; };
+		AFF14ED12B327EC30017CC40 /* AuthDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14ED02B327EC30017CC40 /* AuthDomainError.swift */; };
+		AFF14ED42B327EEB0017CC40 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14ED32B327EEB0017CC40 /* AuthRepository.swift */; };
+		AFF14ED72B327F0C0017CC40 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14ED62B327F0C0017CC40 /* LoginUseCase.swift */; };
+		AFF14EDD2B327FA30017CC40 /* LoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EDC2B327FA30017CC40 /* LoginUseCaseImpl.swift */; };
+		AFF14EE02B327FDB0017CC40 /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EDF2B327FDB0017CC40 /* AuthRepositoryImpl.swift */; };
+		AFF14EE52B3280250017CC40 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EE42B3280250017CC40 /* Keychain.swift */; };
+		AFF14EE72B32803E0017CC40 /* KeychainImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EE62B32803E0017CC40 /* KeychainImpl.swift */; };
+		AFF14EED2B32809A0017CC40 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EEC2B32809A0017CC40 /* AppComponent.swift */; };
+		AFF14EEF2B3280BA0017CC40 /* AppComponent+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF14EEE2B3280BA0017CC40 /* AppComponent+Auth.swift */; };
 		AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */; };
-		EA2C57E82B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2C57E72B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf */; };
-		EA2C57FC2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2C57FB2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf */; };
-		EA2C57FE2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2C57FD2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf */; };
 		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
 		EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */; };
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
 		EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26162B0604E000F8D244 /* DiaryLog.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4C8A38F12B0EC5FA00306580 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFA611522A94B54300D63657 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C8A38DE2B0EC5F800306580;
-			remoteInfo = CalenderWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4C8A38F42B0EC5FA00306580 /* Embed Foundation Extensions */ = {
@@ -85,7 +91,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				4C8A38F32B0EC5FA00306580 /* CalenderWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,19 +107,8 @@
 		4C396FC42B2B1EDC00F8C19D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4C396FD02B2B1F2900F8C19D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4C72B2D72AEA6110003AD638 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		4C8A38DF2B0EC5F800306580 /* CalenderWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalenderWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8A38E12B0EC5F800306580 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4C8A38E32B0EC5F800306580 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		4C8A38E62B0EC5F800306580 /* CalenderWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderWidgetBundle.swift; sourceTree = "<group>"; };
-		4C8A38E82B0EC5F800306580 /* CalenderWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		4C8A38EA2B0EC5F800306580 /* CalenderWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderWidget.swift; sourceTree = "<group>"; };
-		4C8A38EC2B0EC5F800306580 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
-		4C8A38EE2B0EC5FA00306580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C8A38F02B0EC5FA00306580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C8A38FC2B0ED38100306580 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB00.ttf; sourceTree = "<group>"; };
-		4C8A38FD2B0ED38100306580 /* AppleSDGothicNeoM00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM00.ttf; sourceTree = "<group>"; };
-		4C8A38FE2B0ED38100306580 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoSB00.ttf; sourceTree = "<group>"; };
-		4C8A39022B0ED3AE00306580 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -140,10 +134,36 @@
 		AFA611D52AA1E94900D63657 /* StartPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AFF14E912B327AF00017CC40 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		AFF14E932B327B010017CC40 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		AFF14E962B327B2B0017CC40 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		AFF14E992B327B4C0017CC40 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
+		AFF14E9C2B327B650017CC40 /* SceneFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFlow.swift; sourceTree = "<group>"; };
+		AFF14E9E2B327BC90017CC40 /* LoginComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponent.swift; sourceTree = "<group>"; };
+		AFF14EA12B327BEB0017CC40 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		AFF14EA42B327C450017CC40 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		AFF14EA62B327C530017CC40 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		AFF14EAE2B327CB30017CC40 /* RefreshAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAPI.swift; sourceTree = "<group>"; };
+		AFF14EB12B327CD10017CC40 /* BaseRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRemoteDataSource.swift; sourceTree = "<group>"; };
+		AFF14EB42B327CF50017CC40 /* RefreshError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshError.swift; sourceTree = "<group>"; };
+		AFF14EB82B327D420017CC40 /* JwtAuthorizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtAuthorizable.swift; sourceTree = "<group>"; };
+		AFF14EBA2B327D530017CC40 /* JwtPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtPlugin.swift; sourceTree = "<group>"; };
+		AFF14EBC2B327D690017CC40 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
+		AFF14EBE2B327DA00017CC40 /* WeeingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingAPI.swift; sourceTree = "<group>"; };
+		AFF14EC22B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthDataSourceImpl.swift; sourceTree = "<group>"; };
+		AFF14EC52B327E1F0017CC40 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		AFF14ECA2B327E6B0017CC40 /* LoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
+		AFF14ECD2B327E910017CC40 /* RemoteAuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthDataSource.swift; sourceTree = "<group>"; };
+		AFF14ED02B327EC30017CC40 /* AuthDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDomainError.swift; sourceTree = "<group>"; };
+		AFF14ED32B327EEB0017CC40 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		AFF14ED62B327F0C0017CC40 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		AFF14EDC2B327FA30017CC40 /* LoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseImpl.swift; sourceTree = "<group>"; };
+		AFF14EDF2B327FDB0017CC40 /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryImpl.swift; sourceTree = "<group>"; };
+		AFF14EE42B3280250017CC40 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		AFF14EE62B32803E0017CC40 /* KeychainImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainImpl.swift; sourceTree = "<group>"; };
+		AFF14EEC2B32809A0017CC40 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		AFF14EEE2B3280BA0017CC40 /* AppComponent+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppComponent+Auth.swift"; sourceTree = "<group>"; };
 		AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameApplicationView.swift; sourceTree = "<group>"; };
-		EA2C57E72B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoEB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoEB00.ttf"; sourceTree = "<group>"; };
-		EA2C57FB2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
-		EA2C57FD2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = CalenderWidget/DesignSystem/Resources/Font/AppleSDGothicNeoB00.ttf; sourceTree = SOURCE_ROOT; };
 		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
 		EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupScreen.swift; sourceTree = "<group>"; };
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
@@ -152,24 +172,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C8A38DC2B0EC5F800306580 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C8A38E42B0EC5F800306580 /* SwiftUI.framework in Frameworks */,
-				4C8A38E22B0EC5F800306580 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFA611572A94B54300D63657 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF14E8E2B327A840017CC40 /* NeedleFoundationTest in Frameworks */,
 				4C396FCE2B2B1F0F00F8C19D /* RxMoya in Frameworks */,
 				4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */,
 				4C3639F22AB7F36F00DD8F30 /* SwiftUICalendar in Frameworks */,
 				4C396FCA2B2B1F0F00F8C19D /* Moya in Frameworks */,
 				4C396FCC2B2B1F0F00F8C19D /* ReactiveMoya in Frameworks */,
+				AFF14E8C2B327A840017CC40 /* NeedleFoundation in Frameworks */,
 				4C396FC82B2B1F0F00F8C19D /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,55 +237,6 @@
 				4C8A38E32B0EC5F800306580 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4C8A38E52B0EC5F800306580 /* CalenderWidget */ = {
-			isa = PBXGroup;
-			children = (
-				4C8A38F02B0EC5FA00306580 /* Info.plist */,
-				4C8A38EE2B0EC5FA00306580 /* Assets.xcassets */,
-				4C8A38F82B0ED33C00306580 /* DesignSystem */,
-				4C8A38E62B0EC5F800306580 /* CalenderWidgetBundle.swift */,
-				4C8A38E82B0EC5F800306580 /* CalenderWidgetLiveActivity.swift */,
-				4C8A38EA2B0EC5F800306580 /* CalenderWidget.swift */,
-				4C8A38EC2B0EC5F800306580 /* AppIntent.swift */,
-			);
-			path = CalenderWidget;
-			sourceTree = "<group>";
-		};
-		4C8A38F82B0ED33C00306580 /* DesignSystem */ = {
-			isa = PBXGroup;
-			children = (
-				4C8A38F92B0ED34900306580 /* Resources */,
-			);
-			path = DesignSystem;
-			sourceTree = "<group>";
-		};
-		4C8A38F92B0ED34900306580 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4C8A38FA2B0ED35500306580 /* Font */,
-				4C8A38FB2B0ED35A00306580 /* Color */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		4C8A38FA2B0ED35500306580 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				4C8A38FC2B0ED38100306580 /* AppleSDGothicNeoB00.ttf */,
-				4C8A38FD2B0ED38100306580 /* AppleSDGothicNeoM00.ttf */,
-				4C8A38FE2B0ED38100306580 /* AppleSDGothicNeoSB00.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		4C8A38FB2B0ED35A00306580 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				4C8A39022B0ED3AE00306580 /* Colors.swift */,
-			);
-			path = Color;
 			sourceTree = "<group>";
 		};
 		4CF1031D2AA6009D0059C4C2 /* HomeFeature */ = {
@@ -385,7 +349,6 @@
 			children = (
 				4C72B2D72AEA6110003AD638 /* .swiftlint.yml */,
 				AFA6115C2A94B54300D63657 /* Weeing */,
-				4C8A38E52B0EC5F800306580 /* CalenderWidget */,
 				4C8A38E02B0EC5F800306580 /* Frameworks */,
 				AFA6115B2A94B54300D63657 /* Products */,
 			);
@@ -395,7 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				AFA6115A2A94B54300D63657 /* Weeing.app */,
-				4C8A38DF2B0EC5F800306580 /* CalenderWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -403,9 +365,13 @@
 		AFA6115C2A94B54300D63657 /* Weeing */ = {
 			isa = PBXGroup;
 			children = (
+				AFF14EE82B3280530017CC40 /* Application */,
+				AFF14EE12B327FF20017CC40 /* Core */,
+				AFF14ED82B327F740017CC40 /* Data */,
+				AFF14EA92B327C870017CC40 /* Domain */,
+				AFF14E8F2B327AC70017CC40 /* Utility */,
 				AFA6117A2A94C8DF00D63657 /* Info.plist */,
 				AFA611612A94B54400D63657 /* Assets.xcassets */,
-				AFA6115D2A94B54300D63657 /* WeeingApp.swift */,
 				AFA611CB2A9F62CC00D63657 /* DesignSystem */,
 				AFA611C32A9F007500D63657 /* Feature */,
 				AFA611632A94B54400D63657 /* Preview Content */,
@@ -432,11 +398,8 @@
 		AFA611752A94C85700D63657 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				EA2C57FB2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf */,
-				EA2C57FD2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf */,
 				4C396FBE2B2B1E8300F8C19D /* NotoSansKR-Bold.ttf */,
 				4C396FBC2B2B1E6800F8C19D /* Nunito-Black.ttf */,
-				EA2C57E72B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -444,6 +407,8 @@
 		AFA611C32A9F007500D63657 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				AFF14EA32B327C090017CC40 /* RootFeature */,
+				AFF14E952B327B190017CC40 /* BaseFeature */,
 				EA7FFBA52B21374000132C8E /* CounselingCheckFeature */,
 				EAE14ABE2ACDA64000C99D60 /* ConsultLogFeature */,
 				4C3639F32AB86D1100DD8F30 /* RecordFeature */,
@@ -463,7 +428,7 @@
 		AFA611C42A9F012B00D63657 /* LoginFeature */ = {
 			isa = PBXGroup;
 			children = (
-				AFD02CE52AF9B821000CF617 /* ViewModel */,
+				AFF14EA02B327BE30017CC40 /* Interface */,
 				AFA611C52A9F014600D63657 /* View */,
 			);
 			path = LoginFeature;
@@ -472,9 +437,11 @@
 		AFA611C52A9F014600D63657 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */,
 				AFA611702A94C6F400D63657 /* LoginView.swift */,
 				AFA611912A961EC600D63657 /* FIndPasswordView.swift */,
 				AFA611952A9779F900D63657 /* ResetPasswordView.swift */,
+				AFF14E9E2B327BC90017CC40 /* LoginComponent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,12 +526,338 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		AFD02CE52AF9B821000CF617 /* ViewModel */ = {
+		AFF14E8F2B327AC70017CC40 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */,
+				AFF14E902B327ADD0017CC40 /* Sources */,
 			);
-			path = ViewModel;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		AFF14E902B327ADD0017CC40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14E912B327AF00017CC40 /* DateUtil.swift */,
+				AFF14E932B327B010017CC40 /* ViewUtil.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFF14E952B327B190017CC40 /* BaseFeature */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14E9B2B327B550017CC40 /* Flow */,
+				AFF14E982B327B360017CC40 /* Sources */,
+				AFF14E962B327B2B0017CC40 /* BaseViewModel.swift */,
+			);
+			path = BaseFeature;
+			sourceTree = "<group>";
+		};
+		AFF14E982B327B360017CC40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14E992B327B4C0017CC40 /* SceneState.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFF14E9B2B327B550017CC40 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14E9C2B327B650017CC40 /* SceneFlow.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		AFF14EA02B327BE30017CC40 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EA12B327BEB0017CC40 /* LoginFactory.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		AFF14EA32B327C090017CC40 /* RootFeature */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EA82B327C6F0017CC40 /* Sources */,
+			);
+			path = RootFeature;
+			sourceTree = "<group>";
+		};
+		AFF14EA82B327C6F0017CC40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EA42B327C450017CC40 /* RootComponent.swift */,
+				AFF14EA62B327C530017CC40 /* RootView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFF14EA92B327C870017CC40 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EAB2B327C920017CC40 /* BaseDomain */,
+				AFF14EAA2B327C8C0017CC40 /* AuthDomain */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AFF14EAA2B327C8C0017CC40 /* AuthDomain */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EC72B327E4B0017CC40 /* Interface */,
+				AFF14EC02B327DD50017CC40 /* Sources */,
+			);
+			path = AuthDomain;
+			sourceTree = "<group>";
+		};
+		AFF14EAB2B327C920017CC40 /* BaseDomain */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EAC2B327C9D0017CC40 /* Sources */,
+			);
+			path = BaseDomain;
+			sourceTree = "<group>";
+		};
+		AFF14EAC2B327C9D0017CC40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EB62B327D1F0017CC40 /* Plugins */,
+				AFF14EB32B327CEC0017CC40 /* Error */,
+				AFF14EB02B327CC50017CC40 /* Base */,
+				AFF14EAD2B327CA70017CC40 /* API */,
+				AFF14EBE2B327DA00017CC40 /* WeeingAPI.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFF14EAD2B327CA70017CC40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EAE2B327CB30017CC40 /* RefreshAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AFF14EB02B327CC50017CC40 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EB12B327CD10017CC40 /* BaseRemoteDataSource.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AFF14EB32B327CEC0017CC40 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EB42B327CF50017CC40 /* RefreshError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		AFF14EB62B327D1F0017CC40 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EB72B327D360017CC40 /* Jwt */,
+			);
+			name = Plugins;
+			path = "ㅖㅣㅕㅎ냐ㅜ";
+			sourceTree = "<group>";
+		};
+		AFF14EB72B327D360017CC40 /* Jwt */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EB82B327D420017CC40 /* JwtAuthorizable.swift */,
+				AFF14EBA2B327D530017CC40 /* JwtPlugin.swift */,
+				AFF14EBC2B327D690017CC40 /* TokenDTO.swift */,
+			);
+			path = Jwt;
+			sourceTree = "<group>";
+		};
+		AFF14EC02B327DD50017CC40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EC42B327E160017CC40 /* API */,
+				AFF14EC12B327DE00017CC40 /* DataSource */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFF14EC12B327DE00017CC40 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EC22B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		AFF14EC42B327E160017CC40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EC52B327E1F0017CC40 /* AuthAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AFF14EC72B327E4B0017CC40 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14ED52B327F030017CC40 /* UseCase */,
+				AFF14ED22B327EE10017CC40 /* Repository */,
+				AFF14ECF2B327EB80017CC40 /* Error */,
+				AFF14ECC2B327E800017CC40 /* DataSource */,
+				AFF14EC82B327E560017CC40 /* DTO */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		AFF14EC82B327E560017CC40 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EC92B327E5E0017CC40 /* Request */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		AFF14EC92B327E5E0017CC40 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14ECA2B327E6B0017CC40 /* LoginRequestDTO.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		AFF14ECC2B327E800017CC40 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14ECD2B327E910017CC40 /* RemoteAuthDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		AFF14ECF2B327EB80017CC40 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14ED02B327EC30017CC40 /* AuthDomainError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		AFF14ED22B327EE10017CC40 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14ED32B327EEB0017CC40 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AFF14ED52B327F030017CC40 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14ED62B327F0C0017CC40 /* LoginUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AFF14ED82B327F740017CC40 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EDA2B327F8A0017CC40 /* Repository */,
+				AFF14ED92B327F810017CC40 /* UseCase */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AFF14ED92B327F810017CC40 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EDB2B327F960017CC40 /* Auth */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AFF14EDA2B327F8A0017CC40 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EDE2B327FCF0017CC40 /* Auth */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AFF14EDB2B327F960017CC40 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EDC2B327FA30017CC40 /* LoginUseCaseImpl.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AFF14EDE2B327FCF0017CC40 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EDF2B327FDB0017CC40 /* AuthRepositoryImpl.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AFF14EE12B327FF20017CC40 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EE22B3280090017CC40 /* Keychain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AFF14EE22B3280090017CC40 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EE32B3280150017CC40 /* Sources */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		AFF14EE32B3280150017CC40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EE42B3280250017CC40 /* Keychain.swift */,
+				AFF14EE62B32803E0017CC40 /* KeychainImpl.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AFF14EE82B3280530017CC40 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EE92B3280640017CC40 /* DI */,
+				AFA6115D2A94B54300D63657 /* WeeingApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AFF14EE92B3280640017CC40 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EEB2B3280720017CC40 /* Auth */,
+				AFF14EEA2B32806C0017CC40 /* Users */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		AFF14EEA2B32806C0017CC40 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EEC2B32809A0017CC40 /* AppComponent.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		AFF14EEB2B3280720017CC40 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFF14EEE2B3280BA0017CC40 /* AppComponent+Auth.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		EA2C57EB2B306CE400AD6DE6 /* Model */ = {
@@ -618,23 +911,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C8A38DE2B0EC5F800306580 /* CalenderWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C8A38F72B0EC5FA00306580 /* Build configuration list for PBXNativeTarget "CalenderWidgetExtension" */;
-			buildPhases = (
-				4C8A38DB2B0EC5F800306580 /* Sources */,
-				4C8A38DC2B0EC5F800306580 /* Frameworks */,
-				4C8A38DD2B0EC5F800306580 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CalenderWidgetExtension;
-			productName = CalenderWidgetExtension;
-			productReference = 4C8A38DF2B0EC5F800306580 /* CalenderWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		AFA611592A94B54300D63657 /* Weeing */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA611682A94B54400D63657 /* Build configuration list for PBXNativeTarget "Weeing" */;
@@ -649,7 +925,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4C8A38F22B0EC5FA00306580 /* PBXTargetDependency */,
 			);
 			name = Weeing;
 			packageProductDependencies = (
@@ -659,6 +934,8 @@
 				4C396FC92B2B1F0F00F8C19D /* Moya */,
 				4C396FCB2B2B1F0F00F8C19D /* ReactiveMoya */,
 				4C396FCD2B2B1F0F00F8C19D /* RxMoya */,
+				AFF14E8B2B327A840017CC40 /* NeedleFoundation */,
+				AFF14E8D2B327A840017CC40 /* NeedleFoundationTest */,
 			);
 			productName = Weeing;
 			productReference = AFA6115A2A94B54300D63657 /* Weeing.app */;
@@ -674,9 +951,6 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					4C8A38DE2B0EC5F800306580 = {
-						CreatedOnToolsVersion = 15.0.1;
-					};
 					AFA611592A94B54300D63657 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -696,40 +970,26 @@
 				4C3639F02AB7F36F00DD8F30 /* XCRemoteSwiftPackageReference "SwiftUICalendar" */,
 				4CAED9612AC3023E00A1EE76 /* XCRemoteSwiftPackageReference "PopupView" */,
 				4C396FC62B2B1F0F00F8C19D /* XCRemoteSwiftPackageReference "Moya" */,
+				AFF14E8A2B327A840017CC40 /* XCRemoteSwiftPackageReference "needle" */,
 			);
 			productRefGroup = AFA6115B2A94B54300D63657 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AFA611592A94B54300D63657 /* Weeing */,
-				4C8A38DE2B0EC5F800306580 /* CalenderWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C8A38DD2B0EC5F800306580 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C8A39002B0ED38100306580 /* AppleSDGothicNeoM00.ttf in Resources */,
-				4C8A38FF2B0ED38100306580 /* AppleSDGothicNeoB00.ttf in Resources */,
-				4C8A39012B0ED38100306580 /* AppleSDGothicNeoSB00.ttf in Resources */,
-				4C8A38EF2B0EC5FA00306580 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFA611582A94B54300D63657 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C396FBD2B2B1E6800F8C19D /* Nunito-Black.ttf in Resources */,
-				EA2C57E82B3035F900AD6DE6 /* AppleSDGothicNeoEB00.ttf in Resources */,
 				4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */,
 				4C396FBF2B2B1E8300F8C19D /* NotoSansKR-Bold.ttf in Resources */,
-				EA2C57FC2B31183F00AD6DE6 /* AppleSDGothicNeoSB00.ttf in Resources */,
 				AFA611652A94B54400D63657 /* Preview Assets.xcassets in Resources */,
-				EA2C57FE2B31189400AD6DE6 /* AppleSDGothicNeoB00.ttf in Resources */,
 				AFA611622A94B54400D63657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,53 +1036,70 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C8A38DB2B0EC5F800306580 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C8A38E92B0EC5F800306580 /* CalenderWidgetLiveActivity.swift in Sources */,
-				4C8A39032B0ED3AE00306580 /* Colors.swift in Sources */,
-				4C8A38ED2B0EC5F800306580 /* AppIntent.swift in Sources */,
-				4C8A38E72B0EC5F800306580 /* CalenderWidgetBundle.swift in Sources */,
-				4C8A38EB2B0EC5F800306580 /* CalenderWidget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFA611562A94B54300D63657 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
+				AFF14EBD2B327D690017CC40 /* TokenDTO.swift in Sources */,
 				EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */,
 				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
+				AFF14EB92B327D420017CC40 /* JwtAuthorizable.swift in Sources */,
+				AFF14E972B327B2B0017CC40 /* BaseViewModel.swift in Sources */,
+				AFF14E922B327AF00017CC40 /* DateUtil.swift in Sources */,
 				EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
 				AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */,
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
+				AFF14ECE2B327E910017CC40 /* RemoteAuthDataSource.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
+				AFF14EA22B327BEB0017CC40 /* LoginFactory.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
+				AFF14EAF2B327CB30017CC40 /* RefreshAPI.swift in Sources */,
 				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				4C396FC22B2B1EA800F8C19D /* Model.swift in Sources */,
+				AFF14ED42B327EEB0017CC40 /* AuthRepository.swift in Sources */,
+				AFF14E9D2B327B650017CC40 /* SceneFlow.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
+				AFF14EC32B327DF90017CC40 /* RemoteAuthDataSourceImpl.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
+				AFF14EED2B32809A0017CC40 /* AppComponent.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
+				AFF14EDD2B327FA30017CC40 /* LoginUseCaseImpl.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
+				AFF14EA52B327C450017CC40 /* RootComponent.swift in Sources */,
+				AFF14EB22B327CD10017CC40 /* BaseRemoteDataSource.swift in Sources */,
 				AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */,
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
+				AFF14ED72B327F0C0017CC40 /* LoginUseCase.swift in Sources */,
+				AFF14EC62B327E1F0017CC40 /* AuthAPI.swift in Sources */,
+				AFF14EA72B327C530017CC40 /* RootView.swift in Sources */,
+				AFF14ED12B327EC30017CC40 /* AuthDomainError.swift in Sources */,
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
+				AFF14E942B327B010017CC40 /* ViewUtil.swift in Sources */,
+				AFF14E9A2B327B4C0017CC40 /* SceneState.swift in Sources */,
+				AFF14EE72B32803E0017CC40 /* KeychainImpl.swift in Sources */,
 				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
+				AFF14EB52B327CF50017CC40 /* RefreshError.swift in Sources */,
+				AFF14EBF2B327DA00017CC40 /* WeeingAPI.swift in Sources */,
+				AFF14ECB2B327E6B0017CC40 /* LoginRequestDTO.swift in Sources */,
+				AFF14EE52B3280250017CC40 /* Keychain.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
+				AFF14E9F2B327BC90017CC40 /* LoginComponent.swift in Sources */,
+				AFF14EE02B327FDB0017CC40 /* AuthRepositoryImpl.swift in Sources */,
 				4C396FC52B2B1EDC00F8C19D /* HomeViewModel.swift in Sources */,
+				AFF14EBB2B327D530017CC40 /* JwtPlugin.swift in Sources */,
+				AFF14EEF2B3280BA0017CC40 /* AppComponent+Auth.swift in Sources */,
 				4C396FD12B2B1F2900F8C19D /* API.swift in Sources */,
 				AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */,
 			);
@@ -830,78 +1107,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4C8A38F22B0EC5FA00306580 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4C8A38DE2B0EC5F800306580 /* CalenderWidgetExtension */;
-			targetProxy = 4C8A38F12B0EC5FA00306580 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4C8A38F52B0EC5FA00306580 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CalenderWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CalenderWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shwaaaa.Weeing.CalenderWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4C8A38F62B0EC5FA00306580 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CalenderWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CalenderWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shwaaaa.Weeing.CalenderWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		AFA611662A94B54400D63657 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1021,13 +1227,12 @@
 		AFA611692A94B54400D63657 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
-				DEVELOPMENT_TEAM = 7DAQAFQ2TX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1042,7 +1247,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shwaaaa.Weeing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gapple.Weeing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1053,13 +1258,12 @@
 		AFA6116A2A94B54400D63657 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
-				DEVELOPMENT_TEAM = 7DAQAFQ2TX;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1074,7 +1278,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shwaaaa.Weeing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gapple.Weeing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1085,15 +1289,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C8A38F72B0EC5FA00306580 /* Build configuration list for PBXNativeTarget "CalenderWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4C8A38F52B0EC5FA00306580 /* Debug */,
-				4C8A38F62B0EC5FA00306580 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AFA611552A94B54300D63657 /* Build configuration list for PBXProject "Weeing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1139,6 +1334,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		AFF14E8A2B327A840017CC40 /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1171,6 +1374,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4CAED9612AC3023E00A1EE76 /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
+		};
+		AFF14E8B2B327A840017CC40 /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFF14E8A2B327A840017CC40 /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
+		AFF14E8D2B327A840017CC40 /* NeedleFoundationTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFF14E8A2B327A840017CC40 /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundationTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

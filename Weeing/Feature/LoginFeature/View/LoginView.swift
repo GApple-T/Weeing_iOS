@@ -6,8 +6,6 @@ enum Login: Hashable {
 }
 
 struct LoginView: View {
-    @State private var emailText = ""
-    @State private var passwordText = ""
     @State private var showPassword = false
     @State private var showLoginView = false
     @FocusState private var focusField: Login?
@@ -28,7 +26,7 @@ struct LoginView: View {
                                 .padding(.top, 109)
 
                             WeeingEmailTextField(
-                                textFieldText: $emailText,
+                                textFieldText: $viewModel.email,
                                 titleColor: .S20,
                                 isError: viewModel.isEmailErrorOccured
                             )
@@ -39,7 +37,7 @@ struct LoginView: View {
                             }
 
                             WeeingPasswordTextField(
-                                textFieldText: $passwordText,
+                                textFieldText: $viewModel.password,
                                 isSecure: $showPassword,
                                 titleColor: .S20,
                                 helpMessage: "비밀번호를 잊어버리셨나요?",
@@ -50,8 +48,14 @@ struct LoginView: View {
                             .focused($focusField, equals: .password)
                             .submitLabel(.done)
 
-                            StartPageButton(buttonText: "로그인", buttonColor: .P30)
-                                .padding(.top, 40)
+                            StartPageButton(
+                                buttonText: "로그인",
+                                buttonColor: .P30
+                            )
+                            .onTapGesture {
+                                viewModel.login()
+                            }
+                            .padding(.top, 40)
 
                             Spacer()
 
@@ -78,8 +82,4 @@ struct LoginView: View {
             }
         }
     }
-}
-
-#Preview {
-    LoginView(viewModel: LoginViewModel())
 }
