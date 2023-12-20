@@ -9,3 +9,4 @@ public enum JwtTokenType: String {
 public protocol JwtAuthorizable {
     var jwtTokenType: JwtTokenType { get }
 }
+
