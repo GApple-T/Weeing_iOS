@@ -1,16 +1,13 @@
 import Foundation
 import Moya
+import Combine
 
-final class LoginViewModel: BaseViewModel {
+final class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var passwordHelpMessage = "비밀번호를 잊어버리셨나요?"
     @Published var isLoginSuccessful = false
-    private let loginUseCase: any LoginUseCase
-    
-    init(loginUseCase: any LoginUseCase) {
-            self.loginUseCase = loginUseCase
-        }
+    private let authProvider = MoyaProvider<AuthAPI>(plugins: [LoggingPlugin()])
 
     var isEmailErrorOccured: Bool {
         if email.isEmpty {
@@ -26,8 +23,6 @@ final class LoginViewModel: BaseViewModel {
     var emailHelpMessage: String {
         if isEmailErrorOccured {
             return "학교 이메일을 입력해주세요"
-        } else if isErrorOccurred == true {
-            return "아직 승인되지 않은 계정입니다."
         } else {
             return ""
         }
@@ -55,17 +50,28 @@ final class LoginViewModel: BaseViewModel {
     }
     
     func login() {
-        guard checkEmail(email) && checkPassword(password) else { return }
-        
-        _Concurrency.Task {
-            do {
-                try await loginUseCase(req: LoginRequestDTO(email: email, password: password))
-                print("로그인 성공")
-            } catch {
-                isErrorOccurred = true
-                print("로그인 실패: \(error)")
+        authProvider.request(.login(req: .init(email: email, password: password))) { result in
+            switch result {
+            case .success(let res):
+                print(res.statusCode)
+                switch res.statusCode {
+                case 200:
+                    self.isLoginSuccessful = true
+                    print(String(data: res.data, encoding: .utf8))
+                case 400:
+                    print("악 BAD REQUEST 400")
+                    print(String(data: res.data, encoding: .utf8))
+                case 404:
+                    print("NOT_FOUND")
+                    print(String(data: res.data, encoding: .utf8))
+                default:
+                    print("????")
+                }
+                
+            case .failure(let err):
+                print(err.localizedDescription)
             }
+            
         }
-        
     }
 }

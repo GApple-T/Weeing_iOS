@@ -10,6 +10,7 @@ struct LoginView: View {
     @State private var showLoginView = false
     @FocusState private var focusField: Login?
     @StateObject var viewModel: LoginViewModel
+    @EnvironmentObject var sceneState: SceneState
 
     var body: some View {
         ZStack {
@@ -79,6 +80,11 @@ struct LoginView: View {
                             }
                         }
                     }
+            }
+        }
+        .onChange(of: viewModel.isLoginSuccessful) { newValue in
+            if newValue {
+                sceneState.sceneFlow = .main
             }
         }
     }
