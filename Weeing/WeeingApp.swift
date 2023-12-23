@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WeeingApp: App {
+    @StateObject var sceneState = SceneState(sceneFlow: SceneFlow.login)
+    
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: LoginViewModel(loginUseCase: LoginUseCaseImpl(authRepository: AuthRepositoryImpl(remoteAuthDataSource: RemoteAuthDataSourceImpl(keychain: KeychainImpl())))))
+            RootView()
+                .environmentObject(sceneState)
         }
     }
 }

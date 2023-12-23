@@ -1,20 +1,19 @@
-//
-//  RecordView.swift
-//  Weeing
-//
-//  Created by 한재형 on 2023/09/18.
-//
-
 import SwiftUI
 
-struct RecordView: View {
+struct RootView: View {
+    @EnvironmentObject var sceneState: SceneState
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct RecordView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecordView()
-    }
+            Group {
+                switch sceneState.sceneFlow {
+                case .login:
+                    LoginView(viewModel: LoginViewModel())
+                        .environmentObject(sceneState)
+                case .main:
+                    MainView()
+                        .environmentObject(sceneState)
+                }
+            }
+            .animation(.default, value: sceneState.sceneFlow)
+        }
 }
