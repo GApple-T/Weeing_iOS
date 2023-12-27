@@ -40,7 +40,6 @@ extension ConsultationAPI: TargetType {
     var task: Moya.Task {
         switch self {
         case let .submit(req):
-//            print(ViewModel.accessToken)
             return .requestJSONEncodable(req)
         }
     }
