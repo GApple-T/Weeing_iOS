@@ -21,6 +21,8 @@
 		4C396FCE2B2B1F0F00F8C19D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C396FCD2B2B1F0F00F8C19D /* RxMoya */; };
 		4C396FD12B2B1F2900F8C19D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C396FD02B2B1F2900F8C19D /* API.swift */; };
 		4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C72B2D72AEA6110003AD638 /* .swiftlint.yml */; };
+		4C9AC70E2B3704C600659E57 /* ConsultationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */; };
+		4C9AC7102B3707FB00659E57 /* ConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
@@ -87,6 +89,8 @@
 		4C72B2D72AEA6110003AD638 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4C8A38E12B0EC5F800306580 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4C8A38E32B0EC5F800306580 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationAPI.swift; sourceTree = "<group>"; };
+		4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -195,6 +199,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C9AC70C2B37048000659E57 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		4CF1031D2AA6009D0059C4C2 /* HomeFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +266,7 @@
 		4CF103292AA618C00059C4C2 /* ConsultationFeature */ = {
 			isa = PBXGroup;
 			children = (
+				4C9AC70C2B37048000659E57 /* API */,
 				4CF1032A2AA618E40059C4C2 /* View */,
 				4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */,
 			);
@@ -264,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */,
+				4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -739,6 +753,7 @@
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
+				4C9AC70E2B3704C600659E57 /* ConsultationAPI.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				AF61AA0A2B33CFB5008F292A /* AuthAPI.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
@@ -749,6 +764,7 @@
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,
 				4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */,
+				4C9AC7102B3707FB00659E57 /* ConsultationViewModel.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
 				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
@@ -887,7 +903,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weeing/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4DK8NWW546;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

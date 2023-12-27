@@ -18,6 +18,7 @@ struct ConsultationView: View {
     @State var texteditor = ""
     @Environment(\.dismiss) var dismiss
     @ObservedObject var controller: CalendarController = .init()
+    @StateObject var viewModel: ConsultationViewModel = .init()
     @State var focusDate: YearMonthDay? = YearMonthDay.current
 
     @State var date = Date()
@@ -113,18 +114,18 @@ struct ConsultationView: View {
                                 DropdownItem(isSelecting: $isSelecting,
                                              selectiontitle: $selectionTitle,
                                              selectionId: $selectedRowId,
-                                             item: .init(id: 1, title: "5교시",
-                                                         onSelect: {}))
+                                             item: .init(id: 5, title: "5교시",
+                                                         onSelect: { viewModel.classTime = 5 }))
                                 DropdownItem(isSelecting: $isSelecting,
                                              selectiontitle: $selectionTitle,
                                              selectionId: $selectedRowId,
-                                             item: .init(id: 2, title: "6교시",
-                                                         onSelect: {}))
+                                             item: .init(id: 6, title: "6교시",
+                                                         onSelect: { viewModel.classTime = 6 }))
                                 DropdownItem(isSelecting: $isSelecting,
                                              selectiontitle: $selectionTitle,
                                              selectionId: $selectedRowId,
-                                             item: .init(id: 3, title: "7교시",
-                                                         onSelect: {}))
+                                             item: .init(id: 7, title: "7교시",
+                                                         onSelect: { viewModel.classTime = 7 }))
                             }
                             .padding(.bottom, 10)
                         }
@@ -170,7 +171,7 @@ struct ConsultationView: View {
                                         .padding(.leading, 20)
                                     Spacer()
                                 }
-                                TextEditor(text: $texteditor)
+                                TextEditor(text: $viewModel.consultationContent)
                                     .cornerRadius(10)
                                     .frame(width: 360, height: 180)
                                     .overlay {
@@ -191,6 +192,7 @@ struct ConsultationView: View {
                             Spacer()
                             Button { // 완료 버튼
                                 isPresentedFloating.toggle()
+                                viewModel.consultationSubmit()
                             } label: {
                                 Text("완료")
                                     .font(.custom("AppleSDGothicNeoB00", size: 18))

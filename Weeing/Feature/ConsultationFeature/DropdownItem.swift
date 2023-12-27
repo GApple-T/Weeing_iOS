@@ -19,6 +19,7 @@ struct DropdownItem: View {
             selectiontitle = item.title
             selectionId = item.id
             item.onSelect()
+
         }) {
             VStack(spacing: 0) {
                 Divider()
