@@ -190,6 +190,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		4C5FEABF2B3D432400664024 /* Consult */ = {
+			isa = PBXGroup;
+			children = (
+				4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */,
+			);
+			path = Consult;
+			sourceTree = "<group>";
+		};
 		4C8A38E02B0EC5F800306580 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,14 +205,6 @@
 				4C8A38E32B0EC5F800306580 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4C9AC70C2B37048000659E57 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		4CF1031D2AA6009D0059C4C2 /* HomeFeature */ = {
@@ -266,7 +266,6 @@
 		4CF103292AA618C00059C4C2 /* ConsultationFeature */ = {
 			isa = PBXGroup;
 			children = (
-				4C9AC70C2B37048000659E57 /* API */,
 				4CF1032A2AA618E40059C4C2 /* View */,
 				4C3639F72AB9B80100DD8F30 /* DropdownItem.swift */,
 			);
@@ -317,6 +316,7 @@
 		AF61AA072B33CFAA008F292A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				4C5FEABF2B3D432400664024 /* Consult */,
 				AF61AA0B2B33D2A5008F292A /* Plugins */,
 				AF61AA082B33CFB0008F292A /* Auth */,
 			);
@@ -551,20 +551,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EA2C57EB2B306CE400AD6DE6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EA2C57EE2B306D2200AD6DE6 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		EA7FFBA52B21374000132C8E /* CounselingCheckFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,8 +570,6 @@
 		EAE14ABE2ACDA64000C99D60 /* ConsultLogFeature */ = {
 			isa = PBXGroup;
 			children = (
-				EA2C57EE2B306D2200AD6DE6 /* API */,
-				EA2C57EB2B306CE400AD6DE6 /* Model */,
 				EAE14ABF2ACDA66100C99D60 /* View */,
 			);
 			path = ConsultLogFeature;
