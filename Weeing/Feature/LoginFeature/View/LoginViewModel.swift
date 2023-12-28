@@ -1,12 +1,14 @@
+import Combine
 import Foundation
 import Moya
-import Combine
+import SwiftUI
 
 final class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var passwordHelpMessage = "비밀번호를 잊어버리셨나요?"
     @Published var isLoginSuccessful = false
+    @Published var accessToken = ""
     private let authProvider = MoyaProvider<AuthAPI>(plugins: [LoggingPlugin()])
 
     var isEmailErrorOccured: Bool {
@@ -48,16 +50,22 @@ final class LoginViewModel: ObservableObject {
         let passwordRegex = "^(?=.*[a-zA-Z0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,24}$"
         return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
     }
-    
+
     func login() {
         authProvider.request(.login(req: .init(email: email, password: password))) { result in
             switch result {
-            case .success(let res):
+            case let .success(res):
                 print(res.statusCode)
                 switch res.statusCode {
                 case 200:
                     self.isLoginSuccessful = true
-                    print(String(data: res.data, encoding: .utf8))
+                    print(String(data: res.data, encoding: .utf8)!)
+                    do {
+                        self.accessToken = try res.map(LoginResponseDTO.self).access
+                        try UserDefaults.standard.set(res.map(LoginResponseDTO.self).access, forKey: "accessToken")
+                    } catch {
+                        print("파싱에러: \(error)")
+                    }
                 case 400:
                     print("악 BAD REQUEST 400")
                     print(String(data: res.data, encoding: .utf8))
@@ -67,11 +75,10 @@ final class LoginViewModel: ObservableObject {
                 default:
                     print("????")
                 }
-                
-            case .failure(let err):
+
+            case let .failure(err):
                 print(err.localizedDescription)
             }
-            
         }
     }
 }

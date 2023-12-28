@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct WeeingApp: App {
     @StateObject var sceneState = SceneState(sceneFlow: SceneFlow.login)
-    
+
     var body: some Scene {
         WindowGroup {
             RootView()
