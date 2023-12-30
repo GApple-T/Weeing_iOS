@@ -57,6 +57,9 @@
 		AFF14E8C2B327A840017CC40 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AFF14E8B2B327A840017CC40 /* NeedleFoundation */; };
 		AFF14E8E2B327A840017CC40 /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = AFF14E8D2B327A840017CC40 /* NeedleFoundationTest */; };
 		AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */; };
+		EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF602B3D471000327529 /* ConsultLogAPI.swift */; };
+		EA72DF632B3D472100327529 /* ConsultLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF622B3D472100327529 /* ConsultLogModel.swift */; };
+		EA72DF652B3D473B00327529 /* ConsultLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF642B3D473B00327529 /* ConsultLogViewModel.swift */; };
 		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
 		EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */; };
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
@@ -124,6 +127,9 @@
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameApplicationView.swift; sourceTree = "<group>"; };
+		EA72DF602B3D471000327529 /* ConsultLogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogAPI.swift; sourceTree = "<group>"; };
+		EA72DF622B3D472100327529 /* ConsultLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogModel.swift; sourceTree = "<group>"; };
+		EA72DF642B3D473B00327529 /* ConsultLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogViewModel.swift; sourceTree = "<group>"; };
 		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
 		EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupScreen.swift; sourceTree = "<group>"; };
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
@@ -579,6 +585,9 @@
 			isa = PBXGroup;
 			children = (
 				EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */,
+				EA72DF602B3D471000327529 /* ConsultLogAPI.swift */,
+				EA72DF622B3D472100327529 /* ConsultLogModel.swift */,
+				EA72DF642B3D473B00327529 /* ConsultLogViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -732,7 +741,9 @@
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
+				EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
+				EA72DF632B3D472100327529 /* ConsultLogModel.swift in Sources */,
 				4C396FC22B2B1EA800F8C19D /* Model.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
@@ -744,6 +755,7 @@
 				AF61AA192B33DBBB008F292A /* SceneState.swift in Sources */,
 				AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */,
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
+				EA72DF652B3D473B00327529 /* ConsultLogViewModel.swift in Sources */,
 				AF61AA142B33D705008F292A /* LoginRequestDTO.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,
