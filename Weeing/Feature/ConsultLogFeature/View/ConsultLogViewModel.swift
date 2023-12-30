@@ -5,11 +5,9 @@
 //  Created by 서지완 on 12/14/23.
 //
 
-// ConsultLogViewModel.swift
 import Foundation
 import Moya
 
-// ConsultLogViewModel.swift
 final class ConsultLogViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var isDataLoaded = false
@@ -20,12 +18,10 @@ final class ConsultLogViewModel: ObservableObject {
         provider.request(.getList) { result in
             switch result {
             case let .success(response):
-                print("ㅁㄴㅇㄹ  \(String(data: response.data, encoding: .utf8))")
-                print(response.statusCode)
                 do {
                     let responseModel = try JSONDecoder().decode(ConsultLogModel.self, from: response.data)
                     print(responseModel)
-                    self.consults = responseModel.consults // 변경된 부분
+                    self.consults = responseModel.consults
                     self.isDataLoaded = true
 
                 } catch {

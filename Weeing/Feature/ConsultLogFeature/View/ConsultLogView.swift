@@ -227,75 +227,8 @@ struct ConsultLogView: View {
     }
 }
 
-// @ViewBuilder
-// func popupScreen(listColor: Color, listname: String, listtime: Int) -> some View {
-//    ZStack {
-//        Rectangle()
-//            .clipShape(RoundedRectangle(cornerRadius: 10))
-//            .foregroundStyle(.white)
-//            .shadow(color: Color("Shadow"), radius: 15, x: 3, y: 2)
-//            .frame(width: 360, height: 102)
-//
-//        VStack(alignment: .leading, spacing: 7) {
-//            Text("2023.11.21 (\(listtime)교시) 상담 \(listname)")
-//                .font(.custom("AppleSDGothicNeoSB00", size: 18))
-//                .foregroundStyle(listColor)
-//
-//            Text("상담사유")
-//                .foregroundStyle(.black)
-//                .font(.custom("AppleSDGothicNeoB00", size: 13))
-//
-//            Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
-//                .frame(width: 338)
-//                .font(.system(size: 10))
-//                .foregroundStyle(.gray)
-//                .multilineTextAlignment(.leading)
-//                .lineLimit(2)
-//                .lineSpacing(5)
-//
-//        }.padding(.leading, 12)
-//    }
-// }
-
 struct ConsultLogView_Previews: PreviewProvider {
     static var previews: some View {
         ConsultLogView()
     }
 }
-
-//
-//  ConsultLogView.swift
-//  Weeing
-//
-//  Created by 서지완 on 12/25/14.
-//
-
-/* import SwiftUI
-
- struct ConsultLogView: View {
-     @ObservedObject var viewModel = ConsultLogViewModel()
-
-     var body: some View {
-         VStack {
-             if viewModel.isDataLoaded {
-                 ForEach(viewModel.consults, id: \.id) { consultLog in
-                     Text("\(consultLog.time) - \(consultLog.description)")
-                 }
-             } else {
-                 ProgressView("로딩 중...")
-
-                 Text(viewModel.errorMessage)
-                     .foregroundColor(.red)
-             }
-         }
-         .onAppear {
-             viewModel.loadConsultLogs()
-         }
-     }
- }
-
- struct ConsultLogView_Previews: PreviewProvider {
-     static var previews: some View {
-         ConsultLogView()
-     }
- } */
