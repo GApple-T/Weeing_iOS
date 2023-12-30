@@ -50,16 +50,17 @@ struct ConsultLogView: View {
                                                     .padding(.top, 7)
 
                                                 Text("상담사유")
-                                                    .foregroundStyle(.black)
+                                                    .foregroundStyle(Color.N10)
                                                     .font(.custom("AppleSDGothicNeoB00", size: 13))
 
-                                                Text("\(consultLog.description)")
+                                                Text(consultLog.description)
                                                     .frame(maxWidth: .infinity, alignment: .leading)
                                                     .frame(width: 338)
                                                     .font(.system(size: 10))
                                                     .foregroundStyle(.gray)
                                                     .lineLimit(2)
-                                                    .lineSpacing(5)
+                                                    .lineSpacing(7)
+                                                    .padding(.top, 1)
 
                                                 // }
                                                 Spacer()
