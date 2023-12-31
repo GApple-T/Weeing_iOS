@@ -61,8 +61,7 @@ struct ConsultLogView: View {
                                                     .lineLimit(2)
                                                     .lineSpacing(7)
                                                     .padding(.top, 1)
-
-                                                // }
+                                                             
                                                 Spacer()
 
                                             }.padding(.leading, 12)

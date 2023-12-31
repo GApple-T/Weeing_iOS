@@ -1,6 +1,12 @@
+//
+//  ConsultLogAPI.swift
+//  Weeing
+//
+//  Created by 서지완 on 2023/09/26.
+//
+
 import Foundation
 import Moya
-import SwiftUI
 
 enum ConsultLogAPI {
     case getList
