@@ -29,19 +29,18 @@ struct ConsultLogView: View {
                         .padding(.top, 11)
                         .padding(.bottom, 20)
 
-                    VStack {
-                        ScrollView(showsIndicators: false) {
+                    ScrollView(showsIndicators: false) {
+                        VStack {
                             if viewModel.isDataLoaded {
                                 ForEach(viewModel.consults, id: \.id) { consultLog in
                                     Button {
                                         isShowingInitialPopup = true
-                                    
+
                                     } label: {
-                                        // ZStack {
                                         RoundedRectangle(cornerRadius: 10)
-                                            .foregroundStyle(.white)
                                             .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
                                             .frame(width: 360, height: 102)
+                                            .foregroundStyle(.white)
                                             .overlay(
                                                 VStack(alignment: .leading) {
                                                     Text("2024.01.03 (\(consultLog.time)교시) 상담 신청")
@@ -63,41 +62,11 @@ struct ConsultLogView: View {
                                                         .foregroundStyle(.gray)
                                                         .lineLimit(2)
                                                         .lineSpacing(7)
-
                                                         .padding(.top, 1)
 
                                                     Spacer()
                                                 }
                                             )
-
-//                                            VStack(alignment: .leading) {
-//                                                Text("2024.01.03 (\(consultLog.time)교시) 상담 신청")
-//                                                    .frame(maxWidth: .infinity, alignment: .leading)
-//                                                    .font(.custom("AppleSDGothicNeoSB00", size: 18))
-//                                                    .foregroundStyle(Color.P30)
-//                                                    .padding(.top, 7)
-//                                                    .padding(.leading,27)
-//
-//                                                Text("상담사유")
-//                                                    .frame(maxWidth: .infinity, alignment: .leading)
-//                                                    .foregroundStyle(Color.N10)
-//                                                    .font(.custom("AppleSDGothicNeoB00", size: 13))
-//                                                    .padding(.leading,27)
-//
-//                                                Text(consultLog.description)
-//                                                    .frame(maxWidth: .infinity)
-//                                                    // .frame(width: 338)
-//                                                    .multilineTextAlignment(.leading)
-//                                                    .padding(.horizontal, 27)
-//                                                    .font(.system(size: 10))
-//                                                    .foregroundStyle(.gray)
-//                                                    .lineLimit(2)
-//                                                    .lineSpacing(7)
-//                                                    .padding(.top, 1)
-//
-//                                                Spacer()
-//                                            } // .padding(.leading, 12)
-                                        // }
                                     }
                                 }.padding(.top, 10)
                             } else {
