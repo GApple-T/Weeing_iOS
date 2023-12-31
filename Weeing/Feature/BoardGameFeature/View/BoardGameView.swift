@@ -7,7 +7,8 @@ struct BoardGameView: View {
     @State private var isApplication = false
     @State private var isAlert = false
     @Environment(\.dismiss) var dismiss
-
+    @StateObject var viewModel = BoardGameViewModel()
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -18,23 +19,30 @@ struct BoardGameView: View {
                         .padding(.leading, 20)
                         .padding(.trailing, 241)
                         .padding(.top, 11)
-
-                    LazyHGrid(rows: rows) {
-                        ForEach(0 ..< 3) { _ in
-                            Button {
-                                self.isShownsheet.toggle()
-                            } label: {
-                                reservationGrid(backColor: .white, itemColor: .S30, name: "개최자 : 1206 류지민", status: "남은 자리 2개", isShownSheet: isShownsheet)
-                            }
-                            .sheet(isPresented: $isShownsheet) {
-                                reservationList()
-                                    .presentationDetents([.height(300)])
+                    
+                        LazyHGrid(rows: rows) {
+                            ForEach(viewModel.boardgames) { boardgame in
+                                Button {
+                                    self.isShownsheet.toggle()
+                                } label: {
+                                    reservationGrid(
+                                        backColor: .white,
+                                        itemColor: .S30,
+                                        name: "개최자 : \(boardgame.creator.info)",
+                                        status: "남은 자리 \(boardgame.maxOf - boardgame.joined)개",
+                                        isShownSheet: isShownsheet)
+                                }
+                                .sheet(isPresented: $isShownsheet) {
+                                    reservationList(creator: boardgame.creator.info,
+                                                    players: boardgame.players
+                                    )
+                                        .presentationDetents([.height(300)])
+                                }
                             }
                         }
-                    }
-
+                    
                     Spacer()
-
+                    
                     Button {
                         self.isApplication.toggle()
                     } label: {
@@ -51,9 +59,12 @@ struct BoardGameView: View {
                     }
                 }
             }
+            .onAppear {
+                viewModel.getBoardGameDetail()
+            }
         }
     }
-
+    
     @ViewBuilder
     func reservationGrid(backColor: Color, itemColor: Color, name: String, status: String, isShownSheet: Bool) -> some View {
         VStack {
@@ -72,12 +83,12 @@ struct BoardGameView: View {
                         .frame(width: 28, height: 28)
                         .foregroundStyle(itemColor)
                         .padding(.top, 26)
-
+                    
                     Text(name)
                         .font(.custom("AppleSDGothicNeoSB00", size: 10))
                         .foregroundStyle(Color.black)
                         .padding(.top, 26)
-
+                    
                     Text(status)
                         .font(.custom("AppleSDGothicNeoSB00", size: 10))
                         .foregroundStyle(itemColor)
@@ -86,29 +97,30 @@ struct BoardGameView: View {
                 }
             }
             .padding(.top, 40)
+            
             Spacer()
         }
     }
-
+    
     @ViewBuilder
-    func reservationList() -> some View {
+    func reservationList(creator: String, players: [String]) -> some View {
         ZStack {
             Color.BG.ignoresSafeArea()
             VStack(spacing: 0) {
-                Text("2023.10.10 점심시간")
+                Text("2024.01.03 점심시간")
                     .font(.custom("AppleSDGothicNeoB00", size: 20))
                     .padding(.top, 26)
-
-                Text("개최자 : 1206 류지민")
+                
+                Text("개최자 : \(creator)")
                     .font(.custom("AppleSDGothicNeoEB00", size: 15))
                     .foregroundStyle(Color.S30)
                     .padding(.top, 32)
-
-                Text("참가자 : 1114 이승화 , 1301 김동학, 1314 서지완, 1413 이현준, 1417 한재형")
+                
+                Text("참가자 : \(players.joined(separator: ", "))")
                     .font(.custom("AppleSDGothicNeoEB00", size: 15))
                     .frame(width: 290)
                     .padding(.top, 10)
-
+                
                 Button {
                     dismiss()
                 } label: {
