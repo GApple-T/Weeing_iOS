@@ -33,4 +33,5 @@ extension Color {
 
     static let Shadow = Color("Shadow")
     static let T10 = Color("T10")
+    static let empty_dice = Color("empty_dice")
 }

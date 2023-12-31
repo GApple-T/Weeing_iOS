@@ -11,9 +11,10 @@ import SwiftUI
 struct BoardGameApplicationView: View {
     @State var isClicked = false
     @State var selectionTitle = "인원수를 선택하세요."
-    @State var selectedRowId = 0
+    @State var maxOf = 0
     @State var isSelect = false
     @Environment(\.dismiss) private var dismiss
+    @StateObject var viewModel = BoardGameViewModel()
 
     var body: some View {
         ZStack {
@@ -43,19 +44,19 @@ struct BoardGameApplicationView: View {
                         VStack(spacing: 0) {
                             DropdownItem(isSelecting: $isClicked,
                                          selectiontitle: $selectionTitle,
-                                         selectionId: $selectedRowId,
-                                         item: .init(id: 1, title: "2명",
-                                                     onSelect: {}))
+                                         selectionId: $maxOf,
+                                         item: .init(id: 2, title: "2명",
+                                                     onSelect: { viewModel.maxOf = 2 }))
                             DropdownItem(isSelecting: $isClicked,
                                          selectiontitle: $selectionTitle,
-                                         selectionId: $selectedRowId,
-                                         item: .init(id: 2, title: "3명",
-                                                     onSelect: {}))
+                                         selectionId: $maxOf,
+                                         item: .init(id: 3, title: "3명",
+                                                     onSelect: { viewModel.maxOf = 3 }))
                             DropdownItem(isSelecting: $isClicked,
                                          selectiontitle: $selectionTitle,
-                                         selectionId: $selectedRowId,
-                                         item: .init(id: 3, title: "4명",
-                                                     onSelect: {}))
+                                         selectionId: $maxOf,
+                                         item: .init(id: 4, title: "4명",
+                                                     onSelect: { viewModel.maxOf = 4}))
                         }
                         .padding(.bottom, 10)
                     }
@@ -75,7 +76,7 @@ struct BoardGameApplicationView: View {
 
                 Spacer()
 
-                if selectedRowId != 0 {
+                if maxOf != 0 {
                     VStack(spacing: 0) {
                         Text("완료")
                             .font(.custom("AppleSDGothicNeoB00", size: 18))
@@ -84,6 +85,7 @@ struct BoardGameApplicationView: View {
                             .background(Color.P30)
                             .cornerRadius(10)
                             .onTapGesture {
+                                viewModel.submitBoardGame()
                                 dismiss()
                             }
                     }
