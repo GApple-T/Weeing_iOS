@@ -2,9 +2,19 @@ import Foundation
 import Moya
 
 final class BoardGameViewModel: ObservableObject {
+    @Published var maxOf: Int = 0
     @Published var errorMessage = ""
+//    @Published var emptyPeople = false
     @Published var boardgames: [BoardGameShowResponseDTO.BoardGameDTO] = []
     let provider = MoyaProvider<BoardGameAPI>(plugins: [LoggingPlugin()])
+    
+    var emptyPeople: Bool {
+        if maxOf == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
     
     func getBoardGameDetail() {
         provider.request(.show) { result in
@@ -24,6 +34,17 @@ final class BoardGameViewModel: ObservableObject {
             case let .failure(err):
                 self.errorMessage = "Network request failed: \(err.localizedDescription)"
                 print("Network request failed: \(err)")
+            }
+        }
+    }
+    
+    func submitBoardGame() {
+        provider.request(.submit(req: BoardGameSubmitRequestDTO(maxOf: maxOf))) { result in
+            switch result {
+            case .success(let res):
+                print(res.statusCode)
+            case .failure(let err):
+                print(err.localizedDescription)
             }
         }
     }

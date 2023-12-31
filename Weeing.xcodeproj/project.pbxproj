@@ -31,8 +31,9 @@
 		4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032F2AA619140059C4C2 /* ProfileView.swift */; };
 		4CF103342AA620C90059C4C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103332AA620C90059C4C2 /* MainView.swift */; };
 		AF284AF72B41091B00715695 /* BoardGameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AF62B41091B00715695 /* BoardGameAPI.swift */; };
-		AF284AFA2B41093600715695 /* BoardGameResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AF92B41093600715695 /* BoardGameResponseDTO.swift */; };
+		AF284AFA2B41093600715695 /* BoardGameShowResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AF92B41093600715695 /* BoardGameShowResponseDTO.swift */; };
 		AF284AFC2B41099700715695 /* BoardGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AFB2B41099700715695 /* BoardGameViewModel.swift */; };
+		AF284B022B41142B00715695 /* BoardGameSubmitRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284B012B41142B00715695 /* BoardGameSubmitRequestDTO.swift */; };
 		AF61AA0A2B33CFB5008F292A /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA092B33CFB5008F292A /* AuthAPI.swift */; };
 		AF61AA0D2B33D2AB008F292A /* LoggingPugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA0C2B33D2AB008F292A /* LoggingPugin.swift */; };
 		AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA102B33D36D008F292A /* LoginResponseDTO.swift */; };
@@ -101,8 +102,9 @@
 		4CF1032F2AA619140059C4C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4CF103332AA620C90059C4C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AF284AF62B41091B00715695 /* BoardGameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameAPI.swift; sourceTree = "<group>"; };
-		AF284AF92B41093600715695 /* BoardGameResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameResponseDTO.swift; sourceTree = "<group>"; };
+		AF284AF92B41093600715695 /* BoardGameShowResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameShowResponseDTO.swift; sourceTree = "<group>"; };
 		AF284AFB2B41099700715695 /* BoardGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModel.swift; sourceTree = "<group>"; };
+		AF284B012B41142B00715695 /* BoardGameSubmitRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameSubmitRequestDTO.swift; sourceTree = "<group>"; };
 		AF61AA092B33CFB5008F292A /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		AF61AA0C2B33D2AB008F292A /* LoggingPugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingPugin.swift; sourceTree = "<group>"; };
 		AF61AA102B33D36D008F292A /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
@@ -332,9 +334,26 @@
 		AF284AF82B41092900715695 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				AF284AF92B41093600715695 /* BoardGameResponseDTO.swift */,
+				AF284B002B41141700715695 /* Response */,
+				AF284AFF2B41140800715695 /* Request */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		AF284AFF2B41140800715695 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				AF284B012B41142B00715695 /* BoardGameSubmitRequestDTO.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		AF284B002B41141700715695 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AF284AF92B41093600715695 /* BoardGameShowResponseDTO.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		AF61AA072B33CFAA008F292A /* Domain */ = {
@@ -778,8 +797,9 @@
 				4C9AC7102B3707FB00659E57 /* ConsultationViewModel.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
-				AF284AFA2B41093600715695 /* BoardGameResponseDTO.swift in Sources */,
+				AF284AFA2B41093600715695 /* BoardGameShowResponseDTO.swift in Sources */,
 				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
+				AF284B022B41142B00715695 /* BoardGameSubmitRequestDTO.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
 				AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */,
 				4C396FC52B2B1EDC00F8C19D /* HomeViewModel.swift in Sources */,

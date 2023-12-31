@@ -2,7 +2,7 @@ import PopupView
 import SwiftUI
 
 struct BoardGameView: View {
-    let rows = [GridItem(.flexible())]
+    let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     @State private var isShownsheet = false
     @State private var isApplication = false
     @State private var isAlert = false
@@ -20,27 +20,31 @@ struct BoardGameView: View {
                         .padding(.trailing, 241)
                         .padding(.top, 11)
                     
-                        LazyHGrid(rows: rows) {
+                        LazyVGrid(columns: columns, spacing: 10) {
                             ForEach(viewModel.boardgames) { boardgame in
                                 Button {
                                     self.isShownsheet.toggle()
                                 } label: {
                                     reservationGrid(
-                                        backColor: .white,
-                                        itemColor: .S30,
+                                        backColor:viewModel.emptyPeople ? .white : .Shadow,
+                                        itemColor: viewModel.emptyPeople ? .S30 : .empty_dice,
                                         name: "개최자 : \(boardgame.creator.info)",
-                                        status: "남은 자리 \(boardgame.maxOf - boardgame.joined)개",
-                                        isShownSheet: isShownsheet)
+                                        status: viewModel.emptyPeople ? "남은 자리 \(boardgame.maxOf - boardgame.joined)개" : "모집완료",
+                                        isShownSheet: isShownsheet,
+                                        dice: viewModel.emptyPeople ? "dice" : "empty_dice"
+                                    )
                                 }
                                 .sheet(isPresented: $isShownsheet) {
-                                    reservationList(creator: boardgame.creator.info,
-                                                    players: boardgame.players
+                                    reservationList(
+                                        creator: boardgame.creator.info,
+                                        players: boardgame.players
                                     )
-                                        .presentationDetents([.height(300)])
+                                    .presentationDetents([.height(300)])
                                 }
                             }
                         }
-                    
+                        .padding(.horizontal, 15)
+                        
                     Spacer()
                     
                     Button {
@@ -66,19 +70,16 @@ struct BoardGameView: View {
     }
     
     @ViewBuilder
-    func reservationGrid(backColor: Color, itemColor: Color, name: String, status: String, isShownSheet: Bool) -> some View {
+    func reservationGrid(backColor: Color, itemColor: Color, name: String, status: String, isShownSheet: Bool, dice: String) -> some View {
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 13)
                     .foregroundStyle(backColor)
                     .frame(width: 112, height: 140)
                     .shadow(color: Color("Shadow"), radius: 15, y: -7)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder(isShownSheet ? Color.S30 : .white, lineWidth: 1)
-                    )
+
                 VStack(spacing: 0) {
-                    Image(systemName: "dice.fill")
+                    Image("\(dice)")
                         .resizable()
                         .frame(width: 28, height: 28)
                         .foregroundStyle(itemColor)
