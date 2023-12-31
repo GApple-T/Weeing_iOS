@@ -30,6 +30,9 @@
 		4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */; };
 		4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1032F2AA619140059C4C2 /* ProfileView.swift */; };
 		4CF103342AA620C90059C4C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103332AA620C90059C4C2 /* MainView.swift */; };
+		AF284AF72B41091B00715695 /* BoardGameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AF62B41091B00715695 /* BoardGameAPI.swift */; };
+		AF284AFA2B41093600715695 /* BoardGameResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AF92B41093600715695 /* BoardGameResponseDTO.swift */; };
+		AF284AFC2B41099700715695 /* BoardGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AFB2B41099700715695 /* BoardGameViewModel.swift */; };
 		AF61AA0A2B33CFB5008F292A /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA092B33CFB5008F292A /* AuthAPI.swift */; };
 		AF61AA0D2B33D2AB008F292A /* LoggingPugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA0C2B33D2AB008F292A /* LoggingPugin.swift */; };
 		AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA102B33D36D008F292A /* LoginResponseDTO.swift */; };
@@ -97,6 +100,9 @@
 		4CF1032B2AA618EF0059C4C2 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
 		4CF1032F2AA619140059C4C2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4CF103332AA620C90059C4C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AF284AF62B41091B00715695 /* BoardGameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameAPI.swift; sourceTree = "<group>"; };
+		AF284AF92B41093600715695 /* BoardGameResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameResponseDTO.swift; sourceTree = "<group>"; };
+		AF284AFB2B41099700715695 /* BoardGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModel.swift; sourceTree = "<group>"; };
 		AF61AA092B33CFB5008F292A /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		AF61AA0C2B33D2AB008F292A /* LoggingPugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingPugin.swift; sourceTree = "<group>"; };
 		AF61AA102B33D36D008F292A /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 			children = (
 				4CF103232AA618790059C4C2 /* BoardGameView.swift */,
 				AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */,
+				AF284AFB2B41099700715695 /* BoardGameViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,9 +320,27 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AF284AF52B41090F00715695 /* BoardGame */ = {
+			isa = PBXGroup;
+			children = (
+				AF284AF82B41092900715695 /* DTO */,
+				AF284AF62B41091B00715695 /* BoardGameAPI.swift */,
+			);
+			path = BoardGame;
+			sourceTree = "<group>";
+		};
+		AF284AF82B41092900715695 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AF284AF92B41093600715695 /* BoardGameResponseDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		AF61AA072B33CFAA008F292A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AF284AF52B41090F00715695 /* BoardGame */,
 				4C5FEABF2B3D432400664024 /* Consult */,
 				AF61AA0B2B33D2A5008F292A /* Plugins */,
 				AF61AA082B33CFB0008F292A /* Auth */,
@@ -724,12 +749,14 @@
 				AF61AA172B33DB93008F292A /* RootView.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
 				AF61AA1B2B33DBD0008F292A /* SceneFlow.swift in Sources */,
+				AF284AFC2B41099700715695 /* BoardGameViewModel.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
 				AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */,
 				AF61AA0D2B33D2AB008F292A /* LoggingPugin.swift in Sources */,
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
+				AF284AF72B41091B00715695 /* BoardGameAPI.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
@@ -751,6 +778,7 @@
 				4C9AC7102B3707FB00659E57 /* ConsultationViewModel.swift in Sources */,
 				AFA611D12AA1724000D63657 /* WeeingConfirmTextField.swift in Sources */,
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
+				AF284AFA2B41093600715695 /* BoardGameResponseDTO.swift in Sources */,
 				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
 				AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */,
