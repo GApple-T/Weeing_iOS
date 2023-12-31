@@ -14,7 +14,7 @@ enum ConsultLogAPI {
 
 extension ConsultLogAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "http://3.34.34.162:8080/")!
+        return URL(string: "http://141.164.61.154:8080/")!
     }
 
     var path: String {
