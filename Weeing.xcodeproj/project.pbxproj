@@ -59,9 +59,9 @@
 		AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */; };
 		EA2B2BA62B402FC6009AFEE2 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B2BA52B402FC6009AFEE2 /* AppleSDGothicNeoSB00.ttf */; };
 		EA2B2BAA2B403026009AFEE2 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B2BA92B403026009AFEE2 /* AppleSDGothicNeoB00.ttf */; };
+		EA2B2BB22B404747009AFEE2 /* ConsultLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */; };
 		EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF602B3D471000327529 /* ConsultLogAPI.swift */; };
 		EA72DF632B3D472100327529 /* ConsultLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF622B3D472100327529 /* ConsultLogModel.swift */; };
-		EA72DF652B3D473B00327529 /* ConsultLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF642B3D473B00327529 /* ConsultLogViewModel.swift */; };
 		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
 		EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */; };
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
@@ -131,9 +131,9 @@
 		AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameApplicationView.swift; sourceTree = "<group>"; };
 		EA2B2BA52B402FC6009AFEE2 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
 		EA2B2BA92B403026009AFEE2 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
+		EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogViewModel.swift; sourceTree = "<group>"; };
 		EA72DF602B3D471000327529 /* ConsultLogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogAPI.swift; sourceTree = "<group>"; };
 		EA72DF622B3D472100327529 /* ConsultLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogModel.swift; sourceTree = "<group>"; };
-		EA72DF642B3D473B00327529 /* ConsultLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogViewModel.swift; sourceTree = "<group>"; };
 		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
 		EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupScreen.swift; sourceTree = "<group>"; };
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
@@ -593,7 +593,7 @@
 				EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */,
 				EA72DF602B3D471000327529 /* ConsultLogAPI.swift */,
 				EA72DF622B3D472100327529 /* ConsultLogModel.swift */,
-				EA72DF642B3D473B00327529 /* ConsultLogViewModel.swift */,
+				EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -763,7 +763,7 @@
 				AF61AA192B33DBBB008F292A /* SceneState.swift in Sources */,
 				AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */,
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
-				EA72DF652B3D473B00327529 /* ConsultLogViewModel.swift in Sources */,
+				EA2B2BB22B404747009AFEE2 /* ConsultLogViewModel.swift in Sources */,
 				AF61AA142B33D705008F292A /* LoginRequestDTO.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,
