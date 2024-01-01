@@ -13,6 +13,7 @@ struct ConsultLogView: View {
     @State private var isShowingCancelConfirmation = false
     @State private var isShowingCancellationComplete = false
     @Environment(\.dismiss) var dismiss
+    @ObservedObject var viewModel = ConsultLogViewModel()
 
     var body: some View {
         NavigationView {
@@ -29,19 +30,56 @@ struct ConsultLogView: View {
                         .padding(.bottom, 20)
 
                     ScrollView(showsIndicators: false) {
-                        LazyVStack {
-                            Button(action: {
-                                isShowingInitialPopup.toggle()
-                            }) {
-                                popupScreen(listColor: Color.P30, listname: "신청", listtime: 7)
-                                    .padding(.top, 10)
-                            }
+                        VStack {
+                            if viewModel.isDataLoaded {
+                                ForEach(viewModel.consults, id: \.id) { consultLog in
+                                    Button {
+                                        isShowingInitialPopup = true
 
-                            ForEach(0 ..< 6, id: \.self) { _ in
-                                popupScreen(listColor: Color.gray, listname: "완료", listtime: 6)
-                                    .padding(.top, 10)
+                                    } label: {
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
+                                            .frame(width: 360, height: 102)
+                                            .foregroundStyle(.white)
+                                            .overlay(
+                                                VStack(alignment: .leading) {
+                                                    Text("2024.01.03 (\(consultLog.time)교시) 상담 신청")
+                                                        .font(.custom("AppleSDGothicNeoSB00", size: 18))
+                                                        .foregroundStyle(Color.P30)
+                                                        .padding(.top, 7)
+                                                        .padding(.leading, 12)
+
+                                                    Text("상담사유")
+                                                        .foregroundStyle(Color.N10)
+                                                        .font(.custom("AppleSDGothicNeoB00", size: 13))
+                                                        .padding(.leading, 12)
+
+                                                    Text(consultLog.description)
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                                        .multilineTextAlignment(.leading)
+                                                        .padding(.leading, 12)
+                                                        .font(.system(size: 10))
+                                                        .foregroundStyle(.gray)
+                                                        .lineLimit(2)
+                                                        .lineSpacing(7)
+                                                        .padding(.top, 1)
+
+                                                    Spacer()
+                                                }
+                                            )
+                                    }
+                                }.padding(.top, 10)
+                            } else {
+                                ProgressView("로딩 중...")
+                                    .padding()
+
+                                Text(viewModel.errorMessage)
+                                    .foregroundColor(.red)
+                                    .padding()
                             }
                         }
+                    }.onAppear {
+                        viewModel.loadConsultLogs()
                     }
                 }
             }
@@ -187,36 +225,6 @@ struct ConsultLogView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }
-    }
-}
-
-@ViewBuilder
-func popupScreen(listColor: Color, listname: String, listtime: Int) -> some View {
-    ZStack {
-        Rectangle()
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .foregroundStyle(.white)
-            .shadow(color: Color("Shadow"), radius: 15, x: 3, y: 2)
-            .frame(width: 360, height: 102)
-
-        VStack(alignment: .leading, spacing: 7) {
-            Text("2023.11.21 (\(listtime)교시) 상담 \(listname)")
-                .font(.custom("AppleSDGothicNeoSB00", size: 18))
-                .foregroundStyle(listColor)
-
-            Text("상담사유")
-                .foregroundStyle(.black)
-                .font(.custom("AppleSDGothicNeoB00", size: 13))
-
-            Text("요즘 너무 힘드러용... 전공도 그렇구 학교 생활이 너무 괴롭습니다 선생님... 저 좀 도와주세요 ㅠㅠ 진짜 잘하구 싶은데 잘 안됩니다ㅠㅠ 넘 힘들어요 버틸수 있을지 모르겠어요... 힘드네요.")
-                .frame(width: 338)
-                .font(.system(size: 10))
-                .foregroundStyle(.gray)
-                .multilineTextAlignment(.leading)
-                .lineLimit(2)
-                .lineSpacing(5)
-
-        }.padding(.leading, 12)
     }
 }
 
