@@ -4,10 +4,11 @@ import Moya
 final class BoardGameViewModel: ObservableObject {
     @Published var maxOf: Int = 0
     @Published var errorMessage = ""
-//    @Published var emptyPeople = false
+    @Published var id: String = ""
     @Published var boardgames: [BoardGameShowResponseDTO.BoardGameDTO] = []
+    @Published var selectedBoardGame: BoardGameShowResponseDTO.BoardGameDTO?
     let provider = MoyaProvider<BoardGameAPI>(plugins: [LoggingPlugin()])
-
+    
     var emptyPeople: Bool {
         if maxOf == 0 {
             return true
@@ -15,7 +16,15 @@ final class BoardGameViewModel: ObservableObject {
             return false
         }
     }
-
+    
+    func studentNumber(grade: Int, classroom: Int, number: Int, name: String) -> String {
+        if number < 2 {
+            return "\(grade)" + "\(classroom)" + "0" + "\(number)" + " \(name)"
+        } else {
+            return "\(grade)" + "\(classroom)" + "\(number)" + " \(name)"
+        }
+    }
+    
     func getBoardGameDetail() {
         provider.request(.show) { result in
             switch result {
@@ -37,13 +46,32 @@ final class BoardGameViewModel: ObservableObject {
             }
         }
     }
-
+    
     func submitBoardGame() {
         provider.request(.submit(req: BoardGameSubmitRequestDTO(maxOf: maxOf))) { result in
             switch result {
-            case let .success(res):
+            case .success(let res):
                 print(res.statusCode)
-            case let .failure(err):
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
+    func joinBoardGame() {
+        guard let selectedBoardGame = selectedBoardGame else {
+                print("Error: Selected board game is nil.")
+                return
+            }
+        
+        id = selectedBoardGame.id
+        
+        provider.request(.join(req: BoardGameJoinRequestDTO(id: id))) { result in
+            switch result {
+            case .success(let res):
+                print(res.statusCode)
+                self.getBoardGameDetail()
+            case .failure(let err):
                 print(err.localizedDescription)
             }
         }
