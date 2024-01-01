@@ -4,8 +4,9 @@ import Moya
 final class BoardGameViewModel: ObservableObject {
     @Published var maxOf: Int = 0
     @Published var errorMessage = ""
-//    @Published var emptyPeople = false
+    @Published var id: String = ""
     @Published var boardgames: [BoardGameShowResponseDTO.BoardGameDTO] = []
+    @Published var selectedBoardGame: BoardGameShowResponseDTO.BoardGameDTO?
     let provider = MoyaProvider<BoardGameAPI>(plugins: [LoggingPlugin()])
     
     var emptyPeople: Bool {
@@ -13,6 +14,14 @@ final class BoardGameViewModel: ObservableObject {
             return true
         } else {
             return false
+        }
+    }
+    
+    func studentNumber(grade: Int, classroom: Int, number: Int, name: String) -> String {
+        if number < 2 {
+            return "\(grade)" + "\(classroom)" + "0" + "\(number)" + " \(name)"
+        } else {
+            return "\(grade)" + "\(classroom)" + "\(number)" + " \(name)"
         }
     }
     
@@ -43,6 +52,25 @@ final class BoardGameViewModel: ObservableObject {
             switch result {
             case .success(let res):
                 print(res.statusCode)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
+    func joinBoardGame() {
+        guard let selectedBoardGame = selectedBoardGame else {
+                print("Error: Selected board game is nil.")
+                return
+            }
+        
+        id = selectedBoardGame.id
+        
+        provider.request(.join(req: BoardGameJoinRequestDTO(id: id))) { result in
+            switch result {
+            case .success(let res):
+                print(res.statusCode)
+                self.getBoardGameDetail()
             case .failure(let err):
                 print(err.localizedDescription)
             }

@@ -20,30 +20,36 @@ struct BoardGameView: View {
                         .padding(.trailing, 241)
                         .padding(.top, 11)
                     
+                    ScrollView {
                         LazyVGrid(columns: columns, spacing: 10) {
                             ForEach(viewModel.boardgames) { boardgame in
                                 Button {
+                                    viewModel.selectedBoardGame = boardgame
                                     self.isShownsheet.toggle()
                                 } label: {
                                     reservationGrid(
-                                        backColor:viewModel.emptyPeople ? .white : .Shadow,
+                                        backColor: viewModel.emptyPeople ? .white : .Shadow,
                                         itemColor: viewModel.emptyPeople ? .S30 : .empty_dice,
-                                        name: "개최자 : \(boardgame.creator.info)",
-                                        status: viewModel.emptyPeople ? "남은 자리 \(boardgame.maxOf - boardgame.joined)개" : "모집완료",
+                                        name: "개최자 : \(viewModel.studentNumber(grade: boardgame.creator.grade, classroom: boardgame.creator.classroom, number: boardgame.creator.number, name: boardgame.creator.name))",
+                                        status: viewModel.emptyPeople ? "남은 자리 \(boardgame.maxOf - boardgame.players.count)개" : "모집완료",
                                         isShownSheet: isShownsheet,
                                         dice: viewModel.emptyPeople ? "dice" : "empty_dice"
                                     )
                                 }
-                                .sheet(isPresented: $isShownsheet) {
+                                .sheet(item: $viewModel.selectedBoardGame) { boardgame in
                                     reservationList(
-                                        creator: boardgame.creator.info,
-                                        players: boardgame.players
+                                        creator: viewModel.studentNumber(grade: boardgame.creator.grade, classroom: boardgame.creator.classroom, number: boardgame.creator.number, name: boardgame.creator.name),
+                                        players: boardgame.players.map { viewModel.studentNumber(grade: $0.grade, classroom: $0.classroom, number: $0.number, name: $0.name) }
                                     )
                                     .presentationDetents([.height(300)])
+                                    .onTapGesture {
+                                        viewModel.id = boardgame.id
+                                    }
                                 }
                             }
                         }
                         .padding(.horizontal, 15)
+                    }
                         
                     Spacer()
                     
@@ -123,6 +129,7 @@ struct BoardGameView: View {
                     .padding(.top, 10)
                 
                 Button {
+                    viewModel.joinBoardGame()
                     dismiss()
                 } label: {
                     Text("참가 신청")

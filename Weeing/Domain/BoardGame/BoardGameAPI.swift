@@ -4,6 +4,7 @@ import Moya
 enum BoardGameAPI {
     case show
     case submit(req: BoardGameSubmitRequestDTO)
+    case join(req: BoardGameJoinRequestDTO)
 }
 
 extension BoardGameAPI: TargetType {
@@ -17,6 +18,8 @@ extension BoardGameAPI: TargetType {
             return "api/boardgame/list"
         case .submit:
             return "api/boardgame/submit"
+        case .join:
+            return "api/boardgame/join"
         }
     }
     
@@ -26,6 +29,8 @@ extension BoardGameAPI: TargetType {
             return .get
         case .submit:
             return .post
+        case .join:
+            return .post
         }
     }
     
@@ -34,6 +39,8 @@ extension BoardGameAPI: TargetType {
         case .show:
             return .requestPlain
         case .submit(let req):
+            return .requestJSONEncodable(req)
+        case .join(let req):
             return .requestJSONEncodable(req)
         }
     }

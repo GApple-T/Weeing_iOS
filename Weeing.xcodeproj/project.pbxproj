@@ -34,6 +34,7 @@
 		AF284AFA2B41093600715695 /* BoardGameShowResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AF92B41093600715695 /* BoardGameShowResponseDTO.swift */; };
 		AF284AFC2B41099700715695 /* BoardGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284AFB2B41099700715695 /* BoardGameViewModel.swift */; };
 		AF284B022B41142B00715695 /* BoardGameSubmitRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284B012B41142B00715695 /* BoardGameSubmitRequestDTO.swift */; };
+		AF284B042B41A52F00715695 /* BoardGameJoinRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF284B032B41A52F00715695 /* BoardGameJoinRequestDTO.swift */; };
 		AF61AA0A2B33CFB5008F292A /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA092B33CFB5008F292A /* AuthAPI.swift */; };
 		AF61AA0D2B33D2AB008F292A /* LoggingPugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA0C2B33D2AB008F292A /* LoggingPugin.swift */; };
 		AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61AA102B33D36D008F292A /* LoginResponseDTO.swift */; };
@@ -105,6 +106,7 @@
 		AF284AF92B41093600715695 /* BoardGameShowResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameShowResponseDTO.swift; sourceTree = "<group>"; };
 		AF284AFB2B41099700715695 /* BoardGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModel.swift; sourceTree = "<group>"; };
 		AF284B012B41142B00715695 /* BoardGameSubmitRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameSubmitRequestDTO.swift; sourceTree = "<group>"; };
+		AF284B032B41A52F00715695 /* BoardGameJoinRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameJoinRequestDTO.swift; sourceTree = "<group>"; };
 		AF61AA092B33CFB5008F292A /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		AF61AA0C2B33D2AB008F292A /* LoggingPugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingPugin.swift; sourceTree = "<group>"; };
 		AF61AA102B33D36D008F292A /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				AF284B012B41142B00715695 /* BoardGameSubmitRequestDTO.swift */,
+				AF284B032B41A52F00715695 /* BoardGameJoinRequestDTO.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
+				AF284B042B41A52F00715695 /* BoardGameJoinRequestDTO.swift in Sources */,
 				4C396FC22B2B1EA800F8C19D /* Model.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
