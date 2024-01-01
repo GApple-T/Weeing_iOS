@@ -19,6 +19,7 @@ struct Diarywriting: View {
     @State private var DiaryContent = ""
     @Environment(\.dismiss) var dismiss
     @State private var textNum = 0
+    @ObservedObject var viewModel = DiaryViewModel()
 
     enum Field {
         case DiaryTitle
@@ -103,6 +104,7 @@ struct Diarywriting: View {
                         .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .padding(.trailing, 84)
                     Button {
+                        viewModel.consultationSubmit(title: diaryTitleText, description: diaryContentText)
                         dismiss()
                     } label: {
                         Text("완료")
