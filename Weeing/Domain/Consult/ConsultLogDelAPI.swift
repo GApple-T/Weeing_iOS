@@ -1,24 +1,20 @@
 //
-//  ConsultationAPI.swift
+//  ConsultLogDelAPI.swift
 //  Weeing
 //
-//  Created by 한재형 on 12/23/23.
+//  Created by 서지완 on 1/1/24.
 //
+
+// ConsultLogDelAPI.swift
 
 import Foundation
 import Moya
-import SwiftUI
 
-struct Consultation: Codable {
-    let time: Int
-    let description: String
+enum ConsultLogDelAPI {
+    case submit(req: ConsultDelete)
 }
 
-enum ConsultationAPI {
-    case submit(req: Consultation)
-}
-
-extension ConsultationAPI: TargetType {
+extension ConsultLogDelAPI: TargetType {
     var baseURL: URL {
         return URL(string: "http://141.164.61.154:8080/api/consulting/")!
     }
@@ -26,18 +22,18 @@ extension ConsultationAPI: TargetType {
     var path: String {
         switch self {
         case .submit:
-            return "submit"
+            return "cancle"
         }
     }
 
     var method: Moya.Method {
         switch self {
         case .submit:
-            return .post
+            return .delete
         }
     }
 
-    var task: Moya.Task {
+    var task: Task {
         switch self {
         case let .submit(req):
             return .requestJSONEncodable(req)

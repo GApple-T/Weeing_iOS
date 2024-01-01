@@ -56,7 +56,7 @@ struct BoardGameApplicationView: View {
                                          selectiontitle: $selectionTitle,
                                          selectionId: $maxOf,
                                          item: .init(id: 4, title: "4명",
-                                                     onSelect: { viewModel.maxOf = 4}))
+                                                     onSelect: { viewModel.maxOf = 4 }))
                         }
                         .padding(.bottom, 10)
                     }

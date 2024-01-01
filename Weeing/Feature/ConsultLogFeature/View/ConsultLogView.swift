@@ -4,6 +4,7 @@
 //
 //  Created by 서지완 on 2023/09/26.
 //
+//
 
 import PopupView
 import SwiftUI
@@ -12,11 +13,16 @@ struct ConsultLogView: View {
     @State private var isShowingInitialPopup = false
     @State private var isShowingCancelConfirmation = false
     @State private var isShowingCancellationComplete = false
+    @State private var isShowNavigationLink = false
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel = ConsultLogViewModel()
+    @Binding var selectedConsultLog: UUID
+    @ObservedObject var viewModel2 = ConsultChangViewModel()
+    @State var consultLogbackup = 0
+    @ObservedObject var viewModel3 = ConsultDeleteViewModel()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color.BG.ignoresSafeArea()
 
@@ -35,6 +41,8 @@ struct ConsultLogView: View {
                                 ForEach(viewModel.consults, id: \.id) { consultLog in
                                     Button {
                                         isShowingInitialPopup = true
+                                        selectedConsultLog = consultLog.id
+                                        consultLogbackup = consultLog.time
 
                                     } label: {
                                         RoundedRectangle(cornerRadius: 10)
@@ -48,7 +56,6 @@ struct ConsultLogView: View {
                                                         .foregroundStyle(Color.P30)
                                                         .padding(.top, 7)
                                                         .padding(.leading, 12)
-
                                                     Text("상담사유")
                                                         .foregroundStyle(Color.N10)
                                                         .font(.custom("AppleSDGothicNeoB00", size: 13))
@@ -62,6 +69,7 @@ struct ConsultLogView: View {
                                                         .foregroundStyle(.gray)
                                                         .lineLimit(2)
                                                         .lineSpacing(7)
+
                                                         .padding(.top, 1)
 
                                                     Spacer()
@@ -94,7 +102,7 @@ struct ConsultLogView: View {
             .popup(isPresented: $isShowingInitialPopup) {
                 ZStack {
                     VStack {
-                        Text("2023.11.21 (7교시) 상담")
+                        Text("2023.11.21 (\(consultLogbackup)교시) 상담")
                             .font(.custom("AppleSDGothicNeoB00", size: 16))
                             .padding(.top, -30)
                             .background(RoundedRectangle(cornerRadius: 10)
@@ -107,9 +115,19 @@ struct ConsultLogView: View {
                         .padding(.top, 76)
 
                     HStack {
+                        NavigationLink(
+                            destination: ConsultChangView(viewModel: ConsultChangViewModel(), selectedConsultLog: $selectedConsultLog),
+                            isActive: $isShowNavigationLink,
+                            label: {
+                                EmptyView()
+                            }
+                        )
+
+                        .hidden()
+
                         Button {
                             isShowingInitialPopup = false
-
+                            isShowNavigationLink.toggle()
                         } label: {
                             Text("변경")
                                 .font(.custom("AppleSDGothicNeoSB00", size: 13))
@@ -178,6 +196,7 @@ struct ConsultLogView: View {
                         Button {
                             isShowingCancelConfirmation = false
                             isShowingCancellationComplete = true
+                            viewModel3.deleteConsultation(id: selectedConsultLog)
                         } label: {
                             Text("확인")
                                 .font(.custom("AppleSDGothicNeoSB00", size: 13))
@@ -230,6 +249,7 @@ struct ConsultLogView: View {
 
 struct ConsultLogView_Previews: PreviewProvider {
     static var previews: some View {
-        ConsultLogView()
+        let selectedConsultLog = Binding.constant(UUID())
+        return ConsultLogView(selectedConsultLog: selectedConsultLog)
     }
 }

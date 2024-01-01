@@ -16,7 +16,7 @@ final class ConsultationViewModel: ObservableObject {
     private let consultationProvider = MoyaProvider<ConsultationAPI>()
 
     func consultationSubmit() {
-        consultationProvider.request(.submit(req: Consultation(classTime: classTime, description: consultationContent))) { result in
+        consultationProvider.request(.submit(req: Consultation(time: classTime, description: consultationContent))) { result in
             switch result {
             case let .success(response):
                 print(UserDefaults.standard.string(forKey: "accessToken") ?? "")

@@ -22,6 +22,7 @@ struct MainView_Previews: PreviewProvider {
 struct ScreenTapBar: View {
     @State private var selectedIndex = 2
     let tabBarImangeNames = ["gamecontroller.fill", "book.fill", "house.fill", "calendar", "person.crop.circle.fill"]
+    @State private var selectedConsultLog = UUID()
     var selected = 0
     var body: some View {
         VStack {
@@ -34,7 +35,7 @@ struct ScreenTapBar: View {
                 case 2:
                     HomeView(viewModel: HomeViewModel())
                 case 3:
-                    ConsultLogView()
+                    ConsultLogView(selectedConsultLog: $selectedConsultLog)
                 default:
                     ProfileView()
                 }

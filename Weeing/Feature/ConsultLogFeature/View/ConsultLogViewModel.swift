@@ -18,6 +18,7 @@ final class ConsultLogViewModel: ObservableObject {
         provider.request(.getList) { result in
             switch result {
             case let .success(response):
+
                 do {
                     let responseModel = try JSONDecoder().decode(ConsultLogModel.self, from: response.data)
                     print(responseModel)

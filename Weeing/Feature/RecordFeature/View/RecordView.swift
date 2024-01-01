@@ -12,7 +12,7 @@ struct RootView: View {
             case .main:
                 MainView()
                     .environmentObject(sceneState)
-                
+
             case .boardgame:
                 BoardGameView()
                     .environmentObject(sceneState)

@@ -7,7 +7,7 @@ final class BoardGameViewModel: ObservableObject {
 //    @Published var emptyPeople = false
     @Published var boardgames: [BoardGameShowResponseDTO.BoardGameDTO] = []
     let provider = MoyaProvider<BoardGameAPI>(plugins: [LoggingPlugin()])
-    
+
     var emptyPeople: Bool {
         if maxOf == 0 {
             return true
@@ -15,7 +15,7 @@ final class BoardGameViewModel: ObservableObject {
             return false
         }
     }
-    
+
     func getBoardGameDetail() {
         provider.request(.show) { result in
             switch result {
@@ -37,13 +37,13 @@ final class BoardGameViewModel: ObservableObject {
             }
         }
     }
-    
+
     func submitBoardGame() {
         provider.request(.submit(req: BoardGameSubmitRequestDTO(maxOf: maxOf))) { result in
             switch result {
-            case .success(let res):
+            case let .success(res):
                 print(res.statusCode)
-            case .failure(let err):
+            case let .failure(err):
                 print(err.localizedDescription)
             }
         }

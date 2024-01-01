@@ -1,45 +1,47 @@
 //
-//  ConsultationAPI.swift
+//  ConsultChangAPI.swift
 //  Weeing
 //
-//  Created by 한재형 on 12/23/23.
+//  Created by 서지완 on 1/1/24.
 //
+
+// ConsultChangAPI.swift
 
 import Foundation
 import Moya
 import SwiftUI
 
-struct Consultation: Codable {
-    let time: Int
-    let description: String
+struct ConsultChang: Codable {
+    let id: String
+    let time: String
 }
 
-enum ConsultationAPI {
-    case submit(req: Consultation)
+enum ConsultChangAPI {
+    case update(req: ConsultChang)
 }
 
-extension ConsultationAPI: TargetType {
+extension ConsultChangAPI: TargetType {
     var baseURL: URL {
         return URL(string: "http://141.164.61.154:8080/api/consulting/")!
     }
 
     var path: String {
         switch self {
-        case .submit:
-            return "submit"
+        case .update:
+            return "update"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .submit:
-            return .post
+        case .update:
+            return .patch
         }
     }
 
-    var task: Moya.Task {
+    var task: Task {
         switch self {
-        case let .submit(req):
+        case let .update(req):
             return .requestJSONEncodable(req)
         }
     }
