@@ -58,6 +58,7 @@
 		AFA611D32AA1878F00D63657 /* WeeingPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */; };
 		AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D52AA1E94900D63657 /* StartPageButton.swift */; };
 		AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */; };
+		AFC7B4F82B43258E00CAF2FE /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC7B4F72B43258E00CAF2FE /* ProfileAPI.swift */; };
 		AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */; };
 		AFF14E8C2B327A840017CC40 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AFF14E8B2B327A840017CC40 /* NeedleFoundation */; };
 		AFF14E8E2B327A840017CC40 /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = AFF14E8D2B327A840017CC40 /* NeedleFoundationTest */; };
@@ -141,6 +142,7 @@
 		AFA611D22AA1878F00D63657 /* WeeingPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingPasswordTextField.swift; sourceTree = "<group>"; };
 		AFA611D52AA1E94900D63657 /* StartPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		AFA611D92AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeingCheckPasswordTextField.swift; sourceTree = "<group>"; };
+		AFC7B4F72B43258E00CAF2FE /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
 		AFD02CE62AF9B831000CF617 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AFF300242B2FEF8A0008F8F9 /* BoardGameApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameApplicationView.swift; sourceTree = "<group>"; };
 		EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogViewModel.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 		AF61AA072B33CFAA008F292A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AFC7B4F62B43258200CAF2FE /* Profile */,
 				AF284AF52B41090F00715695 /* BoardGame */,
 				4C5FEABF2B3D432400664024 /* Consult */,
 				AF61AA0B2B33D2A5008F292A /* Plugins */,
@@ -619,6 +622,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		AFC7B4F62B43258200CAF2FE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AFC7B4F92B4325A200CAF2FE /* DTO */,
+				AFC7B4F72B43258E00CAF2FE /* ProfileAPI.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AFC7B4F92B4325A200CAF2FE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		EA7FFBA52B21374000132C8E /* CounselingCheckFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,6 +828,7 @@
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
 				AF284AF72B41091B00715695 /* BoardGameAPI.swift in Sources */,
+				AFC7B4F82B43258E00CAF2FE /* ProfileAPI.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
 				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
 				EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */,

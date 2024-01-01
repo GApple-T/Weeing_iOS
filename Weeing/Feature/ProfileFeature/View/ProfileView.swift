@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @StateObject var viewModel = BoardGameViewModel()
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -28,6 +30,9 @@ struct ProfileView: View {
                     }
                     Spacer()
                 }
+            }
+            .onAppear {
+                viewModel.getBoardGameDetail()
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
