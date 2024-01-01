@@ -8,7 +8,7 @@ struct BoardGameShowResponseDTO: Codable {
         let maxOf: Int
         let creator: CreatorDTO
         let players: [PlayerDTO]
-        
+
         struct CreatorDTO: Codable {
             let id: String
             let grade: Int
@@ -16,7 +16,7 @@ struct BoardGameShowResponseDTO: Codable {
             let number: Int
             let name: String
         }
-        
+
         struct PlayerDTO: Codable {
             let id: String
             let grade: Int
