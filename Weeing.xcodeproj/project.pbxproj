@@ -23,6 +23,8 @@
 		4C72B2D82AEA6110003AD638 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C72B2D72AEA6110003AD638 /* .swiftlint.yml */; };
 		4C9AC70E2B3704C600659E57 /* ConsultationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */; };
 		4C9AC7102B3707FB00659E57 /* ConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */; };
+		4C9CB9892B4380BF003A7CA8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CB9882B4380BF003A7CA8 /* ProfileViewModel.swift */; };
+		4C9CB98D2B4380EA003A7CA8 /* ProfileResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9CB98C2B4380EA003A7CA8 /* ProfileResponseDTO.swift */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
@@ -106,6 +108,8 @@
 		4C8A38E32B0EC5F800306580 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationAPI.swift; sourceTree = "<group>"; };
 		4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
+		4C9CB9882B4380BF003A7CA8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		4C9CB98C2B4380EA003A7CA8 /* ProfileResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseDTO.swift; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -240,6 +244,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C9CB98A2B4380CD003A7CA8 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4C9CB98B2B4380D8003A7CA8 /* Response */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		4C9CB98B2B4380D8003A7CA8 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4C9CB98C2B4380EA003A7CA8 /* ProfileResponseDTO.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		4CF1031D2AA6009D0059C4C2 /* HomeFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF1032F2AA619140059C4C2 /* ProfileView.swift */,
+				4C9CB9882B4380BF003A7CA8 /* ProfileViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -625,17 +646,10 @@
 		AFC7B4F62B43258200CAF2FE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				AFC7B4F92B4325A200CAF2FE /* DTO */,
+				4C9CB98A2B4380CD003A7CA8 /* DTO */,
 				AFC7B4F72B43258E00CAF2FE /* ProfileAPI.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		AFC7B4F92B4325A200CAF2FE /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DTO;
 			sourceTree = "<group>";
 		};
 		EA7FFBA52B21374000132C8E /* CounselingCheckFeature */ = {
@@ -810,6 +824,7 @@
 			files = (
 				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
 				EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */,
+				4C9CB9892B4380BF003A7CA8 /* ProfileViewModel.swift in Sources */,
 				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
@@ -830,6 +845,7 @@
 				AF284AF72B41091B00715695 /* BoardGameAPI.swift in Sources */,
 				AFC7B4F82B43258E00CAF2FE /* ProfileAPI.swift in Sources */,
 				AFA611A02A98877F00D63657 /* SplashView.swift in Sources */,
+				4C9CB98D2B4380EA003A7CA8 /* ProfileResponseDTO.swift in Sources */,
 				EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */,
 				EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */,
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
