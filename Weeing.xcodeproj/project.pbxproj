@@ -24,6 +24,11 @@
 		4C9AC70E2B3704C600659E57 /* ConsultationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */; };
 		4C9AC7102B3707FB00659E57 /* ConsultationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */; };
 		4CAED9632AC3023E00A1EE76 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 4CAED9622AC3023E00A1EE76 /* PopupView */; };
+		4CB7D85A2B43782A00515A68 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7D8592B43782A00515A68 /* ProfileViewModel.swift */; };
+		4CB7D85F2B43788000515A68 /* ProfileResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7D85E2B43788000515A68 /* ProfileResponseDTO.swift */; };
+		4CB7D8612B4378DA00515A68 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7D8602B4378DA00515A68 /* ProfileAPI.swift */; };
+		4CB7D8652B4379FD00515A68 /* ConsultRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7D8642B4379FD00515A68 /* ConsultRequestDTO.swift */; };
+		4CB7D8682B437A4800515A68 /* ConsultResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7D8672B437A4800515A68 /* ConsultResponseDTO.swift */; };
 		4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1031F2AA600C00059C4C2 /* HomeView.swift */; };
 		4CF103242AA618790059C4C2 /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103232AA618790059C4C2 /* BoardGameView.swift */; };
 		4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF103272AA618B50059C4C2 /* DiaryView.swift */; };
@@ -105,6 +110,11 @@
 		4C8A38E32B0EC5F800306580 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationAPI.swift; sourceTree = "<group>"; };
 		4C9AC70F2B3707FB00659E57 /* ConsultationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewModel.swift; sourceTree = "<group>"; };
+		4CB7D8592B43782A00515A68 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		4CB7D85E2B43788000515A68 /* ProfileResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseDTO.swift; sourceTree = "<group>"; };
+		4CB7D8602B4378DA00515A68 /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
+		4CB7D8642B4379FD00515A68 /* ConsultRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultRequestDTO.swift; sourceTree = "<group>"; };
+		4CB7D8672B437A4800515A68 /* ConsultResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultResponseDTO.swift; sourceTree = "<group>"; };
 		4CF1031F2AA600C00059C4C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4CF103232AA618790059C4C2 /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		4CF103272AA618B50059C4C2 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -221,6 +231,7 @@
 		4C5FEABF2B3D432400664024 /* Consult */ = {
 			isa = PBXGroup;
 			children = (
+				4CB7D8622B4379D700515A68 /* DTO */,
 				EA72DF602B3D471000327529 /* ConsultLogAPI.swift */,
 				4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */,
 				EA2B2BC92B42E49F009AFEE2 /* ConsultLogDelAPI.swift */,
@@ -236,6 +247,57 @@
 				4C8A38E32B0EC5F800306580 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CB7D85B2B43784200515A68 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7D85C2B43785600515A68 /* DTO */,
+				4CB7D8602B4378DA00515A68 /* ProfileAPI.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4CB7D85C2B43785600515A68 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7D85D2B43786D00515A68 /* Response */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		4CB7D85D2B43786D00515A68 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7D85E2B43788000515A68 /* ProfileResponseDTO.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		4CB7D8622B4379D700515A68 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7D8662B437A3700515A68 /* Response */,
+				4CB7D8632B4379EA00515A68 /* Request */,
+			);
+			name = DTO;
+			path = "ㅇ썌";
+			sourceTree = "<group>";
+		};
+		4CB7D8632B4379EA00515A68 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7D8642B4379FD00515A68 /* ConsultRequestDTO.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		4CB7D8662B437A3700515A68 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7D8672B437A4800515A68 /* ConsultResponseDTO.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		4CF1031D2AA6009D0059C4C2 /* HomeFeature */ = {
@@ -325,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				4CF1032F2AA619140059C4C2 /* ProfileView.swift */,
+				4CB7D8592B43782A00515A68 /* ProfileViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,6 +446,7 @@
 		AF61AA072B33CFAA008F292A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				4CB7D85B2B43784200515A68 /* Profile */,
 				AF284AF52B41090F00715695 /* BoardGame */,
 				4C5FEABF2B3D432400664024 /* Consult */,
 				AF61AA0B2B33D2A5008F292A /* Plugins */,
@@ -792,11 +856,13 @@
 				AFA611712A94C6F400D63657 /* LoginView.swift in Sources */,
 				EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */,
 				AFA611922A961EC600D63657 /* FIndPasswordView.swift in Sources */,
+				4CB7D8682B437A4800515A68 /* ConsultResponseDTO.swift in Sources */,
 				AFA611742A94C7FD00D63657 /* Colors.swift in Sources */,
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
 				EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */,
 				AF61AA172B33DB93008F292A /* RootView.swift in Sources */,
 				EA2B2BD42B42E501009AFEE2 /* ConsultChangViewModel.swift in Sources */,
+				4CB7D85F2B43788000515A68 /* ProfileResponseDTO.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
 				AF61AA1B2B33DBD0008F292A /* SceneFlow.swift in Sources */,
 				EA2B2BCE2B42E4C6009AFEE2 /* ConsultDelete.swift in Sources */,
@@ -818,16 +884,19 @@
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
+				4CB7D8652B4379FD00515A68 /* ConsultRequestDTO.swift in Sources */,
 				4C9AC70E2B3704C600659E57 /* ConsultationAPI.swift in Sources */,
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				AF61AA0A2B33CFB5008F292A /* AuthAPI.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
 				AF61AA192B33DBBB008F292A /* SceneState.swift in Sources */,
 				AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */,
+				4CB7D8612B4378DA00515A68 /* ProfileAPI.swift in Sources */,
 				EA2B2BCA2B42E49F009AFEE2 /* ConsultLogDelAPI.swift in Sources */,
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
 				EA2B2BD02B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift in Sources */,
 				EA2B2BB22B404747009AFEE2 /* ConsultLogViewModel.swift in Sources */,
+				4CB7D85A2B43782A00515A68 /* ProfileViewModel.swift in Sources */,
 				AF61AA142B33D705008F292A /* LoginRequestDTO.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
 				EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */,

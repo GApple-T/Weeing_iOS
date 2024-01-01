@@ -16,11 +16,14 @@ final class ConsultationViewModel: ObservableObject {
     private let consultationProvider = MoyaProvider<ConsultationAPI>()
 
     func consultationSubmit() {
-        consultationProvider.request(.submit(req: Consultation(time: classTime, description: consultationContent))) { result in
+        print(classTime)
+        print(consultationContent)
+        consultationProvider.request(.submit(req: ConsultRequestDTO(time: classTime, description: consultationContent))) { result in
             switch result {
             case let .success(response):
+                print("상담 신청 요청 성공")
+                print("상담 신청: \(response.statusCode)")
                 print(UserDefaults.standard.string(forKey: "accessToken") ?? "")
-                print("상담 신청 성공")
             case let .failure(error):
                 print("네트워크 요청 실패: \(error.localizedDescription)")
             }

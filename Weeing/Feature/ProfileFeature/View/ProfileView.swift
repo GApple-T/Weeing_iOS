@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewModel()
     var body: some View {
         NavigationStack {
             ZStack {
@@ -22,7 +23,7 @@ struct ProfileView: View {
                         .padding(.bottom, 22)
                         .padding(.top, 7)
                     ScrollView {
-                        ForEach(1 ..< 5) { _ in
+                        if viewModel.title != "" {
                             diarylist()
                         }
                     }
@@ -50,43 +51,43 @@ struct ProfileView: View {
             }
         }
     }
+
+    @ViewBuilder func diarylist() -> some View {
+        Button {} label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 360, height: 70)
+                    .foregroundStyle(.white)
+                    .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
+                HStack(spacing: 0) {
+                    Group {
+                        Text("\(viewModel.title)")
+                            .font(Font.custom("AppleSDGothicNeoSB00", size: 18))
+                            .foregroundStyle(.black)
+                        Text("1206 류지민")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundStyle(.gray)
+                            .padding(.leading, -15)
+                    }
+                    .padding(.leading, 30)
+                    Spacer()
+                    VStack(spacing: 0) {
+                        Spacer()
+                        Text("작성일 : 2023.10.10")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundStyle(.gray)
+                            .padding(.trailing, 26)
+                            .padding(.bottom, 6)
+                    }
+                    .frame(height: 70)
+                }
+            }
+        }
+    }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
-    }
-}
-
-@ViewBuilder func diarylist() -> some View {
-    Button {} label: {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 360, height: 70)
-                .foregroundStyle(.white)
-                .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
-            HStack(spacing: 0) {
-                Group {
-                    Text("야구장 가는 날")
-                        .font(Font.custom("AppleSDGothicNeoSB00", size: 18))
-                        .foregroundStyle(.black)
-                    Text("1206 류지민")
-                        .font(Font.custom("AppleSDGothicNeoM00", size: 12))
-                        .foregroundStyle(.gray)
-                        .padding(.leading, -15)
-                }
-                .padding(.leading, 30)
-                Spacer()
-                VStack(spacing: 0) {
-                    Spacer()
-                    Text("작성일 : 2023.10.10")
-                        .font(Font.custom("AppleSDGothicNeoM00", size: 12))
-                        .foregroundStyle(.gray)
-                        .padding(.trailing, 26)
-                        .padding(.bottom, 6)
-                }
-                .frame(height: 70)
-            }
-        }
     }
 }
