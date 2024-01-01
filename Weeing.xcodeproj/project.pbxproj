@@ -64,6 +64,12 @@
 		EA2B2BA62B402FC6009AFEE2 /* AppleSDGothicNeoSB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B2BA52B402FC6009AFEE2 /* AppleSDGothicNeoSB00.ttf */; };
 		EA2B2BAA2B403026009AFEE2 /* AppleSDGothicNeoB00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B2BA92B403026009AFEE2 /* AppleSDGothicNeoB00.ttf */; };
 		EA2B2BB22B404747009AFEE2 /* ConsultLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */; };
+		EA2B2BCA2B42E49F009AFEE2 /* ConsultLogDelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BC92B42E49F009AFEE2 /* ConsultLogDelAPI.swift */; };
+		EA2B2BCC2B42E4B2009AFEE2 /* ConsultChangAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BCB2B42E4B2009AFEE2 /* ConsultChangAPI.swift */; };
+		EA2B2BCE2B42E4C6009AFEE2 /* ConsultDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BCD2B42E4C6009AFEE2 /* ConsultDelete.swift */; };
+		EA2B2BD02B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BCF2B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift */; };
+		EA2B2BD22B42E4F1009AFEE2 /* ConsultChangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BD12B42E4F1009AFEE2 /* ConsultChangView.swift */; };
+		EA2B2BD42B42E501009AFEE2 /* ConsultChangViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BD32B42E501009AFEE2 /* ConsultChangViewModel.swift */; };
 		EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF602B3D471000327529 /* ConsultLogAPI.swift */; };
 		EA72DF632B3D472100327529 /* ConsultLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF622B3D472100327529 /* ConsultLogModel.swift */; };
 		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
@@ -140,6 +146,12 @@
 		EA2B2BA52B402FC6009AFEE2 /* AppleSDGothicNeoSB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoSB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoSB00.ttf"; sourceTree = "<group>"; };
 		EA2B2BA92B403026009AFEE2 /* AppleSDGothicNeoB00.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleSDGothicNeoB00.ttf; path = "../../../../../../Fonts/Apple_산돌고딕_Neo/AppleSDGothicNeoB00.ttf"; sourceTree = "<group>"; };
 		EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogViewModel.swift; sourceTree = "<group>"; };
+		EA2B2BC92B42E49F009AFEE2 /* ConsultLogDelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogDelAPI.swift; sourceTree = "<group>"; };
+		EA2B2BCB2B42E4B2009AFEE2 /* ConsultChangAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultChangAPI.swift; sourceTree = "<group>"; };
+		EA2B2BCD2B42E4C6009AFEE2 /* ConsultDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultDelete.swift; sourceTree = "<group>"; };
+		EA2B2BCF2B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultDeleteViewModel.swift; sourceTree = "<group>"; };
+		EA2B2BD12B42E4F1009AFEE2 /* ConsultChangView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultChangView.swift; sourceTree = "<group>"; };
+		EA2B2BD32B42E501009AFEE2 /* ConsultChangViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultChangViewModel.swift; sourceTree = "<group>"; };
 		EA72DF602B3D471000327529 /* ConsultLogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogAPI.swift; sourceTree = "<group>"; };
 		EA72DF622B3D472100327529 /* ConsultLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogModel.swift; sourceTree = "<group>"; };
 		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
@@ -211,7 +223,10 @@
 		4C5FEABF2B3D432400664024 /* Consult */ = {
 			isa = PBXGroup;
 			children = (
+				EA72DF602B3D471000327529 /* ConsultLogAPI.swift */,
 				4C9AC70D2B3704C600659E57 /* ConsultationAPI.swift */,
+				EA2B2BC92B42E49F009AFEE2 /* ConsultLogDelAPI.swift */,
+				EA2B2BCB2B42E4B2009AFEE2 /* ConsultChangAPI.swift */,
 			);
 			path = Consult;
 			sourceTree = "<group>";
@@ -635,9 +650,12 @@
 			isa = PBXGroup;
 			children = (
 				EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */,
-				EA72DF602B3D471000327529 /* ConsultLogAPI.swift */,
 				EA72DF622B3D472100327529 /* ConsultLogModel.swift */,
 				EA2B2BB12B404747009AFEE2 /* ConsultLogViewModel.swift */,
+				EA2B2BCD2B42E4C6009AFEE2 /* ConsultDelete.swift */,
+				EA2B2BCF2B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift */,
+				EA2B2BD12B42E4F1009AFEE2 /* ConsultChangView.swift */,
+				EA2B2BD32B42E501009AFEE2 /* ConsultChangViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -783,12 +801,15 @@
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
 				EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */,
 				AF61AA172B33DB93008F292A /* RootView.swift in Sources */,
+				EA2B2BD42B42E501009AFEE2 /* ConsultChangViewModel.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
 				AF61AA1B2B33DBD0008F292A /* SceneFlow.swift in Sources */,
+				EA2B2BCE2B42E4C6009AFEE2 /* ConsultDelete.swift in Sources */,
 				AF284AFC2B41099700715695 /* BoardGameViewModel.swift in Sources */,
 				AFA6115E2A94B54300D63657 /* WeeingApp.swift in Sources */,
 				AFA611802A94F61A00D63657 /* SignupView.swift in Sources */,
 				AFA611D62AA1E94900D63657 /* StartPageButton.swift in Sources */,
+				EA2B2BCC2B42E4B2009AFEE2 /* ConsultChangAPI.swift in Sources */,
 				AF61AA0D2B33D2AB008F292A /* LoggingPugin.swift in Sources */,
 				AFA611CF2A9F638200D63657 /* WeeingEmailTextField.swift in Sources */,
 				4C3639F82AB9B80100DD8F30 /* DropdownItem.swift in Sources */,
@@ -808,7 +829,9 @@
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
 				AF61AA192B33DBBB008F292A /* SceneState.swift in Sources */,
 				AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */,
+				EA2B2BCA2B42E49F009AFEE2 /* ConsultLogDelAPI.swift in Sources */,
 				EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */,
+				EA2B2BD02B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift in Sources */,
 				EA2B2BB22B404747009AFEE2 /* ConsultLogViewModel.swift in Sources */,
 				AF61AA142B33D705008F292A /* LoginRequestDTO.swift in Sources */,
 				4CF103342AA620C90059C4C2 /* MainView.swift in Sources */,
@@ -819,6 +842,7 @@
 				AFA611982A98756300D63657 /* UserInformationView.swift in Sources */,
 				AF284AFA2B41093600715695 /* BoardGameShowResponseDTO.swift in Sources */,
 				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
+				EA2B2BD22B42E4F1009AFEE2 /* ConsultChangView.swift in Sources */,
 				AF284B022B41142B00715695 /* BoardGameSubmitRequestDTO.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
 				AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */,
