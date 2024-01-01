@@ -182,10 +182,10 @@ struct HomeView: View {
                                                         Text(x)
                                                             .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                             .foregroundColor(Color.N10)
-                                                            .padding(.bottom, 4)
+                                                            .padding(.bottom, 8)
                                                             .padding(.leading, 10)
                                                     } else {
-                                                        Text("")
+                                                        Text("자습")
                                                             .font(.custom("AppleSDGothicNeoB00", size: 12))
                                                             .foregroundColor(Color.N10)
                                                             .padding(.bottom, 4)
