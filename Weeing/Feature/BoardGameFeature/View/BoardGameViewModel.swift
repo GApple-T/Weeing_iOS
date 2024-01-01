@@ -19,8 +19,10 @@ final class BoardGameViewModel: ObservableObject {
 
     func studentNumber(grade: Int, classroom: Int, number: Int, name: String) -> String {
         if number < 2 {
+            UserDefaults.standard.set("\(grade)" + "\(classroom)" + "0" + "\(number)" + " \(name)", forKey: "number")
             return "\(grade)" + "\(classroom)" + "0" + "\(number)" + " \(name)"
         } else {
+            UserDefaults.standard.set("\(grade)" + "\(classroom)" + "\(number)" + " \(name)", forKey: "number2")
             return "\(grade)" + "\(classroom)" + "\(number)" + " \(name)"
         }
     }
@@ -32,7 +34,6 @@ final class BoardGameViewModel: ObservableObject {
                 do {
                     let decoder = JSONDecoder()
                     let responseModel = try decoder.decode(BoardGameShowResponseDTO.self, from: res.data)
-
                     self.boardgames = responseModel.boardgames
                 } catch {
                     print("JSON Decoding Error: \(error)")

@@ -19,8 +19,10 @@ final class ConsultationViewModel: ObservableObject {
         consultationProvider.request(.submit(req: Consultation(time: classTime, description: consultationContent))) { result in
             switch result {
             case let .success(response):
+                print(response.statusCode)
                 print(UserDefaults.standard.string(forKey: "accessToken") ?? "")
-                print("상담 신청 성공")
+                print(UserDefaults.standard.string(forKey: "number") ?? "")
+                print(UserDefaults.standard.string(forKey: "number2") ?? "")
             case let .failure(error):
                 print("네트워크 요청 실패: \(error.localizedDescription)")
             }
