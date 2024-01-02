@@ -6,8 +6,9 @@ import SwiftUI
 
 struct DiaryView: View {
     @State private var GradeSelectButton: Int? = nil
-    @State private var ClassSelectButton: Int? = nil
+    // @State private var ClassSelectButton: Int? = nil
     @State private var AllSelectBotton: Bool = false
+    @ObservedObject var viewModel = DiaryListViewModel()
 
     var body: some View {
         NavigationStack {
@@ -20,46 +21,82 @@ struct DiaryView: View {
                             .padding(.leading, 20)
                         Spacer()
                     }
-
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             EntireFillterButton(EntireButtonColor: AllSelectBotton)
                                 .onTapGesture {
                                     AllSelectBotton.toggle()
                                     GradeSelectButton = nil
-                                    ClassSelectButton = nil
+                                    // ClassSelectButton = nil
+                                    viewModel.loadConsultLogs(button: nil)
                                 }
 
                             ForEach(1 ..< 4) { GradeFor in
                                 GradeFillterButton(GradeChange: GradeFor, GradeButtonColor: GradeSelectButton == GradeFor)
                                     .onTapGesture {
                                         GradeSelectButton = GradeFor
-                                        ClassSelectButton = nil
+                                        // ClassSelectButton = nil
                                         AllSelectBotton = false
+                                        viewModel.loadConsultLogs(button: GradeFor)
                                     }
                             }
 
-                            ForEach(1 ..< 5) { ClassFor in
-                                ClassFillterButton(ClassChange: ClassFor, ClassButtonColor: ClassSelectButton == ClassFor)
-                                    .onTapGesture {
-                                        GradeSelectButton = nil
-                                        ClassSelectButton = ClassFor
-                                        AllSelectBotton = false
-                                    }
-                            }
+//                            ForEach(1 ..< 5) { ClassFor in
+//                                ClassFillterButton(ClassChange: ClassFor, ClassButtonColor: ClassSelectButton == ClassFor)
+//                                    .onTapGesture {
+//                                        GradeSelectButton = nil
+//                                        ClassSelectButton = ClassFor
+//                                        AllSelectBotton = false
+//                                    }
+//                            }
                         }
                     }
-                    .padding(.top, 4)
+                    // .padding(.top, 4)
                     .padding(.leading, 20)
 
-                    ScrollView(showsIndicators: false) {
-                        ForEach(0 ..< 12) { _ in
-//                            diarylog()
+                    ScrollView {
+                        LazyVStack {
+                            if viewModel.isDataLoaded {
+                                ForEach(viewModel.diaries, id: \.id) { diarycount in
+                                    NavigationLink {
+                                        DiaryLog()
+                                    } label: {
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .shadow(color: .Shadow, radius: 12.5, x: 3, y: 2)
+                                                .frame(width: 360, height: 70)
+                                                .foregroundStyle(.white)
+
+                                            HStack(spacing: 0) {
+                                                Group {
+                                                    Text(diarycount.title)
+                                                        .font(.custom("AppleSDGothicNeoSB00", size: 18))
+                                                        .foregroundStyle(.black)
+                                                    Text(UserDefaults.standard.string(forKey: "number") ?? UserDefaults.standard.string(forKey: "number2") ?? "")
+                                                        .font(.custom("AppleSDGothicNeoM00", size: 12))
+                                                        .foregroundStyle(.gray)
+                                                        .padding(.leading, -15)
+                                                }
+                                                .padding(.leading, 30)
+                                                Spacer()
+                                                VStack(spacing: 0) {
+                                                    Spacer()
+                                                    Text("작성일 : 2024.01.02")
+                                                        .font(.custom("AppleSDGothicNeoM00", size: 12))
+                                                        .foregroundStyle(.gray)
+                                                        .padding(.trailing, 26)
+                                                        .padding(.bottom, 6)
+                                                }
+                                                .frame(height: 70)
+                                            }
+                                        }
+                                    }
+                                }.padding(.top, 14)
+                            }
                         }
-                        .padding(.top, 14)
                     }
-                    .padding(.top, 10)
                 }
+                .padding(.top, 10)
 
                 NavigationLink(
                     destination: Diarywriting(),
