@@ -79,6 +79,8 @@
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
 		EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26162B0604E000F8D244 /* DiaryLog.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
+		EAF57AA12B4388E600AD8BDD /* DiaryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF57AA02B4388E600AD8BDD /* DiaryAPI.swift */; };
+		EAF57AA32B43890900AD8BDD /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF57AA22B43890900AD8BDD /* DiaryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -163,6 +165,8 @@
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EA8D26162B0604E000F8D244 /* DiaryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
+		EAF57AA02B4388E600AD8BDD /* DiaryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAPI.swift; sourceTree = "<group>"; };
+		EAF57AA22B43890900AD8BDD /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +317,8 @@
 				EA8D26142B0604AF00F8D244 /* Diarywriting.swift */,
 				EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */,
 				EA8D26162B0604E000F8D244 /* DiaryLog.swift */,
+				EAF57AA02B4388E600AD8BDD /* DiaryAPI.swift */,
+				EAF57AA22B43890900AD8BDD /* DiaryViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -858,6 +864,7 @@
 				4CF103282AA618B50059C4C2 /* DiaryView.swift in Sources */,
 				AF61AA0A2B33CFB5008F292A /* AuthAPI.swift in Sources */,
 				4C3639FA2ABAE8D100DD8F30 /* Calenderday.swift in Sources */,
+				EAF57AA12B4388E600AD8BDD /* DiaryAPI.swift in Sources */,
 				AF61AA192B33DBBB008F292A /* SceneState.swift in Sources */,
 				AFF300252B2FEF8A0008F8F9 /* BoardGameApplicationView.swift in Sources */,
 				EA2B2BCA2B42E49F009AFEE2 /* ConsultLogDelAPI.swift in Sources */,
@@ -874,6 +881,7 @@
 				AF284AFA2B41093600715695 /* BoardGameShowResponseDTO.swift in Sources */,
 				4CF103302AA619140059C4C2 /* ProfileView.swift in Sources */,
 				EA2B2BD22B42E4F1009AFEE2 /* ConsultChangView.swift in Sources */,
+				EAF57AA32B43890900AD8BDD /* DiaryViewModel.swift in Sources */,
 				AF284B022B41142B00715695 /* BoardGameSubmitRequestDTO.swift in Sources */,
 				AF284B062B43170F00715695 /* BoardGameJoinRequestDTO.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
