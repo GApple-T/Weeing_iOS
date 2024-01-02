@@ -21,6 +21,7 @@ final class DiaryViewModel: ObservableObject {
             print(description)
             switch result {
             case let .success(response):
+                print(response.statusCode)
                 print(UserDefaults.standard.string(forKey: "accessToken") ?? "")
                 print("공유일기 완료")
             case let .failure(error):

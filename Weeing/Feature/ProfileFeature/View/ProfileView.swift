@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,12 +24,15 @@ struct ProfileView: View {
                         .padding(.bottom, 22)
                         .padding(.top, 7)
                     ScrollView {
-                        if viewModel.title != "" {
-                            diarylist()
+                        ForEach(viewModel.diary) { diary in
+                            diarylist(title: diary.title)
                         }
                     }
                     Spacer()
                 }
+                .onAppear(perform: {
+                    viewModel.getDiary()
+                })
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -52,8 +56,10 @@ struct ProfileView: View {
         }
     }
 
-    @ViewBuilder func diarylist() -> some View {
-        Button {} label: {
+    @ViewBuilder func diarylist(title: String) -> some View {
+        NavigationLink {
+            DiaryLog()
+        } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 360, height: 70)
@@ -61,10 +67,10 @@ struct ProfileView: View {
                     .shadow(color: .Shadow, radius: 15, x: 3, y: 2)
                 HStack(spacing: 0) {
                     Group {
-                        Text("\(viewModel.title)")
+                        Text(title)
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 18))
                             .foregroundStyle(.black)
-                        Text("1206 류지민")
+                        Text((UserDefaults.standard.string(forKey: "number") ?? UserDefaults.standard.string(forKey: "number2")) ?? "")
                             .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                             .foregroundStyle(.gray)
                             .padding(.leading, -15)

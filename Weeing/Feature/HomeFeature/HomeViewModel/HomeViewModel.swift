@@ -19,10 +19,12 @@ final class HomeViewModel: ObservableObject {
             switch result {
             case let .success(response):
                 do {
+                    print("학년 : \(UserDefaults.standard.string(forKey: "grade") ?? "")")
+                    print("반 : \(UserDefaults.standard.string(forKey: "classroom") ?? "")")
                     let information = try JSONDecoder().decode(TimeTable.self, from: response.data)
 
                     guard let x = information.hisTimetable?.last?.row else {
-                        return print("nil")
+                        return print("시간표 : nil")
                     }
                     for i in 0 ... 7 {
                         self.information[x[i].PERIO] = x[i].ITRT_CNTNT
