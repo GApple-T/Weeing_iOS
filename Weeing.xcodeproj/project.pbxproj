@@ -72,6 +72,10 @@
 		EA2B2BD02B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BCF2B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift */; };
 		EA2B2BD22B42E4F1009AFEE2 /* ConsultChangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BD12B42E4F1009AFEE2 /* ConsultChangView.swift */; };
 		EA2B2BD42B42E501009AFEE2 /* ConsultChangViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B2BD32B42E501009AFEE2 /* ConsultChangViewModel.swift */; };
+		EA401EBD2B43C9B8006789D6 /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA401EBC2B43C9B8006789D6 /* DiaryListViewModel.swift */; };
+		EA401EBF2B43C9C8006789D6 /* DiaryListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA401EBE2B43C9C8006789D6 /* DiaryListAPI.swift */; };
+		EA401EC12B43C9DB006789D6 /* DiaryRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA401EC02B43C9DB006789D6 /* DiaryRequestDTO.swift */; };
+		EA401EC32B43C9E9006789D6 /* DiaryResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA401EC22B43C9E9006789D6 /* DiaryResponseDTO.swift */; };
 		EA72DF612B3D471000327529 /* ConsultLogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF602B3D471000327529 /* ConsultLogAPI.swift */; };
 		EA72DF632B3D472100327529 /* ConsultLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72DF622B3D472100327529 /* ConsultLogModel.swift */; };
 		EA7FFBA82B21375E00132C8E /* CounselingCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */; };
@@ -158,6 +162,10 @@
 		EA2B2BCF2B42E4D9009AFEE2 /* ConsultDeleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultDeleteViewModel.swift; sourceTree = "<group>"; };
 		EA2B2BD12B42E4F1009AFEE2 /* ConsultChangView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultChangView.swift; sourceTree = "<group>"; };
 		EA2B2BD32B42E501009AFEE2 /* ConsultChangViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultChangViewModel.swift; sourceTree = "<group>"; };
+		EA401EBC2B43C9B8006789D6 /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
+		EA401EBE2B43C9C8006789D6 /* DiaryListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListAPI.swift; sourceTree = "<group>"; };
+		EA401EC02B43C9DB006789D6 /* DiaryRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRequestDTO.swift; sourceTree = "<group>"; };
+		EA401EC22B43C9E9006789D6 /* DiaryResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryResponseDTO.swift; sourceTree = "<group>"; };
 		EA72DF602B3D471000327529 /* ConsultLogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogAPI.swift; sourceTree = "<group>"; };
 		EA72DF622B3D472100327529 /* ConsultLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogModel.swift; sourceTree = "<group>"; };
 		EA7FFBA72B21375E00132C8E /* CounselingCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounselingCheckView.swift; sourceTree = "<group>"; };
@@ -319,6 +327,10 @@
 				EA8D26162B0604E000F8D244 /* DiaryLog.swift */,
 				EAF57AA02B4388E600AD8BDD /* DiaryAPI.swift */,
 				EAF57AA22B43890900AD8BDD /* DiaryViewModel.swift */,
+				EA401EBC2B43C9B8006789D6 /* DiaryListViewModel.swift */,
+				EA401EBE2B43C9C8006789D6 /* DiaryListAPI.swift */,
+				EA401EC02B43C9DB006789D6 /* DiaryRequestDTO.swift */,
+				EA401EC22B43C9E9006789D6 /* DiaryResponseDTO.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -836,6 +848,7 @@
 				AFA611962A9779F900D63657 /* ResetPasswordView.swift in Sources */,
 				EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */,
 				AF61AA172B33DB93008F292A /* RootView.swift in Sources */,
+				EA401EBD2B43C9B8006789D6 /* DiaryListViewModel.swift in Sources */,
 				EA2B2BD42B42E501009AFEE2 /* ConsultChangViewModel.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
 				AF61AA1B2B33DBD0008F292A /* SceneFlow.swift in Sources */,
@@ -857,6 +870,7 @@
 				4C3639F62AB86D3400DD8F30 /* RecordView.swift in Sources */,
 				EA72DF632B3D472100327529 /* ConsultLogModel.swift in Sources */,
 				4C396FC22B2B1EA800F8C19D /* Model.swift in Sources */,
+				EA401EBF2B43C9C8006789D6 /* DiaryListAPI.swift in Sources */,
 				AFD02CE72AF9B831000CF617 /* LoginViewModel.swift in Sources */,
 				AFA6118E2A95D37E00D63657 /* MakePasswordView.swift in Sources */,
 				4CF1032C2AA618EF0059C4C2 /* ConsultationView.swift in Sources */,
@@ -883,8 +897,10 @@
 				EA2B2BD22B42E4F1009AFEE2 /* ConsultChangView.swift in Sources */,
 				EAF57AA32B43890900AD8BDD /* DiaryViewModel.swift in Sources */,
 				AF284B022B41142B00715695 /* BoardGameSubmitRequestDTO.swift in Sources */,
+				EA401EC12B43C9DB006789D6 /* DiaryRequestDTO.swift in Sources */,
 				AF284B062B43170F00715695 /* BoardGameJoinRequestDTO.swift in Sources */,
 				4CF103202AA600C00059C4C2 /* HomeView.swift in Sources */,
+				EA401EC32B43C9E9006789D6 /* DiaryResponseDTO.swift in Sources */,
 				AF61AA112B33D36D008F292A /* LoginResponseDTO.swift in Sources */,
 				4C396FC52B2B1EDC00F8C19D /* HomeViewModel.swift in Sources */,
 				4C396FD12B2B1F2900F8C19D /* API.swift in Sources */,
