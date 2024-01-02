@@ -45,6 +45,6 @@ extension DiaryAPI: TargetType {
     }
 
     var headers: [String: String]? {
-        ["Authorization": "Bearer (UserDefaults.standard.string(forKey: "accessToken") ?? "")"]
+        ["Authorization": "Bearer \(UserDefaults.standard.string(forKey: "accessToken") ?? "")"]
     }
 }
