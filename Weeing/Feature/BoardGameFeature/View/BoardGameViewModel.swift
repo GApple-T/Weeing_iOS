@@ -20,9 +20,13 @@ final class BoardGameViewModel: ObservableObject {
     func studentNumber(grade: Int, classroom: Int, number: Int, name: String) -> String {
         if number < 2 {
             UserDefaults.standard.set("\(grade)" + "\(classroom)" + "0" + "\(number)" + " \(name)", forKey: "number")
+            UserDefaults.standard.set(grade, forKey: "grade")
+            UserDefaults.standard.set(classroom, forKey: "classroom")
             return "\(grade)" + "\(classroom)" + "0" + "\(number)" + " \(name)"
         } else {
             UserDefaults.standard.set("\(grade)" + "\(classroom)" + "\(number)" + " \(name)", forKey: "number2")
+            UserDefaults.standard.set(grade, forKey: "grade")
+            UserDefaults.standard.set(classroom, forKey: "classroom")
             return "\(grade)" + "\(classroom)" + "\(number)" + " \(name)"
         }
     }

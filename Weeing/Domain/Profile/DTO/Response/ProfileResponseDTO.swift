@@ -8,13 +8,18 @@
 import Foundation
 
 struct ProfileResponseDTO: Codable {
+//    let id: String
     let diaries: [ProfileDTO]
+    let name: String
+    let grade: Int
+    let classroom: Int
+    let number: Int
 
-    struct ProfileDTO: Codable {
+    struct ProfileDTO: Codable, Identifiable {
         let id: String
         let title: String
         let description: String
-        let studentGrade: Int
-        let studentClass: Int
+        let grade: Int
+        let classroom: Int
     }
 }

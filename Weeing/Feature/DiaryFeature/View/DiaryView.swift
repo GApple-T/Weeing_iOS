@@ -54,7 +54,7 @@ struct DiaryView: View {
 
                     ScrollView(showsIndicators: false) {
                         ForEach(0 ..< 12) { _ in
-                            diarylog()
+//                            diarylog()
                         }
                         .padding(.top, 14)
                     }
