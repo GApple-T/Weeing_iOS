@@ -104,8 +104,9 @@ struct Diarywriting: View {
                         .font(.custom("AppleSDGothicNeoB00", size: 22))
                         .padding(.trailing, 84)
                     Button {
-                        viewModel.consultationSubmit(title: diaryTitleText, description: diaryContentText)
                         dismiss()
+                        viewModel.consultationSubmit(title: diaryTitleText, description: diaryContentText)
+
                     } label: {
                         Text("완료")
                             .font(.custom("AppleSDGothicNeoB00", size: 18))

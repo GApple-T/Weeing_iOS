@@ -19,7 +19,7 @@ struct ProfileView: View {
                         .resizable()
                         .frame(width: 75, height: 75)
                         .padding(.top, 52)
-                    Text((UserDefaults.standard.string(forKey: "number") ?? UserDefaults.standard.string(forKey: "number2")) ?? "")
+                    Text("1114 이승화")
                         .font(.custom("AppleSDGothicNeoEB00", size: 20))
                         .padding(.bottom, 22)
                         .padding(.top, 7)
