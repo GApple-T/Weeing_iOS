@@ -82,6 +82,7 @@
 		EA8D26132B06049100F8D244 /* WarningPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */; };
 		EA8D26152B0604AF00F8D244 /* Diarywriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26142B0604AF00F8D244 /* Diarywriting.swift */; };
 		EA8D26172B0604E000F8D244 /* DiaryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D26162B0604E000F8D244 /* DiaryLog.swift */; };
+		EAD89B902B4433480044D56A /* DiaryLog2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD89B8F2B4433480044D56A /* DiaryLog2.swift */; };
 		EAE14AC12ACDA6C400C99D60 /* ConsultLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */; };
 		EAF57AA12B4388E600AD8BDD /* DiaryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF57AA02B4388E600AD8BDD /* DiaryAPI.swift */; };
 		EAF57AA32B43890900AD8BDD /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF57AA22B43890900AD8BDD /* DiaryViewModel.swift */; };
@@ -172,6 +173,7 @@
 		EA8D26122B06049100F8D244 /* WarningPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupScreen.swift; sourceTree = "<group>"; };
 		EA8D26142B0604AF00F8D244 /* Diarywriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diarywriting.swift; sourceTree = "<group>"; };
 		EA8D26162B0604E000F8D244 /* DiaryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog.swift; sourceTree = "<group>"; };
+		EAD89B8F2B4433480044D56A /* DiaryLog2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryLog2.swift; sourceTree = "<group>"; };
 		EAE14AC02ACDA6C400C99D60 /* ConsultLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultLogView.swift; sourceTree = "<group>"; };
 		EAF57AA02B4388E600AD8BDD /* DiaryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryAPI.swift; sourceTree = "<group>"; };
 		EAF57AA22B43890900AD8BDD /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				EA401EBE2B43C9C8006789D6 /* DiaryListAPI.swift */,
 				EA401EC02B43C9DB006789D6 /* DiaryRequestDTO.swift */,
 				EA401EC22B43C9E9006789D6 /* DiaryResponseDTO.swift */,
+				EAD89B8F2B4433480044D56A /* DiaryLog2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 				EA401EBD2B43C9B8006789D6 /* DiaryListViewModel.swift in Sources */,
 				EA2B2BD42B42E501009AFEE2 /* ConsultChangViewModel.swift in Sources */,
 				AFA611DA2AA2FE2F00D63657 /* WeeingCheckPasswordTextField.swift in Sources */,
+				EAD89B902B4433480044D56A /* DiaryLog2.swift in Sources */,
 				AF61AA1B2B33DBD0008F292A /* SceneFlow.swift in Sources */,
 				EA2B2BCE2B42E4C6009AFEE2 /* ConsultDelete.swift in Sources */,
 				AF284AFC2B41099700715695 /* BoardGameViewModel.swift in Sources */,

@@ -9,6 +9,8 @@ struct DiaryView: View {
     // @State private var ClassSelectButton: Int? = nil
     @State private var AllSelectBotton: Bool = false
     @ObservedObject var viewModel = DiaryListViewModel()
+    @Binding var text1: String
+        @Binding var text2: String
 
     var body: some View {
         NavigationStack {
@@ -59,7 +61,11 @@ struct DiaryView: View {
                             if viewModel.isDataLoaded {
                                 ForEach(viewModel.diaries, id: \.id) { diarycount in
                                     NavigationLink {
-                                        DiaryLog()
+                                        DiaryLog2()
+                                            .onTapGesture {
+                                                text1 = diarycount.title
+                                                text2 = diarycount.description
+                                            }
                                     } label: {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 10)
@@ -213,6 +219,6 @@ func diarylog() -> some View {
     }
 }
 
-#Preview {
-    DiaryView()
-}
+//#Preview {
+//    DiaryView()
+//}
